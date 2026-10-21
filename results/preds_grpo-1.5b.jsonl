@@ -1,0 +1,1034 @@
+{"idx": 1000, "completion": "<sql>\nSELECT COUNT(*) FROM singer;\n</sql>", "latency_s": 0.131, "cost_usd": 0.0}
+{"idx": 1001, "completion": "<sql>\nSELECT COUNT(*) FROM singer;\n</sql>", "latency_s": 0.131, "cost_usd": 0.0}
+{"idx": 1018, "completion": "<sql>\nSELECT song.Title, singer.Name FROM song JOIN singer ON song.Singer_ID = singer.Singer_ID;\n</sql>", "latency_s": 0.131, "cost_usd": 0.0}
+{"idx": 1019, "completion": "<sql>\nSELECT Title, Name FROM song;\n</sql>", "latency_s": 0.131, "cost_usd": 0.0}
+{"idx": 1015, "completion": "<sql>\nSELECT Citizenship FROM singer GROUP BY Citizenship ORDER BY COUNT(*) DESC LIMIT 1;\n</sql>", "latency_s": 0.131, "cost_usd": 0.0}
+{"idx": 1004, "completion": "<sql>\nSELECT Birth_Year, Citizenship FROM singer;\n</sql>", "latency_s": 0.131, "cost_usd": 0.0}
+{"idx": 1014, "completion": "<sql>\nSELECT Citizenship FROM singer GROUP BY Citizenship ORDER BY COUNT(*) DESC LIMIT 1;\n</sql>", "latency_s": 0.131, "cost_usd": 0.0}
+{"idx": 1026, "completion": "<sql>\nSELECT Name FROM singer WHERE Singer_ID NOT IN (SELECT Singer_ID FROM song);\n</sql>", "latency_s": 0.131, "cost_usd": 0.0}
+{"idx": 1017, "completion": "<sql>\nSELECT Citizenship, MAX(Net_Worth_Millions) FROM singer GROUP BY Citizenship;\n</sql>", "latency_s": 0.131, "cost_usd": 0.0}
+{"idx": 1011, "completion": "<sql>\nSELECT Name FROM singer WHERE Net_Worth_Millions = (SELECT MAX(Net_Worth_Millions) FROM singer);\n</sql>", "latency_s": 0.131, "cost_usd": 0.0}
+{"idx": 1022, "completion": "<sql>\nSELECT Name FROM singer WHERE Singer_ID IN (SELECT Singer_ID FROM song GROUP BY Singer_ID HAVING COUNT(*) > 1)\n</sql>", "latency_s": 0.131, "cost_usd": 0.0}
+{"idx": 1002, "completion": "<sql>\nSELECT Name FROM singer ORDER BY Net_Worth_Millions ASC;\n</sql>", "latency_s": 0.131, "cost_usd": 0.0}
+{"idx": 1005, "completion": "<sql>\nSELECT Birth_Year, Citizenship FROM singer;\n</sql>", "latency_s": 0.131, "cost_usd": 0.0}
+{"idx": 1010, "completion": "<sql>\nSELECT Name FROM singer WHERE Net_Worth_Millions = (SELECT MAX(Net_Worth_Millions) FROM singer);\n</sql>", "latency_s": 0.131, "cost_usd": 0.0}
+{"idx": 1006, "completion": "<sql>\nSELECT Name FROM singer WHERE Citizenship != 'France';\n</sql>", "latency_s": 0.131, "cost_usd": 0.0}
+{"idx": 1027, "completion": "<sql>\nSELECT Name FROM singer WHERE Singer_ID NOT IN (SELECT Singer_ID FROM song);\n</sql>", "latency_s": 0.131, "cost_usd": 0.0}
+{"idx": 1003, "completion": "<sql>\nSELECT Name FROM singer ORDER BY Net_Worth_Millions ASC;\n</sql>", "latency_s": 0.115, "cost_usd": 0.0}
+{"idx": 1013, "completion": "<sql>\nSELECT Citizenship, COUNT(*) FROM singer GROUP BY Citizenship;\n</sql>", "latency_s": 0.115, "cost_usd": 0.0}
+{"idx": 1024, "completion": "<sql>\nSELECT Name, SUM(Sales) AS Total_Sales FROM singer JOIN song ON singer.Singer_ID = song.Singer_ID GROUP BY Singer_ID;\n</sql>", "latency_s": 0.115, "cost_usd": 0.0}
+{"idx": 1007, "completion": "<sql>\nSELECT Name FROM singer WHERE Citizenship != 'French';\n</sql>", "latency_s": 0.115, "cost_usd": 0.0}
+{"idx": 1025, "completion": "<sql>\nSELECT Name, SUM(Sales) as Total_Sales FROM song JOIN singer ON song.Singer_ID = singer.Singer_ID GROUP BY Name;\n</sql>", "latency_s": 0.115, "cost_usd": 0.0}
+{"idx": 1023, "completion": "<sql>\nSELECT Name FROM singer WHERE Singer_ID IN (SELECT Singer_ID FROM song GROUP BY Singer_ID HAVING COUNT(*) > 1);\n</sql>", "latency_s": 0.115, "cost_usd": 0.0}
+{"idx": 1008, "completion": "<sql>\nSELECT Name FROM singer WHERE Birth_Year IN (1948, 1949);\n</sql>", "latency_s": 0.115, "cost_usd": 0.0}
+{"idx": 647, "completion": "<sql>\nSELECT COUNT(*) FROM people;\n</sql>", "latency_s": 0.115, "cost_usd": 0.0}
+{"idx": 648, "completion": "<sql>\nSELECT COUNT(*) FROM poker_player;\n</sql>", "latency_s": 0.115, "cost_usd": 0.0}
+{"idx": 1020, "completion": "<sql>\nSELECT DISTINCT Name FROM singer WHERE Singer_ID IN (SELECT Singer_ID FROM song WHERE Sales > 300000);\n</sql>", "latency_s": 0.115, "cost_usd": 0.0}
+{"idx": 659, "completion": "<sql>\nSELECT Name FROM people;\n</sql>", "latency_s": 0.115, "cost_usd": 0.0}
+{"idx": 1009, "completion": "<sql>\nSELECT Name FROM singer WHERE Birth_Year IN (1948, 1949);\n</sql>", "latency_s": 0.115, "cost_usd": 0.0}
+{"idx": 1021, "completion": "<sql>\nSELECT Name FROM singer WHERE Singer_ID IN (SELECT Singer_ID FROM song WHERE Sales > 300000);\n</sql>", "latency_s": 0.115, "cost_usd": 0.0}
+{"idx": 660, "completion": "<sql>\nSELECT Name FROM people;\n</sql>", "latency_s": 0.115, "cost_usd": 0.0}
+{"idx": 685, "completion": "<sql>\nSELECT COUNT(DISTINCT Nationality) FROM people;\n</sql>", "latency_s": 0.115, "cost_usd": 0.0}
+{"idx": 1028, "completion": "<sql>\nSELECT Citizenship FROM singer WHERE Birth_Year BETWEEN 1944 AND 1955;\n</sql>", "latency_s": 0.115, "cost_usd": 0.0}
+{"idx": 686, "completion": "<sql>\nSELECT COUNT(DISTINCT Nationality) FROM people;\n</sql>", "latency_s": 0.097, "cost_usd": 0.0}
+{"idx": 1012, "completion": "<sql>\nSELECT Citizenship, COUNT(*) FROM singer GROUP BY Citizenship;\n</sql>", "latency_s": 0.097, "cost_usd": 0.0}
+{"idx": 1016, "completion": "<sql>\nSELECT Citizenship, MAX(Net_Worth_Millions) FROM singer GROUP BY Citizenship;\n</sql>", "latency_s": 0.097, "cost_usd": 0.0}
+{"idx": 653, "completion": "<sql>\nSELECT AVG(Earnings) FROM poker_player;\n</sql>", "latency_s": 0.097, "cost_usd": 0.0}
+{"idx": 674, "completion": "<sql>\nSELECT Nationality, COUNT(*) as Num_People FROM people GROUP BY Nationality;\n</sql>", "latency_s": 0.097, "cost_usd": 0.0}
+{"idx": 675, "completion": "<sql>\nSELECT Nationality FROM people GROUP BY Nationality ORDER BY COUNT(*) DESC LIMIT 1;\n</sql>", "latency_s": 0.097, "cost_usd": 0.0}
+{"idx": 667, "completion": "<sql>\nSELECT Money_Rank FROM poker_player WHERE Height = (SELECT MAX(Height) FROM people);\n</sql>", "latency_s": 0.097, "cost_usd": 0.0}
+{"idx": 684, "completion": "<sql>\nSELECT Name FROM people WHERE People_ID NOT IN (SELECT People_ID FROM poker_player);\n</sql>", "latency_s": 0.097, "cost_usd": 0.0}
+{"idx": 683, "completion": "<sql>\nSELECT Name FROM people WHERE People_ID NOT IN (SELECT People_ID FROM poker_player);\n</sql>", "latency_s": 0.097, "cost_usd": 0.0}
+{"idx": 654, "completion": "<sql>\nSELECT AVG(Earnings) FROM poker_player;\n</sql>", "latency_s": 0.097, "cost_usd": 0.0}
+{"idx": 682, "completion": "<sql>\nSELECT Name FROM people WHERE Nationality != 'Russia';\n</sql>", "latency_s": 0.097, "cost_usd": 0.0}
+{"idx": 649, "completion": "<sql>\nSELECT Earnings FROM poker_player ORDER BY Earnings DESC;\n</sql>", "latency_s": 0.097, "cost_usd": 0.0}
+{"idx": 681, "completion": "<sql>\nSELECT Name FROM people WHERE Nationality != 'Russia';\n</sql>", "latency_s": 0.097, "cost_usd": 0.0}
+{"idx": 1029, "completion": "<sql>\nSELECT DISTINCT Citizenship FROM singer WHERE Birth_Year BETWEEN 1945 AND 1955;\n</sql>", "latency_s": 0.097, "cost_usd": 0.0}
+{"idx": 676, "completion": "<sql>\nSELECT Nationality FROM people GROUP BY Nationality ORDER BY COUNT(*) DESC LIMIT 1;\n</sql>", "latency_s": 0.097, "cost_usd": 0.0}
+{"idx": 656, "completion": "<sql>\nSELECT Money_Rank FROM poker_player WHERE Earnings = (SELECT MAX(Earnings) FROM poker_player);\n</sql>", "latency_s": 0.097, "cost_usd": 0.0}
+{"idx": 662, "completion": "<sql>\nSELECT Name FROM people WHERE People_ID IN (SELECT People_ID FROM poker_player WHERE Earnings > 300000)\n</sql>", "latency_s": 0.109, "cost_usd": 0.0}
+{"idx": 670, "completion": "<sql>\nSELECT AVG(Earnings) FROM poker_player WHERE Height > 200;\n</sql>", "latency_s": 0.109, "cost_usd": 0.0}
+{"idx": 678, "completion": "<sql>\nSELECT Nationality FROM people GROUP BY Nationality HAVING COUNT(*) >= 2;\n</sql>", "latency_s": 0.109, "cost_usd": 0.0}
+{"idx": 651, "completion": "<sql>\nSELECT Final_Table_Made, Best_Finish FROM poker_player;\n</sql>", "latency_s": 0.109, "cost_usd": 0.0}
+{"idx": 677, "completion": "<sql>\nSELECT Nationality FROM people GROUP BY Nationality HAVING COUNT(*) >= 2;\n</sql>", "latency_s": 0.109, "cost_usd": 0.0}
+{"idx": 666, "completion": "<sql>\nSELECT Birth_Date FROM people WHERE People_ID = (SELECT People_ID FROM poker_player ORDER BY Earnings ASC LIMIT 1);\n</sql>", "latency_s": 0.109, "cost_usd": 0.0}
+{"idx": 668, "completion": "<sql>\nSELECT Money_Rank FROM poker_player WHERE Height = (SELECT MAX(Height) FROM people);\n</sql>", "latency_s": 0.109, "cost_usd": 0.0}
+{"idx": 650, "completion": "<sql>\nSELECT Earnings FROM poker_player ORDER BY Earnings DESC;\n</sql>", "latency_s": 0.109, "cost_usd": 0.0}
+{"idx": 665, "completion": "<sql>\nSELECT Birth_Date FROM people WHERE People_ID = (SELECT People_ID FROM poker_player ORDER BY Earnings ASC LIMIT 1);\n</sql>", "latency_s": 0.109, "cost_usd": 0.0}
+{"idx": 671, "completion": "<sql>\nSELECT Name FROM people WHERE People_ID IN (SELECT People_ID FROM poker_player ORDER BY Earnings DESC)\n</sql>", "latency_s": 0.109, "cost_usd": 0.0}
+{"idx": 655, "completion": "<sql>\nSELECT Money_Rank FROM poker_player ORDER BY Earnings DESC LIMIT 1;\n</sql>", "latency_s": 0.109, "cost_usd": 0.0}
+{"idx": 672, "completion": "<sql>\nSELECT Name FROM people INNER JOIN poker_player ON people.People_ID = poker_player.People_ID ORDER BY Earnings DESC;\n</sql>", "latency_s": 0.109, "cost_usd": 0.0}
+{"idx": 652, "completion": "<sql>\nSELECT Final_Table_Made, Best_Finish FROM poker_player;\n</sql>", "latency_s": 0.109, "cost_usd": 0.0}
+{"idx": 661, "completion": "<sql>\nSELECT Name FROM people WHERE People_ID IN (SELECT People_ID FROM poker_player WHERE Earnings > 300000);\n</sql>", "latency_s": 0.109, "cost_usd": 0.0}
+{"idx": 669, "completion": "<sql>\nSELECT AVG(Earnings) FROM poker_player WHERE Height > 200;\n</sql>", "latency_s": 0.109, "cost_usd": 0.0}
+{"idx": 679, "completion": "<sql>\nSELECT Name, Birth_Date FROM people ORDER BY Name;\n</sql>", "latency_s": 0.109, "cost_usd": 0.0}
+{"idx": 663, "completion": "<sql>\nSELECT Name FROM people ORDER BY Final_Table_Made ASC;\n</sql>", "latency_s": 0.107, "cost_usd": 0.0}
+{"idx": 680, "completion": "<sql>\nSELECT Name, Birth_Date FROM people ORDER BY Name;\n</sql>", "latency_s": 0.107, "cost_usd": 0.0}
+{"idx": 658, "completion": "<sql>\nSELECT MAX(Final_Table_Made) FROM poker_player WHERE Earnings < 200000;\n</sql>", "latency_s": 0.107, "cost_usd": 0.0}
+{"idx": 657, "completion": "<sql>\nSELECT MAX(Final_Table_Made) FROM poker_player WHERE Earnings < 200000;\n</sql>", "latency_s": 0.107, "cost_usd": 0.0}
+{"idx": 673, "completion": "<sql>\nSELECT Nationality, COUNT(*) FROM people GROUP BY Nationality;\n</sql>", "latency_s": 0.107, "cost_usd": 0.0}
+{"idx": 664, "completion": "<sql>\nSELECT Name FROM people WHERE Poker_Player_ID IN (SELECT Poker_Player_ID FROM poker_player ORDER BY Final_Table_Made ASC)\n</sql>", "latency_s": 0.107, "cost_usd": 0.0}
+{"idx": 381, "completion": "<sql>\nSELECT COUNT(Teacher_ID) FROM teacher;\n</sql>", "latency_s": 0.107, "cost_usd": 0.0}
+{"idx": 392, "completion": "<sql>\nSELECT Hometown FROM teacher WHERE Age = (SELECT MIN(Age) FROM teacher);\n</sql>", "latency_s": 0.107, "cost_usd": 0.0}
+{"idx": 873, "completion": "<sql>\nSELECT ID FROM Highschooler WHERE name = 'Kyle';\n</sql>", "latency_s": 0.107, "cost_usd": 0.0}
+{"idx": 382, "completion": "<sql>\nSELECT COUNT(Teacher_ID) FROM teacher;\n</sql>", "latency_s": 0.107, "cost_usd": 0.0}
+{"idx": 868, "completion": "<sql>\nSELECT grade FROM Highschooler WHERE name = 'Kyle';\n</sql>", "latency_s": 0.107, "cost_usd": 0.0}
+{"idx": 385, "completion": "<sql>\nSELECT Age, Hometown FROM teacher;\n</sql>", "latency_s": 0.107, "cost_usd": 0.0}
+{"idx": 395, "completion": "<sql>\nSELECT Hometown FROM teacher GROUP BY Hometown ORDER BY COUNT(*) DESC LIMIT 1;\n</sql>", "latency_s": 0.107, "cost_usd": 0.0}
+{"idx": 391, "completion": "<sql>\nSELECT Hometown FROM teacher WHERE Age = (SELECT MIN(Age) FROM teacher);\n</sql>", "latency_s": 0.107, "cost_usd": 0.0}
+{"idx": 386, "completion": "<sql>\nSELECT Age, Hometown FROM teacher;\n</sql>", "latency_s": 0.107, "cost_usd": 0.0}
+{"idx": 389, "completion": "<sql>\nSELECT Name FROM teacher WHERE Age IN ('32', '33');\n</sql>", "latency_s": 0.107, "cost_usd": 0.0}
+{"idx": 394, "completion": "<sql>\nSELECT Hometown, COUNT(*) FROM teacher GROUP BY Hometown;\n</sql>", "latency_s": 0.149, "cost_usd": 0.0}
+{"idx": 912, "completion": "<sql>\nSELECT COUNT(*) FROM Likes WHERE student_id = (SELECT ID FROM Highschooler WHERE name = 'Kyle');\n</sql>", "latency_s": 0.149, "cost_usd": 0.0}
+{"idx": 396, "completion": "<sql>\nSELECT Hometown FROM teacher GROUP BY Hometown ORDER BY COUNT(*) DESC LIMIT 1;\n</sql>", "latency_s": 0.149, "cost_usd": 0.0}
+{"idx": 403, "completion": "<sql>\nSELECT Name FROM teacher WHERE Teacher_ID IN (SELECT Teacher_ID FROM course_arrange WHERE Course_ID IN (SELECT Course_ID FROM course WHERE Course = 'Math'))\n</sql>", "latency_s": 0.149, "cost_usd": 0.0}
+{"idx": 397, "completion": "<sql>\nSELECT Hometown FROM teacher GROUP BY Hometown HAVING COUNT(*) >= 2;\n</sql>", "latency_s": 0.149, "cost_usd": 0.0}
+{"idx": 862, "completion": "<sql>\nSELECT COUNT(*) FROM Highschooler;\n</sql>", "latency_s": 0.149, "cost_usd": 0.0}
+{"idx": 863, "completion": "<sql>\nSELECT COUNT(*) FROM Highschooler;\n</sql>", "latency_s": 0.149, "cost_usd": 0.0}
+{"idx": 383, "completion": "<sql>\nSELECT Name FROM teacher ORDER BY Age ASC;\n</sql>", "latency_s": 0.149, "cost_usd": 0.0}
+{"idx": 411, "completion": "<sql>\nSELECT COUNT(*) FROM visitor WHERE Age < 30;\n</sql>", "latency_s": 0.149, "cost_usd": 0.0}
+{"idx": 893, "completion": "<sql>\nSELECT COUNT(T2.friend_id) AS friend_count\nFROM Highschooler AS T1\nJOIN Friend AS T2 ON T1.ID = T2.student_id\nWHERE T1.name = 'Kyle';\n</sql>", "latency_s": 0.149, "cost_usd": 0.0}
+{"idx": 407, "completion": "<sql>\nSELECT Name FROM teacher WHERE Teacher_ID IN (SELECT Teacher_ID FROM course_arrange GROUP BY Teacher_ID HAVING COUNT(Course_ID) >= 2)\n</sql>", "latency_s": 0.149, "cost_usd": 0.0}
+{"idx": 191, "completion": "<sql>\nSELECT COUNT(*) FROM flights;\n</sql>", "latency_s": 0.149, "cost_usd": 0.0}
+{"idx": 404, "completion": "<sql>\nSELECT Name FROM teacher WHERE Teacher_ID IN (SELECT Teacher_ID FROM course_arrange WHERE Course_ID IN (SELECT Course_ID FROM course WHERE Course = 'Math'))\n</sql>", "latency_s": 0.149, "cost_usd": 0.0}
+{"idx": 187, "completion": "<sql>\nSELECT COUNT(uid) FROM airlines;\n</sql>", "latency_s": 0.149, "cost_usd": 0.0}
+{"idx": 189, "completion": "<sql>\nSELECT COUNT(DISTINCT AirportCode) FROM airports;\n</sql>", "latency_s": 0.149, "cost_usd": 0.0}
+{"idx": 192, "completion": "<sql>\nSELECT COUNT(*) FROM flights;\n</sql>", "latency_s": 0.149, "cost_usd": 0.0}
+{"idx": 867, "completion": "<sql>\nSELECT ID, name, grade FROM Highschooler;\n</sql>", "latency_s": 0.135, "cost_usd": 0.0}
+{"idx": 878, "completion": "<sql>\nSELECT grade FROM Highschooler GROUP BY grade ORDER BY COUNT(*) DESC LIMIT 1;\n</sql>", "latency_s": 0.135, "cost_usd": 0.0}
+{"idx": 883, "completion": "<sql>\nSELECT name, COUNT(*) as friend_count FROM Highschooler JOIN Friend ON Highschooler.ID = Friend.student_id GROUP BY name;\n</sql>", "latency_s": 0.135, "cost_usd": 0.0}
+{"idx": 190, "completion": "<sql>\nSELECT COUNT(*) FROM airports;\n</sql>", "latency_s": 0.135, "cost_usd": 0.0}
+{"idx": 195, "completion": "<sql>\nSELECT COUNT(DISTINCT Airline) FROM airlines WHERE Country = 'USA';\n</sql>", "latency_s": 0.135, "cost_usd": 0.0}
+{"idx": 866, "completion": "<sql>\nSELECT grade FROM Highschooler;\n</sql>", "latency_s": 0.135, "cost_usd": 0.0}
+{"idx": 877, "completion": "<sql>\nSELECT grade, COUNT(*) FROM Highschooler GROUP BY grade;\n</sql>", "latency_s": 0.135, "cost_usd": 0.0}
+{"idx": 384, "completion": "<sql>\nSELECT Name FROM teacher ORDER BY Age ASC;\n</sql>", "latency_s": 0.135, "cost_usd": 0.0}
+{"idx": 400, "completion": "<sql>\nSELECT Name FROM teacher;\n</sql>", "latency_s": 0.135, "cost_usd": 0.0}
+{"idx": 405, "completion": "<sql>\nSELECT teacher.Name, COUNT(course.Course_ID) AS Number_of_Courses FROM teacher JOIN course_arrange ON teacher.Teacher_ID = course_arrange.Teacher_ID GROUP BY teacher.Name;\n</sql>", "latency_s": 0.135, "cost_usd": 0.0}
+{"idx": 881, "completion": "<sql>\nSELECT grade FROM Highschooler GROUP BY grade HAVING COUNT(*) >= 4;\n</sql>", "latency_s": 0.135, "cost_usd": 0.0}
+{"idx": 872, "completion": "<sql>\nSELECT ID FROM Highschooler WHERE name = 'Kyle';\n</sql>", "latency_s": 0.135, "cost_usd": 0.0}
+{"idx": 398, "completion": "<sql>\nSELECT Hometown FROM teacher GROUP BY Hometown HAVING COUNT(*) >= 2;\n</sql>", "latency_s": 0.135, "cost_usd": 0.0}
+{"idx": 903, "completion": "<sql>\nSELECT student_id, COUNT(*) as num_likes FROM Likes GROUP BY student_id;\n</sql>", "latency_s": 0.135, "cost_usd": 0.0}
+{"idx": 203, "completion": "<sql>\nSELECT COUNT(*) FROM flights WHERE SourceAirport = 'APG';\n</sql>", "latency_s": 0.135, "cost_usd": 0.0}
+{"idx": 902, "completion": "<sql>\nSELECT student_id, COUNT(*) as num_likes FROM Likes GROUP BY student_id;\n</sql>", "latency_s": 0.135, "cost_usd": 0.0}
+{"idx": 390, "completion": "<sql>\nSELECT Name FROM teacher WHERE Age IN ('32', '33');\n</sql>", "latency_s": 0.127, "cost_usd": 0.0}
+{"idx": 188, "completion": "<sql>\nSELECT COUNT(uid) FROM airlines;\n</sql>", "latency_s": 0.127, "cost_usd": 0.0}
+{"idx": 193, "completion": "<sql>\nSELECT Airline FROM airlines WHERE Abbreviation = 'UAL';\n</sql>", "latency_s": 0.127, "cost_usd": 0.0}
+{"idx": 206, "completion": "<sql>\nSELECT COUNT(*) FROM flights WHERE DestAirport = 'ATO'\n</sql>", "latency_s": 0.127, "cost_usd": 0.0}
+{"idx": 230, "completion": "<sql>\nSELECT Airline FROM airlines GROUP BY Airline ORDER BY COUNT(*) DESC LIMIT 1;\n</sql>", "latency_s": 0.127, "cost_usd": 0.0}
+{"idx": 864, "completion": "<sql>\nSELECT name, grade FROM Highschooler;\n</sql>", "latency_s": 0.127, "cost_usd": 0.0}
+{"idx": 205, "completion": "<sql>\nSELECT COUNT(*) FROM flights WHERE DestAirport = 'ATO'\n</sql>", "latency_s": 0.127, "cost_usd": 0.0}
+{"idx": 399, "completion": "<sql>\nSELECT teacher.Name FROM teacher JOIN course_arrange ON teacher.Teacher_ID = course_arrange.Teacher_ID;\n</sql>", "latency_s": 0.127, "cost_usd": 0.0}
+{"idx": 408, "completion": "<sql>\nSELECT Name FROM teacher WHERE Teacher_ID IN (SELECT Teacher_ID FROM course_arrange GROUP BY Teacher_ID HAVING COUNT(Course_ID) >= 2);\n</sql>", "latency_s": 0.127, "cost_usd": 0.0}
+{"idx": 870, "completion": "<sql>\nSELECT name FROM Highschooler WHERE grade = 10;\n</sql>", "latency_s": 0.127, "cost_usd": 0.0}
+{"idx": 876, "completion": "<sql>\nSELECT grade, COUNT(*) FROM Highschooler GROUP BY grade;\n</sql>", "latency_s": 0.127, "cost_usd": 0.0}
+{"idx": 880, "completion": "<sql>\nSELECT grade FROM Highschooler WHERE ID IN (\n    SELECT student_id FROM Friend GROUP BY student_id HAVING COUNT(*) >= 4\n);\n</sql>", "latency_s": 0.127, "cost_usd": 0.0}
+{"idx": 907, "completion": "<sql>\nSELECT name FROM Highschooler WHERE ID = (\n    SELECT student_id FROM Likes GROUP BY student_id ORDER BY COUNT(*) DESC LIMIT 1\n);\n</sql>", "latency_s": 0.127, "cost_usd": 0.0}
+{"idx": 422, "completion": "<sql>\nSELECT Name FROM museum WHERE Museum_ID NOT IN (SELECT Museum_ID FROM visit)\n</sql>", "latency_s": 0.127, "cost_usd": 0.0}
+{"idx": 428, "completion": "<sql>\nSELECT COUNT(*) FROM museum WHERE Open_Year > '2013' OR Open_Year < '2008';\n</sql>", "latency_s": 0.127, "cost_usd": 0.0}
+{"idx": 869, "completion": "<sql>\nSELECT grade FROM Highschooler WHERE name = 'Kyle';\n</sql>", "latency_s": 0.127, "cost_usd": 0.0}
+{"idx": 242, "completion": "<sql>\nSELECT Airline FROM airlines WHERE uid IN (\n    SELECT DISTINCT Airline FROM flights GROUP BY Airline HAVING COUNT(FlightNo) >= 10\n);\n</sql>", "latency_s": 0.126, "cost_usd": 0.0}
+{"idx": 874, "completion": "<sql>\nSELECT COUNT(*) FROM Highschooler WHERE grade IN (9, 10);\n</sql>", "latency_s": 0.126, "cost_usd": 0.0}
+{"idx": 897, "completion": "<sql>\nSELECT name FROM Highschooler WHERE ID NOT IN (\n\tSELECT student_id FROM Friend\n\tUNION ALL\n\tSELECT friend_id FROM Friend\n);\n</sql>", "latency_s": 0.126, "cost_usd": 0.0}
+{"idx": 194, "completion": "<sql>\nSELECT Airline FROM airlines WHERE Abbreviation = 'UAL';\n</sql>", "latency_s": 0.126, "cost_usd": 0.0}
+{"idx": 196, "completion": "<sql>\nSELECT COUNT(DISTINCT Airline) FROM airlines WHERE Country = 'USA';\n</sql>", "latency_s": 0.126, "cost_usd": 0.0}
+{"idx": 229, "completion": "<sql>\nSELECT Airline FROM airlines GROUP BY Airline ORDER BY COUNT(*) DESC LIMIT 1;\n</sql>", "latency_s": 0.126, "cost_usd": 0.0}
+{"idx": 201, "completion": "<sql>\nSELECT AirportName FROM airports WHERE City = 'Aberdeen'\n</sql>", "latency_s": 0.126, "cost_usd": 0.0}
+{"idx": 244, "completion": "<sql>\nSELECT Airline FROM airlines WHERE uid IN (\n    SELECT Airline FROM flights GROUP BY Airline HAVING COUNT(FlightNo) < 200\n);\n</sql>", "latency_s": 0.126, "cost_usd": 0.0}
+{"idx": 406, "completion": "<sql>\nSELECT Name, COUNT(*) FROM teacher JOIN course_arrange ON teacher.Teacher_ID = course_arrange.Teacher_ID GROUP BY Teacher_ID;\n</sql>", "latency_s": 0.126, "cost_usd": 0.0}
+{"idx": 421, "completion": "<sql>\nSELECT visitor_ID, Name FROM visit GROUP BY visitor_ID ORDER BY COUNT(*) DESC LIMIT 1;\n</sql>", "latency_s": 0.126, "cost_usd": 0.0}
+{"idx": 865, "completion": "<sql>\nSELECT name, grade FROM Highschooler;\n</sql>", "latency_s": 0.126, "cost_usd": 0.0}
+{"idx": 871, "completion": "<sql>\nSELECT name FROM Highschooler WHERE grade = 10;\n</sql>", "latency_s": 0.126, "cost_usd": 0.0}
+{"idx": 875, "completion": "<sql>\nSELECT COUNT(*) FROM Highschooler WHERE grade IN (9, 10);\n</sql>", "latency_s": 0.126, "cost_usd": 0.0}
+{"idx": 894, "completion": "<sql>\nSELECT ID FROM Highschooler WHERE ID NOT IN (\n    SELECT student_id FROM Friend\n);\n</sql>", "latency_s": 0.126, "cost_usd": 0.0}
+{"idx": 908, "completion": "<sql>\nSELECT name FROM Highschooler WHERE ID IN (\n    SELECT student_id FROM Likes GROUP BY student_id HAVING COUNT(*) >= 2\n);\n</sql>", "latency_s": 0.126, "cost_usd": 0.0}
+{"idx": 199, "completion": "<sql>\nSELECT AirportName FROM airports WHERE AirportCode = \"AKO\"\n</sql>", "latency_s": 0.126, "cost_usd": 0.0}
+{"idx": 202, "completion": "<sql>\nSELECT AirportName FROM airports WHERE City = 'Aberdeen'\n</sql>", "latency_s": 0.116, "cost_usd": 0.0}
+{"idx": 207, "completion": "<sql>\nSELECT COUNT(*) FROM airports WHERE City = 'Aberdeen'\n</sql>", "latency_s": 0.116, "cost_usd": 0.0}
+{"idx": 209, "completion": "<sql>\nSELECT COUNT(*) FROM flights f JOIN airports a ON f.DestAirport = a.AirportCode WHERE a.City = 'Aberdeen';\n</sql>", "latency_s": 0.116, "cost_usd": 0.0}
+{"idx": 214, "completion": "<sql>\nSELECT COUNT(*) FROM flights WHERE Airline = \"JetBlue Airways\"\n</sql>", "latency_s": 0.116, "cost_usd": 0.0}
+{"idx": 409, "completion": "<sql>\nSELECT Name FROM teacher WHERE Teacher_ID NOT IN (SELECT Teacher_ID FROM course_arrange)\n</sql>", "latency_s": 0.116, "cost_usd": 0.0}
+{"idx": 410, "completion": "<sql>\nSELECT Name FROM teacher WHERE Teacher_ID NOT IN (SELECT Teacher_ID FROM course_arrange)\n</sql>", "latency_s": 0.116, "cost_usd": 0.0}
+{"idx": 915, "completion": "<sql>\nSELECT AVG(Grade) FROM Highschooler WHERE ID IN (\n    SELECT student_id FROM Friend\n);\n</sql>", "latency_s": 0.116, "cost_usd": 0.0}
+{"idx": 916, "completion": "<sql>\nSELECT MIN(grade) FROM Highschooler WHERE ID NOT IN (\n    SELECT student_id FROM Friend\n);\n</sql>", "latency_s": 0.116, "cost_usd": 0.0}
+{"idx": 212, "completion": "<sql>\nSELECT COUNT(*) FROM flights WHERE SourceAirport = \"Aberdeen\" AND DestAirport = \"Ashley\";\n</sql>", "latency_s": 0.116, "cost_usd": 0.0}
+{"idx": 256, "completion": "<sql>\nSELECT COUNT(*) FROM flights WHERE DestAirport IN ('ABERDEEN', 'ABILENE')\n</sql>", "latency_s": 0.116, "cost_usd": 0.0}
+{"idx": 892, "completion": "<sql>\nSELECT COUNT(DISTINCT friend_id) FROM Friend WHERE student_id = (SELECT ID FROM Highschooler WHERE name = 'Kyle')\n</sql>", "latency_s": 0.116, "cost_usd": 0.0}
+{"idx": 909, "completion": "<sql>\nSELECT name FROM Highschooler WHERE ID IN (\n    SELECT student_id FROM Likes GROUP BY student_id HAVING COUNT(*) >= 2\n);\n</sql>", "latency_s": 0.116, "cost_usd": 0.0}
+{"idx": 197, "completion": "<sql>\nSELECT City, Country FROM airports WHERE AirportCode = (SELECT SourceAirport FROM flights WHERE DestAirport = 'Alton')\n</sql>", "latency_s": 0.116, "cost_usd": 0.0}
+{"idx": 200, "completion": "<sql>\nSELECT AirportName FROM airports WHERE AirportCode = 'AKO'\n</sql>", "latency_s": 0.116, "cost_usd": 0.0}
+{"idx": 221, "completion": "<sql>\nSELECT City FROM airports WHERE AirportCode IN (\n    SELECT SourceAirport FROM flights GROUP BY SourceAirport ORDER BY COUNT(*) DESC LIMIT 1\n);\n</sql>", "latency_s": 0.116, "cost_usd": 0.0}
+{"idx": 224, "completion": "<sql>\nSELECT City FROM airports WHERE AirportCode IN (\n\tSELECT SourceAirport FROM flights GROUP BY SourceAirport ORDER BY COUNT(*) DESC LIMIT 1\n);\n</sql>", "latency_s": 0.116, "cost_usd": 0.0}
+{"idx": 890, "completion": "<sql>\nSELECT T1.name FROM Highschooler AS T1 JOIN Friend AS T2 ON T1.ID = T2.student_id WHERE T2.friend_id = (SELECT ID FROM Highschooler WHERE name = 'Kyle')\n</sql>", "latency_s": 0.154, "cost_usd": 0.0}
+{"idx": 180, "completion": "<sql>\nSELECT Country FROM airlines WHERE Abbreviation = 'JetBlue'\n</sql>", "latency_s": 0.154, "cost_usd": 0.0}
+{"idx": 198, "completion": "<sql>\nSELECT City, Country FROM airports WHERE AirportCode = \"ALTN\"\n</sql>", "latency_s": 0.154, "cost_usd": 0.0}
+{"idx": 223, "completion": "<sql>\nSELECT City FROM airports WHERE AirportCode IN (\n    SELECT SourceAirport FROM flights GROUP BY SourceAirport ORDER BY COUNT(*) DESC LIMIT 1\n);\n</sql>", "latency_s": 0.154, "cost_usd": 0.0}
+{"idx": 241, "completion": "<sql>\nSELECT Airline FROM airlines WHERE uid IN (\n    SELECT DISTINCT Airline FROM flights GROUP BY Airline HAVING COUNT(FlightNo) >= 10\n);\n</sql>", "latency_s": 0.154, "cost_usd": 0.0}
+{"idx": 204, "completion": "<sql>\nSELECT COUNT(*) FROM flights WHERE SourceAirport = 'APG'\n</sql>", "latency_s": 0.154, "cost_usd": 0.0}
+{"idx": 891, "completion": "<sql>\nSELECT T2.name FROM Highschooler AS T1 JOIN Friend AS T2 ON T1.ID = T2.student_id WHERE T1.name = 'Kyle';\n</sql>", "latency_s": 0.154, "cost_usd": 0.0}
+{"idx": 182, "completion": "<sql>\nSELECT Abbreviation FROM airlines WHERE Airline = \"JetBlue Airways\";\n</sql>", "latency_s": 0.154, "cost_usd": 0.0}
+{"idx": 210, "completion": "<sql>\nSELECT COUNT(*) FROM flights WHERE DestAirport = 'ABERDEEN'\n</sql>", "latency_s": 0.154, "cost_usd": 0.0}
+{"idx": 250, "completion": "<sql>\nSELECT DISTINCT FlightNo FROM flights WHERE DestAirport = 'APG'\n</sql>", "latency_s": 0.154, "cost_usd": 0.0}
+{"idx": 888, "completion": "<sql>\nSELECT name FROM Highschooler WHERE ID IN (\n    SELECT student_id FROM Friend GROUP BY student_id HAVING COUNT(friend_id) >= 3\n);\n</sql>", "latency_s": 0.154, "cost_usd": 0.0}
+{"idx": 914, "completion": "<sql>\nSELECT AVG(grade) FROM Highschooler WHERE ID IN (\n    SELECT student_id FROM Friend\n);\n</sql>", "latency_s": 0.154, "cost_usd": 0.0}
+{"idx": 243, "completion": "<sql>\nSELECT Airline FROM airlines WHERE uid IN (\n    SELECT DISTINCT Airline FROM flights GROUP BY Airline HAVING COUNT(FlightNo) < 200\n);\n</sql>", "latency_s": 0.154, "cost_usd": 0.0}
+{"idx": 415, "completion": "<sql>\nSELECT Museum_ID, Name FROM museum WHERE Num_of_Staff = (SELECT MAX(Num_of_Staff) FROM museum);\n</sql>", "latency_s": 0.154, "cost_usd": 0.0}
+{"idx": 228, "completion": "<sql>\nSELECT AirportCode FROM airports WHERE AirportCode = (SELECT SourceAirport FROM flights GROUP BY SourceAirport ORDER BY COUNT(*) LIMIT 1);\n</sql>", "latency_s": 0.154, "cost_usd": 0.0}
+{"idx": 248, "completion": "<sql>\nSELECT DISTINCT FlightNo FROM flights WHERE SourceAirport = 'APG'\n</sql>", "latency_s": 0.154, "cost_usd": 0.0}
+{"idx": 208, "completion": "<sql>\nSELECT COUNT(*) FROM flights WHERE SourceAirport = \"Aberdeen\"\n</sql>", "latency_s": 0.185, "cost_usd": 0.0}
+{"idx": 213, "completion": "<sql>\nSELECT COUNT(*) FROM flights WHERE Airline = 'JetBlue Airways'\n</sql>", "latency_s": 0.185, "cost_usd": 0.0}
+{"idx": 222, "completion": "<sql>\nSELECT City FROM airports WHERE AirportCode IN (\n    SELECT DestAirport FROM flights GROUP BY DestAirport ORDER BY COUNT(*) DESC LIMIT 1\n);\n</sql>", "latency_s": 0.185, "cost_usd": 0.0}
+{"idx": 234, "completion": "<sql>\nSELECT T1.Airline FROM flights AS T1 JOIN airports AS T2 ON T1.SourceAirport = T2.AirportCode WHERE T2.City = 'AHD';\n</sql>", "latency_s": 0.185, "cost_usd": 0.0}
+{"idx": 245, "completion": "<sql>\nSELECT DISTINCT FlightNo FROM flights WHERE Airline = 'United Airlines';\n</sql>", "latency_s": 0.185, "cost_usd": 0.0}
+{"idx": 879, "completion": "<sql>\nSELECT grade FROM Highschooler GROUP BY grade ORDER BY COUNT(*) DESC LIMIT 1;\n</sql>", "latency_s": 0.185, "cost_usd": 0.0}
+{"idx": 889, "completion": "<sql>\nSELECT name FROM Highschooler WHERE ID IN (\n    SELECT student_id FROM Friend GROUP BY student_id HAVING COUNT(friend_id) >= 3\n);\n</sql>", "latency_s": 0.185, "cost_usd": 0.0}
+{"idx": 181, "completion": "<sql>\nSELECT CountryAbbrev FROM airlines WHERE Airline = \"JetBlue Airways\"\n</sql>", "latency_s": 0.185, "cost_usd": 0.0}
+{"idx": 185, "completion": "<sql>\nSELECT AirportCode, AirportName FROM airports WHERE City = \"Anthony\"\n</sql>", "latency_s": 0.185, "cost_usd": 0.0}
+{"idx": 393, "completion": "<sql>\nSELECT Hometown, COUNT(*) FROM teacher GROUP BY Hometown;\n</sql>", "latency_s": 0.185, "cost_usd": 0.0}
+{"idx": 887, "completion": "<sql>\nSELECT T1.name FROM Highschooler AS T1 JOIN Friend AS T2 ON T1.ID = T2.student_id JOIN Friend AS T3 ON T1.ID = T3.friend_id GROUP BY T1.ID ORDER BY COUNT(*) DESC LIMIT 1;\n</sql>", "latency_s": 0.185, "cost_usd": 0.0}
+{"idx": 895, "completion": "<sql>\nSELECT ID FROM Highschooler WHERE ID NOT IN (\n    SELECT student_id FROM Friend\n);\n</sql>", "latency_s": 0.185, "cost_usd": 0.0}
+{"idx": 899, "completion": "<sql>\nSELECT DISTINCT T1.ID FROM Highschooler AS T1 JOIN Friend AS T2 ON T1.ID = T2.student_id JOIN Friend AS T3 ON T1.ID = T3.friend_id WHERE T2.friend_id = T1.ID AND T3.student_id = T1.ID;\n</sql>", "latency_s": 0.185, "cost_usd": 0.0}
+{"idx": 913, "completion": "<sql>\nSELECT COUNT(*) FROM Likes WHERE student_id = (SELECT ID FROM Highschooler WHERE name = 'Kyle')\n</sql>", "latency_s": 0.185, "cost_usd": 0.0}
+{"idx": 917, "completion": "<sql>\nSELECT MIN(grade) FROM Highschooler WHERE ID NOT IN (\n    SELECT student_id FROM Friend\n);\n</sql>", "latency_s": 0.185, "cost_usd": 0.0}
+{"idx": 179, "completion": "<sql>\nSELECT Country FROM airlines WHERE Abbreviation = 'JetBlue Airways'\n</sql>", "latency_s": 0.185, "cost_usd": 0.0}
+{"idx": 215, "completion": "<sql>\nSELECT COUNT(*) FROM flights f JOIN airlines a ON f.Airline = a.Airline WHERE a.Airline = 'United Airlines' AND f.DestAirport = 'ASY';\n</sql>", "latency_s": 0.199, "cost_usd": 0.0}
+{"idx": 219, "completion": "<sql>\nSELECT COUNT(*) FROM flights f JOIN airlines a ON f.Airline = a.uid JOIN airports src ON f.SourceAirport = src.AirportCode JOIN airports dest ON f.DestAirport = dest.AirportCode WHERE a.Abbreviation = 'United' AND src.City = 'Aberdeen';\n</sql>", "latency_s": 0.199, "cost_usd": 0.0}
+{"idx": 387, "completion": "<sql>\nSELECT Name FROM teacher WHERE Hometown != 'Little Lever Urban District';\n</sql>", "latency_s": 0.199, "cost_usd": 0.0}
+{"idx": 882, "completion": "<sql>\nSELECT ID, COUNT(*) FROM Highschooler GROUP BY ID;\n</sql>", "latency_s": 0.199, "cost_usd": 0.0}
+{"idx": 183, "completion": "<sql>\nSELECT Airline, Abbreviation FROM airlines WHERE Country = 'USA';\n</sql>", "latency_s": 0.199, "cost_usd": 0.0}
+{"idx": 254, "completion": "<sql>\nSELECT DISTINCT f.FlightNo FROM flights f JOIN airports a ON f.DestAirport = a.AirportCode WHERE a.City = 'Aberdeen'\n</sql>", "latency_s": 0.199, "cost_usd": 0.0}
+{"idx": 424, "completion": "<sql>\nSELECT AVG(Num_of_Ticket), MAX(Num_of_Ticket) FROM visit;\n</sql>", "latency_s": 0.199, "cost_usd": 0.0}
+{"idx": 896, "completion": "<sql>\nSELECT name FROM Highschooler WHERE ID NOT IN (\n    SELECT student_id FROM Friend\n);\n</sql>", "latency_s": 0.199, "cost_usd": 0.0}
+{"idx": 252, "completion": "<sql>\nSELECT DISTINCT SourceAirport FROM flights WHERE SourceAirport = \"Aberdeen\"\n</sql>", "latency_s": 0.199, "cost_usd": 0.0}
+{"idx": 258, "completion": "<sql>\nSELECT AirportName FROM airports WHERE AirportCode NOT IN (SELECT SourceAirport FROM flights UNION SELECT DestAirport FROM flights)\n</sql>", "latency_s": 0.199, "cost_usd": 0.0}
+{"idx": 423, "completion": "<sql>\nSELECT Name, Age FROM visitor WHERE ID = (SELECT visitor_ID FROM visit GROUP BY visitor_ID ORDER BY Num_of_Ticket DESC LIMIT 1);\n</sql>", "latency_s": 0.199, "cost_usd": 0.0}
+{"idx": 236, "completion": "<sql>\nSELECT T1.Airline FROM flights AS T1 JOIN airports AS T2 ON T1.DestAirport = T2.AirportCode WHERE T2.AirportName = 'AHD';\n</sql>", "latency_s": 0.199, "cost_usd": 0.0}
+{"idx": 246, "completion": "<sql>\nSELECT FlightNo FROM flights WHERE Airline = (SELECT Airline FROM airlines WHERE Abbreviation = 'United')\n</sql>", "latency_s": 0.199, "cost_usd": 0.0}
+{"idx": 427, "completion": "<sql>\nSELECT COUNT(DISTINCT visitor.ID) \nFROM visitor \nWHERE visitor.ID NOT IN (SELECT DISTINCT visitor_ID FROM visit WHERE Museum_ID IN (SELECT Museum_ID FROM museum WHERE Open_Year > '2010'))\n</sql>", "latency_s": 0.199, "cost_usd": 0.0}
+{"idx": 417, "completion": "<sql>\nSELECT Open_Year, Num_of_Staff FROM museum WHERE Name = 'Plaza Museum';\n</sql>", "latency_s": 0.199, "cost_usd": 0.0}
+{"idx": 217, "completion": "<sql>\nSELECT COUNT(*) FROM flights f JOIN airlines a ON f.Airline = a.uid WHERE a.Airline = 'United Airlines' AND f.SourceAirport = 'AHD';\n</sql>", "latency_s": 0.199, "cost_usd": 0.0}
+{"idx": 249, "completion": "<sql>\nSELECT DISTINCT FlightNo FROM flights WHERE DestAirport = 'APG'\n</sql>", "latency_s": 0.183, "cost_usd": 0.0}
+{"idx": 425, "completion": "<sql>\nSELECT SUM(Total_spent) FROM visit WHERE visitor_ID IN (SELECT ID FROM visitor WHERE Level_of_membership = 1);\n</sql>", "latency_s": 0.183, "cost_usd": 0.0}
+{"idx": 226, "completion": "<sql>\nSELECT AirportCode FROM airports GROUP BY AirportCode ORDER BY COUNT(*) DESC LIMIT 1;\n</sql>", "latency_s": 0.183, "cost_usd": 0.0}
+{"idx": 227, "completion": "<sql>\nSELECT AirportCode FROM airports GROUP BY AirportCode ORDER BY COUNT(*) LIMIT 1;\n</sql>", "latency_s": 0.183, "cost_usd": 0.0}
+{"idx": 235, "completion": "<sql>\nSELECT DISTINCT T1.Airline FROM flights AS T1 JOIN airports AS T2 ON T1.SourceAirport = T2.AirportCode WHERE T2.AirportName = 'AHD';\n</sql>", "latency_s": 0.183, "cost_usd": 0.0}
+{"idx": 901, "completion": "<sql>\nSELECT name FROM Highschooler WHERE ID IN (\n    SELECT student_id FROM Friend\n    UNION ALL\n    SELECT friend_id FROM Friend\n) AND ID IN (\n    SELECT liked_id FROM Likes\n    INTERSECT\n    SELECT student_id FROM Likes\n);\n</sql>", "latency_s": 0.183, "cost_usd": 0.0}
+{"idx": 253, "completion": "<sql>\nSELECT DISTINCT f.FlightNo FROM flights f JOIN airports a ON f.DestAirport = a.AirportCode WHERE a.City = 'Aberdeen'\n</sql>", "latency_s": 0.183, "cost_usd": 0.0}
+{"idx": 419, "completion": "<sql>\nSELECT visitor.ID, visitor.Name, visitor.Age FROM visitor \nJOIN visit ON visitor.ID = visit.visitor_ID \nGROUP BY visitor.ID, visitor.Name, visitor.Age \nHAVING COUNT(visit.Museum_ID) > 1;\n</sql>", "latency_s": 0.183, "cost_usd": 0.0}
+{"idx": 247, "completion": "<sql>\nSELECT DISTINCT FlightNo FROM flights WHERE SourceAirport = 'APG';\n</sql>", "latency_s": 0.183, "cost_usd": 0.0}
+{"idx": 388, "completion": "<sql>\nSELECT Name FROM teacher WHERE Hometown != 'Little Lever Urban District';\n</sql>", "latency_s": 0.183, "cost_usd": 0.0}
+{"idx": 906, "completion": "<sql>\nSELECT name FROM Highschooler WHERE ID IN (\n    SELECT student_id FROM Likes GROUP BY student_id ORDER BY COUNT(*) DESC LIMIT 1\n);\n</sql>", "latency_s": 0.183, "cost_usd": 0.0}
+{"idx": 240, "completion": "<sql>\nSELECT A.Airline FROM airports AS A WHERE NOT EXISTS(SELECT 1 FROM flights AS F WHERE F.SourceAirport = \"CVO\" AND F.DestAirport = \"APG\") AND EXISTS(SELECT 1 FROM flights AS F WHERE F.SourceAirport = \"CVO\");\n</sql>", "latency_s": 0.183, "cost_usd": 0.0}
+{"idx": 257, "completion": "<sql>\nSELECT AirportName FROM airports WHERE AirportCode NOT IN (\n    SELECT SourceAirport FROM flights\n    UNION ALL\n    SELECT DestAirport FROM flights\n);\n</sql>", "latency_s": 0.183, "cost_usd": 0.0}
+{"idx": 885, "completion": "<sql>\nSELECT name, COUNT(*) as friend_count FROM Highschooler JOIN Friend ON Highschooler.ID = Friend.student_id GROUP BY ID;\n</sql>", "latency_s": 0.183, "cost_usd": 0.0}
+{"idx": 886, "completion": "<sql>\nSELECT name FROM Highschooler WHERE ID IN (\n    SELECT student_id FROM Friend GROUP BY student_id ORDER BY COUNT(*) DESC LIMIT 1\n);\n</sql>", "latency_s": 0.183, "cost_usd": 0.0}
+{"idx": 225, "completion": "<sql>\nSELECT AirportCode FROM airports WHERE AirportCode = (SELECT SourceAirport FROM flights GROUP BY SourceAirport ORDER BY COUNT(*) DESC LIMIT 1);\n</sql>", "latency_s": 0.183, "cost_usd": 0.0}
+{"idx": 251, "completion": "<sql>\nSELECT DISTINCT f.FlightNo FROM flights f JOIN airports a ON f.SourceAirport = a.AirportCode WHERE a.City = 'Aberdeen'\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 216, "completion": "<sql>\nSELECT COUNT(*) FROM flights f JOIN airlines a ON f.Airline = a.uid JOIN airports sa ON f.SourceAirport = sa.AirportCode WHERE a.Abbreviation = 'United' AND sa.AirportCode = 'ASY';\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 220, "completion": "<sql>\nSELECT COUNT(*) FROM flights f JOIN airlines a ON f.Airline = a.uid JOIN airports ap1 ON f.SourceAirport = ap1.AirportCode JOIN airports ap2 ON f.DestAirport = ap2.AirportCode WHERE a.Abbreviation = 'United' AND ap1.City = 'Aberdeen'\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 413, "completion": "<sql>\nSELECT AVG(Age) FROM visitor WHERE Level_of_membership <= 4;\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 416, "completion": "<sql>\nSELECT AVG(Num_of_Staff) FROM museum WHERE Open_Year < '2009';\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 904, "completion": "<sql>\nSELECT H1.name AS name, COUNT(*) AS num_likes\nFROM Highschooler H1\nJOIN Likes L ON H1.ID = L.student_id OR H1.ID = L.liked_id\nGROUP BY H1.ID;\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 184, "completion": "<sql>\nSELECT Airline, Abbreviation FROM airlines WHERE Country = 'USA';\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 233, "completion": "<sql>\nSELECT DISTINCT A.Airline FROM airports AS A JOIN flights AS F ON A.AirportCode = F.SourceAirport WHERE F.DestAirport = 'AHD';\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 238, "completion": "<sql>\nSELECT A.Airline FROM airports AS A WHERE A.AirportCode IN (SELECT SourceAirport FROM flights WHERE DestAirport = 'APG') INTERSECT SELECT A.Airline FROM airports AS A WHERE A.AirportCode IN (SELECT DestAirport FROM flights WHERE SourceAirport = 'CVO')\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 218, "completion": "<sql>\nSELECT COUNT(*) FROM flights f JOIN airports a ON f.SourceAirport = a.AirportCode WHERE f.Airline = 1 AND a.AirportCode = 'AHD';\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 255, "completion": "<sql>\nSELECT COUNT(*) FROM flights WHERE DestAirport IN ('ABERDEEN', 'ABILENE')\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 884, "completion": "<sql>\nSELECT name, COUNT(*) as friend_count FROM Highschooler JOIN Friend ON Highschooler.ID = Friend.student_id GROUP BY ID;\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 237, "completion": "<sql>\nSELECT DISTINCT A.Airline FROM airlines AS A JOIN flights AS F ON A.uid = F.Airline WHERE F.SourceAirport = 'APG' AND F.DestAirport = 'CVO'\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 186, "completion": "<sql>\nSELECT AirportCode, AirportName FROM airports WHERE City = \"Anthony\"\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 898, "completion": "<sql>\nSELECT ID FROM Highschooler WHERE ID IN (\n    SELECT student_id FROM Friend\n    UNION ALL\n    SELECT friend_id FROM Friend\n) AND ID NOT IN (\n    SELECT liked_id FROM Likes\n)\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 900, "completion": "<sql>\nSELECT T1.name FROM Highschooler AS T1 JOIN Friend AS T2 ON T1.ID = T2.student_id WHERE T2.friend_id IS NOT NULL INTERSECT SELECT T1.name FROM Highschooler AS T1 JOIN Likes AS T2 ON T1.ID = T2.liked_id WHERE T2.student_id IS NOT NULL;\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 239, "completion": "<sql>\nSELECT DISTINCT A.Airline FROM airports AS A JOIN flights AS F ON A.AirportCode = F.SourceAirport WHERE F.DestAirport = 'CVO' AND NOT EXISTS(SELECT 1 FROM flights AS FF WHERE FF.SourceAirport = 'APG' AND FF.DestAirport = 'CVO')\n</sql>", "latency_s": 0.199, "cost_usd": 0.0}
+{"idx": 910, "completion": "<sql>\nSELECT name FROM Highschooler WHERE grade > 5 AND ID IN (\n    SELECT student_id FROM Friend GROUP BY student_id HAVING COUNT(friend_id) >= 2\n);\n</sql>", "latency_s": 0.199, "cost_usd": 0.0}
+{"idx": 905, "completion": "<sql>\nSELECT name FROM Highschooler WHERE ID IN (\n    SELECT student_id FROM Likes\n    UNION ALL\n    SELECT liked_id FROM Likes\n);\n</sql>", "latency_s": 0.199, "cost_usd": 0.0}
+{"idx": 47, "completion": "<sql>\nSELECT MIN(weight) FROM Pets WHERE PetType = 'Dog';\n</sql>", "latency_s": 0.199, "cost_usd": 0.0}
+{"idx": 48, "completion": "<sql>\nSELECT MIN(weight) FROM Pets WHERE PetType = 'Dog' ORDER BY age ASC LIMIT 1;\n</sql>", "latency_s": 0.199, "cost_usd": 0.0}
+{"idx": 211, "completion": "<sql>\nSELECT COUNT(*) FROM flights f JOIN airports s ON f.SourceAirport = s.AirportCode JOIN airports d ON f.DestAirport = d.AirportCode WHERE s.City = 'Aberdeen' AND d.City = 'Ashley';\n</sql>", "latency_s": 0.199, "cost_usd": 0.0}
+{"idx": 911, "completion": "<sql>\nSELECT name FROM Highschooler WHERE grade > 5 AND ID IN (\n    SELECT student_id FROM Friend GROUP BY student_id HAVING COUNT(friend_id) >= 2\n);\n</sql>", "latency_s": 0.199, "cost_usd": 0.0}
+{"idx": 55, "completion": "<sql>\nSELECT COUNT(DISTINCT PetType) FROM Pets;\n</sql>", "latency_s": 0.199, "cost_usd": 0.0}
+{"idx": 56, "completion": "<sql>\nSELECT COUNT(DISTINCT PetType) FROM Pets;\n</sql>", "latency_s": 0.199, "cost_usd": 0.0}
+{"idx": 73, "completion": "<sql>\nSELECT PetType, AVG(weight) as AverageWeight\nFROM Pets\nGROUP BY PetType;\n</sql>", "latency_s": 0.199, "cost_usd": 0.0}
+{"idx": 231, "completion": "<sql>\nSELECT Abbreviation, Country FROM airlines WHERE uid = (\n    SELECT Airline FROM (\n        SELECT Airline, COUNT(*) AS flight_count FROM flights GROUP BY Airline ORDER BY flight_count LIMIT 1\n    ) t\n);\n</sql>", "latency_s": 0.199, "cost_usd": 0.0}
+{"idx": 46, "completion": "<sql>\nSELECT COUNT(*) FROM Pets WHERE weight > 10;\n</sql>", "latency_s": 0.199, "cost_usd": 0.0}
+{"idx": 67, "completion": "<sql>\nSELECT PetType, weight FROM Pets WHERE PetID = (SELECT PetID FROM Has_Pet INNER JOIN Student ON Has_Pet.StuID = Student.StuID ORDER BY Age ASC LIMIT 1);\n</sql>", "latency_s": 0.199, "cost_usd": 0.0}
+{"idx": 54, "completion": "<sql>\nSELECT COUNT(*) FROM Pets AS T1 JOIN Student AS T2 ON T1.StuID = T2.StuID WHERE T2.Sex = 'F' AND T1.PetType = 'Dog';\n</sql>", "latency_s": 0.199, "cost_usd": 0.0}
+{"idx": 74, "completion": "<sql>\nSELECT PetType, AVG(weight) as AverageWeight\nFROM Pets\nGROUP BY PetType;\n</sql>", "latency_s": 0.199, "cost_usd": 0.0}
+{"idx": 232, "completion": "<sql>\nSELECT T1.Abbreviation, T2.Country FROM airlines AS T1 JOIN flights AS T3 ON T1.uid = T3.Airline WHERE T3.FlightNo IN (SELECT MAX(FlightNo) FROM flights GROUP BY SourceAirport, DestAirport) LIMIT 1;\n</sql>", "latency_s": 0.199, "cost_usd": 0.0}
+{"idx": 63, "completion": "<sql>\nSELECT StuID FROM Student WHERE StuID NOT IN (SELECT StuID FROM Has_Pet WHERE PetID = (SELECT PetID FROM Pets WHERE PetType = 'Cat'))\n</sql>", "latency_s": 0.213, "cost_usd": 0.0}
+{"idx": 401, "completion": "<sql>\nSELECT Name FROM teacher WHERE Teacher_ID IN (SELECT Teacher_ID FROM course_arrange ORDER BY Name ASC)\n</sql>", "latency_s": 0.213, "cost_usd": 0.0}
+{"idx": 426, "completion": "<sql>\nSELECT v.Name FROM visitor AS v\nJOIN visit AS vi ON v.ID = vi.visitor_ID\nJOIN museum AS m ON vi.Museum_ID = m.Museum_ID\nWHERE (m.Open_Year < '2009' OR m.Open_Year > '2011')\nGROUP BY v.Name;\n</sql>", "latency_s": 0.213, "cost_usd": 0.0}
+{"idx": 402, "completion": "<sql>\nSELECT Name FROM teacher ORDER BY Name ASC;\n</sql>", "latency_s": 0.213, "cost_usd": 0.0}
+{"idx": 491, "completion": "<sql>\nSELECT COUNT(*) FROM ship WHERE disposition_of_ship = 'Captured';\n</sql>", "latency_s": 0.213, "cost_usd": 0.0}
+{"idx": 50, "completion": "<sql>\nSELECT PetType, MAX(weight) FROM Pets GROUP BY PetType;\n</sql>", "latency_s": 0.213, "cost_usd": 0.0}
+{"idx": 71, "completion": "<sql>\nSELECT P.PetType, AVG(S.Age), MAX(S.Age)\nFROM Students S\nJOIN Has_Pet HP ON S.StuID = HP.StuID\nJOIN Pets P ON HP.PetID = P.PetID\nGROUP BY P.PetType;\n</sql>", "latency_s": 0.213, "cost_usd": 0.0}
+{"idx": 72, "completion": "<sql>\nSELECT PetType, AVG(Age), MAX(Age)\nFROM Student AS S JOIN Has_Pet AS HP ON S.StuID = HP.StuID JOIN Pets AS P ON HP.PetID = P.PetID\nGROUP BY PetType;\n</sql>", "latency_s": 0.213, "cost_usd": 0.0}
+{"idx": 418, "completion": "<sql>\nSELECT Name FROM museum WHERE Num_of_Staff > (SELECT MIN(Num_of_Staff) FROM museum WHERE Open_Year > '2010')\n</sql>", "latency_s": 0.213, "cost_usd": 0.0}
+{"idx": 75, "completion": "<sql>\nSELECT fname, Age FROM Student WHERE StuID IN (SELECT StuID FROM Has_Pet);\n</sql>", "latency_s": 0.213, "cost_usd": 0.0}
+{"idx": 45, "completion": "<sql>\nSELECT COUNT(*) \nFROM Pets \nWHERE weight > 10;\n</sql>", "latency_s": 0.213, "cost_usd": 0.0}
+{"idx": 57, "completion": "<sql>\nSELECT T1.Fname FROM Student AS T1 JOIN Has_Pet AS T2 ON T1.StuID = T2.StuID WHERE T2.PetID IN (SELECT PetID FROM Pets WHERE PetType IN ('cat', 'dog'))\n</sql>", "latency_s": 0.213, "cost_usd": 0.0}
+{"idx": 85, "completion": "<sql>\nSELECT AVG(Age) FROM Student WHERE StuID NOT IN (SELECT StuID FROM Has_Pet);\n</sql>", "latency_s": 0.213, "cost_usd": 0.0}
+{"idx": 493, "completion": "<sql>\nSELECT name, date, result FROM battle;\n</sql>", "latency_s": 0.213, "cost_usd": 0.0}
+{"idx": 70, "completion": "<sql>\nSELECT PetID, weight FROM Pets WHERE pet_age > 1;\n</sql>", "latency_s": 0.213, "cost_usd": 0.0}
+{"idx": 51, "completion": "<sql>\nSELECT COUNT(*) \nFROM Student AS S \nJOIN Has_Pet AS HP ON S.StuID = HP.StuID \nWHERE S.Age > 20;\n</sql>", "latency_s": 0.213, "cost_usd": 0.0}
+{"idx": 61, "completion": "<sql>\nSELECT T1.Major, T1.Age FROM Student AS T1 JOIN Has_Pet AS T2 ON T1.StuID = T2.StuID WHERE NOT EXISTS (SELECT * FROM Pets AS T3 WHERE T3.PetID = T2.PetID AND T3.PetType = 'Cat')\n</sql>", "latency_s": 0.219, "cost_usd": 0.0}
+{"idx": 64, "completion": "<sql>\nSELECT StuID FROM Student WHERE StuID NOT IN (SELECT StuID FROM Has_Pet WHERE PetID = (SELECT PetID FROM Pets WHERE PetType = 'Cat'))\n</sql>", "latency_s": 0.219, "cost_usd": 0.0}
+{"idx": 69, "completion": "<sql>\nSELECT PetID, weight FROM Pets WHERE pet_age > 1;\n</sql>", "latency_s": 0.219, "cost_usd": 0.0}
+{"idx": 83, "completion": "<sql>\nSELECT T1.LName FROM Student AS T1 JOIN Has_Pet AS T2 ON T1.StuID = T2.StuID WHERE T2.PetID IN (SELECT PetID FROM Pets WHERE PetType = 'cat' AND pet_age = 3);\n</sql>", "latency_s": 0.219, "cost_usd": 0.0}
+{"idx": 59, "completion": "<sql>\nSELECT T1.Fname FROM Student AS T1 JOIN Has_Pet AS T2 ON T1.StuID = T2.StuID WHERE T2.PetID IN (SELECT PetID FROM Pets WHERE PetType = 'cat') AND T2.PetID IN (SELECT PetID FROM Pets WHERE PetType = 'dog')\n</sql>", "latency_s": 0.219, "cost_usd": 0.0}
+{"idx": 502, "completion": "<sql>\nSELECT COUNT(DISTINCT result) FROM battle;\n</sql>", "latency_s": 0.219, "cost_usd": 0.0}
+{"idx": 86, "completion": "<sql>\nSELECT AVG(Age) FROM Student WHERE StuID NOT IN (SELECT StuID FROM Has_Pet);\n</sql>", "latency_s": 0.219, "cost_usd": 0.0}
+{"idx": 77, "completion": "<sql>\nSELECT T1.PetID FROM Student AS T1 JOIN Has_Pet AS T2 ON T1.StuID = T2.StuID WHERE T1.LName = 'Smith';\n</sql>", "latency_s": 0.219, "cost_usd": 0.0}
+{"idx": 412, "completion": "<sql>\nSELECT Name FROM visitor WHERE Level_of_membership > 4 ORDER BY Level_of_membership DESC;\n</sql>", "latency_s": 0.219, "cost_usd": 0.0}
+{"idx": 68, "completion": "<sql>\nSELECT PetType, weight FROM Pets WHERE PetID = (SELECT PetID FROM Has_Pet INNER JOIN Student ON Has_Pet.StuID = Student.StuID ORDER BY Age ASC LIMIT 1);\n</sql>", "latency_s": 0.219, "cost_usd": 0.0}
+{"idx": 494, "completion": "<sql>\nSELECT MAX(killed), MIN(killed) FROM death;\n</sql>", "latency_s": 0.219, "cost_usd": 0.0}
+{"idx": 495, "completion": "<sql>\nSELECT AVG(injured) FROM death;\n</sql>", "latency_s": 0.219, "cost_usd": 0.0}
+{"idx": 52, "completion": "<sql>\nSELECT COUNT(*) FROM Students AS T1 JOIN Has_Pet AS T2 ON T1.StuID = T2.StuID WHERE T1.Age > 20;\n</sql>", "latency_s": 0.219, "cost_usd": 0.0}
+{"idx": 81, "completion": "<sql>\nSELECT fname, sex FROM Student WHERE StuID IN (SELECT StuID FROM Has_Pet GROUP BY StuID HAVING COUNT(*) > 1);\n</sql>", "latency_s": 0.219, "cost_usd": 0.0}
+{"idx": 503, "completion": "<sql>\nSELECT COUNT(id) FROM battle WHERE id NOT IN (SELECT lost_in_battle FROM ship WHERE tonnage = '225')\n</sql>", "latency_s": 0.219, "cost_usd": 0.0}
+{"idx": 60, "completion": "<sql>\nSELECT T1.Fname FROM Student AS T1 JOIN Has_Pet AS T2 ON T1.StuID = T2.StuID WHERE T2.PetID IN (SELECT PetID FROM Pets WHERE PetType = 'cat') AND T2.PetID IN (SELECT PetID FROM Pets WHERE PetType = 'dog');\n</sql>", "latency_s": 0.219, "cost_usd": 0.0}
+{"idx": 84, "completion": "<sql>\nSELECT T1.LName FROM Student AS T1 JOIN Has_Pet AS T2 ON T1.StuID = T2.StuID WHERE T2.PetID IN (SELECT PetID FROM Pets WHERE PetType = 'cat' AND pet_age = 3);\n</sql>", "latency_s": 0.286, "cost_usd": 0.0}
+{"idx": 58, "completion": "<sql>\nSELECT T1.Fname FROM Student AS T1 JOIN Has_Pet AS T2 ON T1.StuID = T2.StuID WHERE T2.PetID IN (SELECT PetID FROM Pets WHERE PetType IN ('Cat', 'Dog'))\n</sql>", "latency_s": 0.286, "cost_usd": 0.0}
+{"idx": 79, "completion": "<sql>\nSELECT S.StuID, COUNT(HP.PetID) as NumPets\nFROM Student S\nJOIN Has_Pet HP ON S.StuID = HP.StuID\nGROUP BY S.StuID;\n</sql>", "latency_s": 0.286, "cost_usd": 0.0}
+{"idx": 420, "completion": "<sql>\nSELECT visitor.ID, visitor.Name, visitor.Level_of_membership \nFROM visit INNER JOIN visitor ON visit.visitor_ID = visitor.ID \nGROUP BY visitor.ID \nORDER BY SUM(visit.Total_spent) DESC LIMIT 1;\n</sql>", "latency_s": 0.286, "cost_usd": 0.0}
+{"idx": 500, "completion": "<sql>\nSELECT death.id, ship.name FROM death JOIN ship ON death.caused_by_ship_id = ship.id GROUP BY death.id ORDER BY SUM(death.injured) DESC LIMIT 1;\n</sql>", "latency_s": 0.286, "cost_usd": 0.0}
+{"idx": 78, "completion": "<sql>\nSELECT T1.PetID FROM Student AS T1 JOIN Has_Pet AS T2 ON T1.StuID = T2.StuID WHERE T1.LName = 'Smith';\n</sql>", "latency_s": 0.286, "cost_usd": 0.0}
+{"idx": 414, "completion": "<sql>\nSELECT Name, Level_of_membership FROM visitor WHERE Level_of_membership > 4 ORDER BY Age ASC;\n</sql>", "latency_s": 0.286, "cost_usd": 0.0}
+{"idx": 53, "completion": "<sql>\nSELECT COUNT(*) \nFROM Pets AS T1 \nJOIN Student AS T2 ON T1.StuID = T2.StuID \nWHERE T2.Sex = 'F' AND T1.PetType = 'Dog';\n</sql>", "latency_s": 0.286, "cost_usd": 0.0}
+{"idx": 76, "completion": "<sql>\nSELECT DISTINCT T1.Fname, T1.Age FROM Student AS T1 JOIN Has_Pet AS T2 ON T1.StuID = T2.StuID;\n</sql>", "latency_s": 0.286, "cost_usd": 0.0}
+{"idx": 66, "completion": "<sql>\nSELECT T1.Fname FROM Student AS T1 JOIN Has_Pet AS T2 ON T1.StuID = T2.StuID WHERE T2.PetID IN (SELECT PetID FROM Pets WHERE PetType = 'Dog') AND NOT EXISTS (SELECT 1 FROM Pets AS T3 WHERE T3.PetType = 'Cat' AND T3.PetID = T2.PetID);\n</sql>", "latency_s": 0.286, "cost_usd": 0.0}
+{"idx": 506, "completion": "<sql>\nSELECT note FROM death WHERE id IN (SELECT caused_by_ship_id FROM ship WHERE name LIKE '%East%')\n</sql>", "latency_s": 0.286, "cost_usd": 0.0}
+{"idx": 49, "completion": "<sql>\nSELECT PetType, MAX(weight) FROM Pets GROUP BY PetType;\n</sql>", "latency_s": 0.286, "cost_usd": 0.0}
+{"idx": 82, "completion": "<sql>\nSELECT fname, Sex FROM Student WHERE StuID IN (SELECT StuID FROM Has_Pet GROUP BY StuID HAVING COUNT(*) > 1);\n</sql>", "latency_s": 0.286, "cost_usd": 0.0}
+{"idx": 65, "completion": "<sql>\nSELECT T1.Fname, T1.Age FROM Student AS T1 JOIN Has_Pet AS T2 ON T1.StuID = T2.StuID WHERE T1.Major = 4 AND T2.PetID NOT IN (SELECT T3.PetID FROM Pets AS T3 WHERE T3.PetType = 'Cat') AND T2.PetID IN (SELECT T4.PetID FROM Pets AS T4 WHERE T4.PetType = 'Dog')\n</sql>", "latency_s": 0.286, "cost_usd": 0.0}
+{"idx": 62, "completion": "<sql>\nSELECT S.Major, S.Age FROM Student AS S WHERE NOT EXISTS (SELECT 1 FROM Has_Pet AS HP JOIN Pets AS P ON HP.PetID = P.PetID WHERE S.StuID = HP.StuID AND P.PetType = 'Cat') ;\n</sql>", "latency_s": 0.286, "cost_usd": 0.0}
+{"idx": 496, "completion": "<sql>\nSELECT note, killed, injured FROM death WHERE caused_by_ship_id IN (SELECT id FROM ship WHERE tonnage = 't')\n</sql>", "latency_s": 0.286, "cost_usd": 0.0}
+{"idx": 492, "completion": "<sql>\nSELECT name, tonnage FROM ship ORDER BY name DESC;\n</sql>", "latency_s": 0.202, "cost_usd": 0.0}
+{"idx": 498, "completion": "<sql>\nSELECT DISTINCT b.id, b.name FROM battle AS b JOIN ship AS s ON b.id = s.lost_in_battle WHERE s.ship_type LIKE '%Brig%'\n</sql>", "latency_s": 0.202, "cost_usd": 0.0}
+{"idx": 497, "completion": "<sql>\nSELECT name, result FROM battle WHERE bulgarian_commander != 'Boril';\n</sql>", "latency_s": 0.202, "cost_usd": 0.0}
+{"idx": 80, "completion": "<sql>\nSELECT S.StuID, COUNT(HP.PetID) AS NumPets\nFROM Student S\nJOIN Has_Pet HP ON S.StuID = HP.StuID\nGROUP BY S.StuID;\n</sql>", "latency_s": 0.202, "cost_usd": 0.0}
+{"idx": 499, "completion": "<sql>\nSELECT battle.id, battle.name FROM battle JOIN death ON battle.id = death.caused_by_ship_id GROUP BY battle.id HAVING SUM(killed) > 10;\n</sql>", "latency_s": 0.202, "cost_usd": 0.0}
+{"idx": 505, "completion": "<sql>\nSELECT battle.name, battle.result, battle.bulgarian_commander FROM battle WHERE id NOT IN (SELECT lost_in_battle FROM ship WHERE location = 'English Channel')\n</sql>", "latency_s": 0.202, "cost_usd": 0.0}
+{"idx": 504, "completion": "<sql>\nSELECT b.name AS battle_name, b.date FROM battle b JOIN ship s1 ON b.id = s1.lost_in_battle JOIN death d ON s1.id = d.caused_by_ship_id WHERE s1.name = 'Lettice' AND s2.name = 'HMS Atalanta';\n</sql>", "latency_s": 0.202, "cost_usd": 0.0}
+{"idx": 501, "completion": "<sql>\nSELECT DISTINCT name FROM battle WHERE bulgarian_commander = 'Kaloyan' AND latin_commander = 'Baldwin I';\n</sql>", "latency_s": 0.202, "cost_usd": 0.0}
+{"idx": 687, "completion": "<sql>\nSELECT COUNT(state) FROM AREA_CODE_STATE;\n</sql>", "latency_s": 0.202, "cost_usd": 0.0}
+{"idx": 697, "completion": "<sql>\nSELECT COUNT(contestant_number)\nFROM CONTESTANTS c\nWHERE contestant_number NOT IN (SELECT DISTINCT contestant_number FROM VOTES);\n</sql>", "latency_s": 0.202, "cost_usd": 0.0}
+{"idx": 696, "completion": "<sql>\nSELECT COUNT(*) FROM VOTES WHERE state IN ('NY', 'CA');\n</sql>", "latency_s": 0.202, "cost_usd": 0.0}
+{"idx": 698, "completion": "<sql>\nSELECT state FROM AREA_CODE_STATE WHERE area_code = (SELECT state FROM VOTES GROUP BY state ORDER BY COUNT(*) DESC LIMIT 1)\n</sql>", "latency_s": 0.202, "cost_usd": 0.0}
+{"idx": 690, "completion": "<sql>\nSELECT MAX(area_code), MIN(area_code)\nFROM AREA_CODE_STATE;\n</sql>", "latency_s": 0.202, "cost_usd": 0.0}
+{"idx": 691, "completion": "<sql>\nSELECT MAX(created) FROM VOTES WHERE state = 'CA';\n</sql>", "latency_s": 0.202, "cost_usd": 0.0}
+{"idx": 689, "completion": "<sql>\nSELECT vote_id, phone_number, state FROM VOTES;\n</sql>", "latency_s": 0.202, "cost_usd": 0.0}
+{"idx": 693, "completion": "<sql>\nSELECT DISTINCT state, created FROM VOTES;\n</sql>", "latency_s": 0.202, "cost_usd": 0.0}
+{"idx": 692, "completion": "<sql>\nSELECT contestant_name FROM CONTESTANTS WHERE contestant_name != 'Jessie Alloway';\n</sql>", "latency_s": 0.206, "cost_usd": 0.0}
+{"idx": 701, "completion": "<sql>\nSELECT contestant_name FROM CONTESTANTS WHERE contestant_name LIKE '%Al%'\n</sql>", "latency_s": 0.206, "cost_usd": 0.0}
+{"idx": 688, "completion": "<sql>\nSELECT contestant_number, contestant_name FROM CONTESTANTS ORDER BY contestant_name DESC;\n</sql>", "latency_s": 0.206, "cost_usd": 0.0}
+{"idx": 694, "completion": "<sql>\nSELECT T1.contestant_number, T1.contestant_name FROM CONTESTANTS AS T1 JOIN VOTES AS T2 ON T1.contestant_number = T2.contestant_number WHERE T2.state IN (SELECT state FROM AREA_CODE_STATE GROUP BY state HAVING COUNT(*) >= 2);\n</sql>", "latency_s": 0.206, "cost_usd": 0.0}
+{"idx": 259, "completion": "<sql>\nSELECT COUNT(*) FROM employee;\n</sql>", "latency_s": 0.206, "cost_usd": 0.0}
+{"idx": 260, "completion": "<sql>\nSELECT COUNT(*) FROM employee;\n</sql>", "latency_s": 0.206, "cost_usd": 0.0}
+{"idx": 291, "completion": "<sql>\nSELECT * FROM hiring;\n</sql>", "latency_s": 0.206, "cost_usd": 0.0}
+{"idx": 292, "completion": "<sql>\nSELECT * FROM hiring;\n</sql>", "latency_s": 0.206, "cost_usd": 0.0}
+{"idx": 267, "completion": "<sql>\nSELECT Location, COUNT(*) FROM shop GROUP BY Location;\n</sql>", "latency_s": 0.206, "cost_usd": 0.0}
+{"idx": 268, "completion": "<sql>\nSELECT Location, COUNT(*) FROM shop GROUP BY Location;\n</sql>", "latency_s": 0.206, "cost_usd": 0.0}
+{"idx": 264, "completion": "<sql>\nSELECT City, COUNT(*) FROM employee GROUP BY City;\n</sql>", "latency_s": 0.206, "cost_usd": 0.0}
+{"idx": 289, "completion": "<sql>\nSELECT SUM(Bonus) FROM evaluation;\n</sql>", "latency_s": 0.206, "cost_usd": 0.0}
+{"idx": 295, "completion": "<sql>\nSELECT COUNT(DISTINCT Location) FROM shop;\n</sql>", "latency_s": 0.206, "cost_usd": 0.0}
+{"idx": 296, "completion": "<sql>\nSELECT COUNT(DISTINCT Location) FROM shop;\n</sql>", "latency_s": 0.206, "cost_usd": 0.0}
+{"idx": 263, "completion": "<sql>\nSELECT City, COUNT(*) FROM employee GROUP BY City;\n</sql>", "latency_s": 0.206, "cost_usd": 0.0}
+{"idx": 695, "completion": "<sql>\nSELECT T1.contestant_number, T1.contestant_name FROM CONTESTANTS AS T1 JOIN VOTES AS T2 ON T1.contestant_number = T2.contestant_number GROUP BY T1.contestant_number ORDER BY COUNT(T2.vote_id) ASC LIMIT 1;\n</sql>", "latency_s": 0.206, "cost_usd": 0.0}
+{"idx": 700, "completion": "<sql>\nSELECT DISTINCT T1.area_code \nFROM AREA_CODE_STATE AS T1 \nJOIN VOTES AS T2 ON T1.state = T2.state \nJOIN CONTESTANTS AS T3 ON T2.contestant_number = T3.contestant_number \nWHERE (T3.contestant_name = 'Tabatha Gehling' OR T3.contestant_name = 'Kelly Clauss') AND T2.contestant_number IS NOT NULL;\n</sql>", "latency_s": 0.276, "cost_usd": 0.0}
+{"idx": 261, "completion": "<sql>\nSELECT Name FROM employee ORDER BY Age ASC;\n</sql>", "latency_s": 0.276, "cost_usd": 0.0}
+{"idx": 699, "completion": "<sql>\nSELECT created, state, phone_number FROM VOTES WHERE contestant_number = (SELECT contestant_number FROM CONTESTANTS WHERE contestant_name = 'Tabatha Gehling')\n</sql>", "latency_s": 0.276, "cost_usd": 0.0}
+{"idx": 286, "completion": "<sql>\nSELECT Name FROM shop WHERE Shop_ID NOT IN (SELECT Shop_ID FROM hiring)\n</sql>", "latency_s": 0.276, "cost_usd": 0.0}
+{"idx": 587, "completion": "<sql>\nSELECT Title FROM Cartoon WHERE Directed_by = 'Ben Jones';\n</sql>", "latency_s": 0.276, "cost_usd": 0.0}
+{"idx": 284, "completion": "<sql>\nSELECT Name FROM shop WHERE Shop_ID IN (SELECT Shop_ID FROM hiring GROUP BY Shop_ID ORDER BY COUNT(Employee_ID) DESC LIMIT 1)\n</sql>", "latency_s": 0.276, "cost_usd": 0.0}
+{"idx": 285, "completion": "<sql>\nSELECT Name FROM shop WHERE Shop_ID NOT IN (SELECT Shop_ID FROM hiring)\n</sql>", "latency_s": 0.276, "cost_usd": 0.0}
+{"idx": 603, "completion": "<sql>\nSELECT COUNT(*) FROM TV_Channel WHERE Language = 'English';\n</sql>", "latency_s": 0.276, "cost_usd": 0.0}
+{"idx": 628, "completion": "<sql>\nSELECT Directed_by, COUNT(*) as Number_of_Cartoons FROM Cartoon GROUP BY Directed_by;\n</sql>", "latency_s": 0.276, "cost_usd": 0.0}
+{"idx": 600, "completion": "<sql>\nSELECT Content FROM TV_Channel WHERE Series_Name = 'Sky Radio';\n</sql>", "latency_s": 0.276, "cost_usd": 0.0}
+{"idx": 290, "completion": "<sql>\nSELECT SUM(Bonus) FROM evaluation;\n</sql>", "latency_s": 0.276, "cost_usd": 0.0}
+{"idx": 604, "completion": "<sql>\nSELECT COUNT(id) FROM TV_Channel WHERE Language = 'English';\n</sql>", "latency_s": 0.276, "cost_usd": 0.0}
+{"idx": 265, "completion": "<sql>\nSELECT City FROM employee WHERE Age < 30 GROUP BY City HAVING COUNT(*) > 1;\n</sql>", "latency_s": 0.276, "cost_usd": 0.0}
+{"idx": 266, "completion": "<sql>\nSELECT City FROM employee WHERE Age < 30 GROUP BY City HAVING COUNT(Employee_ID) > 1;\n</sql>", "latency_s": 0.276, "cost_usd": 0.0}
+{"idx": 271, "completion": "<sql>\nSELECT MIN(Number_products), MAX(Number_products) FROM shop;\n</sql>", "latency_s": 0.276, "cost_usd": 0.0}
+{"idx": 617, "completion": "<sql>\nSELECT MIN(share), MAX(share) FROM TV_series;\n</sql>", "latency_s": 0.276, "cost_usd": 0.0}
+{"idx": 262, "completion": "<sql>\nSELECT Name FROM employee ORDER BY Age ASC;\n</sql>", "latency_s": 0.132, "cost_usd": 0.0}
+{"idx": 589, "completion": "<sql>\nSELECT COUNT(*) FROM Cartoon WHERE Written_by = 'Joseph Kuhr';\n</sql>", "latency_s": 0.132, "cost_usd": 0.0}
+{"idx": 614, "completion": "<sql>\nSELECT Episode FROM TV_series ORDER BY Rating;\n</sql>", "latency_s": 0.132, "cost_usd": 0.0}
+{"idx": 620, "completion": "<sql>\nSELECT Air_Date FROM TV_series WHERE Episode = 'A Love of a Lifetime';\n</sql>", "latency_s": 0.132, "cost_usd": 0.0}
+{"idx": 279, "completion": "<sql>\nSELECT Name FROM employee WHERE Employee_ID = (SELECT Employee_ID FROM evaluation ORDER BY Bonus DESC LIMIT 1);\n</sql>", "latency_s": 0.132, "cost_usd": 0.0}
+{"idx": 613, "completion": "<sql>\nSELECT Episode FROM TV_series ORDER BY Rating;\n</sql>", "latency_s": 0.132, "cost_usd": 0.0}
+{"idx": 585, "completion": "<sql>\nSELECT Title FROM Cartoon ORDER BY Title ASC;\n</sql>", "latency_s": 0.132, "cost_usd": 0.0}
+{"idx": 280, "completion": "<sql>\nSELECT Name FROM employee WHERE Employee_ID = (SELECT Employee_ID FROM evaluation ORDER BY Bonus DESC LIMIT 1);\n</sql>", "latency_s": 0.132, "cost_usd": 0.0}
+{"idx": 281, "completion": "<sql>\nSELECT Name FROM employee WHERE Employee_ID NOT IN (SELECT Employee_ID FROM evaluation)\n</sql>", "latency_s": 0.132, "cost_usd": 0.0}
+{"idx": 282, "completion": "<sql>\nSELECT Name FROM employee WHERE Employee_ID NOT IN (SELECT Employee_ID FROM evaluation)\n</sql>", "latency_s": 0.132, "cost_usd": 0.0}
+{"idx": 590, "completion": "<sql>\nSELECT COUNT(*) FROM Cartoon WHERE Written_by = 'Joseph Kuhr';\n</sql>", "latency_s": 0.132, "cost_usd": 0.0}
+{"idx": 618, "completion": "<sql>\nSELECT MAX(share), MIN(share) FROM TV_series;\n</sql>", "latency_s": 0.132, "cost_usd": 0.0}
+{"idx": 626, "completion": "<sql>\nSELECT Episode FROM TV_series WHERE Channel = (SELECT id FROM TV_Channel WHERE series_name = 'Sky Radio') AND Title = 'Sky Radio';\n</sql>", "latency_s": 0.132, "cost_usd": 0.0}
+{"idx": 588, "completion": "<sql>\nSELECT Title FROM Cartoon WHERE Directed_by = 'Ben Jones';\n</sql>", "latency_s": 0.132, "cost_usd": 0.0}
+{"idx": 272, "completion": "<sql>\nSELECT min(Number_products), max(Number_products) FROM shop;\n</sql>", "latency_s": 0.132, "cost_usd": 0.0}
+{"idx": 586, "completion": "<sql>\nSELECT Title FROM Cartoon ORDER BY Title ASC;\n</sql>", "latency_s": 0.132, "cost_usd": 0.0}
+{"idx": 607, "completion": "<sql>\nSELECT Language, COUNT(*) FROM TV_Channel GROUP BY Language;\n</sql>", "latency_s": 0.157, "cost_usd": 0.0}
+{"idx": 276, "completion": "<sql>\nSELECT Name FROM shop WHERE Number_products > (SELECT AVG(Number_products) FROM shop)\n</sql>", "latency_s": 0.157, "cost_usd": 0.0}
+{"idx": 277, "completion": "<sql>\nSELECT Name FROM employee WHERE Employee_ID IN (SELECT Employee_ID FROM evaluation GROUP BY Employee_ID ORDER BY COUNT(Employee_ID) DESC LIMIT 1)\n</sql>", "latency_s": 0.157, "cost_usd": 0.0}
+{"idx": 283, "completion": "<sql>\nSELECT s.Name FROM shop s JOIN hiring h ON s.Shop_ID = h.Shop_ID GROUP BY s.Name ORDER BY COUNT(h.Employee_ID) DESC LIMIT 1;\n</sql>", "latency_s": 0.157, "cost_usd": 0.0}
+{"idx": 287, "completion": "<sql>\nSELECT s.Name, COUNT(e.Employee_ID) AS Number_of_Employees\nFROM shop s\nJOIN hiring h ON s.Shop_ID = h.Shop_ID\nGROUP BY s.Name;\n</sql>", "latency_s": 0.157, "cost_usd": 0.0}
+{"idx": 608, "completion": "<sql>\nSELECT Language, COUNT(*) FROM TV_Channel GROUP BY Language;\n</sql>", "latency_s": 0.157, "cost_usd": 0.0}
+{"idx": 599, "completion": "<sql>\nSELECT Content FROM TV_Channel WHERE series_name = 'Sky Radio';\n</sql>", "latency_s": 0.157, "cost_usd": 0.0}
+{"idx": 622, "completion": "<sql>\nSELECT Weekly_Rank FROM TV_series WHERE Episode = 'A Love of a Lifetime';\n</sql>", "latency_s": 0.157, "cost_usd": 0.0}
+{"idx": 278, "completion": "<sql>\nSELECT Name FROM employee WHERE Employee_ID = (SELECT Employee_ID FROM evaluation GROUP BY Employee_ID ORDER BY COUNT(*) DESC LIMIT 1);\n</sql>", "latency_s": 0.157, "cost_usd": 0.0}
+{"idx": 591, "completion": "<sql>\nSELECT Title, Directed_by FROM Cartoon ORDER BY Original_air_date;\n</sql>", "latency_s": 0.157, "cost_usd": 0.0}
+{"idx": 621, "completion": "<sql>\nSELECT Weekly_Rank FROM TV_series WHERE Episode = 'A Love of a Lifetime';\n</sql>", "latency_s": 0.157, "cost_usd": 0.0}
+{"idx": 627, "completion": "<sql>\nSELECT Directed_by, COUNT(*) as Number_of_Cartoons\nFROM Cartoon\nGROUP BY Directed_by;\n</sql>", "latency_s": 0.157, "cost_usd": 0.0}
+{"idx": 630, "completion": "<sql>\nSELECT Production_code, Channel FROM Cartoon ORDER BY Air_Date DESC LIMIT 1;\n</sql>", "latency_s": 0.157, "cost_usd": 0.0}
+{"idx": 288, "completion": "<sql>\nSELECT COUNT(hiring.Employee_ID) AS Employee_Count, shop.Name FROM hiring JOIN shop ON hiring.Shop_ID = shop.Shop_ID GROUP BY shop.Shop_ID;\n</sql>", "latency_s": 0.157, "cost_usd": 0.0}
+{"idx": 601, "completion": "<sql>\nSELECT Package_Option FROM TV_Channel WHERE series_name = 'Sky Radio';\n</sql>", "latency_s": 0.157, "cost_usd": 0.0}
+{"idx": 619, "completion": "<sql>\nSELECT T2.Air_Date FROM TV_series AS T2 JOIN TV_Channel AS T1 ON T2.Channel = T1.id WHERE T2.Episode = 'A Love of a Lifetime';\n</sql>", "latency_s": 0.157, "cost_usd": 0.0}
+{"idx": 642, "completion": "<sql>\nSELECT id FROM TV_Channel WHERE id IN (SELECT Channel FROM TV_series GROUP BY Channel HAVING COUNT(*) > 2)\n</sql>", "latency_s": 0.316, "cost_usd": 0.0}
+{"idx": 269, "completion": "<sql>\nSELECT Manager_name, District FROM shop WHERE Number_products = (SELECT MAX(Number_products) FROM shop)\n</sql>", "latency_s": 0.316, "cost_usd": 0.0}
+{"idx": 0, "completion": "<sql>\nSELECT COUNT(*) FROM singer;\n</sql>", "latency_s": 0.316, "cost_usd": 0.0}
+{"idx": 629, "completion": "<sql>\nSELECT Production_code, Channel FROM Cartoon ORDER BY Air_Date DESC LIMIT 1;\n</sql>", "latency_s": 0.316, "cost_usd": 0.0}
+{"idx": 593, "completion": "<sql>\nSELECT Title FROM Cartoon WHERE Directed_by = 'Ben Jones' OR Directed_by = 'Brandon Vietti';\n</sql>", "latency_s": 0.316, "cost_usd": 0.0}
+{"idx": 598, "completion": "<sql>\nSELECT COUNT(DISTINCT series_name), COUNT(DISTINCT content) FROM TV_Channel;\n</sql>", "latency_s": 0.316, "cost_usd": 0.0}
+{"idx": 624, "completion": "<sql>\nSELECT T2.series_name FROM TV_series AS T1 JOIN TV_Channel AS T2 ON T1.Channel = T2.id WHERE T1.Episode = 'A Love of a Lifetime';\n</sql>", "latency_s": 0.316, "cost_usd": 0.0}
+{"idx": 636, "completion": "<sql>\nSELECT Country FROM TV_Channel WHERE id NOT IN (SELECT Channel FROM Cartoon WHERE Written_by = 'Todd Casey')\n</sql>", "latency_s": 0.316, "cost_usd": 0.0}
+{"idx": 275, "completion": "<sql>\nSELECT Name FROM shop WHERE Number_products > (SELECT AVG(Number_products) FROM shop)\n</sql>", "latency_s": 0.316, "cost_usd": 0.0}
+{"idx": 594, "completion": "<sql>\nSELECT Title FROM Cartoon WHERE Directed_by = 'Ben Jones' OR Directed_by = 'Brandon Vietti';\n</sql>", "latency_s": 0.316, "cost_usd": 0.0}
+{"idx": 633, "completion": "<sql>\nSELECT Country FROM TV_Channel WHERE id IN (SELECT Channel FROM Cartoon WHERE Written_by = 'Todd Casey')\n</sql>", "latency_s": 0.316, "cost_usd": 0.0}
+{"idx": 270, "completion": "<sql>\nSELECT T2.Manager_name, T2.District FROM shop AS T1 JOIN hiring AS T3 ON T1.Shop_ID = T3.Shop_ID JOIN employee AS T2 ON T3.Employee_ID = T2.Employee_ID WHERE T1.Number_products = (SELECT MAX(Number_products) FROM shop)\n</sql>", "latency_s": 0.316, "cost_usd": 0.0}
+{"idx": 615, "completion": "<sql>\nSELECT Episode, Rating FROM TV_series ORDER BY Rating DESC LIMIT 3;\n</sql>", "latency_s": 0.316, "cost_usd": 0.0}
+{"idx": 643, "completion": "<sql>\nSELECT T1.id FROM TV_Channel AS T1 JOIN TV_series AS T2 ON T1.id = T2.Channel WHERE T1.Country != 'USA' AND T1.Language != 'English' AND T1.Content != 'Documentary' AND T1.Pixel_aspect_ratio_PAR != '16:9' AND T1.Hight_definition_TV != 'Yes' AND T1.Pay_per_view_PPV != 'No' AND T1.Package_Option != 'Basic Package' AND T1.directed_by != 'Ben Jones';\n</sql>", "latency_s": 0.316, "cost_usd": 0.0}
+{"idx": 273, "completion": "<sql>\nSELECT Name, Location, District FROM shop ORDER BY Number_products DESC;\n</sql>", "latency_s": 0.316, "cost_usd": 0.0}
+{"idx": 597, "completion": "<sql>\nSELECT COUNT(DISTINCT series_name), Content FROM TV_Channel GROUP BY Content;\n</sql>", "latency_s": 0.316, "cost_usd": 0.0}
+{"idx": 635, "completion": "<sql>\nSELECT Country FROM TV_Channel WHERE id NOT IN (SELECT Channel FROM Cartoon WHERE Written_by = 'Todd Casey')\n</sql>", "latency_s": 0.148, "cost_usd": 0.0}
+{"idx": 592, "completion": "<sql>\nSELECT Title, Directed_by FROM Cartoon ORDER BY Original_air_date;\n</sql>", "latency_s": 0.148, "cost_usd": 0.0}
+{"idx": 634, "completion": "<sql>\nSELECT DISTINCT T2.Country FROM Cartoon AS T1 JOIN TV_Channel AS T2 ON T1.Channel = T2.id WHERE T1.Written_by = 'Todd Casey';\n</sql>", "latency_s": 0.148, "cost_usd": 0.0}
+{"idx": 1, "completion": "<sql>\nSELECT COUNT(*) FROM singer;\n</sql>", "latency_s": 0.148, "cost_usd": 0.0}
+{"idx": 602, "completion": "<sql>\nSELECT DISTINCT Package_Option FROM TV_Channel WHERE id IN (SELECT Channel FROM TV_series WHERE Series_Name = 'Sky Radio')\n</sql>", "latency_s": 0.148, "cost_usd": 0.0}
+{"idx": 596, "completion": "<sql>\nSELECT Country, COUNT(*) as ChannelCount FROM TV_Channel GROUP BY Country ORDER BY ChannelCount DESC LIMIT 1;\n</sql>", "latency_s": 0.148, "cost_usd": 0.0}
+{"idx": 611, "completion": "<sql>\nSELECT Title FROM Cartoon WHERE Channel = (SELECT id FROM TV_Channel WHERE series_name = 'Sky Radio')\n</sql>", "latency_s": 0.148, "cost_usd": 0.0}
+{"idx": 639, "completion": "<sql>\nSELECT Pixel_aspect_ratio_PAR, Country FROM TV_Channel WHERE Language != 'English';\n</sql>", "latency_s": 0.148, "cost_usd": 0.0}
+{"idx": 11, "completion": "<sql>\nSELECT Country, COUNT(*) FROM singer GROUP BY Country;\n</sql>", "latency_s": 0.148, "cost_usd": 0.0}
+{"idx": 26, "completion": "<sql>\nSELECT Year FROM concert GROUP BY Year ORDER BY COUNT(*) DESC LIMIT 1;\n</sql>", "latency_s": 0.148, "cost_usd": 0.0}
+{"idx": 625, "completion": "<sql>\nSELECT T2.Episode FROM TV_Channel AS T1 JOIN TV_series AS T2 ON T1.id = T2.Channel WHERE T1.series_name = 'Sky Radio';\n</sql>", "latency_s": 0.148, "cost_usd": 0.0}
+{"idx": 293, "completion": "<sql>\nSELECT DISTINCT District FROM shop WHERE Number_products < 3000 INTERSECT SELECT DISTINCT District FROM shop WHERE Number_products > 10000;\n</sql>", "latency_s": 0.148, "cost_usd": 0.0}
+{"idx": 631, "completion": "<sql>\nSELECT Package_Option, series_name FROM TV_Channel WHERE Hight_definition_TV = 'Yes';\n</sql>", "latency_s": 0.148, "cost_usd": 0.0}
+{"idx": 21, "completion": "<sql>\nSELECT COUNT(*) FROM concert WHERE Year IN ('2014', '2015');\n</sql>", "latency_s": 0.148, "cost_usd": 0.0}
+{"idx": 28, "completion": "<sql>\nSELECT Name FROM stadium EXCEPT SELECT T1.Name FROM singer_in_concert AS T1 JOIN concert AS T2 ON T1.concert_ID = T2.concert_ID;\n</sql>", "latency_s": 0.148, "cost_usd": 0.0}
+{"idx": 641, "completion": "<sql>\nSELECT id FROM TV_Channel WHERE id IN (SELECT Channel FROM TV_series GROUP BY Channel HAVING COUNT(*) > 2)\n</sql>", "latency_s": 0.148, "cost_usd": 0.0}
+{"idx": 644, "completion": "<sql>\nSELECT id FROM TV_Channel WHERE id NOT IN (SELECT Channel FROM Cartoon WHERE Directed_by = 'Ben Jones')\n</sql>", "latency_s": 0.237, "cost_usd": 0.0}
+{"idx": 27, "completion": "<sql>\nSELECT Year FROM concert GROUP BY Year ORDER BY COUNT(*) DESC LIMIT 1;\n</sql>", "latency_s": 0.237, "cost_usd": 0.0}
+{"idx": 616, "completion": "<sql>\nSELECT Episode, Rating FROM TV_series ORDER BY Rating DESC LIMIT 3;\n</sql>", "latency_s": 0.237, "cost_usd": 0.0}
+{"idx": 605, "completion": "<sql>\nSELECT Language, COUNT(*) FROM TV_Channel GROUP BY Language ORDER BY COUNT(*) LIMIT 1;\n</sql>", "latency_s": 0.237, "cost_usd": 0.0}
+{"idx": 23, "completion": "<sql>\nSELECT Stadium_ID, COUNT(concert_ID) as Number_of_Concerts FROM concert GROUP BY Stadium_ID;\n</sql>", "latency_s": 0.237, "cost_usd": 0.0}
+{"idx": 37, "completion": "<sql>\nSELECT T3.Name FROM concert AS T1 JOIN stadium AS T2 ON T1.Stadium_ID = T2.Stadium_ID JOIN singer_in_concert AS T4 ON T1.concert_ID = T4.concert_ID JOIN singer AS T3 ON T4.Singer_ID = T3.Singer_ID WHERE T1.Year = '2014';\n</sql>", "latency_s": 0.237, "cost_usd": 0.0}
+{"idx": 606, "completion": "<sql>\nSELECT Language, COUNT(*) as ChannelCount FROM TV_Channel GROUP BY Language ORDER BY ChannelCount LIMIT 1;\n</sql>", "latency_s": 0.237, "cost_usd": 0.0}
+{"idx": 595, "completion": "<sql>\nSELECT Country, COUNT(*) as ChannelCount FROM TV_Channel GROUP BY Country ORDER BY ChannelCount DESC LIMIT 1;\n</sql>", "latency_s": 0.237, "cost_usd": 0.0}
+{"idx": 645, "completion": "<sql>\nSELECT Package_Option FROM TV_Channel WHERE id NOT IN (SELECT Channel FROM Cartoon WHERE Directed_by = 'Ben Jones')\n</sql>", "latency_s": 0.237, "cost_usd": 0.0}
+{"idx": 20, "completion": "<sql>\nSELECT COUNT(*) FROM concert WHERE Year IN ('2014', '2015');\n</sql>", "latency_s": 0.237, "cost_usd": 0.0}
+{"idx": 610, "completion": "<sql>\nSELECT T2.series_name FROM Cartoon AS T1 JOIN TV_Channel AS T2 ON T1.Channel = T2.id WHERE T1.Title = 'The Rise of the Blue Beetle';\n</sql>", "latency_s": 0.237, "cost_usd": 0.0}
+{"idx": 640, "completion": "<sql>\nSELECT Pixel_aspect_ratio_PAR, Country FROM TV_Channel WHERE Language != 'English';\n</sql>", "latency_s": 0.237, "cost_usd": 0.0}
+{"idx": 12, "completion": "<sql>\nSELECT Song_Name FROM singer WHERE Age > (SELECT AVG(Age) FROM singer)\n</sql>", "latency_s": 0.237, "cost_usd": 0.0}
+{"idx": 612, "completion": "<sql>\nSELECT Title FROM Cartoon WHERE Channel = (SELECT id FROM TV_Channel WHERE series_name = 'Sky Radio') AND Channel IN (SELECT id FROM Cartoons);\n</sql>", "latency_s": 0.237, "cost_usd": 0.0}
+{"idx": 274, "completion": "<sql>\nSELECT Name, Location, District FROM shop ORDER BY Number_products DESC;\n</sql>", "latency_s": 0.237, "cost_usd": 0.0}
+{"idx": 29, "completion": "<sql>\nSELECT Name FROM stadium EXCEPT SELECT T1.Name FROM concert AS T1 JOIN stadium AS T2 ON T1.Stadium_ID = T2.Stadium_ID;\n</sql>", "latency_s": 0.237, "cost_usd": 0.0}
+{"idx": 35, "completion": "<sql>\nSELECT s.Name, COUNT(c.concert_ID) as Number_of_Concerts FROM singer s JOIN singer_in_concert sic ON s.Singer_ID = sic.Singer_ID GROUP BY s.Name;\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 646, "completion": "<sql>\nSELECT Package_Option FROM TV_Channel WHERE id NOT IN (SELECT Channel FROM Cartoon WHERE Directed_by = 'Ben Jones')\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 9, "completion": "<sql>\nSELECT DISTINCT Country FROM singer WHERE Age > 20 ;\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 10, "completion": "<sql>\nSELECT Country, COUNT(*) FROM singer GROUP BY Country;\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 17, "completion": "<sql>\nSELECT AVG(Average), MAX(Capacity) FROM stadium;\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 16, "completion": "<sql>\nSELECT MAX(Capacity), AVG(Average) FROM stadium;\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 623, "completion": "<sql>\nSELECT T2.series_name FROM TV_series AS T1 JOIN TV_Channel AS T2 ON T1.Channel = T2.id WHERE T1.Episode = 'A Love of a Lifetime';\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 632, "completion": "<sql>\nSELECT Package_Option, series_name FROM TV_Channel WHERE Hight_definition_TV = 'Yes';\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 294, "completion": "<sql>\nSELECT DISTINCT District FROM shop WHERE Number_products < 3000 INTERSECT SELECT DISTINCT District FROM shop WHERE Number_products > 10000;\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 22, "completion": "<sql>\nSELECT Name AS Stadium_Name, COUNT(concert_ID) FROM stadium JOIN concert ON stadium.Stadium_ID = concert.Stadium_ID GROUP BY Stadium_ID;\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 13, "completion": "<sql>\nSELECT Song_Name FROM singer WHERE Age > (SELECT Average FROM stadium)\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 609, "completion": "<sql>\nSELECT T2.series_name FROM Cartoon AS T1 JOIN TV_Channel AS T2 ON T1.Channel = T2.id WHERE T1.Title = 'The Rise of the Blue Beetle!';\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 8, "completion": "<sql>\nSELECT DISTINCT T1.Country FROM singer AS T1 JOIN singer_in_concert AS T2 ON T1.Singer_ID = T2.Singer_ID WHERE T1.Age > 20;\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 5, "completion": "<sql>\nSELECT AVG(Age) AS Average_Age, MIN(Age) AS Minimum_Age, MAX(Age) AS Maximum_Age FROM singer WHERE Country = 'France';\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 38, "completion": "<sql>\nSELECT T3.Name FROM concert AS T1 JOIN singer_in_concert AS T2 ON T1.concert_ID = T2.concert_ID JOIN singer AS T3 ON T2.Singer_ID = T3.Singer_ID WHERE T1.Year = '2014';\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 6, "completion": "<sql>\nSELECT T2.Name, T2.Song_release_year FROM concert AS T1 JOIN singer_in_concert AS T3 ON T1.concert_ID = T3.concert_ID JOIN singer AS T2 ON T3.Singer_ID = T2.Singer_ID WHERE T2.Age = (SELECT MIN(Age) FROM singer);\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 32, "completion": "<sql>\nSELECT Name FROM stadium WHERE Stadium_ID NOT IN (SELECT Stadium_ID FROM concert WHERE Year = '2014');\n</sql>", "latency_s": 0.241, "cost_usd": 0.0}
+{"idx": 34, "completion": "<sql>\nSELECT c.concert_Name, c.Theme, COUNT(s.Singer_ID) \nFROM concert AS c \nJOIN singer_in_concert AS sic ON c.concert_ID = sic.concert_ID \nJOIN singer AS s ON sic.Singer_ID = s.Singer_ID \nGROUP BY c.concert_Name, c.Theme;\n</sql>", "latency_s": 0.241, "cost_usd": 0.0}
+{"idx": 4, "completion": "<sql>\nSELECT AVG(Age) AS Average, MIN(Age) AS Minimum, MAX(Age) AS Maximum \nFROM singer \nWHERE Country = 'France';\n</sql>", "latency_s": 0.241, "cost_usd": 0.0}
+{"idx": 36, "completion": "<sql>\nSELECT Singer_ID, Name FROM singer;\n</sql>", "latency_s": 0.241, "cost_usd": 0.0}
+{"idx": 30, "completion": "<sql>\nSELECT Country FROM singer WHERE Age > 40 INTERSECT SELECT Country FROM singer WHERE Age < 30;\n</sql>", "latency_s": 0.241, "cost_usd": 0.0}
+{"idx": 637, "completion": "<sql>\nSELECT T2.series_name, T2.Country FROM Cartoon AS T1 JOIN TV_Channel AS T2 ON T1.Channel = T2.id WHERE T1.Directed_by = 'Ben Jones' OR T1.Directed_by = 'Michael Chang';\n</sql>", "latency_s": 0.241, "cost_usd": 0.0}
+{"idx": 7, "completion": "<sql>\nSELECT Singer.Name, Singer.Song_release_year FROM singer \nJOIN concert ON singer.Singer_ID = concert.concert_ID \nJOIN stadium ON concert.Stadium_ID = stadium.Stadium_ID \nWHERE singer.Age = (SELECT MIN(Age) FROM singer);\n</sql>", "latency_s": 0.241, "cost_usd": 0.0}
+{"idx": 18, "completion": "<sql>\nSELECT Name, Capacity FROM stadium WHERE Average = (SELECT MAX(Average) FROM stadium);\n</sql>", "latency_s": 0.241, "cost_usd": 0.0}
+{"idx": 31, "completion": "<sql>\nSELECT Name FROM stadium WHERE Stadium_ID NOT IN (SELECT DISTINCT Stadium_ID FROM concert WHERE Year = '2014');\n</sql>", "latency_s": 0.241, "cost_usd": 0.0}
+{"idx": 14, "completion": "<sql>\nSELECT Location, Name FROM stadium WHERE Capacity BETWEEN 5000 AND 10000;\n</sql>", "latency_s": 0.241, "cost_usd": 0.0}
+{"idx": 43, "completion": "<sql>\nSELECT COUNT(*) FROM concert AS T1 JOIN stadium AS T2 ON T1.Stadium_ID = T2.Stadium_ID WHERE T2.Capacity = (SELECT MAX(Capacity) FROM stadium);\n</sql>", "latency_s": 0.241, "cost_usd": 0.0}
+{"idx": 25, "completion": "<sql>\nSELECT T1.Name, T1.Capacity FROM stadium AS T1 JOIN concert AS T2 ON T1.Stadium_ID = T2.Stadium_ID WHERE T2.Year > '2013' ORDER BY COUNT(*) DESC LIMIT 1;\n</sql>", "latency_s": 0.241, "cost_usd": 0.0}
+{"idx": 19, "completion": "<sql>\nSELECT Name, Capacity FROM stadium WHERE Average = (SELECT MAX(Average) FROM stadium);\n</sql>", "latency_s": 0.241, "cost_usd": 0.0}
+{"idx": 33, "completion": "<sql>\nSELECT c.concert_Name, c.Theme, COUNT(s.Singer_ID) AS Number_of_Singers\nFROM concert c\nJOIN singer_in_concert sic ON c.concert_ID = sic.concert_ID\nJOIN singer s ON sic.Singer_ID = s.Singer_ID\nGROUP BY c.concert_ID;\n</sql>", "latency_s": 0.241, "cost_usd": 0.0}
+{"idx": 39, "completion": "<sql>\nSELECT T1.Name, T2.Country FROM singer AS T1 JOIN concert AS T3 ON T1.Singer_ID = T3.Singer_ID JOIN concert AS T4 ON T3.concert_ID = T4.concert_ID JOIN stadium AS T5 ON T4.Stadium_ID = T5.Stadium_ID WHERE T4.Song_Name LIKE '%Hey%'\n</sql>", "latency_s": 0.241, "cost_usd": 0.0}
+{"idx": 3, "completion": "<sql>\nSELECT Name, Country, Age FROM singer ORDER BY Age DESC;\n</sql>", "latency_s": 0.241, "cost_usd": 0.0}
+{"idx": 15, "completion": "<sql>\nSELECT Location, Name FROM stadium WHERE Capacity BETWEEN 5000 AND 10000;\n</sql>", "latency_s": 0.258, "cost_usd": 0.0}
+{"idx": 24, "completion": "<sql>\nSELECT T1.Name, T1.Capacity FROM stadium AS T1 JOIN concert AS T2 ON T1.Stadium_ID = T2.Stadium_ID WHERE T2.Year >= '2014' GROUP BY T1.Stadium_ID ORDER BY COUNT(*) DESC LIMIT 1;\n</sql>", "latency_s": 0.258, "cost_usd": 0.0}
+{"idx": 2, "completion": "<sql>\nSELECT Name, Country, Age FROM singer ORDER BY Age ASC;\n</sql>", "latency_s": 0.258, "cost_usd": 0.0}
+{"idx": 44, "completion": "<sql>\nSELECT COUNT(*) FROM concert WHERE Stadium_ID = (SELECT Stadium_ID FROM stadium ORDER BY Capacity DESC LIMIT 1);\n</sql>", "latency_s": 0.258, "cost_usd": 0.0}
+{"idx": 638, "completion": "<sql>\nSELECT T2.series_name, T2.Country FROM Cartoon AS T1 JOIN TV_Channel AS T2 ON T1.Channel = T2.id WHERE T1.Directed_by = 'Ben Jones' INTERSECT SELECT T3.series_name, T3.Country FROM Cartoon AS T2 JOIN TV_Channel AS T3 ON T2.Channel = T3.id WHERE T2.Directed_by = 'Michael Chang';\n</sql>", "latency_s": 0.258, "cost_usd": 0.0}
+{"idx": 40, "completion": "<sql>\nSELECT T1.Name, T2.Country FROM singer AS T1 JOIN concert AS T3 ON T1.Singer_ID = T3.Singer_ID JOIN concert AS T4 ON T3.concert_ID = T4.concert_ID JOIN stadium AS T5 ON T4.Stadium_ID = T5.Stadium_ID WHERE T4.song_name LIKE '%Hey%' AND T5.name IS NOT NULL;\n</sql>", "latency_s": 0.258, "cost_usd": 0.0}
+{"idx": 42, "completion": "<sql>\nSELECT T1.Name, T1.Location FROM stadium AS T1 JOIN concert AS T2 ON T1.Stadium_ID = T2.Stadium_ID WHERE T2.Year IN ('2014', '2015');\n</sql>", "latency_s": 0.258, "cost_usd": 0.0}
+{"idx": 41, "completion": "<sql>\nSELECT T1.Name, T1.Location FROM stadium AS T1 JOIN concert AS T2 ON T1.Stadium_ID = T2.Stadium_ID WHERE T2.Year IN ('2014', '2015');\n</sql>", "latency_s": 0.258, "cost_usd": 0.0}
+{"idx": 822, "completion": "<sql>\nSELECT COUNT(*) FROM conductor;\n</sql>", "latency_s": 0.258, "cost_usd": 0.0}
+{"idx": 823, "completion": "<sql>\nSELECT COUNT(*) FROM conductor;\n</sql>", "latency_s": 0.258, "cost_usd": 0.0}
+{"idx": 830, "completion": "<sql>\nSELECT AVG(Attendance) FROM show;\n</sql>", "latency_s": 0.258, "cost_usd": 0.0}
+{"idx": 831, "completion": "<sql>\nSELECT AVG(Attendance) FROM show;\n</sql>", "latency_s": 0.258, "cost_usd": 0.0}
+{"idx": 825, "completion": "<sql>\nSELECT Name FROM conductor ORDER BY Age;\n</sql>", "latency_s": 0.258, "cost_usd": 0.0}
+{"idx": 834, "completion": "<sql>\nSELECT COUNT(DISTINCT Nationality) FROM conductor;\n</sql>", "latency_s": 0.258, "cost_usd": 0.0}
+{"idx": 849, "completion": "<sql>\nSELECT Record_Company, COUNT(*) FROM orchestra GROUP BY Record_Company;\n</sql>", "latency_s": 0.258, "cost_usd": 0.0}
+{"idx": 854, "completion": "<sql>\nSELECT Orchestra FROM orchestra WHERE Orchestra_ID NOT IN (SELECT DISTINCT Orchestra_ID FROM performance)\n</sql>", "latency_s": 0.258, "cost_usd": 0.0}
+{"idx": 824, "completion": "<sql>\nSELECT Name FROM conductor ORDER BY Age ASC;\n</sql>", "latency_s": 0.15, "cost_usd": 0.0}
+{"idx": 835, "completion": "<sql>\nSELECT COUNT(DISTINCT Nationality) FROM conductor;\n</sql>", "latency_s": 0.15, "cost_usd": 0.0}
+{"idx": 855, "completion": "<sql>\nSELECT Orchestra FROM orchestra WHERE Orchestra_ID NOT IN (SELECT DISTINCT Orchestra_ID FROM performance);\n</sql>", "latency_s": 0.15, "cost_usd": 0.0}
+{"idx": 838, "completion": "<sql>\nSELECT Name FROM conductor WHERE Year_of_Work = (SELECT MAX(Year_of_Work) FROM conductor);\n</sql>", "latency_s": 0.15, "cost_usd": 0.0}
+{"idx": 836, "completion": "<sql>\nSELECT Name FROM conductor ORDER BY Year_of_Work DESC;\n</sql>", "latency_s": 0.15, "cost_usd": 0.0}
+{"idx": 852, "completion": "<sql>\nSELECT Record_Company FROM orchestra GROUP BY Record_Company ORDER BY COUNT(*) DESC LIMIT 1;\n</sql>", "latency_s": 0.15, "cost_usd": 0.0}
+{"idx": 826, "completion": "<sql>\nSELECT Name FROM conductor WHERE Nationality != 'USA';\n</sql>", "latency_s": 0.15, "cost_usd": 0.0}
+{"idx": 858, "completion": "<sql>\nSELECT COUNT(*) FROM orchestra WHERE Major_Record_Format IN ('CD', 'DVD');\n</sql>", "latency_s": 0.15, "cost_usd": 0.0}
+{"idx": 840, "completion": "<sql>\nSELECT conductor.Name, orchestra.Orchestra FROM conductor JOIN orchestra ON conductor.Conductor_ID = orchestra.Conductor_ID;\n</sql>", "latency_s": 0.15, "cost_usd": 0.0}
+{"idx": 853, "completion": "<sql>\nSELECT Record_Company FROM orchestra GROUP BY Record_Company ORDER BY COUNT(*) DESC LIMIT 1;\n</sql>", "latency_s": 0.15, "cost_usd": 0.0}
+{"idx": 827, "completion": "<sql>\nSELECT Name FROM conductor WHERE Nationality != 'USA';\n</sql>", "latency_s": 0.15, "cost_usd": 0.0}
+{"idx": 845, "completion": "<sql>\nSELECT Name FROM conductor WHERE Conductor_ID IN (SELECT DISTINCT Conductor_ID FROM orchestra GROUP BY Conductor_ID ORDER BY COUNT(Orchestra_ID) DESC LIMIT 1);\n</sql>", "latency_s": 0.15, "cost_usd": 0.0}
+{"idx": 850, "completion": "<sql>\nSELECT Major_Record_Format FROM orchestra GROUP BY Major_Record_Format ORDER BY COUNT(*) ASC;\n</sql>", "latency_s": 0.15, "cost_usd": 0.0}
+{"idx": 842, "completion": "<sql>\nSELECT Name FROM conductor WHERE Conductor_ID IN (SELECT DISTINCT Conductor_ID FROM orchestra)\n</sql>", "latency_s": 0.15, "cost_usd": 0.0}
+{"idx": 859, "completion": "<sql>\nSELECT COUNT(*) \nFROM orchestra \nWHERE Major_Record_Format IN ('CD', 'DVD');\n</sql>", "latency_s": 0.15, "cost_usd": 0.0}
+{"idx": 851, "completion": "<sql>\nSELECT DISTINCT Major_Record_Format FROM orchestra ORDER BY COUNT(Major_Record_Format) DESC;\n</sql>", "latency_s": 0.15, "cost_usd": 0.0}
+{"idx": 839, "completion": "<sql>\nSELECT Name FROM conductor WHERE Conductor_ID IN (SELECT Conductor_ID FROM orchestra GROUP BY Conductor_ID ORDER BY Year_of_Work DESC LIMIT 1);\n</sql>", "latency_s": 0.169, "cost_usd": 0.0}
+{"idx": 843, "completion": "<sql>\nSELECT Name FROM conductor WHERE Conductor_ID IN (SELECT DISTINCT Conductor_ID FROM orchestra)\n</sql>", "latency_s": 0.169, "cost_usd": 0.0}
+{"idx": 844, "completion": "<sql>\nSELECT Name FROM conductor WHERE Conductor_ID IN (SELECT DISTINCT Conductor_ID FROM orchestra GROUP BY Conductor_ID ORDER BY COUNT(Orchestra_ID) DESC LIMIT 1);\n</sql>", "latency_s": 0.169, "cost_usd": 0.0}
+{"idx": 856, "completion": "<sql>\nSELECT Record_Company FROM orchestra WHERE Year_of_Founded > 2003 INTERSECT SELECT Record_Company FROM orchestra WHERE Year_of_Founded < 2003;\n</sql>", "latency_s": 0.169, "cost_usd": 0.0}
+{"idx": 832, "completion": "<sql>\nSELECT MAX(share), MIN(share) FROM show WHERE Type != 'Live final';\n</sql>", "latency_s": 0.169, "cost_usd": 0.0}
+{"idx": 848, "completion": "<sql>\nSELECT Record_Company, COUNT(*) FROM orchestra GROUP BY Record_Company;\n</sql>", "latency_s": 0.169, "cost_usd": 0.0}
+{"idx": 846, "completion": "<sql>\nSELECT Name FROM conductor WHERE Conductor_ID IN (SELECT Conductor_ID FROM orchestra WHERE Year_of_Founded > 2008);\n</sql>", "latency_s": 0.169, "cost_usd": 0.0}
+{"idx": 861, "completion": "<sql>\nSELECT Year_of_Founded FROM orchestra WHERE Orchestra_ID IN (SELECT Orchestra_ID FROM performance GROUP BY Orchestra_ID HAVING COUNT(Performance_ID) > 1);\n</sql>", "latency_s": 0.169, "cost_usd": 0.0}
+{"idx": 860, "completion": "<sql>\nSELECT Year_of_Founded FROM orchestra WHERE Orchestra_ID IN (SELECT DISTINCT Orchestra_ID FROM performance GROUP BY Orchestra_ID HAVING COUNT(Performance_ID) > 1);\n</sql>", "latency_s": 0.169, "cost_usd": 0.0}
+{"idx": 847, "completion": "<sql>\nSELECT Name FROM conductor WHERE Conductor_ID IN (SELECT Conductor_ID FROM orchestra WHERE Year_of_Founded > 2008);\n</sql>", "latency_s": 0.169, "cost_usd": 0.0}
+{"idx": 837, "completion": "<sql>\nSELECT Name FROM conductor ORDER BY Year_of_Work DESC;\n</sql>", "latency_s": 0.169, "cost_usd": 0.0}
+{"idx": 833, "completion": "<sql>\nSELECT MAX(share), MIN(share) FROM performance WHERE Type != 'Live final';\n</sql>", "latency_s": 0.169, "cost_usd": 0.0}
+{"idx": 841, "completion": "<sql>\nSELECT conductor.Name, orchestra.Orchestra FROM conductor JOIN orchestra ON conductor.Conductor_ID = orchestra.Conductor_ID;\n</sql>", "latency_s": 0.169, "cost_usd": 0.0}
+{"idx": 828, "completion": "<sql>\nSELECT Record_Company FROM orchestra ORDER BY Year_of_Founded DESC;\n</sql>", "latency_s": 0.169, "cost_usd": 0.0}
+{"idx": 829, "completion": "<sql>\nSELECT Record_Company FROM orchestra ORDER BY Year_of_Founded DESC;\n</sql>", "latency_s": 0.169, "cost_usd": 0.0}
+{"idx": 92, "completion": "<sql>\nSELECT COUNT(*) FROM countries;\n</sql>", "latency_s": 0.169, "cost_usd": 0.0}
+{"idx": 857, "completion": "<sql>\nSELECT Record_Company FROM orchestra WHERE Year_of_Founded < 2003 INTERSECT SELECT Record_Company FROM orchestra WHERE Year_of_Founded > 2003;\n</sql>", "latency_s": 0.172, "cost_usd": 0.0}
+{"idx": 87, "completion": "<sql>\nSELECT COUNT(*) FROM continents;\n</sql>", "latency_s": 0.172, "cost_usd": 0.0}
+{"idx": 91, "completion": "<sql>\nSELECT COUNT(*) FROM countries;\n</sql>", "latency_s": 0.172, "cost_usd": 0.0}
+{"idx": 122, "completion": "<sql>\nSELECT Maker, Model FROM car_makers;\n</sql>", "latency_s": 0.172, "cost_usd": 0.0}
+{"idx": 88, "completion": "<sql>\nSELECT COUNT(*) FROM continents;\n</sql>", "latency_s": 0.172, "cost_usd": 0.0}
+{"idx": 146, "completion": "<sql>\nSELECT COUNT(*) FROM cars_data WHERE Year = 1980;\n</sql>", "latency_s": 0.172, "cost_usd": 0.0}
+{"idx": 121, "completion": "<sql>\nSELECT Maker, Model FROM car_makers;\n</sql>", "latency_s": 0.172, "cost_usd": 0.0}
+{"idx": 163, "completion": "<sql>\nSELECT COUNT(*) FROM cars_data WHERE Cylinders > 6;\n</sql>", "latency_s": 0.172, "cost_usd": 0.0}
+{"idx": 145, "completion": "<sql>\nSELECT COUNT(*) FROM cars_data WHERE Year = 1980;\n</sql>", "latency_s": 0.172, "cost_usd": 0.0}
+{"idx": 113, "completion": "<sql>\nSELECT COUNT(DISTINCT Country) FROM car_makers WHERE Country = 'France';\n</sql>", "latency_s": 0.172, "cost_usd": 0.0}
+{"idx": 143, "completion": "<sql>\nSELECT COUNT(*) FROM cars_data WHERE Cylinders > 4;\n</sql>", "latency_s": 0.172, "cost_usd": 0.0}
+{"idx": 138, "completion": "<sql>\nSELECT AVG(edispl) FROM cars_data WHERE Make = 'Volvo';\n</sql>", "latency_s": 0.172, "cost_usd": 0.0}
+{"idx": 142, "completion": "<sql>\nSELECT Model FROM car_names GROUP BY Model ORDER BY COUNT(*) DESC LIMIT 1;\n</sql>", "latency_s": 0.172, "cost_usd": 0.0}
+{"idx": 115, "completion": "<sql>\nSELECT COUNT(DISTINCT Model) FROM cars_data WHERE Country = 'USA';\n</sql>", "latency_s": 0.172, "cost_usd": 0.0}
+{"idx": 134, "completion": "<sql>\nSELECT Model FROM cars_data ORDER BY MPG DESC LIMIT 1;\n</sql>", "latency_s": 0.172, "cost_usd": 0.0}
+{"idx": 127, "completion": "<sql>\nSELECT AVG(Weight), Year FROM cars_data GROUP BY Year;\n</sql>", "latency_s": 0.172, "cost_usd": 0.0}
+{"idx": 114, "completion": "<sql>\nSELECT COUNT(DISTINCT Maker) FROM car_makers WHERE Country = 'France';\n</sql>", "latency_s": 0.174, "cost_usd": 0.0}
+{"idx": 141, "completion": "<sql>\nSELECT Model FROM car_names GROUP BY Model ORDER BY COUNT(*) DESC LIMIT 1;\n</sql>", "latency_s": 0.174, "cost_usd": 0.0}
+{"idx": 161, "completion": "<sql>\nSELECT COUNT(DISTINCT c.CountryName) FROM countries AS c JOIN car_makers AS cm ON c.Continent = cm.Country WHERE cm.Id > 2;\n</sql>", "latency_s": 0.174, "cost_usd": 0.0}
+{"idx": 164, "completion": "<sql>\nSELECT COUNT(*) FROM cars_data WHERE Cylinders > 6;\n</sql>", "latency_s": 0.174, "cost_usd": 0.0}
+{"idx": 95, "completion": "<sql>\nSELECT Model FROM car_names WHERE Horsepower = (SELECT MIN(Horsepower) FROM cars_data);\n</sql>", "latency_s": 0.174, "cost_usd": 0.0}
+{"idx": 128, "completion": "<sql>\nSELECT AVG(Weight), Year FROM cars_data GROUP BY Year;\n</sql>", "latency_s": 0.174, "cost_usd": 0.0}
+{"idx": 103, "completion": "<sql>\nSELECT DISTINCT Model FROM cars_data WHERE Year > 1980;\n</sql>", "latency_s": 0.174, "cost_usd": 0.0}
+{"idx": 137, "completion": "<sql>\nSELECT AVG(Edispl) FROM cars_data WHERE Model = 'volvo';\n</sql>", "latency_s": 0.174, "cost_usd": 0.0}
+{"idx": 144, "completion": "<sql>\nSELECT COUNT(*) FROM cars_data WHERE Cylinders > 4;\n</sql>", "latency_s": 0.174, "cost_usd": 0.0}
+{"idx": 135, "completion": "<sql>\nSELECT AVG(Horsepower) FROM cars_data WHERE Year < 1980;\n</sql>", "latency_s": 0.174, "cost_usd": 0.0}
+{"idx": 174, "completion": "<sql>\nSELECT CountryName FROM countries WHERE Continent IS NULL;\n</sql>", "latency_s": 0.174, "cost_usd": 0.0}
+{"idx": 108, "completion": "<sql>\nSELECT CountryName FROM countries WHERE Continent = (SELECT Continent FROM continents ORDER BY COUNT(*) DESC LIMIT 1);\n</sql>", "latency_s": 0.174, "cost_usd": 0.0}
+{"idx": 129, "completion": "<sql>\nSELECT CountryName FROM countries WHERE Continent = 'Europe' AND CountryId IN (\n    SELECT CountryId FROM car_makers GROUP BY CountryId HAVING COUNT(Id) >= 3\n);\n</sql>", "latency_s": 0.174, "cost_usd": 0.0}
+{"idx": 125, "completion": "<sql>\nSELECT COUNT(*) FROM cars_data WHERE Horsepower > '150';\n</sql>", "latency_s": 0.174, "cost_usd": 0.0}
+{"idx": 162, "completion": "<sql>\nSELECT COUNT(DISTINCT c.CountryName) FROM countries AS c JOIN car_makers AS cm ON c.Continent = cm.Country WHERE cm.Id > 2;\n</sql>", "latency_s": 0.174, "cost_usd": 0.0}
+{"idx": 126, "completion": "<sql>\nSELECT COUNT(*) FROM cars_data WHERE Horsepower > '150';\n</sql>", "latency_s": 0.174, "cost_usd": 0.0}
+{"idx": 155, "completion": "<sql>\nSELECT Horsepower FROM cars_data ORDER BY Accelerate DESC LIMIT 1;\n</sql>", "latency_s": 0.207, "cost_usd": 0.0}
+{"idx": 140, "completion": "<sql>\nSELECT MAX(Accelerate), Cylinders FROM cars_data GROUP BY Cylinders;\n</sql>", "latency_s": 0.207, "cost_usd": 0.0}
+{"idx": 156, "completion": "<sql>\nSELECT Horsepower FROM cars_data ORDER BY Accelerate DESC LIMIT 1;\n</sql>", "latency_s": 0.207, "cost_usd": 0.0}
+{"idx": 104, "completion": "<sql>\nSELECT DISTINCT Model FROM cars_data WHERE Year > 1980;\n</sql>", "latency_s": 0.207, "cost_usd": 0.0}
+{"idx": 139, "completion": "<sql>\nSELECT MAX(T1.Accelerate), T2.Cylinders FROM cars_data AS T1 JOIN countries AS T2 ON T1.Country = T2.CountryId GROUP BY T1.Cylinders;\n</sql>", "latency_s": 0.207, "cost_usd": 0.0}
+{"idx": 150, "completion": "<sql>\nSELECT FullName AS Maker_Name, Id FROM car_makers WHERE Country IS NOT NULL GROUP BY FullName HAVING COUNT(Model) > 3;\n</sql>", "latency_s": 0.207, "cost_usd": 0.0}
+{"idx": 111, "completion": "<sql>\nSELECT T1.Accelerate FROM cars_data AS T1 JOIN car_makers AS T2 ON T1.Make = T2.FullName WHERE T2.Maker = 'AMC Hornet Sportabout' AND T2.Country = 'Sw';\n</sql>", "latency_s": 0.207, "cost_usd": 0.0}
+{"idx": 116, "completion": "<sql>\nSELECT COUNT(DISTINCT Model) FROM cars_data WHERE Make IN (SELECT Country FROM countries WHERE Continent = 'United States');\n</sql>", "latency_s": 0.207, "cost_usd": 0.0}
+{"idx": 136, "completion": "<sql>\nSELECT AVG(Horsepower) FROM cars_data WHERE Year < 1980;\n</sql>", "latency_s": 0.207, "cost_usd": 0.0}
+{"idx": 357, "completion": "<sql>\nSELECT COUNT(*) FROM Paragraphs;\n</sql>", "latency_s": 0.207, "cost_usd": 0.0}
+{"idx": 97, "completion": "<sql>\nSELECT Model FROM cars_data WHERE Weight < (SELECT AVG(Weight) FROM cars_data);\n</sql>", "latency_s": 0.207, "cost_usd": 0.0}
+{"idx": 297, "completion": "<sql>\nSELECT COUNT(*) FROM Documents;\n</sql>", "latency_s": 0.207, "cost_usd": 0.0}
+{"idx": 298, "completion": "<sql>\nSELECT COUNT(*) FROM Documents;\n</sql>", "latency_s": 0.207, "cost_usd": 0.0}
+{"idx": 317, "completion": "<sql>\nSELECT COUNT(*) FROM Templates;\n</sql>", "latency_s": 0.207, "cost_usd": 0.0}
+{"idx": 318, "completion": "<sql>\nSELECT COUNT(*) FROM Templates;\n</sql>", "latency_s": 0.207, "cost_usd": 0.0}
+{"idx": 96, "completion": "<sql>\nSELECT Model FROM car_names WHERE Horsepower = (SELECT MIN(Horsepower) FROM cars_data);\n</sql>", "latency_s": 0.207, "cost_usd": 0.0}
+{"idx": 166, "completion": "<sql>\nSELECT Model FROM car_names WHERE Cylinders = 4 ORDER BY Horsepower DESC LIMIT 1;\n</sql>", "latency_s": 0.21, "cost_usd": 0.0}
+{"idx": 358, "completion": "<sql>\nSELECT COUNT(*) FROM Paragraphs;\n</sql>", "latency_s": 0.21, "cost_usd": 0.0}
+{"idx": 90, "completion": "<sql>\nSELECT Continent, ContId, COUNT(*) FROM continents JOIN countries ON continents.ContId = countries.Continent GROUP BY ContId;\n</sql>", "latency_s": 0.21, "cost_usd": 0.0}
+{"idx": 98, "completion": "<sql>\nSELECT Model FROM cars_data WHERE Weight < (SELECT AVG(Weight) FROM cars_data);\n</sql>", "latency_s": 0.21, "cost_usd": 0.0}
+{"idx": 107, "completion": "<sql>\nSELECT T1.CountryName FROM countries AS T1 JOIN car_makers AS T2 ON T1.Continent = T2.Country WHERE T2.Id IN (SELECT Maker FROM car_names GROUP BY Maker ORDER BY COUNT(*) DESC LIMIT 1);\n</sql>", "latency_s": 0.21, "cost_usd": 0.0}
+{"idx": 165, "completion": "<sql>\nSELECT Model FROM car_names WHERE Cylinders = 4 ORDER BY Horsepower DESC LIMIT 1;\n</sql>", "latency_s": 0.21, "cost_usd": 0.0}
+{"idx": 112, "completion": "<sql>\nSELECT AVG(Accelerate) FROM cars_data WHERE Make = 'AMC Hornet Sportabout' AND Model = 'Sw';\n</sql>", "latency_s": 0.21, "cost_usd": 0.0}
+{"idx": 117, "completion": "<sql>\nSELECT AVG(MPG) FROM cars_data WHERE Cylinders = 4;\n</sql>", "latency_s": 0.21, "cost_usd": 0.0}
+{"idx": 118, "completion": "<sql>\nSELECT AVG(T1.MPG) FROM cars_data AS T1 JOIN car_names AS T2 ON T1.Id = T2.Make WHERE T1.Cylinders = 4;\n</sql>", "latency_s": 0.21, "cost_usd": 0.0}
+{"idx": 123, "completion": "<sql>\nSELECT CountryName, Continent FROM countries WHERE Continent IN (SELECT ContId FROM continents);\n</sql>", "latency_s": 0.21, "cost_usd": 0.0}
+{"idx": 99, "completion": "<sql>\nSELECT T2.FullName FROM cars_data AS T1 JOIN car_makers AS T2 ON T1.Make = T2.Id WHERE T1.Year = 1970;\n</sql>", "latency_s": 0.21, "cost_usd": 0.0}
+{"idx": 100, "completion": "<sql>\nSELECT DISTINCT c2.FullName FROM cars_data AS c1 JOIN car_makers AS c2 ON c1.Make = c2.Id WHERE c1.Year = 1970;\n</sql>", "latency_s": 0.21, "cost_usd": 0.0}
+{"idx": 124, "completion": "<sql>\nSELECT T1.CountryName, T2.Id FROM countries AS T1 JOIN car_makers AS T2 ON T1.Continent = T2.Country WHERE T2.Country IS NOT NULL;\n</sql>", "latency_s": 0.21, "cost_usd": 0.0}
+{"idx": 149, "completion": "<sql>\nSELECT FullName, Id FROM car_makers WHERE Id IN (SELECT Maker FROM car_names GROUP BY Maker HAVING COUNT(*) > 3);\n</sql>", "latency_s": 0.21, "cost_usd": 0.0}
+{"idx": 120, "completion": "<sql>\nSELECT MIN(T2.Weight) FROM cars_data AS T1 JOIN car_names AS T2 ON T1.Make = T2.Model WHERE T1.Cylinders = 8 AND T1.Year = 1974;\n</sql>", "latency_s": 0.21, "cost_usd": 0.0}
+{"idx": 173, "completion": "<sql>\nSELECT CountryName FROM countries WHERE Continent NOT IN (SELECT Continent FROM car_makers);\n</sql>", "latency_s": 0.21, "cost_usd": 0.0}
+{"idx": 119, "completion": "<sql>\nSELECT MIN(T2.Weight) FROM cars_data AS T1 JOIN car_names AS T2 ON T1.Make = T2.Model WHERE T1.Cylinders = 8 AND T1.Year = 1974;\n</sql>", "latency_s": 0.218, "cost_usd": 0.0}
+{"idx": 130, "completion": "<sql>\nSELECT CountryName FROM countries WHERE Continent = 'Europe' AND CountryId IN (SELECT CountryId FROM car_makers GROUP BY Country ORDER BY COUNT(Id) DESC LIMIT 1);\n</sql>", "latency_s": 0.218, "cost_usd": 0.0}
+{"idx": 171, "completion": "<sql>\nSELECT Model FROM car_names WHERE Weight < 3500 AND Make NOT IN ('Ford Motor Company')\n</sql>", "latency_s": 0.218, "cost_usd": 0.0}
+{"idx": 131, "completion": "<sql>\nSELECT MAX(cars_data.Horsepower), cars_data.Make FROM cars_data JOIN car_names ON cars_data.MakeId = car_names.Make WHERE cars_data.Cylinders = 3;\n</sql>", "latency_s": 0.218, "cost_usd": 0.0}
+{"idx": 157, "completion": "<sql>\nSELECT MIN(T2.Cylinders) FROM cars_data AS T1 JOIN car_names AS T2 ON T1.Make = T2.Model WHERE T2.Model = 'volvo';\n</sql>", "latency_s": 0.218, "cost_usd": 0.0}
+{"idx": 159, "completion": "<sql>\nSELECT COUNT(*) FROM cars_data WHERE Accelerate > (SELECT MAX(Horsepower) FROM cars_data);\n</sql>", "latency_s": 0.218, "cost_usd": 0.0}
+{"idx": 322, "completion": "<sql>\nSELECT DISTINCT Template_Type_Code FROM Ref_Template_Types;\n</sql>", "latency_s": 0.218, "cost_usd": 0.0}
+{"idx": 102, "completion": "<sql>\nSELECT c1.FullName AS Maker, MIN(c2.Year) AS EarliestYear FROM car_makers AS c1 JOIN cars_data AS c2 ON c1.Id = c2.Make WHERE c2.Year = ( SELECT MIN(Year) FROM cars_data )\n</sql>", "latency_s": 0.218, "cost_usd": 0.0}
+{"idx": 106, "completion": "<sql>\nSELECT Continent, COUNT(Maker) FROM continents JOIN countries ON continents.ContId = countries.Continent GROUP BY Continent;\n</sql>", "latency_s": 0.218, "cost_usd": 0.0}
+{"idx": 148, "completion": "<sql>\nSELECT COUNT(DISTINCT Model) FROM car_names WHERE Make = 'American Motor Company';\n</sql>", "latency_s": 0.218, "cost_usd": 0.0}
+{"idx": 158, "completion": "<sql>\nSELECT T1.Cylinders FROM cars_data AS T1 JOIN car_names AS T2 ON T1.Make = T2.Make WHERE T2.Model = 'Volvo' ORDER BY T1.Accelerate LIMIT 1;\n</sql>", "latency_s": 0.218, "cost_usd": 0.0}
+{"idx": 326, "completion": "<sql>\nSELECT COUNT(Template_ID) \nFROM Templates \nWHERE Template_Type_Code = 'CV';\n</sql>", "latency_s": 0.218, "cost_usd": 0.0}
+{"idx": 325, "completion": "<sql>\nSELECT COUNT(*) FROM Templates WHERE Template_Type_Code = 'CV';\n</sql>", "latency_s": 0.218, "cost_usd": 0.0}
+{"idx": 347, "completion": "<sql>\nSELECT Template_Type_Code, Template_Type_Description FROM Ref_Template_Types;\n</sql>", "latency_s": 0.218, "cost_usd": 0.0}
+{"idx": 153, "completion": "<sql>\nSELECT DISTINCT Year FROM cars_data WHERE Weight BETWEEN 3000 AND 4000;\n</sql>", "latency_s": 0.218, "cost_usd": 0.0}
+{"idx": 377, "completion": "<sql>\nSELECT Document_ID FROM Paragraphs GROUP BY Document_ID HAVING COUNT(*) BETWEEN 1 AND 2;\n</sql>", "latency_s": 0.218, "cost_usd": 0.0}
+{"idx": 93, "completion": "<sql>\nSELECT FullName, Id, COUNT(Model) FROM car_makers JOIN model_list ON car_makers.Id = model_list.Maker GROUP BY FullName;\n</sql>", "latency_s": 0.205, "cost_usd": 0.0}
+{"idx": 147, "completion": "<sql>\nSELECT COUNT(*) FROM car_makers WHERE FullName = 'American Motor Company';\n</sql>", "latency_s": 0.205, "cost_usd": 0.0}
+{"idx": 101, "completion": "<sql>\nSELECT Make, Year FROM cars_data ORDER BY Year ASC LIMIT 1;\n</sql>", "latency_s": 0.205, "cost_usd": 0.0}
+{"idx": 305, "completion": "<sql>\nSELECT COUNT(DISTINCT Template_ID) FROM Documents;\n</sql>", "latency_s": 0.205, "cost_usd": 0.0}
+{"idx": 133, "completion": "<sql>\nSELECT Model FROM cars_data ORDER BY MPG DESC LIMIT 1;\n</sql>", "latency_s": 0.205, "cost_usd": 0.0}
+{"idx": 105, "completion": "<sql>\nSELECT T1.Continent, COUNT(T2.Id) as Count\nFROM continents AS T1\nJOIN countries AS T2 ON T1.ContId = T2.Continent\nGROUP BY T1.Continent;\n</sql>", "latency_s": 0.205, "cost_usd": 0.0}
+{"idx": 371, "completion": "<sql>\nSELECT Document_ID FROM Paragraphs GROUP BY Document_ID HAVING COUNT(DISTINCT Paragraph_ID) >= 2;\n</sql>", "latency_s": 0.205, "cost_usd": 0.0}
+{"idx": 315, "completion": "<sql>\nSELECT Template_ID FROM Templates WHERE Template_ID NOT IN (SELECT DISTINCT Template_ID FROM Documents);\n</sql>", "latency_s": 0.205, "cost_usd": 0.0}
+{"idx": 169, "completion": "<sql>\nSELECT MAX(T2.MPG) FROM cars_data AS T1 JOIN car_names AS T2 ON T1.Make = T2.Model WHERE T1.Cylinders = 8 OR T1.Year < 1980;\n</sql>", "latency_s": 0.205, "cost_usd": 0.0}
+{"idx": 94, "completion": "<sql>\nSELECT FullName, Id, COUNT(Model) AS NumberOfModels FROM car_makers GROUP BY FullName;\n</sql>", "latency_s": 0.205, "cost_usd": 0.0}
+{"idx": 160, "completion": "<sql>\nSELECT COUNT(*) FROM cars_data WHERE Accelerate > (SELECT MAX(Horsepower) FROM cars_data);\n</sql>", "latency_s": 0.205, "cost_usd": 0.0}
+{"idx": 331, "completion": "<sql>\nSELECT Template_Type_Code FROM Templates GROUP BY Template_Type_Code ORDER BY COUNT(*) DESC LIMIT 1;\n</sql>", "latency_s": 0.205, "cost_usd": 0.0}
+{"idx": 170, "completion": "<sql>\nSELECT MAX(T2.MPG) FROM cars_data AS T1 JOIN car_names AS T2 ON T1.Make = T2.Model WHERE T1.Cylinders = 8 OR T1.Year < 1980;\n</sql>", "latency_s": 0.205, "cost_usd": 0.0}
+{"idx": 132, "completion": "<sql>\nSELECT MAX(Horsepower), Maker FROM cars_data WHERE Cylinders = 3 GROUP BY Maker;\n</sql>", "latency_s": 0.205, "cost_usd": 0.0}
+{"idx": 321, "completion": "<sql>\nSELECT DISTINCT Template_Type_Code FROM Templates;\n</sql>", "latency_s": 0.205, "cost_usd": 0.0}
+{"idx": 375, "completion": "<sql>\nSELECT Document_ID FROM Paragraphs GROUP BY Document_ID ORDER BY COUNT(*) LIMIT 1;\n</sql>", "latency_s": 0.205, "cost_usd": 0.0}
+{"idx": 109, "completion": "<sql>\nSELECT COUNT(Make), FullName FROM car_makers GROUP BY FullName;\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 324, "completion": "<sql>\nSELECT Template_ID FROM Templates WHERE Template_Type_Code IN ('PP', 'PPT');\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 361, "completion": "<sql>\nSELECT P.Other_Details FROM Paragraphs AS P JOIN Documents AS D ON P.Document_ID = D.Document_ID WHERE P.Paragraph_Text LIKE '%Korea%';\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 376, "completion": "<sql>\nSELECT Document_ID FROM Documents GROUP BY Document_ID ORDER BY COUNT(*) LIMIT 1;\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 306, "completion": "<sql>\nSELECT COUNT(DISTINCT Template_ID) FROM Documents;\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 300, "completion": "<sql>\nSELECT Document_ID, Document_Name, Document_Description FROM Documents;\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 333, "completion": "<sql>\nSELECT Template_Type_Code FROM Ref_Template_Types WHERE Template_Type_Code IN (SELECT Template_Type_Code FROM Templates GROUP BY Template_Type_Code HAVING COUNT(*) < 3);\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 335, "completion": "<sql>\nSELECT MIN(T.Version_Number), RT.Template_Type_Code FROM Templates AS T JOIN Ref_Template_Types AS RT ON T.Template_Type_Code = RT.Template_Type_Code;\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 308, "completion": "<sql>\nSELECT COUNT(DISTINCT Document_ID) \nFROM Documents \nWHERE Template_ID IN (\n  SELECT Template_ID \n  FROM Templates \n  WHERE Template_Type_Code = 'PPT'\n);\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 343, "completion": "<sql>\nSELECT Template_Type_Code FROM Templates WHERE Template_ID IN (\n    SELECT Template_ID FROM Documents GROUP BY Template_ID ORDER BY COUNT(*) DESC LIMIT 1\n);\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 359, "completion": "<sql>\nSELECT COUNT(*) \nFROM Paragraphs AS P \nJOIN Documents AS D ON P.Document_ID = D.Document_ID \nWHERE D.Document_Name = 'Summer Show';\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 365, "completion": "<sql>\nSELECT P.Paragraph_Text FROM Paragraphs P JOIN Documents D ON P.Document_ID = D.Document_ID WHERE D.Document_Name = 'Customer reviews';\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 372, "completion": "<sql>\nSELECT Document_ID FROM Paragraphs GROUP BY Document_ID HAVING COUNT(*) >= 2;\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 329, "completion": "<sql>\nSELECT Template_Type_Code, COUNT(*) FROM Templates GROUP BY Template_Type_Code;\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 307, "completion": "<sql>\nSELECT COUNT(DISTINCT Document_ID) \nFROM Documents \nWHERE Template_ID IN (\n  SELECT Template_ID \n  FROM Templates \n  WHERE Template_Type_Code = 'PPT'\n);\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 345, "completion": "<sql>\nSELECT Template_Type_Code \nFROM Ref_Template_Types \nWHERE Template_Type_Code NOT IN (\n    SELECT DISTINCT Template_Type_Code \n    FROM Templates \n    WHERE Template_ID IN (\n        SELECT Document_ID \n        FROM Documents \n        GROUP BY Document_ID\n    )\n);\n</sql>", "latency_s": 0.22, "cost_usd": 0.0}
+{"idx": 323, "completion": "<sql>\nSELECT Template_ID FROM Templates WHERE Template_Type_Code IN ('PP', 'PPT');\n</sql>", "latency_s": 0.251, "cost_usd": 0.0}
+{"idx": 348, "completion": "<sql>\nSELECT Template_Type_Code, Template_Type_Description FROM Ref_Template_Types;\n</sql>", "latency_s": 0.251, "cost_usd": 0.0}
+{"idx": 374, "completion": "<sql>\nSELECT Document_ID, Document_Name FROM Documents WHERE Document_ID = (SELECT Template_ID FROM Templates GROUP BY Template_ID ORDER BY COUNT(*) DESC LIMIT 1);\n</sql>", "latency_s": 0.251, "cost_usd": 0.0}
+{"idx": 379, "completion": "<sql>\nSELECT D.Document_ID \nFROM Documents D \nJOIN Paragraphs P ON D.Document_ID = P.Document_ID \nWHERE P.Paragraph_Text IN ('Brazil', 'Ireland');\n</sql>", "latency_s": 0.251, "cost_usd": 0.0}
+{"idx": 152, "completion": "<sql>\nSELECT Model FROM car_names WHERE Make IN ('General Motors') OR Weight > 3500;\n</sql>", "latency_s": 0.251, "cost_usd": 0.0}
+{"idx": 172, "completion": "<sql>\nSELECT Model FROM car_names WHERE Weight < 3500 AND Make NOT IN (SELECT FullName FROM car_makers WHERE FullName = 'Ford')\n</sql>", "latency_s": 0.251, "cost_usd": 0.0}
+{"idx": 176, "completion": "<sql>\nSELECT c.Id, cm.FullName FROM car_makers AS cm JOIN countries AS c ON cm.Country = c.CountryName WHERE cm.Id IN (SELECT Maker FROM car_names GROUP BY Maker HAVING COUNT(*) >= 2 AND SUM(IF(cars_data.MPG > '0', 1, 0)) > 3);\n</sql>", "latency_s": 0.251, "cost_usd": 0.0}
+{"idx": 309, "completion": "<sql>\nSELECT Template_ID, COUNT(DISTINCT Document_ID) AS NumberOfDocuments FROM Templates JOIN Documents ON Templates.Template_ID = Documents.Template_ID GROUP BY Template_ID;\n</sql>", "latency_s": 0.251, "cost_usd": 0.0}
+{"idx": 316, "completion": "<sql>\nSELECT Template_ID FROM Templates WHERE Template_ID NOT IN (SELECT DISTINCT Template_ID FROM Documents);\n</sql>", "latency_s": 0.251, "cost_usd": 0.0}
+{"idx": 313, "completion": "<sql>\nSELECT Template_ID FROM Templates WHERE Template_ID IN (\n  SELECT Template_ID FROM Documents GROUP BY Template_ID HAVING COUNT(DISTINCT Document_ID) > 1\n);\n</sql>", "latency_s": 0.251, "cost_usd": 0.0}
+{"idx": 339, "completion": "<sql>\nSELECT T3.Document_Name FROM Ref_Template_Types AS T1 JOIN Templates AS T2 ON T1.Template_Type_Code = T2.Template_Type_Code JOIN Documents AS T3 ON T2.Template_ID = T3.Template_ID WHERE T1.Template_Type_Code = 'BK';\n</sql>", "latency_s": 0.251, "cost_usd": 0.0}
+{"idx": 349, "completion": "<sql>\nSELECT Template_Type_Description FROM Ref_Template_Types WHERE Template_Type_Code = 'AD';\n</sql>", "latency_s": 0.251, "cost_usd": 0.0}
+{"idx": 360, "completion": "<sql>\nSELECT COUNT(*) \nFROM Paragraphs \nWHERE Document_ID IN (\n  SELECT Document_ID \n  FROM Documents \n  WHERE Document_Name = 'Summer Show'\n);\n</sql>", "latency_s": 0.251, "cost_usd": 0.0}
+{"idx": 378, "completion": "<sql>\nSELECT Document_ID FROM Paragraphs GROUP BY Document_ID HAVING COUNT(*) BETWEEN 1 AND 2;\n</sql>", "latency_s": 0.251, "cost_usd": 0.0}
+{"idx": 177, "completion": "<sql>\nSELECT T1.CountryId, T2.CountryName FROM countries AS T1 JOIN car_makers AS T3 ON T1.Continent = T3.Country WHERE T3.Count > 3 OR T2.Model = 'FIAT';\n</sql>", "latency_s": 0.251, "cost_usd": 0.0}
+{"idx": 320, "completion": "<sql>\nSELECT Template_ID, Version_Number, Template_Type_Code FROM Templates;\n</sql>", "latency_s": 0.251, "cost_usd": 0.0}
+{"idx": 340, "completion": "<sql>\nSELECT D.Document_Name FROM Documents AS D JOIN Paragraphs AS P ON D.Document_ID = P.Document_ID JOIN Templates AS T ON D.Template_ID = T.Template_ID WHERE T.Template_Type_Code = 'BK';\n</sql>", "latency_s": 0.234, "cost_usd": 0.0}
+{"idx": 351, "completion": "<sql>\nSELECT Template_Type_Code FROM Ref_Template_Types WHERE Template_Type_Description = 'Book';\n</sql>", "latency_s": 0.234, "cost_usd": 0.0}
+{"idx": 373, "completion": "<sql>\nSELECT Document_ID, Document_Name FROM Documents WHERE Document_ID = (SELECT Template_ID FROM Templates GROUP BY Template_ID ORDER BY COUNT(*) DESC LIMIT 1);\n</sql>", "latency_s": 0.234, "cost_usd": 0.0}
+{"idx": 178, "completion": "<sql>\nSELECT c.CountryId, c.CountryName FROM countries AS c JOIN car_makers AS cm ON c.Continent = cm.Country WHERE (SELECT COUNT(*) FROM car_makers WHERE Country = c.CountryId) > 3 OR EXISTS(SELECT * FROM model_list WHERE Model = 'Fiat')\n</sql>", "latency_s": 0.234, "cost_usd": 0.0}
+{"idx": 334, "completion": "<sql>\nSELECT Template_Type_Code FROM Ref_Template_Types WHERE Template_Type_Code IN (\n    SELECT Template_Type_Code FROM Templates GROUP BY Template_Type_Code HAVING COUNT(Template_ID) < 3\n);\n</sql>", "latency_s": 0.234, "cost_usd": 0.0}
+{"idx": 352, "completion": "<sql>\nSELECT Template_Type_Code FROM Ref_Template_Types WHERE Template_Type_Description = 'Book';\n</sql>", "latency_s": 0.234, "cost_usd": 0.0}
+{"idx": 151, "completion": "<sql>\nSELECT Model FROM car_names WHERE Maker = 'General Motors' OR Weight > 3500;\n</sql>", "latency_s": 0.234, "cost_usd": 0.0}
+{"idx": 346, "completion": "<sql>\nSELECT Template_Type_Code \nFROM Ref_Template_Types \nWHERE Template_Type_Code NOT IN (\n    SELECT DISTINCT Template_Type_Code \n    FROM Templates \n    WHERE Template_ID IN (\n        SELECT Document_ID \n        FROM Documents \n        GROUP BY Document_ID\n    )\n);\n</sql>", "latency_s": 0.234, "cost_usd": 0.0}
+{"idx": 355, "completion": "<sql>\nSELECT Template_ID FROM Templates WHERE Template_Type_Code = (SELECT Template_Type_Code FROM Ref_Template_Types WHERE Template_Type_Description = 'Presentation')\n</sql>", "latency_s": 0.234, "cost_usd": 0.0}
+{"idx": 362, "completion": "<sql>\nSELECT T3.Document_Name, T3.Other_Details \nFROM Paragraphs AS T1 \nJOIN Documents AS T3 ON T1.Document_ID = T3.Document_ID \nWHERE T1.Paragraph_Text LIKE '%Korea%';\n</sql>", "latency_s": 0.234, "cost_usd": 0.0}
+{"idx": 311, "completion": "<sql>\nSELECT Template_ID, Template_Type_Code FROM Templates WHERE Template_ID = (SELECT Template_ID FROM Documents GROUP BY Template_ID ORDER BY COUNT(*) DESC LIMIT 1);\n</sql>", "latency_s": 0.234, "cost_usd": 0.0}
+{"idx": 341, "completion": "<sql>\nSELECT Template_Type_Code, COUNT(DISTINCT Document_ID) AS Number_of_Documents FROM Templates JOIN Documents ON Templates.Template_ID = Documents.Template_ID GROUP BY Template_Type_Code;\n</sql>", "latency_s": 0.234, "cost_usd": 0.0}
+{"idx": 89, "completion": "<sql>\nSELECT c.Continent, COUNT(*) as NumCountries FROM continents c JOIN countries cu ON c.ContId = cu.Continent GROUP BY c.Continent;\n</sql>", "latency_s": 0.234, "cost_usd": 0.0}
+{"idx": 110, "completion": "<sql>\nSELECT COUNT(T1.Model), T2.FullName FROM car_makers AS T1 JOIN model_list AS T2 ON T1.Id = T2.Maker GROUP BY T1.FullName;\n</sql>", "latency_s": 0.234, "cost_usd": 0.0}
+{"idx": 350, "completion": "<sql>\nSELECT Template_Type_Description FROM Ref_Template_Types WHERE Template_Type_Code = 'AD';\n</sql>", "latency_s": 0.234, "cost_usd": 0.0}
+{"idx": 369, "completion": "<sql>\nSELECT Document_ID, Document_Name, COUNT(*) AS Number_of_Paragraphs FROM Documents JOIN Paragraphs ON Documents.Document_ID = Paragraphs.Document_ID GROUP BY Document_ID;\n</sql>", "latency_s": 0.234, "cost_usd": 0.0}
+{"idx": 175, "completion": "<sql>\nSELECT Id, Maker FROM car_makers WHERE Country IS NOT NULL GROUP BY Id HAVING COUNT(Maker) >= 2 AND COUNT(Id) > (SELECT COUNT(*) FROM car_makers);\n</sql>", "latency_s": 0.198, "cost_usd": 0.0}
+{"idx": 332, "completion": "<sql>\nSELECT Template_Type_Code FROM Ref_Template_Types WHERE Template_Type_Code = (SELECT Template_Type_Code FROM Templates GROUP BY Template_Type_Code ORDER BY COUNT(*) DESC LIMIT 1);\n</sql>", "latency_s": 0.198, "cost_usd": 0.0}
+{"idx": 363, "completion": "<sql>\nSELECT P.Paragraph_ID, P.Paragraph_Text FROM Paragraphs P JOIN Documents D ON P.Document_ID = D.Document_ID WHERE D.Document_Name = 'Welcome to NY';\n</sql>", "latency_s": 0.198, "cost_usd": 0.0}
+{"idx": 344, "completion": "<sql>\nSELECT Template_Type_Code \nFROM Templates t \nWHERE t.Template_ID = (\n    SELECT Document_ID \n    FROM Documents d \n    GROUP BY Document_ID \n    ORDER BY COUNT(*) DESC \n    LIMIT 1\n);\n</sql>", "latency_s": 0.198, "cost_usd": 0.0}
+{"idx": 319, "completion": "<sql>\nSELECT Template_ID, Version_Number, Template_Type_Code FROM Templates;\n</sql>", "latency_s": 0.198, "cost_usd": 0.0}
+{"idx": 356, "completion": "<sql>\nSELECT Template_ID FROM Templates WHERE Template_Type_Description = 'Presentation';\n</sql>", "latency_s": 0.198, "cost_usd": 0.0}
+{"idx": 299, "completion": "<sql>\nSELECT Document_ID, Document_Name, Document_Description FROM Documents;\n</sql>", "latency_s": 0.198, "cost_usd": 0.0}
+{"idx": 314, "completion": "<sql>\nSELECT Template_ID FROM Templates WHERE Template_ID IN (SELECT DISTINCT Template_ID FROM Documents GROUP BY Template_ID HAVING COUNT(DISTINCT Document_ID) > 1);\n</sql>", "latency_s": 0.198, "cost_usd": 0.0}
+{"idx": 366, "completion": "<sql>\nSELECT T3.Paragraph_Text FROM Documents AS T1 JOIN Paragraphs AS T3 ON T1.Document_ID = T3.Document_ID WHERE T1.Document_Name = 'Customer reviews';\n</sql>", "latency_s": 0.198, "cost_usd": 0.0}
+{"idx": 364, "completion": "<sql>\nSELECT P.Paragraph_ID, P.Paragraph_Text FROM Paragraphs AS P JOIN Documents AS D ON P.Document_ID = D.Document_ID WHERE D.Document_Name = 'Welcome to NY';\n</sql>", "latency_s": 0.198, "cost_usd": 0.0}
+{"idx": 342, "completion": "<sql>\nSELECT Template_Type_Code, COUNT(DISTINCT Document_ID) AS NumberOfDocuments\nFROM Templates t\nJOIN Documents d ON t.Template_ID = d.Template_ID\nGROUP BY Template_Type_Code;\n</sql>", "latency_s": 0.198, "cost_usd": 0.0}
+{"idx": 336, "completion": "<sql>\nSELECT MIN(T2.Version_Number), T1.Template_Type_Code FROM Templates AS T2 JOIN Ref_Template_Types AS T1 ON T2.Template_Type_Code = T1.Template_Type_Code;\n</sql>", "latency_s": 0.198, "cost_usd": 0.0}
+{"idx": 354, "completion": "<sql>\nSELECT DISTINCT Template_Type_Description FROM Ref_Template_Types WHERE Template_Type_Code IN (\n    SELECT Template_Type_Code FROM Templates WHERE Template_ID IN (\n        SELECT Template_ID FROM Documents\n    )\n);\n</sql>", "latency_s": 0.198, "cost_usd": 0.0}
+{"idx": 303, "completion": "<sql>\nSELECT D.Document_ID, T.Template_ID, T.Template_Type_Description FROM Documents AS D JOIN Templates AS T ON D.Template_ID = T.Template_ID WHERE D.Document_Name = 'Robbin CV';\n</sql>", "latency_s": 0.198, "cost_usd": 0.0}
+{"idx": 380, "completion": "<sql>\nSELECT D.Document_ID \nFROM Documents D \nJOIN Paragraphs P ON D.Document_ID = P.Document_ID \nWHERE P.Paragraph_Text LIKE '%Brazil%' AND P.Paragraph_Text LIKE '%Ireland%';\n</sql>", "latency_s": 0.198, "cost_usd": 0.0}
+{"idx": 330, "completion": "<sql>\nSELECT Template_Type_Code, COUNT(*) as Template_Count FROM Templates GROUP BY Template_Type_Code;\n</sql>", "latency_s": 0.198, "cost_usd": 0.0}
+{"idx": 338, "completion": "<sql>\nSELECT Template_Type_Code FROM Templates WHERE Template_ID IN (SELECT Template_ID FROM Documents WHERE Document_Name = 'Data base');\n</sql>", "latency_s": 0.235, "cost_usd": 0.0}
+{"idx": 370, "completion": "<sql>\nSELECT Document_ID, Document_Name, COUNT(*) FROM Documents JOIN Paragraphs ON Documents.Document_ID = Paragraphs.Document_ID GROUP BY Document_ID;\n</sql>", "latency_s": 0.235, "cost_usd": 0.0}
+{"idx": 337, "completion": "<sql>\nSELECT Template_Type_Code FROM Templates WHERE Template_ID = \n(SELECT Document_ID FROM Documents WHERE Document_Name = 'Data base');\n</sql>", "latency_s": 0.235, "cost_usd": 0.0}
+{"idx": 367, "completion": "<sql>\nSELECT Document_ID, COUNT(*) AS Number_of_Paragraphs FROM Documents GROUP BY Document_ID ORDER BY Document_ID;\n</sql>", "latency_s": 0.235, "cost_usd": 0.0}
+{"idx": 167, "completion": "<sql>\nSELECT T1.MakeId, T1.Make FROM car_names AS T1 JOIN cars_data AS T2 ON T1.MakeId = T2.Id WHERE T2.Horsepower > (SELECT MIN(Horsepower) FROM cars_data) AND T2.Cylinders <= 3;\n</sql>", "latency_s": 0.235, "cost_usd": 0.0}
+{"idx": 168, "completion": "<sql>\nSELECT MakeId, Model FROM car_names WHERE Horsepower NOT LIKE '%min%' AND Cylinders < 4;\n</sql>", "latency_s": 0.235, "cost_usd": 0.0}
+{"idx": 353, "completion": "<sql>\nSELECT DISTINCT Template_Type_Description FROM Ref_Template_Types WHERE Template_Type_Code IN (SELECT Template_Type_Code FROM Templates WHERE Template_ID IN (SELECT Template_ID FROM Documents))\n</sql>", "latency_s": 0.235, "cost_usd": 0.0}
+{"idx": 304, "completion": "<sql>\nSELECT D.Document_ID, T.Template_ID, T.Template_Type_Description FROM Documents AS D JOIN Templates AS T ON D.Template_ID = T.Template_ID WHERE D.Document_Name = 'Robbin CV';\n</sql>", "latency_s": 0.235, "cost_usd": 0.0}
+{"idx": 312, "completion": "<sql>\nSELECT Template_ID, Template_Type_Code FROM Templates WHERE Template_ID IN (\n    SELECT Template_ID FROM Documents GROUP BY Template_ID ORDER BY COUNT(*) DESC LIMIT 1\n);\n</sql>", "latency_s": 0.235, "cost_usd": 0.0}
+{"idx": 302, "completion": "<sql>\nSELECT D.Document_Name, T.Template_ID FROM Documents AS D JOIN Templates AS T ON D.Template_ID = T.Template_ID WHERE T.Template_Type_CODE IN (SELECT Template_Type_Code FROM Ref_Template_Types WHERE Template_Type_Description LIKE '%w%')\n</sql>", "latency_s": 0.235, "cost_usd": 0.0}
+{"idx": 154, "completion": "<sql>\nSELECT DISTINCT Year FROM cars_data WHERE Weight < 4000 OR Weight > 3000;\n</sql>", "latency_s": 0.235, "cost_usd": 0.0}
+{"idx": 301, "completion": "<sql>\nSELECT D.Document_Name, T.Template_ID FROM Documents AS D JOIN Templates AS T ON D.Template_ID = T.Template_ID WHERE D.Document_Description LIKE '%w%';\n</sql>", "latency_s": 0.235, "cost_usd": 0.0}
+{"idx": 310, "completion": "<sql>\nSELECT Template_ID, COUNT(*) as Document_Usage FROM Documents JOIN Templates ON Documents.Template_ID = Templates.Template_ID GROUP BY Template_ID;\n</sql>", "latency_s": 0.235, "cost_usd": 0.0}
+{"idx": 327, "completion": "<sql>\nSELECT T2.Version_Number, T2.Template_Type_Code FROM Templates AS T1 JOIN Ref_Template_Types AS T2 ON T1.Template_Type_Code = T2.Template_Type_Code WHERE T1.Version_Number > 5;\n</sql>", "latency_s": 0.235, "cost_usd": 0.0}
+{"idx": 328, "completion": "<sql>\nSELECT Version_Number, Template_Type_Code FROM Templates WHERE Version_Number > 5;\n</sql>", "latency_s": 0.235, "cost_usd": 0.0}
+{"idx": 368, "completion": "<sql>\nSELECT Document_ID, COUNT(*) as paragraph_count FROM Paragraphs GROUP BY Document_ID ORDER BY Document_ID;\n</sql>", "latency_s": 0.235, "cost_usd": 0.0}
+{"idx": 430, "completion": "<sql>\nSELECT COUNT(*) FROM players;\n</sql>", "latency_s": 0.158, "cost_usd": 0.0}
+{"idx": 432, "completion": "<sql>\nSELECT COUNT(*) FROM matches;\n</sql>", "latency_s": 0.158, "cost_usd": 0.0}
+{"idx": 462, "completion": "<sql>\nSELECT year FROM matches GROUP BY year ORDER BY COUNT(*) DESC LIMIT 1;\n</sql>", "latency_s": 0.158, "cost_usd": 0.0}
+{"idx": 429, "completion": "<sql>\nSELECT COUNT(*) FROM players;\n</sql>", "latency_s": 0.158, "cost_usd": 0.0}
+{"idx": 431, "completion": "<sql>\nSELECT COUNT(*) FROM matches;\n</sql>", "latency_s": 0.158, "cost_usd": 0.0}
+{"idx": 474, "completion": "<sql>\nSELECT country_code, COUNT(*) FROM players GROUP BY country_code;\n</sql>", "latency_s": 0.158, "cost_usd": 0.0}
+{"idx": 444, "completion": "<sql>\nSELECT COUNT(DISTINCT loser_name) FROM players;\n</sql>", "latency_s": 0.158, "cost_usd": 0.0}
+{"idx": 482, "completion": "<sql>\nSELECT year, COUNT(*) as num_matches FROM matches GROUP BY year;\n</sql>", "latency_s": 0.158, "cost_usd": 0.0}
+{"idx": 443, "completion": "<sql>\nSELECT COUNT(DISTINCT loser_name) FROM players WHERE loser_id IN (SELECT winner_id FROM matches);\n</sql>", "latency_s": 0.158, "cost_usd": 0.0}
+{"idx": 473, "completion": "<sql>\nSELECT country_code, COUNT(*) FROM players GROUP BY country_code;\n</sql>", "latency_s": 0.158, "cost_usd": 0.0}
+{"idx": 450, "completion": "<sql>\nSELECT COUNT(*) FROM matches WHERE year IN (2013, 2016);\n</sql>", "latency_s": 0.158, "cost_usd": 0.0}
+{"idx": 489, "completion": "<sql>\nSELECT hand, COUNT(*) FROM players GROUP BY hand;\n</sql>", "latency_s": 0.158, "cost_usd": 0.0}
+{"idx": 490, "completion": "<sql>\nSELECT hand, COUNT(*) FROM players GROUP BY hand;\n</sql>", "latency_s": 0.158, "cost_usd": 0.0}
+{"idx": 439, "completion": "<sql>\nSELECT MAX(winner_rank) \nFROM matches AS m \nJOIN players AS w ON m.winner_id = w.player_id;\n</sql>", "latency_s": 0.158, "cost_usd": 0.0}
+{"idx": 437, "completion": "<sql>\nSELECT AVG(ranking_points) FROM rankings WHERE player_id IN (SELECT winner_id FROM matches);\n</sql>", "latency_s": 0.158, "cost_usd": 0.0}
+{"idx": 442, "completion": "<sql>\nSELECT COUNT(DISTINCT country_code) FROM players;\n</sql>", "latency_s": 0.158, "cost_usd": 0.0}
+{"idx": 481, "completion": "<sql>\nSELECT year, COUNT(*) as num_matches FROM matches GROUP BY year;\n</sql>", "latency_s": 0.436, "cost_usd": 0.0}
+{"idx": 461, "completion": "<sql>\nSELECT year FROM matches GROUP BY year ORDER BY COUNT(*) DESC LIMIT 1;\n</sql>", "latency_s": 0.436, "cost_usd": 0.0}
+{"idx": 440, "completion": "<sql>\nSELECT MAX(winner_rank) AS best_rank FROM matches;\n</sql>", "latency_s": 0.436, "cost_usd": 0.0}
+{"idx": 438, "completion": "<sql>\nSELECT AVG(ranking_points) FROM rankings WHERE player_id IN (SELECT winner_id FROM matches);\n</sql>", "latency_s": 0.436, "cost_usd": 0.0}
+{"idx": 479, "completion": "<sql>\nSELECT ranking_date, COUNT(*) as tours FROM rankings GROUP BY ranking_date;\n</sql>", "latency_s": 0.436, "cost_usd": 0.0}
+{"idx": 476, "completion": "<sql>\nSELECT country_code FROM players GROUP BY country_code ORDER BY COUNT(*) DESC LIMIT 1;\n</sql>", "latency_s": 0.436, "cost_usd": 0.0}
+{"idx": 480, "completion": "<sql>\nSELECT COUNT(t1.touring_date), t1.ranking_date FROM rankings AS t1 JOIN players AS t2 ON t1.player_id = t2.player_id GROUP BY t1.ranking_date;\n</sql>", "latency_s": 0.436, "cost_usd": 0.0}
+{"idx": 445, "completion": "<sql>\nSELECT DISTINCT T1.tourney_name FROM matches AS T1 JOIN players AS T2 ON T1.winner_id = T2.player_id OR T1.loser_id = T2.player_id WHERE (T1.winner_id = T2.player_id AND COUNT(T1.match_num) > 10) OR (T1.loser_id = T2.player_id AND COUNT(T1.match_num) > 10);\n</sql>", "latency_s": 0.436, "cost_usd": 0.0}
+{"idx": 441, "completion": "<sql>\nSELECT COUNT(DISTINCT country_code) FROM players;\n</sql>", "latency_s": 0.436, "cost_usd": 0.0}
+{"idx": 435, "completion": "<sql>\nSELECT AVG(T1.winner_age), AVG(T1.loser_age) FROM matches AS T1 JOIN players AS T2 ON T1.winner_id = T2.player_id WHERE T2.hand != 'Singles' GROUP BY T1.winner_id;\n</sql>", "latency_s": 0.436, "cost_usd": 0.0}
+{"idx": 453, "completion": "<sql>\nSELECT first_name, country_code FROM players ORDER BY birth_date DESC LIMIT 1;\n</sql>", "latency_s": 0.436, "cost_usd": 0.0}
+{"idx": 478, "completion": "<sql>\nSELECT country_code FROM players WHERE player_id IN (SELECT winner_id FROM matches GROUP BY winner_id HAVING COUNT(*) > 50 UNION SELECT loser_id FROM matches GROUP BY loser_id HAVING COUNT(*) > 50);\n</sql>", "latency_s": 0.436, "cost_usd": 0.0}
+{"idx": 477, "completion": "<sql>\nSELECT country_code FROM players GROUP BY country_code HAVING COUNT(*) > 50;\n</sql>", "latency_s": 0.436, "cost_usd": 0.0}
+{"idx": 448, "completion": "<sql>\nSELECT DISTINCT p.first_name, p.last_name \nFROM players p \nJOIN (\n  SELECT winner_id FROM matches WHERE year IN (2013, 2016)\n) m ON p.player_id = m.winner_id \nWHERE YEAR(m.tourney_date) = 2013 INTERSECT \nSELECT DISTINCT p.first_name, p.last_name \nFROM players p \nJOIN (\n  SELECT winner_id FROM matches WHERE year IN (2013, 2016)\n) m ON p.player_id = m.winner_id \nWHERE YEAR(m.tourney_date) = 2016;\n</sql>", "latency_s": 0.436, "cost_usd": 0.0}
+{"idx": 454, "completion": "<sql>\nSELECT first_name, country_code FROM players WHERE birth_date = (SELECT MAX(birth_date) FROM players);\n</sql>", "latency_s": 0.436, "cost_usd": 0.0}
+{"idx": 456, "completion": "<sql>\nSELECT first_name, last_name FROM players ORDER BY birth_date;\n</sql>", "latency_s": 0.436, "cost_usd": 0.0}
+{"idx": 469, "completion": "<sql>\nSELECT AVG(ranking), first_name FROM players JOIN rankings ON players.player_id = rankings.player_id GROUP BY first_name;\n</sql>", "latency_s": 0.297, "cost_usd": 0.0}
+{"idx": 436, "completion": "<sql>\nSELECT AVG(winner_age), AVG(loser_age) FROM matches;\n</sql>", "latency_s": 0.297, "cost_usd": 0.0}
+{"idx": 447, "completion": "<sql>\nSELECT winner_name FROM players WHERE winner_id IN (SELECT winner_id FROM matches WHERE year = '2013') AND winner_id IN (SELECT winner_id FROM matches WHERE year = '2016');\n</sql>", "latency_s": 0.297, "cost_usd": 0.0}
+{"idx": 434, "completion": "<sql>\nSELECT first_name, birth_date FROM players WHERE country_code = 'USA';\n</sql>", "latency_s": 0.297, "cost_usd": 0.0}
+{"idx": 446, "completion": "<sql>\nSELECT DISTINCT T2.tourney_name FROM matches AS T1 JOIN tournaments AS T2 ON T1.tourney_id = T2.tournament_id WHERE (T1.match_num / 2) > 10;\n</sql>", "latency_s": 0.297, "cost_usd": 0.0}
+{"idx": 449, "completion": "<sql>\nSELECT COUNT(*) FROM matches WHERE year IN (2013, 2016);\n</sql>", "latency_s": 0.297, "cost_usd": 0.0}
+{"idx": 463, "completion": "<sql>\nSELECT winner_name, winner_rank_points FROM players WHERE player_id = (\n  SELECT winner_id FROM matches GROUP BY winner_id ORDER BY COUNT(*) DESC LIMIT 1\n);\n</sql>", "latency_s": 0.297, "cost_usd": 0.0}
+{"idx": 471, "completion": "<sql>\nSELECT T1.first_name, SUM(T2.ranking_points) AS total_points FROM players AS T1 JOIN rankings AS T2 ON T1.player_id = T2.player_id GROUP BY T1.player_id;\n</sql>", "latency_s": 0.297, "cost_usd": 0.0}
+{"idx": 470, "completion": "<sql>\nSELECT first_name, AVG(ranking) AS avg_ranking FROM players JOIN rankings ON players.player_id = rankings.player_id GROUP BY first_name;\n</sql>", "latency_s": 0.297, "cost_usd": 0.0}
+{"idx": 483, "completion": "<sql>\nSELECT winner_name, winner_rank FROM players WHERE player_id IN (SELECT winner_id FROM matches GROUP BY winner_id ORDER BY winner_age LIMIT 3);\n</sql>", "latency_s": 0.297, "cost_usd": 0.0}
+{"idx": 475, "completion": "<sql>\nSELECT country_code FROM players GROUP BY country_code ORDER BY COUNT(*) DESC LIMIT 1;\n</sql>", "latency_s": 0.297, "cost_usd": 0.0}
+{"idx": 455, "completion": "<sql>\nSELECT first_name, last_name FROM players ORDER BY birth_date;\n</sql>", "latency_s": 0.297, "cost_usd": 0.0}
+{"idx": 472, "completion": "<sql>\nSELECT first_name, SUM(ranking_points) AS total_ranking_points FROM players JOIN rankings ON players.player_id = rankings.player_id GROUP BY first_name;\n</sql>", "latency_s": 0.297, "cost_usd": 0.0}
+{"idx": 460, "completion": "<sql>\nSELECT first_name, country_code FROM players WHERE player_id = (SELECT winner_id FROM matches GROUP BY winner_id ORDER BY COUNT(*) DESC LIMIT 1);\n</sql>", "latency_s": 0.297, "cost_usd": 0.0}
+{"idx": 458, "completion": "<sql>\nSELECT first_name, last_name FROM players WHERE hand = 'left' ORDER BY birth_date;\n</sql>", "latency_s": 0.297, "cost_usd": 0.0}
+{"idx": 468, "completion": "<sql>\nSELECT T1.winner_name AS winner, T2.loser_name AS loser \nFROM matches AS T1 \nJOIN players AS T2 ON T1.winner_id = T2.player_id \nWHERE (T1.tournament_name, T1.year) IN (\n  SELECT tournament_name, year FROM matches GROUP BY tournament_name, year ORDER BY COUNT(*) DESC LIMIT 1\n);\n</sql>", "latency_s": 0.297, "cost_usd": 0.0}
+{"idx": 484, "completion": "<sql>\nSELECT winner_name, winner_rank FROM players WHERE player_id IN (\n  SELECT winner_id FROM matches ORDER BY winner_age ASC LIMIT 3\n);\n</sql>", "latency_s": 0.306, "cost_usd": 0.0}
+{"idx": 433, "completion": "<sql>\nSELECT first_name, birth_date FROM players WHERE country_code = 'USA';\n</sql>", "latency_s": 0.306, "cost_usd": 0.0}
+{"idx": 486, "completion": "<sql>\nSELECT COUNT(*) \nFROM players p \nJOIN matches m ON p.player_id = m.winner_id \nWHERE p.hand = 'left' AND m.tourney_name LIKE '%WTA Championships%'\n</sql>", "latency_s": 0.306, "cost_usd": 0.0}
+{"idx": 459, "completion": "<sql>\nSELECT first_name, country_code FROM players WHERE player_id = (SELECT winner_id FROM matches GROUP BY winner_id ORDER BY COUNT(*) DESC LIMIT 1);\n</sql>", "latency_s": 0.306, "cost_usd": 0.0}
+{"idx": 467, "completion": "<sql>\nSELECT loser_name, winner_name \nFROM matches \nWHERE (loser_id, winner_id) IN (\n  SELECT loser_id, winner_id FROM matches \n  ORDER BY minutes DESC LIMIT 1\n);\n</sql>", "latency_s": 0.306, "cost_usd": 0.0}
+{"idx": 485, "completion": "<sql>\nSELECT COUNT(DISTINCT winner_id) FROM matches WHERE winner_hand = 'left' AND tournament_name LIKE '%WTA Championships%';\n</sql>", "latency_s": 0.306, "cost_usd": 0.0}
+{"idx": 457, "completion": "<sql>\nSELECT first_name, last_name FROM players WHERE hand = 'L' ORDER BY birth_date;\n</sql>", "latency_s": 0.306, "cost_usd": 0.0}
+{"idx": 464, "completion": "<sql>\nSELECT winner_name, SUM(winner_rank_points) AS total_rank_points\nFROM players p1\nJOIN matches m ON p1.player_id = m.winner_id\nGROUP BY winner_name\nORDER BY total_rank_points DESC\nLIMIT 1;\n</sql>", "latency_s": 0.306, "cost_usd": 0.0}
+{"idx": 465, "completion": "<sql>\nSELECT p.winner_name FROM players p JOIN (\n  SELECT w.player_id, MAX(r.ranking_points) AS max_points \n  FROM rankings r JOIN players w ON r.player_id = w.player_id \n  WHERE r.tours = 'Australian Open' \n  GROUP BY w.player_id\n) t ON p.player_id = t.player_id;\n</sql>", "latency_s": 0.306, "cost_usd": 0.0}
+{"idx": 466, "completion": "<sql>\nSELECT winner_name FROM players WHERE player_id = (\n  SELECT winner_id FROM matches WHERE tourney_name LIKE 'Australian Open'\n  ORDER BY winner_rank_points DESC LIMIT 1\n)\n</sql>", "latency_s": 0.306, "cost_usd": 0.0}
+{"idx": 487, "completion": "<sql>\nSELECT p.first_name, p.country_code, p.birth_date \nFROM players p \nJOIN (\n  SELECT w.player_id, MAX(r.ranking_points) AS max_points \n  FROM players w \n  JOIN rankings r ON w.player_id = r.player_id \n  GROUP BY w.player_id\n) t ON p.player_id = t.player_id;\n</sql>", "latency_s": 0.306, "cost_usd": 0.0}
+{"idx": 452, "completion": "<sql>\nSELECT T1.first_name, T1.country_code FROM players AS T1 JOIN (\n    SELECT winner_id FROM matches WHERE tournament_name IN ('WTA Championships', 'Australian Open')\n) AS T2 ON T1.player_id = T2.winner_id;\n</sql>", "latency_s": 0.306, "cost_usd": 0.0}
+{"idx": 451, "completion": "<sql>\nSELECT T1.country_code, T1.first_name FROM players AS T1 JOIN (\n  SELECT winner_id FROM matches WHERE tournament_name IN ('WTA Championships', 'Australian Open')\n) AS T2 ON T1.player_id = T2.winner_id AND T1.tournament_name IN ('WTA Championships', 'Australian Open');\n</sql>", "latency_s": 0.306, "cost_usd": 0.0}
+{"idx": 488, "completion": "<sql>\nSELECT T1.first_name, T1.country_code, T1.birth_date FROM players AS T1 JOIN (\n    SELECT winner_id, MAX(winner_rank_points) as max_points \n    FROM rankings \n    GROUP BY winner_id\n) AS T2 ON T1.player_id = T2.winner_id;\n</sql>", "latency_s": 0.306, "cost_usd": 0.0}
+{"idx": 711, "completion": "<sql>\nSELECT Region FROM country WHERE Name = 'Kabul';\n</sql>", "latency_s": 0.306, "cost_usd": 0.0}
+{"idx": 708, "completion": "<sql>\nSELECT T1.Continent FROM country AS T1 JOIN city AS T2 ON T1.Code = T2.CountryCode WHERE T2.Name = 'Anguilla';\n</sql>", "latency_s": 0.306, "cost_usd": 0.0}
+{"idx": 806, "completion": "<sql>\nSELECT COUNT(*) FROM country WHERE Continent = 'Asia';\n</sql>", "latency_s": 0.235, "cost_usd": 0.0}
+{"idx": 751, "completion": "<sql>\nSELECT COUNT(DISTINCT cl.CountryCode)\nFROM country c\nJOIN countrylanguage cl ON c.Code = cl.CountryCode\nWHERE cl.Language = 'Chinese';\n</sql>", "latency_s": 0.235, "cost_usd": 0.0}
+{"idx": 753, "completion": "<sql>\nSELECT DISTINCT Region FROM country WHERE Language IN ('Dutch', 'English');\n</sql>", "latency_s": 0.235, "cost_usd": 0.0}
+{"idx": 807, "completion": "<sql>\nSELECT COUNT(*) FROM country WHERE Continent = 'Asia';\n</sql>", "latency_s": 0.235, "cost_usd": 0.0}
+{"idx": 737, "completion": "<sql>\nSELECT COUNT(DISTINCT Language) \nFROM countrylanguage \nWHERE CountryCode = (SELECT Code FROM country WHERE Name = 'Aruba');\n</sql>", "latency_s": 0.235, "cost_usd": 0.0}
+{"idx": 710, "completion": "<sql>\nSELECT T2.Region FROM city AS T1 JOIN country AS T2 ON T1.CountryCode = T2.Code WHERE T1.Name = 'Kabul';\n</sql>", "latency_s": 0.235, "cost_usd": 0.0}
+{"idx": 743, "completion": "<sql>\nSELECT Continent \nFROM country \nWHERE Code2 IN (\n    SELECT CountryCode FROM countrylanguage GROUP BY CountryCode ORDER BY COUNT(Language) DESC LIMIT 1\n)\n</sql>", "latency_s": 0.235, "cost_usd": 0.0}
+{"idx": 734, "completion": "<sql>\nSELECT COUNT(DISTINCT GovernmentForm) FROM country WHERE Continent = 'Africa';\n</sql>", "latency_s": 0.235, "cost_usd": 0.0}
+{"idx": 712, "completion": "<sql>\nSELECT Language FROM countrylanguage WHERE CountryCode = (SELECT Code FROM city WHERE Name = \"Aruba\") ORDER BY Percentage DESC LIMIT 1;\n</sql>", "latency_s": 0.235, "cost_usd": 0.0}
+{"idx": 728, "completion": "<sql>\nSELECT Population FROM city WHERE District = 'Gelderland' ;\n</sql>", "latency_s": 0.235, "cost_usd": 0.0}
+{"idx": 716, "completion": "<sql>\nSELECT Region, Population FROM country WHERE Name = 'Angola';\n</sql>", "latency_s": 0.235, "cost_usd": 0.0}
+{"idx": 713, "completion": "<sql>\nSELECT Language FROM countrylanguage WHERE CountryCode = (SELECT Code FROM city WHERE Name = 'Aruba') AND IsOfficial = 'T' ORDER BY Percentage DESC LIMIT 1;\n</sql>", "latency_s": 0.235, "cost_usd": 0.0}
+{"idx": 742, "completion": "<sql>\nSELECT Continent \nFROM country \nWHERE Code IN (\n    SELECT CountryCode \n    FROM countrylanguage \n    GROUP BY CountryCode \n    ORDER BY COUNT(Language) DESC LIMIT 1\n)\n</sql>", "latency_s": 0.235, "cost_usd": 0.0}
+{"idx": 752, "completion": "<sql>\nSELECT DISTINCT Region FROM country WHERE Language IN ('English', 'Dutch')\n</sql>", "latency_s": 0.235, "cost_usd": 0.0}
+{"idx": 744, "completion": "<sql>\nSELECT COUNT(DISTINCT cl.CountryCode)\nFROM countrylanguage cl\nWHERE cl.Language = 'English' AND cl.IsOfficial = 'T'\nAND cl.Language = 'Dutch' AND cl.IsOfficial = 'T';\n</sql>", "latency_s": 0.235, "cost_usd": 0.0}
+{"idx": 715, "completion": "<sql>\nSELECT Population, LifeExpectancy FROM country WHERE Name = 'Brazil';\n</sql>", "latency_s": 0.235, "cost_usd": 0.0}
+{"idx": 732, "completion": "<sql>\nSELECT COUNT(DISTINCT Language) FROM countrylanguage;\n</sql>", "latency_s": 0.255, "cost_usd": 0.0}
+{"idx": 738, "completion": "<sql>\nSELECT COUNT(Language) FROM countrylanguage WHERE CountryCode = 'AF' AND IsOfficial = 'T';\n</sql>", "latency_s": 0.255, "cost_usd": 0.0}
+{"idx": 761, "completion": "<sql>\nSELECT T1.Name FROM city AS T1 JOIN country AS T2 ON T1.CountryCode = T2.Code WHERE T2.LocalName = 'United States' AND T1.Name LIKE '%English%' ORDER BY T1.Population DESC LIMIT 1;\n</sql>", "latency_s": 0.255, "cost_usd": 0.0}
+{"idx": 803, "completion": "<sql>\nSELECT Name FROM city ORDER BY Population DESC LIMIT 3;\n</sql>", "latency_s": 0.255, "cost_usd": 0.0}
+{"idx": 729, "completion": "<sql>\nSELECT SUM(Population) FROM city WHERE District = 'Gelderland' ;\n</sql>", "latency_s": 0.255, "cost_usd": 0.0}
+{"idx": 736, "completion": "<sql>\nSELECT SUM(CAST(REPLACE(IsOfficial,'T','') AS REAL)) FROM countrylanguage WHERE CountryCode = 'AW' ;\n</sql>", "latency_s": 0.255, "cost_usd": 0.0}
+{"idx": 709, "completion": "<sql>\nSELECT T1.Continent FROM country AS T1 JOIN city AS T2 ON T1.Code = T2.CountryCode WHERE T2.Name = 'Anguilla';\n</sql>", "latency_s": 0.255, "cost_usd": 0.0}
+{"idx": 722, "completion": "<sql>\nSELECT SUM(Population), MAX(GNP) FROM country WHERE Continent = 'Asia';\n</sql>", "latency_s": 0.255, "cost_usd": 0.0}
+{"idx": 739, "completion": "<sql>\nSELECT COUNT(Language) FROM countrylanguage WHERE CountryCode = (SELECT Code FROM country WHERE Name = 'Afghanistan') AND IsOfficial = 'T';\n</sql>", "latency_s": 0.255, "cost_usd": 0.0}
+{"idx": 705, "completion": "<sql>\nSELECT COUNT(*) FROM country WHERE GovernmentForm = 'republic';\n</sql>", "latency_s": 0.255, "cost_usd": 0.0}
+{"idx": 815, "completion": "<sql>\nSELECT Language FROM countrylanguage GROUP BY Language ORDER BY COUNT(*) DESC LIMIT 1;\n</sql>", "latency_s": 0.255, "cost_usd": 0.0}
+{"idx": 714, "completion": "<sql>\nSELECT Population, LifeExpectancy FROM country WHERE Name = 'Brazil';\n</sql>", "latency_s": 0.255, "cost_usd": 0.0}
+{"idx": 745, "completion": "<sql>\nSELECT COUNT(*) FROM countrylanguage WHERE Language IN ('English', 'Dutch');\n</sql>", "latency_s": 0.255, "cost_usd": 0.0}
+{"idx": 756, "completion": "<sql>\nSELECT Language FROM countrylanguage WHERE Continent = 'Asia' GROUP BY Language ORDER BY COUNT(*) DESC LIMIT 1;\n</sql>", "latency_s": 0.255, "cost_usd": 0.0}
+{"idx": 703, "completion": "<sql>\nSELECT Name FROM country WHERE IndepYear > 1950;\n</sql>", "latency_s": 0.255, "cost_usd": 0.0}
+{"idx": 805, "completion": "<sql>\nSELECT Name FROM city ORDER BY Population LIMIT 3;\n</sql>", "latency_s": 0.255, "cost_usd": 0.0}
+{"idx": 735, "completion": "<sql>\nSELECT COUNT(DISTINCT GovernmentForm) FROM country WHERE Continent = 'Africa';\n</sql>", "latency_s": 0.348, "cost_usd": 0.0}
+{"idx": 746, "completion": "<sql>\nSELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code = T2.CountryCode WHERE T2.Language = 'English' AND T2.IsOfficial = 'T' INTERSECT SELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code = T2.CountryCode WHERE T2.Language = 'French' AND T2.IsOfficial = 'T';\n</sql>", "latency_s": 0.348, "cost_usd": 0.0}
+{"idx": 760, "completion": "<sql>\nSELECT T1.Name FROM city AS T1 JOIN country AS T2 ON T1.CountryCode = T2.Code WHERE T2.LocalName = 'English' ORDER BY T1.Population DESC LIMIT 1;\n</sql>", "latency_s": 0.348, "cost_usd": 0.0}
+{"idx": 767, "completion": "<sql>\nSELECT SUM(Population) FROM city WHERE CountryCode IN (SELECT CountryCode FROM country WHERE LocalName NOT LIKE '%English%')\n</sql>", "latency_s": 0.348, "cost_usd": 0.0}
+{"idx": 814, "completion": "<sql>\nSELECT Language, SUM(CASE WHEN IsOfficial = 'T' THEN Percentage ELSE 0 END) AS TotalPercentage FROM countrylanguage GROUP BY Language ORDER BY TotalPercentage DESC LIMIT 1;\n</sql>", "latency_s": 0.348, "cost_usd": 0.0}
+{"idx": 717, "completion": "<sql>\nSELECT Region FROM country WHERE Name = 'Angola';\nSELECT Population FROM country WHERE Name = 'Angola';\n</sql>", "latency_s": 0.348, "cost_usd": 0.0}
+{"idx": 747, "completion": "<sql>\nSELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code = T2.CountryCode WHERE T2.Language = 'English' AND T2.IsOfficial = 'T' INTERSECT SELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code = T2.CountryCode WHERE T2.Language = 'French' AND T2.IsOfficial = 'T';\n</sql>", "latency_s": 0.348, "cost_usd": 0.0}
+{"idx": 801, "completion": "<sql>\nSELECT Name, SurfaceArea FROM country ORDER BY SurfaceArea DESC LIMIT 5;\n</sql>", "latency_s": 0.348, "cost_usd": 0.0}
+{"idx": 802, "completion": "<sql>\nSELECT Name FROM country ORDER BY Population DESC LIMIT 3;\n</sql>", "latency_s": 0.348, "cost_usd": 0.0}
+{"idx": 704, "completion": "<sql>\nSELECT COUNT(*) FROM country WHERE GovernmentForm = 'republic';\n</sql>", "latency_s": 0.348, "cost_usd": 0.0}
+{"idx": 733, "completion": "<sql>\nSELECT COUNT(DISTINCT Language) FROM countrylanguage;\n</sql>", "latency_s": 0.348, "cost_usd": 0.0}
+{"idx": 804, "completion": "<sql>\nSELECT Name FROM city ORDER BY Population LIMIT 3;\n</sql>", "latency_s": 0.348, "cost_usd": 0.0}
+{"idx": 726, "completion": "<sql>\nSELECT SUM(SurfaceArea) FROM country WHERE Continent IN ('Asia', 'Europe');\n</sql>", "latency_s": 0.348, "cost_usd": 0.0}
+{"idx": 779, "completion": "<sql>\nSELECT CountryCode FROM country WHERE Language != 'English' AND IsOfficial = 'T';\n</sql>", "latency_s": 0.348, "cost_usd": 0.0}
+{"idx": 750, "completion": "<sql>\nSELECT COUNT(DISTINCT T1.Continent)\nFROM country AS T1\nJOIN countrylanguage AS T2 ON T1.Code = T2.CountryCode\nWHERE T2.Language = 'Chinese';\n</sql>", "latency_s": 0.348, "cost_usd": 0.0}
+{"idx": 812, "completion": "<sql>\nSELECT Name FROM city WHERE Population BETWEEN 160000 AND 900000;\n</sql>", "latency_s": 0.348, "cost_usd": 0.0}
+{"idx": 719, "completion": "<sql>\nSELECT AVG(LifeExpectancy) FROM country WHERE Continent = 'Central Africa';\n</sql>", "latency_s": 0.232, "cost_usd": 0.0}
+{"idx": 727, "completion": "<sql>\nSELECT SUM(T2.SurfaceArea) AS Total_Surface_Area FROM country AS T1 JOIN city AS T2 ON T1.Code = T2.CountryCode WHERE T1.Continent IN ('Asia', 'Europe')\n</sql>", "latency_s": 0.232, "cost_usd": 0.0}
+{"idx": 778, "completion": "<sql>\nSELECT Code FROM country WHERE Language != 'English' AND IsOfficial = 'T';\n</sql>", "latency_s": 0.232, "cost_usd": 0.0}
+{"idx": 721, "completion": "<sql>\nSELECT T1.Name FROM country AS T1 JOIN city AS T2 ON T1.Code = T2.CountryCode WHERE T1.Continent = 'Asia' ORDER BY T1.LifeExpectancy LIMIT 1;\n</sql>", "latency_s": 0.232, "cost_usd": 0.0}
+{"idx": 723, "completion": "<sql>\nSELECT SUM(Population), MAX(GNP) FROM country WHERE Continent = 'Asia';\n</sql>", "latency_s": 0.232, "cost_usd": 0.0}
+{"idx": 755, "completion": "<sql>\nSELECT Code FROM country WHERE IsOfficial = 'T' INTERSECT SELECT Code FROM country WHERE Language = 'English' OR Language = 'Dutch';\n</sql>", "latency_s": 0.232, "cost_usd": 0.0}
+{"idx": 773, "completion": "<sql>\nSELECT Code FROM country WHERE SurfaceArea > (SELECT MAX(SurfaceArea) FROM country WHERE Continent = 'Europe')\n</sql>", "latency_s": 0.232, "cost_usd": 0.0}
+{"idx": 800, "completion": "<sql>\nSELECT Name, SurfaceArea FROM country ORDER BY SurfaceArea DESC LIMIT 5;\n</sql>", "latency_s": 0.232, "cost_usd": 0.0}
+{"idx": 707, "completion": "<sql>\nSELECT SUM(SurfaceArea) FROM country WHERE Continent = 'Caribbean';\n</sql>", "latency_s": 0.232, "cost_usd": 0.0}
+{"idx": 741, "completion": "<sql>\nSELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code = T2.CountryCode GROUP BY T1.Name ORDER BY COUNT(T2.Language) DESC LIMIT 1;\n</sql>", "latency_s": 0.232, "cost_usd": 0.0}
+{"idx": 758, "completion": "<sql>\nSELECT Language FROM countrylanguage WHERE IsOfficial = 'T' AND GovernmentForm = 'Republic' GROUP BY Language HAVING COUNT(CountryCode) = 1;\n</sql>", "latency_s": 0.232, "cost_usd": 0.0}
+{"idx": 706, "completion": "<sql>\nSELECT SUM(T1.SurfaceArea) FROM country AS T1 JOIN city AS T2 ON T1.Code = T2.CountryCode WHERE T1.Region LIKE '%Caribbean%'\n</sql>", "latency_s": 0.232, "cost_usd": 0.0}
+{"idx": 740, "completion": "<sql>\nSELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code = T2.CountryCode GROUP BY T1.Name ORDER BY COUNT(T2.Language) DESC LIMIT 1;\n</sql>", "latency_s": 0.232, "cost_usd": 0.0}
+{"idx": 757, "completion": "<sql>\nSELECT Language FROM countrylanguage WHERE CountryCode IN (SELECT Code FROM country WHERE Continent = 'Asia') GROUP BY Language ORDER BY COUNT(*) DESC LIMIT 1;\n</sql>", "latency_s": 0.232, "cost_usd": 0.0}
+{"idx": 720, "completion": "<sql>\nSELECT T1.Name FROM country AS T1 JOIN city AS T2 ON T1.Code = T2.CountryCode WHERE T1.Continent = 'Asia' ORDER BY T1.LifeExpectancy LIMIT 1;\n</sql>", "latency_s": 0.232, "cost_usd": 0.0}
+{"idx": 749, "completion": "<sql>\nSELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code = T2.CountryCode WHERE T2.Language IN ('English', 'French') AND T2.IsOfficial = 'T';\n</sql>", "latency_s": 0.232, "cost_usd": 0.0}
+{"idx": 702, "completion": "<sql>\nSELECT Name FROM country WHERE IndepYear > 1950;\n</sql>", "latency_s": 0.318, "cost_usd": 0.0}
+{"idx": 724, "completion": "<sql>\nSELECT AVG(T2.LifeExpectancy) \nFROM country AS T1 \nJOIN city AS T3 ON T1.Code = T3.CountryCode \nJOIN countrylanguage AS T2 ON T1.Code = T2.CountryCode \nWHERE T1.Continent = 'Africa' AND T1.GovernmentForm LIKE '%republic%'\n</sql>", "latency_s": 0.318, "cost_usd": 0.0}
+{"idx": 759, "completion": "<sql>\nSELECT Language FROM countrylanguage WHERE IsOfficial = 'T' AND GovernmentForm = 'republic' GROUP BY Language HAVING COUNT(CountryCode) = 1;\n</sql>", "latency_s": 0.318, "cost_usd": 0.0}
+{"idx": 725, "completion": "<sql>\nSELECT AVG(T2.LifeExpectancy) \nFROM country AS T1 \nJOIN city AS T3 ON T1.Code = T3.CountryCode \nJOIN countrylanguage AS T4 ON T1.Code = T4.CountryCode \nWHERE T1.Continent = 'Africa' AND T1.GovernmentForm LIKE '%republic%' \nGROUP BY T1.Continent;\n</sql>", "latency_s": 0.318, "cost_usd": 0.0}
+{"idx": 813, "completion": "<sql>\nSELECT Name FROM city WHERE Population BETWEEN 160000 AND 900000;\n</sql>", "latency_s": 0.318, "cost_usd": 0.0}
+{"idx": 790, "completion": "<sql>\nSELECT T2.Population, T2.Name, T2.HeadOfState FROM country AS T1 JOIN city AS T2 ON T1.Code = T2.CountryCode WHERE T1.SurfaceArea = (SELECT MAX(SurfaceArea) FROM country)\n</sql>", "latency_s": 0.318, "cost_usd": 0.0}
+{"idx": 754, "completion": "<sql>\nSELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code = T2.CountryCode WHERE T2.Language IN ('English', 'Dutch') AND T2.IsOfficial = 'T';\n</sql>", "latency_s": 0.318, "cost_usd": 0.0}
+{"idx": 816, "completion": "<sql>\nSELECT T1.Name, T2.Language \nFROM city AS T1 \nJOIN country AS T3 ON T1.CountryCode = T3.Code \nJOIN countrylanguage AS T4 ON T3.Code = T4.CountryCode \nWHERE T4.Percentage = (SELECT MAX(percentage) FROM countrylanguage WHERE CountryCode = T3.Code);\n</sql>", "latency_s": 0.318, "cost_usd": 0.0}
+{"idx": 766, "completion": "<sql>\nSELECT SUM(Population) FROM city WHERE CountryCode IN (SELECT CountryCode FROM country WHERE LocalName != 'United States' AND Language NOT LIKE '%English%')\n</sql>", "latency_s": 0.318, "cost_usd": 0.0}
+{"idx": 772, "completion": "<sql>\nSELECT Name FROM country WHERE SurfaceArea > (SELECT MAX(SurfaceArea) FROM country WHERE Continent = 'Europe')\n</sql>", "latency_s": 0.318, "cost_usd": 0.0}
+{"idx": 776, "completion": "<sql>\nSELECT c.Name \nFROM city AS c \nJOIN country AS k ON c.CountryCode = k.Code \nWHERE k.Continent = 'Asia' AND (k.SurfaceArea > ALL (SELECT SurfaceArea FROM country WHERE Continent = 'Africa') OR Population > ALL (SELECT Population FROM country WHERE Continent = 'Africa'))\n</sql>", "latency_s": 0.318, "cost_usd": 0.0}
+{"idx": 784, "completion": "<sql>\nSELECT c.Name \nFROM city AS c \nJOIN country AS cu ON c.CountryCode = cu.Code \nWHERE cu.Continent = 'Europe' AND cu.LocalName != 'English';\n</sql>", "latency_s": 0.318, "cost_usd": 0.0}
+{"idx": 748, "completion": "<sql>\nSELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code = T2.CountryCode WHERE T2.Language = 'English' AND T2.IsOfficial = 'T' AND T2.Language = 'French';\n</sql>", "latency_s": 0.318, "cost_usd": 0.0}
+{"idx": 768, "completion": "<sql>\nSELECT Language FROM countrylanguage WHERE CountryCode = (SELECT Code FROM country WHERE HeadOfState = 'Beatrix') AND IsOfficial = 'T';\n</sql>", "latency_s": 0.318, "cost_usd": 0.0}
+{"idx": 775, "completion": "<sql>\nSELECT Code FROM country WHERE Continent = 'Africa' AND Population < (SELECT MAX(Population) FROM country WHERE Continent = 'Asia')\n</sql>", "latency_s": 0.318, "cost_usd": 0.0}
+{"idx": 786, "completion": "<sql>\nSELECT DISTINCT c.Name \nFROM city c \nJOIN country_language cl ON c.CountryCode = cl.CountryCode \nWHERE cl.Language = 'Chinese' AND c.CountryCode IN (SELECT Code FROM country WHERE Continent = 'Asia')\n</sql>", "latency_s": 0.318, "cost_usd": 0.0}
+{"idx": 731, "completion": "<sql>\nSELECT AVG(T1.GNP), SUM(T1.Population)\nFROM country AS T1\nJOIN city AS T2 ON T1.Code = T2.CountryCode\nWHERE T1.Continent = 'North America' AND T1.Region LIKE '%United States%'\n</sql>", "latency_s": 0.258, "cost_usd": 0.0}
+{"idx": 809, "completion": "<sql>\nSELECT Name FROM country WHERE Continent = 'Europe' AND Population = 80000;\n</sql>", "latency_s": 0.258, "cost_usd": 0.0}
+{"idx": 774, "completion": "<sql>\nSELECT Code FROM country WHERE Continent = 'Africa' AND Population < (SELECT MAX(Population) FROM country WHERE Continent = 'Asia')\n</sql>", "latency_s": 0.258, "cost_usd": 0.0}
+{"idx": 819, "completion": "<sql>\nSELECT COUNT(*) \nFROM country \nJOIN countrylanguage ON country.Code = countrylanguage.CountryCode \nWHERE countrylanguage.Language = 'Spanish' AND countrylanguage.IsOfficial = 'T';\n</sql>", "latency_s": 0.258, "cost_usd": 0.0}
+{"idx": 821, "completion": "<sql>\nSELECT Code FROM country WHERE Language = 'Spanish' AND IsOfficial = 'T';\n</sql>", "latency_s": 0.258, "cost_usd": 0.0}
+{"idx": 780, "completion": "<sql>\nSELECT DISTINCT CountryCode FROM countrylanguage WHERE Language != 'English' AND IsOfficial = 'T';\n</sql>", "latency_s": 0.258, "cost_usd": 0.0}
+{"idx": 785, "completion": "<sql>\nSELECT T1.Name FROM city AS T1 JOIN country AS T2 ON T1.CountryCode = T2.Code WHERE T2.Continent = 'Europe' AND T2.LocalName != 'English';\n</sql>", "latency_s": 0.258, "cost_usd": 0.0}
+{"idx": 791, "completion": "<sql>\nSELECT Name, Population, HeadOfState FROM country WHERE SurfaceArea = (SELECT MAX(SurfaceArea) FROM country)\n</sql>", "latency_s": 0.258, "cost_usd": 0.0}
+{"idx": 763, "completion": "<sql>\nSELECT Name, Population, LifeExpectancy FROM country WHERE Continent = 'Asia' ORDER BY SurfaceArea DESC LIMIT 1;\n</sql>", "latency_s": 0.258, "cost_usd": 0.0}
+{"idx": 765, "completion": "<sql>\nSELECT AVG(T2.LifeExpectancy) \nFROM country AS T1 \nJOIN countrylanguage AS T2 ON T1.Code = T2.CountryCode \nWHERE T2.Language != 'English' AND T2.IsOfficial = 'F';\n</sql>", "latency_s": 0.258, "cost_usd": 0.0}
+{"idx": 762, "completion": "<sql>\nSELECT c.Name, c.Population, cl.LifeExpectancy \nFROM city AS c \nJOIN country AS cl ON c.CountryCode = cl.Code \nWHERE cl.Continent = 'Asia' AND cl.SurfaceArea IN (SELECT MAX(SurfaceArea) FROM country)\n</sql>", "latency_s": 0.258, "cost_usd": 0.0}
+{"idx": 781, "completion": "<sql>\nSELECT DISTINCT CountryCode FROM countrylanguage WHERE Language != 'English' AND IsOfficial = 'T';\n</sql>", "latency_s": 0.258, "cost_usd": 0.0}
+{"idx": 718, "completion": "<sql>\nSELECT AVG(LifeExpectancy) FROM country WHERE Region = 'Central Africa';\n</sql>", "latency_s": 0.258, "cost_usd": 0.0}
+{"idx": 764, "completion": "<sql>\nSELECT AVG(T2.LifeExpectancy) FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code = T2.CountryCode WHERE T2.Language != 'English' AND T2.IsOfficial = 'N';\n</sql>", "latency_s": 0.258, "cost_usd": 0.0}
+{"idx": 820, "completion": "<sql>\nSELECT Code FROM country WHERE Language = 'Spanish' ORDER BY Percentage DESC LIMIT 1;\n</sql>", "latency_s": 0.258, "cost_usd": 0.0}
+{"idx": 730, "completion": "<sql>\nSELECT AVG(T1.GNP), SUM(T1.Population) FROM country AS T1 JOIN city AS T2 ON T1.Code = T2.CountryCode WHERE T1.HeadOfState LIKE '%US%';\n</sql>", "latency_s": 0.258, "cost_usd": 0.0}
+{"idx": 769, "completion": "<sql>\nSELECT Language FROM countrylanguage WHERE CountryCode = (SELECT Code FROM country WHERE HeadOfState = 'Beatrix') AND IsOfficial = 'T';\n</sql>", "latency_s": 0.256, "cost_usd": 0.0}
+{"idx": 771, "completion": "<sql>\nSELECT COUNT(DISTINCT Language) \nFROM countrylanguage AS cl \nJOIN country AS c ON cl.CountryCode = c.Code \nWHERE c.IndepYear < 1930 AND cl.IsOfficial = 'T';\n</sql>", "latency_s": 0.256, "cost_usd": 0.0}
+{"idx": 777, "completion": "<sql>\nSELECT c.Name \nFROM country AS c \nJOIN city AS ci ON c.Code = ci.CountryCode \nWHERE c.Continent = 'Asia' AND (c.Population > (SELECT MAX(Population) FROM country WHERE Continent = 'Africa'))\n</sql>", "latency_s": 0.256, "cost_usd": 0.0}
+{"idx": 783, "completion": "<sql>\nSELECT Code \nFROM country \nWHERE GovernmentForm != 'Republic' AND Language != 'English';\n</sql>", "latency_s": 0.256, "cost_usd": 0.0}
+{"idx": 818, "completion": "<sql>\nSELECT SUM(T2.Percentage) AS TotalSpanishSpeakers FROM countrylanguage AS T1 JOIN country AS T2 ON T1.CountryCode = T2.Code WHERE T1.Language = 'Spanish' AND T1.IsOfficial = 'T';\n</sql>", "latency_s": 0.256, "cost_usd": 0.0}
+{"idx": 788, "completion": "<sql>\nSELECT Name, IndepYear, SurfaceArea FROM country WHERE Population = (SELECT MIN(Population) FROM country)\n</sql>", "latency_s": 0.256, "cost_usd": 0.0}
+{"idx": 789, "completion": "<sql>\nSELECT Name, IndepYear, SurfaceArea FROM country ORDER BY Population ASC LIMIT 1;\n</sql>", "latency_s": 0.256, "cost_usd": 0.0}
+{"idx": 787, "completion": "<sql>\nSELECT DISTINCT T1.Name FROM city AS T1 JOIN country AS T2 ON T1.CountryCode = T2.Code WHERE T2.Continent = 'Asia' AND T2.LocalName = 'Chinese';\n</sql>", "latency_s": 0.256, "cost_usd": 0.0}
+{"idx": 808, "completion": "<sql>\nSELECT Name FROM country WHERE Continent = 'Europe' AND Population = 80000;\n</sql>", "latency_s": 0.256, "cost_usd": 0.0}
+{"idx": 782, "completion": "<sql>\nSELECT Code FROM country WHERE GovernmentForm != 'Republic' AND Language != 'English';\n</sql>", "latency_s": 0.256, "cost_usd": 0.0}
+{"idx": 795, "completion": "<sql>\nSELECT District, COUNT(*) as CityCount \nFROM city \nGROUP BY District \nHAVING AVG(Population) > (SELECT AVG(Population) FROM city);\n</sql>", "latency_s": 0.256, "cost_usd": 0.0}
+{"idx": 770, "completion": "<sql>\nSELECT COUNT(DISTINCT T2.Language) \nFROM country AS T1 \nJOIN countrylanguage AS T2 ON T1.Code = T2.CountryCode \nWHERE T1.IndepYear < 1930 AND T2.IsOfficial = 'T';\n</sql>", "latency_s": 0.256, "cost_usd": 0.0}
+{"idx": 793, "completion": "<sql>\nSELECT c.Name, COUNT(cl.Language) AS NumberOfLanguages FROM country c JOIN countrylanguage cl ON c.Code = cl.CountryCode GROUP BY c.Code HAVING COUNT(cl.Language) > 2;\n</sql>", "latency_s": 0.256, "cost_usd": 0.0}
+{"idx": 794, "completion": "<sql>\nSELECT District, COUNT(*) as CityCount \nFROM city \nGROUP BY District \nHAVING Population > (SELECT AVG(Population) FROM city);\n</sql>", "latency_s": 0.256, "cost_usd": 0.0}
+{"idx": 792, "completion": "<sql>\nSELECT c.Name, COUNT(cl.Language) AS NumberOfLanguagesSpoken \nFROM city c \nJOIN country_language cl ON c.CountryCode = cl.CountryCode \nGROUP BY c.Name \nHAVING COUNT(cl.Language) >= 3;\n</sql>", "latency_s": 0.256, "cost_usd": 0.0}
+{"idx": 796, "completion": "<sql>\nSELECT GovernmentForm, SUM(Population) AS TotalPopulation \nFROM country \nJOIN city ON country.Code = city.CountryCode \nJOIN countrylanguage ON country.Code = countrylanguage.CountryCode \nWHERE LifeExpectancy > 72 \nGROUP BY GovernmentForm;\n</sql>", "latency_s": 0.256, "cost_usd": 0.0}
+{"idx": 810, "completion": "<sql>\nSELECT SUM(T1.Population), AVG(T1.SurfaceArea)\nFROM city AS T1\nJOIN country AS T2 ON T1.CountryCode = T2.Code\nWHERE T2.Continent = 'North America' AND T1.SurfaceArea > 3000;\n</sql>", "latency_s": 0.401, "cost_usd": 0.0}
+{"idx": 798, "completion": "<sql>\nSELECT c.Continent, AVG(cl.Percentage), SUM(c.Population)\nFROM country AS c\nJOIN countrylanguage AS cl ON c.Code = cl.CountryCode\nGROUP BY c.Continent\nHAVING AVG(cl.Percentage) < 72;\n</sql>", "latency_s": 0.401, "cost_usd": 0.0}
+{"idx": 817, "completion": "<sql>\nSELECT CountryCode, Language, MAX(Percentage) as Percentage FROM countrylanguage GROUP BY CountryCode, Language;\n</sql>", "latency_s": 0.401, "cost_usd": 0.0}
+{"idx": 811, "completion": "<sql>\nSELECT SUM(T1.Population), AVG(T1.SurfaceArea)\nFROM city AS T1\nJOIN country AS T2 ON T1.CountryCode = T2.Code\nWHERE T2.Continent = 'North America' AND T1.SurfaceArea > 3000;\n</sql>", "latency_s": 0.401, "cost_usd": 0.0}
+{"idx": 797, "completion": "<sql>\nSELECT DISTINCT GovernmentForm, SUM(Population) AS TotalPopulation \nFROM country \nJOIN city ON country.Code = city.CountryCode \nJOIN countrylanguage ON country.Code = countrylanguage.CountryCode \nWHERE LifeExpectancy > 72 AND GovernmentForm IN (SELECT GovernmentForm FROM country WHERE Code2 IN (SELECT CountryCode FROM countrylanguage))\nGROUP BY GovernmentForm;\n</sql>", "latency_s": 0.401, "cost_usd": 0.0}
+{"idx": 799, "completion": "<sql>\nSELECT DISTINCT c.Continent, SUM(c.Population) AS TotalPopulation, AVG(cl.Language) AS AverageLifeExpectancy \nFROM country c \nJOIN city ci ON c.Code = ci.CountryCode \nJOIN countrylanguage cl ON c.Code = cl.CountryCode \nGROUP BY c.Continent \nHAVING AVG(cl.Language) < 72;\n</sql>", "latency_s": 0.401, "cost_usd": 0.0}
+{"idx": 1030, "completion": "<sql>\nSELECT COUNT(*) FROM Other_Available_Features;\n</sql>", "latency_s": 0.401, "cost_usd": 0.0}
+{"idx": 1031, "completion": "<sql>\nSELECT T1.feature_type_name FROM Ref_Feature_Types AS T1 JOIN Other_Available_Features AS T2 ON T1.feature_type_code = T2.feature_type_code WHERE T2.feature_name = 'AirCon';\n</sql>", "latency_s": 0.401, "cost_usd": 0.0}
+{"idx": 1032, "completion": "<sql>\nSELECT T2.property_type_description FROM Properties AS T1 JOIN Ref_Property_Types AS T2 ON T1.property_type_code = T2.property_type_code;\n</sql>", "latency_s": 0.401, "cost_usd": 0.0}
+{"idx": 1033, "completion": "<sql>\nSELECT property_name FROM Properties WHERE (property_type_code = 'H' OR property_type_code = 'A') AND room_count > 1;\n</sql>", "latency_s": 0.401, "cost_usd": 0.0}
+{"idx": 988, "completion": "<sql>\nSELECT MAX(T1.age) FROM Dogs AS T1 JOIN Owners AS T2 ON T1.owner_id = T2.owner_id WHERE T1.abandoned_yn = 'N';\n</sql>", "latency_s": 0.401, "cost_usd": 0.0}
+{"idx": 989, "completion": "<sql>\nSELECT MAX(TO_NUMBER(age)) FROM Dogs;\n</sql>", "latency_s": 0.401, "cost_usd": 0.0}
+{"idx": 991, "completion": "<sql>\nSELECT charge_type, charge_amount FROM Charges;\n</sql>", "latency_s": 0.401, "cost_usd": 0.0}
+{"idx": 986, "completion": "<sql>\nSELECT AVG(age) FROM Dogs;\n</sql>", "latency_s": 0.401, "cost_usd": 0.0}
+{"idx": 987, "completion": "<sql>\nSELECT AVG(age) FROM Dogs;\n</sql>", "latency_s": 0.401, "cost_usd": 0.0}
+{"idx": 966, "completion": "<sql>\nSELECT COUNT(*) FROM Dogs;\n</sql>", "latency_s": 0.401, "cost_usd": 0.0}
+{"idx": 974, "completion": "<sql>\nSELECT COUNT(*) \nFROM Dogs \nWHERE age < (SELECT AVG(age) FROM Dogs);\n</sql>", "latency_s": 0.309, "cost_usd": 0.0}
+{"idx": 976, "completion": "<sql>\nSELECT MAX(cost_of_treatment) FROM Treatments;\n</sql>", "latency_s": 0.309, "cost_usd": 0.0}
+{"idx": 934, "completion": "<sql>\nSELECT breed_name FROM Breeds WHERE breed_code IN (SELECT breed_code FROM Dogs GROUP BY breed_code ORDER BY COUNT(*) DESC LIMIT 1);\n</sql>", "latency_s": 0.309, "cost_usd": 0.0}
+{"idx": 980, "completion": "<sql>\nSELECT COUNT(DISTINCT owner_id) FROM Owners WHERE owner_id NOT IN (SELECT owner_id FROM Dogs);\n</sql>", "latency_s": 0.309, "cost_usd": 0.0}
+{"idx": 978, "completion": "<sql>\nSELECT COUNT(*) FROM Dogs WHERE dog_id NOT IN (SELECT dog_id FROM Treatments);\n</sql>", "latency_s": 0.309, "cost_usd": 0.0}
+{"idx": 992, "completion": "<sql>\nSELECT MAX(charge_amount) FROM Charges;\n</sql>", "latency_s": 0.309, "cost_usd": 0.0}
+{"idx": 975, "completion": "<sql>\nSELECT COUNT(*) \nFROM Dogs \nWHERE age < (SELECT AVG(age) FROM Dogs);\n</sql>", "latency_s": 0.309, "cost_usd": 0.0}
+{"idx": 953, "completion": "<sql>\nSELECT Owners.first_name, Dogs.name FROM Owners JOIN Dogs ON Owners.owner_id = Dogs.owner_id;\n</sql>", "latency_s": 0.309, "cost_usd": 0.0}
+{"idx": 967, "completion": "<sql>\nSELECT COUNT(*) \nFROM Dogs d \nJOIN Treatments t ON d.dog_id = t.dog_id;\n</sql>", "latency_s": 0.309, "cost_usd": 0.0}
+{"idx": 960, "completion": "<sql>\nSELECT DISTINCT T3.last_name FROM Dogs AS T1 JOIN Owners AS T3 ON T1.owner_id = T3.owner_id WHERE T1.age = (SELECT MIN(age) FROM Dogs);\n</sql>", "latency_s": 0.309, "cost_usd": 0.0}
+{"idx": 961, "completion": "<sql>\nSELECT DISTINCT T3.last_name FROM Dogs AS T1 JOIN Owners AS T3 ON T1.owner_id = T3.owner_id WHERE T1.age = (SELECT MIN(age) FROM Dogs);\n</sql>", "latency_s": 0.309, "cost_usd": 0.0}
+{"idx": 919, "completion": "<sql>\nSELECT state FROM Owners WHERE owner_id IN (SELECT owner_id FROM Dogs);\n</sql>", "latency_s": 0.309, "cost_usd": 0.0}
+{"idx": 952, "completion": "<sql>\nSELECT T1.first_name, T3.name FROM Owners AS T1 JOIN Dogs AS T3 ON T1.owner_id = T3.owner_id;\n</sql>", "latency_s": 0.309, "cost_usd": 0.0}
+{"idx": 935, "completion": "<sql>\nSELECT T1.breed_name FROM Breeds AS T1 JOIN Dogs AS T2 ON T1.breed_code = T2.breed_code GROUP BY T1.breed_name ORDER BY COUNT(*) DESC LIMIT 1;\n</sql>", "latency_s": 0.309, "cost_usd": 0.0}
+{"idx": 977, "completion": "<sql>\nSELECT MAX(T.cost_of_treatment) AS max_cost \nFROM Treatments T \nWHERE T.date_of_treatment = (SELECT MAX(date_of_treatment) FROM Treatments);\n</sql>", "latency_s": 0.309, "cost_usd": 0.0}
+{"idx": 968, "completion": "<sql>\nSELECT COUNT(DISTINCT professional_id) FROM Treatments;\n</sql>", "latency_s": 0.309, "cost_usd": 0.0}
+{"idx": 969, "completion": "<sql>\nSELECT COUNT(DISTINCT professional_id) FROM Treatments;\n</sql>", "latency_s": 0.256, "cost_usd": 0.0}
+{"idx": 993, "completion": "<sql>\nSELECT MAX(charge_amount) AS max_charge FROM Charges;\n</sql>", "latency_s": 0.256, "cost_usd": 0.0}
+{"idx": 918, "completion": "<sql>\nSELECT state FROM Owners WHERE owner_id IN (SELECT owner_id FROM Dogs);\n</sql>", "latency_s": 0.256, "cost_usd": 0.0}
+{"idx": 921, "completion": "<sql>\nSELECT AVG(T.age) \nFROM Dogs AS T \nJOIN Treatments AS S ON T.dog_id = S.dog_id;\n</sql>", "latency_s": 0.256, "cost_usd": 0.0}
+{"idx": 982, "completion": "<sql>\nSELECT COUNT(professional_id) \nFROM Professionals \nWHERE professional_id NOT IN (SELECT DISTINCT professional_id FROM Treatments);\n</sql>", "latency_s": 0.256, "cost_usd": 0.0}
+{"idx": 965, "completion": "<sql>\nSELECT date_arrived AS Arrival_Date, date_departed AS Departure_Date FROM Dogs;\n</sql>", "latency_s": 0.256, "cost_usd": 0.0}
+{"idx": 983, "completion": "<sql>\nSELECT COUNT(professional_id) \nFROM Professionals \nWHERE professional_id NOT IN (SELECT DISTINCT professional_id FROM Treatments);\n</sql>", "latency_s": 0.256, "cost_usd": 0.0}
+{"idx": 996, "completion": "<sql>\nSELECT DISTINCT breed_name AS BreedType, size_description AS SizeType FROM Breeds JOIN Sizes ON Breeds.breed_code = Sizes.size_code;\n</sql>", "latency_s": 0.256, "cost_usd": 0.0}
+{"idx": 979, "completion": "<sql>\nSELECT COUNT(*) FROM Dogs WHERE dog_id NOT IN (SELECT dog_id FROM Treatments);\n</sql>", "latency_s": 0.256, "cost_usd": 0.0}
+{"idx": 981, "completion": "<sql>\nSELECT COUNT(owner_id) \nFROM Owners \nWHERE owner_id NOT IN (SELECT owner_id FROM Dogs);\n</sql>", "latency_s": 0.256, "cost_usd": 0.0}
+{"idx": 997, "completion": "<sql>\nSELECT DISTINCT breed_name AS BreedType, size_description AS SizeType FROM Dogs;\n</sql>", "latency_s": 0.256, "cost_usd": 0.0}
+{"idx": 964, "completion": "<sql>\nSELECT date_arrived AS \"Arriving Date\", date_departed AS \"Departing Date\" FROM Dogs;\n</sql>", "latency_s": 0.256, "cost_usd": 0.0}
+{"idx": 949, "completion": "<sql>\nSELECT cost_of_treatment, treatment_type_description FROM Treatments;\n</sql>", "latency_s": 0.256, "cost_usd": 0.0}
+{"idx": 994, "completion": "<sql>\nSELECT email_address, cell_number, home_phone FROM Professionals;\n</sql>", "latency_s": 0.256, "cost_usd": 0.0}
+{"idx": 995, "completion": "<sql>\nSELECT first_name, street, city, state, zip_code, last_name, email_address, home_phone, cell_number FROM Professionals;\n</sql>", "latency_s": 0.256, "cost_usd": 0.0}
+{"idx": 951, "completion": "<sql>\nSELECT O.first_name, O.last_name, D.size_code FROM Owners AS O JOIN Dogs AS D ON O.owner_id = D.owner_id;\n</sql>", "latency_s": 0.256, "cost_usd": 0.0}
+{"idx": 990, "completion": "<sql>\nSELECT charge_type, charge_amount FROM Charges;\n</sql>", "latency_s": 0.413, "cost_usd": 0.0}
+{"idx": 920, "completion": "<sql>\nSELECT AVG(T.age) \nFROM Dogs AS T \nWHERE T.dog_id IN (SELECT dog_id FROM Treatments);\n</sql>", "latency_s": 0.413, "cost_usd": 0.0}
+{"idx": 950, "completion": "<sql>\nSELECT O.first_name, O.last_name, S.size_description FROM Owners AS O JOIN Dogs AS D ON O.owner_id = D.owner_id JOIN Sizes AS S ON D.size_code = S.size_code;\n</sql>", "latency_s": 0.413, "cost_usd": 0.0}
+{"idx": 955, "completion": "<sql>\nSELECT D.name, T.date_of_treatment FROM Dogs AS D JOIN Treatments AS T ON D.dog_id = T.dog_id WHERE D.breed_code IN (SELECT breed_code FROM Breeds ORDER BY COUNT(*) DESC LIMIT 1);\n</sql>", "latency_s": 0.413, "cost_usd": 0.0}
+{"idx": 930, "completion": "<sql>\nSELECT o.owner_id, o.first_name, o.last_name \nFROM Owners o \nJOIN Dogs d ON o.owner_id = d.owner_id \nGROUP BY o.owner_id \nORDER BY COUNT(*) DESC LIMIT 1;\n</sql>", "latency_s": 0.413, "cost_usd": 0.0}
+{"idx": 939, "completion": "<sql>\nSELECT T2.treatment_type_description FROM Dogs AS T1 JOIN Treatments AS T3 ON T1.dog_id = T3.dog_id JOIN Treatment_Types AS T2 ON T3.treatment_type_code = T2.treatment_type_code GROUP BY T2.treatment_type_code ORDER BY SUM(T3.cost_of_treatment) ASC LIMIT 1;\n</sql>", "latency_s": 0.413, "cost_usd": 0.0}
+{"idx": 954, "completion": "<sql>\nSELECT D.name, T.date_of_treatment FROM Dogs AS D JOIN Treatments AS T ON D.dog_id = T.dog_id WHERE D.breed_code IN (SELECT breed_code FROM Breeds ORDER BY COUNT(*) DESC LIMIT 1);\n</sql>", "latency_s": 0.413, "cost_usd": 0.0}
+{"idx": 947, "completion": "<sql>\nSELECT T1.date_of_treatment, P.first_name FROM Treatments AS T1 JOIN Professionals AS P ON T1.professional_id = P.professional_id;\n</sql>", "latency_s": 0.413, "cost_usd": 0.0}
+{"idx": 931, "completion": "<sql>\nSELECT o.owner_id, o.first_name, o.last_name \nFROM Owners o \nJOIN Dogs d ON o.owner_id = d.owner_id \nGROUP BY o.owner_id \nORDER BY COUNT(*) DESC LIMIT 1;\n</sql>", "latency_s": 0.413, "cost_usd": 0.0}
+{"idx": 948, "completion": "<sql>\nSELECT T2.treatment_type_description, T3.cost_of_treatment FROM Treatments AS T1 JOIN Treatment_Types AS T2 ON T1.treatment_type_code = T2.treatment_type_code JOIN Charges AS T3 ON T1.cost_of_treatment = T3.charge_amount;\n</sql>", "latency_s": 0.413, "cost_usd": 0.0}
+{"idx": 957, "completion": "<sql>\nSELECT DISTINCT O.first_name FROM Owners AS O JOIN Dogs AS D ON O.owner_id = D.owner_id WHERE O.state = 'Virginia';\n</sql>", "latency_s": 0.413, "cost_usd": 0.0}
+{"idx": 938, "completion": "<sql>\nSELECT treatment_type_description FROM Treatment_Types WHERE cost_of_treatment = (SELECT MIN(cost_of_treatment) FROM Treatments);\n</sql>", "latency_s": 0.413, "cost_usd": 0.0}
+{"idx": 959, "completion": "<sql>\nSELECT T1.date_of_birth AS Arriving_Date, T1.date_departed AS Departing_Date \nFROM Dogs AS T1 JOIN Treatments AS T2 ON T1.dog_id = T2.dog_id;\n</sql>", "latency_s": 0.413, "cost_usd": 0.0}
+{"idx": 926, "completion": "<sql>\nSELECT DISTINCT first_name \nFROM Professionals \nWHERE first_name NOT IN (SELECT name FROM Dogs) \nINTERSECT \nSELECT DISTINCT first_name \nFROM Owners \nWHERE first_name NOT IN (SELECT name FROM Dogs);\n</sql>", "latency_s": 0.413, "cost_usd": 0.0}
+{"idx": 924, "completion": "<sql>\nSELECT T1.name FROM Dogs AS T1 JOIN Treatments AS T2 ON T1.dog_id = T2.dog_id WHERE T2.cost_of_treatment <= 1000;\n</sql>", "latency_s": 0.413, "cost_usd": 0.0}
+{"idx": 943, "completion": "<sql>\nSELECT professional_id, cell_number FROM Professionals WHERE professional_id IN (SELECT DISTINCT professional_id FROM Treatments GROUP BY professional_id HAVING COUNT(DISTINCT treatment_type_code) >= 2);\n</sql>", "latency_s": 0.413, "cost_usd": 0.0}
+{"idx": 927, "completion": "<sql>\nSELECT DISTINCT first_name \nFROM Professionals \nWHERE role_code IN ('P', 'O') AND first_name NOT IN (SELECT name FROM Dogs);\n\nUNION ALL\n\nSELECT DISTINCT first_name \nFROM Owners \nWHERE first_name NOT IN (SELECT name FROM Dogs);\n</sql>", "latency_s": 0.359, "cost_usd": 0.0}
+{"idx": 999, "completion": "<sql>\nSELECT T1.first_name, T2.treatment_type_description FROM Professionals AS T1 JOIN Treatments AS T3 ON T1.professional_id = T3.professional_id JOIN Treatment_Types AS T2 ON T3.treatment_type_code = T2.treatment_type_code;\n</sql>", "latency_s": 0.359, "cost_usd": 0.0}
+{"idx": 929, "completion": "<sql>\nSELECT professional_id, role_code, email_address FROM Professionals WHERE professional_id NOT IN (SELECT DISTINCT professional_id FROM Treatments);\n</sql>", "latency_s": 0.359, "cost_usd": 0.0}
+{"idx": 925, "completion": "<sql>\nSELECT T1.name FROM Dogs AS T1 JOIN Owners AS T2 ON T1.owner_id = T2.owner_id WHERE T2.home_phone IS NULL AND SUM(T3.cost_of_treatment) <= 1000;\n</sql>", "latency_s": 0.359, "cost_usd": 0.0}
+{"idx": 962, "completion": "<sql>\nSELECT email_address FROM Professionals WHERE state IN ('HI', 'WI');\n</sql>", "latency_s": 0.359, "cost_usd": 0.0}
+{"idx": 958, "completion": "<sql>\nSELECT T1.date_of_birth AS Arriving_Date, T1.date_departed AS Departing_Date FROM Dogs AS T1 JOIN Treatments AS T2 ON T1.dog_id = T2.dog_id;\n</sql>", "latency_s": 0.359, "cost_usd": 0.0}
+{"idx": 936, "completion": "<sql>\nSELECT o.owner_id, o.last_name FROM Owners AS o JOIN Dogs AS d ON o.owner_id = d.owner_id JOIN Treatments AS t ON d.dog_id = t.dog_id GROUP BY o.owner_id ORDER BY COUNT(*) DESC LIMIT 1;\n</sql>", "latency_s": 0.359, "cost_usd": 0.0}
+{"idx": 941, "completion": "<sql>\nSELECT o.owner_id, o.zip_code \nFROM Owners o \nJOIN Dogs d ON o.owner_id = d.owner_id \nGROUP BY o.owner_id, o.zip_code \nORDER BY SUM(t.cost_of_treatment) DESC \nLIMIT 1;\n</sql>", "latency_s": 0.359, "cost_usd": 0.0}
+{"idx": 946, "completion": "<sql>\nSELECT T2.date_of_treatment, T1.first_name FROM Treatments AS T1 JOIN Professionals AS T2 ON T1.professional_id = T2.professional_id;\n</sql>", "latency_s": 0.359, "cost_usd": 0.0}
+{"idx": 937, "completion": "<sql>\nSELECT o.owner_id, o.last_name FROM Owners AS o JOIN Dogs AS d ON o.owner_id = d.owner_id JOIN Treatments AS t ON d.dog_id = t.dog_id GROUP BY o.owner_id ORDER BY SUM(t.cost_of_treatment) DESC LIMIT 1;\n</sql>", "latency_s": 0.359, "cost_usd": 0.0}
+{"idx": 928, "completion": "<sql>\nSELECT professionals.professional_id, professionals.role_code, professionals.email_address \nFROM Professionals \nWHERE professionals.professional_id NOT IN (SELECT DISTINCT professionals.professional_id FROM Professionals JOIN Treatments ON Professionals.professional_id = Treatments.professional_id WHERE Treatments.dog_id IS NOT NULL);\n</sql>", "latency_s": 0.359, "cost_usd": 0.0}
+{"idx": 933, "completion": "<sql>\nSELECT professional_id, role_code, first_name FROM Professionals WHERE professional_id IN (SELECT DISTINCT professional_id FROM Treatments GROUP BY professional_id HAVING COUNT(*) >= 2);\n</sql>", "latency_s": 0.359, "cost_usd": 0.0}
+{"idx": 956, "completion": "<sql>\nSELECT Owners.first_name, Dogs.name FROM Owners JOIN Dogs ON Owners.owner_id = Dogs.owner_id WHERE Owners.state = 'Virginia';\n</sql>", "latency_s": 0.359, "cost_usd": 0.0}
+{"idx": 932, "completion": "<sql>\nSELECT professional_id, role_code, first_name FROM Professionals WHERE professional_id IN (SELECT DISTINCT professional_id FROM Treatments GROUP BY professional_id HAVING COUNT(*) >= 2);\n</sql>", "latency_s": 0.359, "cost_usd": 0.0}
+{"idx": 942, "completion": "<sql>\nSELECT DISTINCT p.professional_id, p.cell_number \nFROM Professionals p \nJOIN Treatments t ON p.professional_id = t.professional_id \nGROUP BY p.professional_id \nHAVING COUNT(DISTINCT t.treatment_type_code) >= 2;\n</sql>", "latency_s": 0.359, "cost_usd": 0.0}
+{"idx": 963, "completion": "<sql>\nSELECT email_address FROM Professionals WHERE state IN ('HI', 'WI');\n</sql>", "latency_s": 0.359, "cost_usd": 0.0}
+{"idx": 998, "completion": "<sql>\nSELECT T1.first_name, T3.treatment_type_description FROM Professionals AS T1 JOIN Treatments AS T2 ON T1.professional_id = T2.professional_id JOIN Treatment_Types AS T3 ON T2.treatment_type_code = T3.treatment_type_code;\n</sql>", "latency_s": 0.494, "cost_usd": 0.0}
+{"idx": 940, "completion": "<sql>\nSELECT o.owner_id, o.zip_code FROM Owners AS o JOIN Dogs AS d ON o.owner_id = d.owner_id WHERE (SELECT SUM(cost_of_treatment) FROM Treatments AS t JOIN Dogs AS dd ON t.dog_id = dd.dog_id WHERE dd.owner_id = o.owner_id GROUP BY o.owner_id ORDER BY SUM(cost_of_treatment) DESC LIMIT 1);\n</sql>", "latency_s": 0.494, "cost_usd": 0.0}
+{"idx": 944, "completion": "<sql>\nSELECT T1.first_name, T1.last_name FROM Professionals AS T1 JOIN Treatments AS T2 ON T1.professional_id = T2.professional_id WHERE T2.cost_of_treatment < (SELECT AVG(cost_of_treatment) FROM Treatments);\n</sql>", "latency_s": 0.494, "cost_usd": 0.0}
+{"idx": 984, "completion": "<sql>\nSELECT Dogs.name, Dogs.age, Dogs.weight FROM Dogs WHERE abandoned_yn = '1';\n</sql>", "latency_s": 0.494, "cost_usd": 0.0}
+{"idx": 971, "completion": "<sql>\nSELECT T2.role_code, T2.street, T2.city, T2.state \nFROM Professionals AS T1 \nJOIN Professionals AS T2 ON T1.professional_id = T2.professional_id \nWHERE T2.city LIKE '%West%';\n</sql>", "latency_s": 0.494, "cost_usd": 0.0}
+{"idx": 970, "completion": "<sql>\nSELECT role_code, street, city, state FROM Professionals WHERE city LIKE '%West%'\n</sql>", "latency_s": 0.494, "cost_usd": 0.0}
+{"idx": 972, "completion": "<sql>\nSELECT first_name, last_name, email_address FROM Owners WHERE state LIKE '%North%'\n</sql>", "latency_s": 0.494, "cost_usd": 0.0}
+{"idx": 973, "completion": "<sql>\nSELECT first_name, last_name, email_address FROM Owners WHERE state LIKE '%North%'\n</sql>", "latency_s": 0.494, "cost_usd": 0.0}
+{"idx": 945, "completion": "<sql>\nSELECT T1.first_name, T1.last_name FROM Professionals AS T1 JOIN Treatments AS T2 ON T1.professional_id = T2.professional_id WHERE T2.cost_of_treatment < (SELECT AVG(cost_of_treatment) FROM Treatments);\n</sql>", "latency_s": 0.494, "cost_usd": 0.0}
+{"idx": 985, "completion": "<sql>\nSELECT Dogs.name, Dogs.age, Dogs.weight FROM Dogs WHERE abandoned_yn = '1';\n</sql>", "latency_s": 0.494, "cost_usd": 0.0}
+{"idx": 923, "completion": "<sql>\nSELECT p.professional_id, p.last_name, p.cell_number \nFROM Professionals p \nJOIN Treatments t ON p.professional_id = t.professional_id \nWHERE (p.state = 'Indiana' OR COUNT(t.treatment_id) > 2);\n</sql>", "latency_s": 0.494, "cost_usd": 0.0}
+{"idx": 922, "completion": "<sql>\nSELECT DISTINCT p.professional_id, p.last_name, p.cell_number \nFROM Professionals p \nJOIN Treatments t ON p.professional_id = t.professional_id \nWHERE (p.state = 'Indiana' OR COUNT(t.treatment_id) > 2);\n</sql>", "latency_s": 0.494, "cost_usd": 0.0}
+{"idx": 581, "completion": "<sql>\nSELECT T1.section_name FROM Sections AS T1 JOIN Student_Enrolment AS T2 ON T1.section_id = T2.section_id WHERE T2.student_id = (SELECT student_id FROM Students WHERE first_name = 'H' AND middle_name = 'h' AND last_name = 'h')\n</sql>", "latency_s": 0.494, "cost_usd": 0.0}
+{"idx": 510, "completion": "<sql>\nSELECT COUNT(*) FROM Courses;\n</sql>", "latency_s": 0.494, "cost_usd": 0.0}
+{"idx": 568, "completion": "<sql>\nSELECT COUNT(*) FROM Transcripts;\n</sql>", "latency_s": 0.494, "cost_usd": 0.0}
+{"idx": 511, "completion": "<sql>\nSELECT course_description FROM Courses WHERE course_name = 'Math';\n</sql>", "latency_s": 0.494, "cost_usd": 0.0}
+{"idx": 567, "completion": "<sql>\nSELECT COUNT(*) FROM Transcripts;\n</sql>", "latency_s": 0.348, "cost_usd": 0.0}
+{"idx": 564, "completion": "<sql>\nSELECT AVG(transcript_date) FROM Transcripts;\n</sql>", "latency_s": 0.348, "cost_usd": 0.0}
+{"idx": 509, "completion": "<sql>\nSELECT COUNT(*) FROM Courses;\n</sql>", "latency_s": 0.348, "cost_usd": 0.0}
+{"idx": 514, "completion": "<sql>\nSELECT zip_postcode FROM Addresses WHERE city = 'Port Chelsea';\n</sql>", "latency_s": 0.348, "cost_usd": 0.0}
+{"idx": 517, "completion": "<sql>\nSELECT COUNT(DISTINCT dp.department_id) \nFROM Departments AS dp \nJOIN Degree_Programs AS dpd ON dp.department_id = dpd.department_id;\n</sql>", "latency_s": 0.348, "cost_usd": 0.0}
+{"idx": 570, "completion": "<sql>\nSELECT MAX(transcript_date) FROM Transcripts;\n</sql>", "latency_s": 0.348, "cost_usd": 0.0}
+{"idx": 520, "completion": "<sql>\nSELECT COUNT(DISTINCT degree_program_id) FROM Degree_Programs;\n</sql>", "latency_s": 0.348, "cost_usd": 0.0}
+{"idx": 569, "completion": "<sql>\nSELECT MAX(transcript_date) FROM Transcripts;\n</sql>", "latency_s": 0.348, "cost_usd": 0.0}
+{"idx": 519, "completion": "<sql>\nSELECT COUNT(DISTINCT dp.degree_summary_name) FROM Degree_Programs AS dp;\n</sql>", "latency_s": 0.348, "cost_usd": 0.0}
+{"idx": 518, "completion": "<sql>\nSELECT COUNT(DISTINCT department_id) FROM Degree_Programs;\n</sql>", "latency_s": 0.348, "cost_usd": 0.0}
+{"idx": 563, "completion": "<sql>\nSELECT AVG(transcript_date) FROM Transcripts;\n</sql>", "latency_s": 0.348, "cost_usd": 0.0}
+{"idx": 582, "completion": "<sql>\nSELECT T2.section_description FROM Sections AS T1 JOIN Student_Enrolment AS T3 ON T1.section_id = T3.section_id WHERE T1.section_name = 'h';\n</sql>", "latency_s": 0.348, "cost_usd": 0.0}
+{"idx": 512, "completion": "<sql>\nSELECT course_description FROM Courses WHERE course_name LIKE '%math%' ;\n</sql>", "latency_s": 0.348, "cost_usd": 0.0}
+{"idx": 508, "completion": "<sql>\nSELECT line_1, line_2 FROM Addresses;\n</sql>", "latency_s": 0.348, "cost_usd": 0.0}
+{"idx": 522, "completion": "<sql>\nSELECT COUNT(degree_program_id) FROM Degree_Programs WHERE department_id = (SELECT department_id FROM Departments WHERE department_name = 'Engineering');\n</sql>", "latency_s": 0.348, "cost_usd": 0.0}
+{"idx": 507, "completion": "<sql>\nSELECT line_1, line_2 FROM Addresses;\n</sql>", "latency_s": 0.348, "cost_usd": 0.0}
+{"idx": 521, "completion": "<sql>\nSELECT COUNT(DISTINCT dp.degree_program_id) \nFROM Departments AS d \nJOIN Degree_Programs AS dp ON d.department_id = dp.department_id \nWHERE d.department_name = 'Engineering';\n</sql>", "latency_s": 0.411, "cost_usd": 0.0}
+{"idx": 523, "completion": "<sql>\nSELECT section_name, section_description FROM Sections;\n</sql>", "latency_s": 0.411, "cost_usd": 0.0}
+{"idx": 527, "completion": "<sql>\nSELECT section_name FROM Sections ORDER BY section_name DESC;\n</sql>", "latency_s": 0.411, "cost_usd": 0.0}
+{"idx": 524, "completion": "<sql>\nSELECT section_name, section_description FROM Sections;\n</sql>", "latency_s": 0.411, "cost_usd": 0.0}
+{"idx": 544, "completion": "<sql>\nSELECT T1.semester_name FROM Semesters AS T1 JOIN Student_Enrolment AS T2 ON T1.semester_id = T2.semester_id WHERE T2.student_id IS NULL;\n</sql>", "latency_s": 0.411, "cost_usd": 0.0}
+{"idx": 577, "completion": "<sql>\nSELECT COUNT(DISTINCT current_address_id) FROM Students;\n</sql>", "latency_s": 0.411, "cost_usd": 0.0}
+{"idx": 513, "completion": "<sql>\nSELECT T1.zip_postcode FROM Addresses AS T1 JOIN Addresses AS T2 ON T1.city = 'Port Chelsea' WHERE T2.address_id = T1.current_address_id;\n</sql>", "latency_s": 0.411, "cost_usd": 0.0}
+{"idx": 547, "completion": "<sql>\nSELECT T1.course_name FROM Courses AS T1 JOIN Student_Enrolment AS T2 ON T1.course_id = T2.course_id GROUP BY T1.course_name ORDER BY COUNT(*) DESC LIMIT 1;\n</sql>", "latency_s": 0.411, "cost_usd": 0.0}
+{"idx": 525, "completion": "<sql>\nSELECT course_name, course_id FROM Courses WHERE course_id IN (SELECT course_id FROM Sections GROUP BY course_id HAVING COUNT(section_id) <= 2);\n</sql>", "latency_s": 0.411, "cost_usd": 0.0}
+{"idx": 548, "completion": "<sql>\nSELECT T1.course_name FROM Courses AS T1 JOIN Student_Enrolment AS T2 ON T1.course_id = T2.course_id GROUP BY T1.course_name ORDER BY COUNT(*) DESC LIMIT 1;\n</sql>", "latency_s": 0.411, "cost_usd": 0.0}
+{"idx": 579, "completion": "<sql>\nSELECT * FROM Students ORDER BY first_name DESC, middle_name DESC, last_name DESC;\n</sql>", "latency_s": 0.411, "cost_usd": 0.0}
+{"idx": 528, "completion": "<sql>\nSELECT section_name FROM Sections ORDER BY section_name DESC;\n</sql>", "latency_s": 0.411, "cost_usd": 0.0}
+{"idx": 565, "completion": "<sql>\nSELECT T1.transcript_date, T1.other_details FROM Transcripts AS T1 JOIN Transcript_Contents AS T2 ON T1.transcript_id = T2.transcript_id WHERE T2.student_course_id IS NULL ORDER BY T1.transcript_date LIMIT 1;\n</sql>", "latency_s": 0.411, "cost_usd": 0.0}
+{"idx": 578, "completion": "<sql>\nSELECT DISTINCT T1.line_1, T1.city, T1.zip_postcode FROM Addresses AS T1 JOIN Students AS T2 ON T1.address_id = T2.current_address_id WHERE T2.date_left IS NULL;\n</sql>", "latency_s": 0.411, "cost_usd": 0.0}
+{"idx": 546, "completion": "<sql>\nSELECT T1.course_name FROM Courses AS T1 JOIN Student_Enrolment AS T2 ON T1.course_id = T2.course_id WHERE T2.student_id IS NOT NULL;\n</sql>", "latency_s": 0.411, "cost_usd": 0.0}
+{"idx": 554, "completion": "<sql>\nSELECT cell_mobile_number FROM Students WHERE first_name = 'Timmothy' AND last_name = 'Ward';\n</sql>", "latency_s": 0.411, "cost_usd": 0.0}
+{"idx": 526, "completion": "<sql>\nSELECT Courses.course_name, Sections.section_id \nFROM Courses \nLEFT JOIN Sections ON Courses.course_id = Sections.course_id \nWHERE Sections.section_id IS NULL OR Sections.section_id < 2;\n</sql>", "latency_s": 0.731, "cost_usd": 0.0}
+{"idx": 551, "completion": "<sql>\nSELECT T1.transcript_date, T1.transcript_id FROM Transcripts AS T1 JOIN Transcript_Contents AS T2 ON T1.transcript_id = T2.transcript_id WHERE T2.student_course_id IN (SELECT student_course_id FROM Student_Enrolment_Courses GROUP BY student_course_id HAVING COUNT(*) >= 2);\n</sql>", "latency_s": 0.731, "cost_usd": 0.0}
+{"idx": 537, "completion": "<sql>\nSELECT degree_summary_name FROM Degree_Programs WHERE degree_program_id = (SELECT degree_program_id FROM Student_Enrolment GROUP BY degree_program_id ORDER BY COUNT(student_id) DESC LIMIT 1);\n</sql>", "latency_s": 0.731, "cost_usd": 0.0}
+{"idx": 543, "completion": "<sql>\nSELECT DISTINCT T1.semester_name FROM Semesters AS T1 JOIN Student_Enrolment AS T2 ON T1.semester_id = T2.semester_id WHERE T2.student_id IS NULL;\n</sql>", "latency_s": 0.731, "cost_usd": 0.0}
+{"idx": 552, "completion": "<sql>\nSELECT T1.transcript_date, T1.transcript_id FROM Transcripts AS T1 JOIN Transcript_Contents AS T2 ON T1.transcript_id = T2.transcript_id GROUP BY T1.transcript_id HAVING COUNT(T2.student_course_id) >= 2;\n</sql>", "latency_s": 0.731, "cost_usd": 0.0}
+{"idx": 558, "completion": "<sql>\nSELECT T1.first_name, T1.middle_name, T1.last_name FROM Students AS T1 INNER JOIN Student_Enrolment AS T2 ON T1.student_id = T2.student_id WHERE T2.other_details LIKE '%graduated%' ORDER BY T2.date_left ASC LIMIT 1;\n</sql>", "latency_s": 0.731, "cost_usd": 0.0}
+{"idx": 562, "completion": "<sql>\nSELECT T1.address_id, T1.line_1, T1.line_2 FROM Addresses AS T1 JOIN Students AS T2 ON T1.address_id = T2.current_address_id OR T1.address_id = T2.permanent_address_id GROUP BY T1.address_id ORDER BY COUNT(*) DESC LIMIT 1;\n</sql>", "latency_s": 0.731, "cost_usd": 0.0}
+{"idx": 556, "completion": "<sql>\nSELECT first_name, middle_name, last_name FROM Students WHERE date_first_registered = (SELECT MIN(date_first_registered) FROM Students);\n</sql>", "latency_s": 0.731, "cost_usd": 0.0}
+{"idx": 516, "completion": "<sql>\nSELECT d.department_name, dp.degree_program_id \nFROM Departments d \nJOIN Degree_Programs dp ON d.department_id = dp.department_id \nGROUP BY d.department_name \nORDER BY COUNT(*) DESC LIMIT 1;\n</sql>", "latency_s": 0.731, "cost_usd": 0.0}
+{"idx": 574, "completion": "<sql>\nSELECT T1.transcript_date, T1.transcript_id FROM Transcripts AS T1 INNER JOIN Transcript_Contents AS T2 ON T1.transcript_id = T2.transcript_id GROUP BY T1.transcript_id ORDER BY COUNT(*) LIMIT 1;\n</sql>", "latency_s": 0.731, "cost_usd": 0.0}
+{"idx": 538, "completion": "<sql>\nSELECT T1.degree_summary_name FROM Degree_Programs AS T1 JOIN Student_Enrolment AS T2 ON T1.degree_program_id = T2.degree_program_id GROUP BY T1.degree_summary_name ORDER BY COUNT(*) DESC LIMIT 1;\n</sql>", "latency_s": 0.731, "cost_usd": 0.0}
+{"idx": 515, "completion": "<sql>\nSELECT d.department_name, d.department_id \nFROM Departments AS d \nJOIN Degree_Programs AS dp ON d.department_id = dp.department_id \nGROUP BY d.department_id \nORDER BY COUNT(*) DESC LIMIT 1;\n</sql>", "latency_s": 0.731, "cost_usd": 0.0}
+{"idx": 532, "completion": "<sql>\nSELECT T2.department_description FROM Students AS T1 JOIN Departments AS T2 ON T1.department_id = T2.department_id WHERE T1.first_name LIKE '%computer%' OR T1.last_name LIKE '%computer%';\n</sql>", "latency_s": 0.731, "cost_usd": 0.0}
+{"idx": 580, "completion": "<sql>\nSELECT DISTINCT other_student_details FROM Students ORDER BY last_name DESC;\n</sql>", "latency_s": 0.731, "cost_usd": 0.0}
+{"idx": 545, "completion": "<sql>\nSELECT DISTINCT T1.course_name FROM Courses AS T1 JOIN Student_Enrolment AS T2 ON T1.course_id = T2.course_id;\n</sql>", "latency_s": 0.731, "cost_usd": 0.0}
+{"idx": 575, "completion": "<sql>\nSELECT T1.semester_id FROM Semesters AS T1 JOIN Student_Enrolment AS T2 ON T1.semester_id = T2.semester_id WHERE T2.degree_program_id IN (SELECT degree_program_id FROM Degree_Programs WHERE department_id IN (SELECT department_id FROM Departments WHERE department_name = 'Master')) INTERSECT SELECT T1.semester_id FROM Semesters AS T1 JOIN Student_Enrolment AS T2 ON T1.semester_id = T2.semester_id WHERE T2.degree_program_id IN (SELECT degree_program_id FROM Degree_Programs WHERE department_id IN (SELECT department_id FROM Departments WHERE department_name = 'Bachelor'))\n</sql>", "latency_s": 0.731, "cost_usd": 0.0}
+{"idx": 531, "completion": "<sql>\nSELECT T2.department_description FROM Addresses AS T1 JOIN Departments AS T2 ON T1.department_id = T2.department_id WHERE T1.city LIKE '%the%computer%'\n</sql>", "latency_s": 0.645, "cost_usd": 0.0}
+{"idx": 566, "completion": "<sql>\nSELECT MIN(transcript_date) AS earliest_transcript_release, other_details FROM Transcripts;\n</sql>", "latency_s": 0.645, "cost_usd": 0.0}
+{"idx": 529, "completion": "<sql>\nSELECT S.semester_id, S.semester_name FROM Semesters AS S JOIN Student_Enrolment AS SE ON S.semester_id = SE.semester_id GROUP BY S.semester_id ORDER BY COUNT(*) DESC LIMIT 1;\n</sql>", "latency_s": 0.645, "cost_usd": 0.0}
+{"idx": 555, "completion": "<sql>\nSELECT first_name, middle_name, last_name FROM Students WHERE date_first_registered = ( SELECT MIN(date_first_registered) FROM Students );\n</sql>", "latency_s": 0.645, "cost_usd": 0.0}
+{"idx": 576, "completion": "<sql>\nSELECT T1.semester_id FROM Semesters AS T1 JOIN Student_Enrolment AS T2 ON T1.semester_id = T2.semester_id WHERE T2.degree_program_id IN (SELECT degree_program_id FROM Degree_Programs WHERE department_id IN (SELECT department_id FROM Departments WHERE department_name = 'Masters') UNION SELECT degree_program_id FROM Degree_Programs WHERE department_id IN (SELECT department_id FROM Departments WHERE department_name = 'Bachelors'))\n</sql>", "latency_s": 0.645, "cost_usd": 0.0}
+{"idx": 530, "completion": "<sql>\nSELECT S.semester_id, S.semester_name \nFROM Semesters AS S \nWHERE (S.semester_id, COUNT(T.transcript_id)) = \n    (SELECT semester_id, MAX(count) FROM Transcript_Contents GROUP BY semester_id);\n</sql>", "latency_s": 0.645, "cost_usd": 0.0}
+{"idx": 553, "completion": "<sql>\nSELECT cell_mobile_number FROM Students WHERE first_name = 'Timmothy' AND last_name = 'Ward';\n</sql>", "latency_s": 0.645, "cost_usd": 0.0}
+{"idx": 536, "completion": "<sql>\nSELECT T1.first_name, T1.middle_name, T1.last_name \nFROM Students AS T1 \nJOIN Student_Enrolment AS T2 ON T1.student_id = T2.student_id \nJOIN Degree_Programs AS T3 ON T2.degree_program_id = T3.degree_program_id \nWHERE T3.degree_summary_name LIKE '%Bachelors%';\n</sql>", "latency_s": 0.645, "cost_usd": 0.0}
+{"idx": 540, "completion": "<sql>\nSELECT D.degree_program_id, DP.degree_summary_name \nFROM Degree_Programs AS D \nJOIN Student_Enrolment AS SE ON D.department_id = SE.department_id \nGROUP BY D.degree_program_id \nORDER BY COUNT(*) DESC LIMIT 1;\n</sql>", "latency_s": 0.645, "cost_usd": 0.0}
+{"idx": 535, "completion": "<sql>\nSELECT T1.first_name, T1.middle_name, T1.last_name FROM Students AS T1 JOIN Student_Enrolment AS T2 ON T1.student_id = T2.student_id WHERE T2.degree_program_id IN (SELECT degree_program_id FROM Degree_Programs WHERE department_id IN (SELECT department_id FROM Departments WHERE department_name = 'Biology'))\n</sql>", "latency_s": 0.645, "cost_usd": 0.0}
+{"idx": 573, "completion": "<sql>\nSELECT T1.transcript_date FROM Transcripts AS T1 INNER JOIN Transcript_Contents AS T2 ON T1.transcript_id = T2.transcript_id GROUP BY T1.transcript_date ORDER BY COUNT(*) LIMIT 1;\n</sql>", "latency_s": 0.645, "cost_usd": 0.0}
+{"idx": 557, "completion": "<sql>\nSELECT T1.first_name, T1.middle_name, T1.last_name FROM Students AS T1 JOIN Student_Enrolment AS T2 ON T1.student_id = T2.student_id WHERE T2.date_left IS NOT NULL ORDER BY T2.date_left ASC LIMIT 1;\n</sql>", "latency_s": 0.645, "cost_usd": 0.0}
+{"idx": 561, "completion": "<sql>\nSELECT current_address_id AS address_id, line_1, line_2, line_3 FROM Addresses WHERE current_address_id IN (SELECT student_id.current_address_id FROM Students JOIN Student_Enrolment ON Students.student_id = Student_Enrolment.student_id JOIN Student_Enrolment_Courses ON Student_Enrolment.student_enrolment_id = Student_Enrolment_Courses.student_enrolment_id WHERE Student_Enrolment_Courses.course_id IS NOT NULL GROUP BY student_id.current_address_id ORDER BY COUNT(*) DESC LIMIT 1);\n</sql>", "latency_s": 0.645, "cost_usd": 0.0}
+{"idx": 539, "completion": "<sql>\nSELECT degree_program_id, degree_summary_name \nFROM Degree_Programs \nWHERE (SELECT COUNT(student_id) FROM Student_Enrolment WHERE degree_program_id = dp.degree_program_id) = \n(SELECT MAX(COUNT(student_id)) FROM Student_Enrolment);\n</sql>", "latency_s": 0.645, "cost_usd": 0.0}
+{"idx": 559, "completion": "<sql>\nSELECT T1.first_name FROM Students AS T1 JOIN Addresses AS T2 ON T1.permanent_address_id = T2.address_id WHERE T1.current_address_id != T2.address_id;\n</sql>", "latency_s": 0.645, "cost_usd": 0.0}
+{"idx": 560, "completion": "<sql>\nSELECT T1.first_name FROM Students AS T1 JOIN Addresses AS T2 ON T1.permanent_address_id = T2.address_id WHERE T1.permanent_address_id != T1.current_address_id;\n</sql>", "latency_s": 0.645, "cost_usd": 0.0}
+{"idx": 533, "completion": "<sql>\nSELECT T1.first_name, T1.middle_name, T1.last_name, T1.student_id FROM Students AS T1 JOIN Student_Enrolment AS T2 ON T1.student_id = T2.student_id WHERE T2.semester_id IN (SELECT semester_id FROM Semesters WHERE COUNT(DISTINCT T2.degree_program_id) = 2);\n</sql>", "latency_s": 0.529, "cost_usd": 0.0}
+{"idx": 550, "completion": "<sql>\nSELECT DISTINCT S.last_name \nFROM Students AS S \nJOIN Addresses AS A ON S.permanent_address_id = A.address_id \nWHERE A.state_province_county LIKE '%North Carolina%' AND S.date_first_registered IS NULL;\n</sql>", "latency_s": 0.529, "cost_usd": 0.0}
+{"idx": 584, "completion": "<sql>\nSELECT T1.first_name FROM Students AS T1 JOIN Addresses AS T2 ON T1.permanent_address_id = T2.address_id WHERE T2.country = 'Haiti' OR T1.cell_mobile_number = '09700166582';\n</sql>", "latency_s": 0.529, "cost_usd": 0.0}
+{"idx": 571, "completion": "<sql>\nSELECT COUNT(DISTINCT T1.student_enrolment_id) AS max_transcripts, T1.student_enrolment_id FROM Student_Enrolment CTE \nJOIN Transcript_Contents CT ON CTE.student_course_id = CT.student_course_id \nGROUP BY CTE.student_enrolment_id;\n</sql>", "latency_s": 0.529, "cost_usd": 0.0}
+{"idx": 583, "completion": "<sql>\nSELECT T1.first_name FROM Students AS T1 JOIN Addresses AS T2 ON T1.permanent_address_id = T2.address_id WHERE T2.country = 'Haiti' OR T1.cell_mobile_number = '09700166582';\n</sql>", "latency_s": 0.529, "cost_usd": 0.0}
+{"idx": 572, "completion": "<sql>\nSELECT MAX(T2.student_course_id), T1.student_enrolment_id FROM Student_Enrolment AS T1 JOIN Transcript_Contents AS T2 ON T1.student_enrolment_id = T2.student_course_id GROUP BY T1.student_enrolment_id;\n</sql>", "latency_s": 0.529, "cost_usd": 0.0}
+{"idx": 534, "completion": "<sql>\nSELECT s.first_name, s.middle_name, s.last_name, se.degree_program_id FROM Students s JOIN Student_Enrolment se ON s.student_id = se.student_id WHERE se.semester_id IS NOT NULL GROUP BY se.student_id HAVING COUNT(se.degree_program_id) > 1;\n</sql>", "latency_s": 0.529, "cost_usd": 0.0}
+{"idx": 549, "completion": "<sql>\nSELECT T1.last_name FROM Students AS T1 JOIN Addresses AS T2 ON T1.current_address_id = T2.address_id WHERE T2.state_province_county LIKE '%North Carolina%' AND T1.date_first_registered IS NULL;\n</sql>", "latency_s": 0.529, "cost_usd": 0.0}
+{"idx": 542, "completion": "<sql>\nSELECT s.first_name, s.middle_name, s.last_name, s.student_id, COUNT(te.degree_program_id) AS enrollment_count \nFROM Students s \nJOIN Student_Enrolment te ON s.student_id = te.student_id \nGROUP BY s.student_id \nORDER BY enrollment_count DESC LIMIT 1;\n</sql>", "latency_s": 0.529, "cost_usd": 0.0}
+{"idx": 541, "completion": "<sql>\nSELECT S.student_id, S.first_name, S.middle_name, S.last_name, COUNT(SE.degree_program_id) AS num_enrollments\nFROM Students S\nJOIN Student_Enrolment SE ON S.student_id = SE.student_id\nGROUP BY S.student_id\nORDER BY num_enrollments DESC LIMIT 1;\n</sql>", "latency_s": 0.529, "cost_usd": 0.0}

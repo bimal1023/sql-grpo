@@ -1,0 +1,298 @@
+{
+  "categories": {
+    "error: wrong column name": 150,
+    "wrong: same structure, wrong details": 106,
+    "wrong: missing JOIN": 54,
+    "wrong: unnecessary JOIN": 37,
+    "wrong: unnecessary nested query": 17,
+    "wrong: missing nested query": 15,
+    "error: other": 14,
+    "error: ambiguous column": 11,
+    "wrong: selected different columns": 11,
+    "error: wrong table name": 6,
+    "wrong: missing GROUP BY": 6,
+    "wrong: unnecessary aggregation": 2,
+    "wrong: missing aggregation": 2,
+    "wrong: missing ORDER BY / LIMIT": 2,
+    "wrong: missing set operation": 2,
+    "wrong: unnecessary GROUP BY": 1,
+    "error: SQL syntax": 1
+  },
+  "accuracy_by_feature": {
+    "JOIN": {
+      "n": 408,
+      "accuracy_pct": 41.9
+    },
+    "nested query": {
+      "n": 159,
+      "accuracy_pct": 39.6
+    },
+    "GROUP BY": {
+      "n": 277,
+      "accuracy_pct": 48.7
+    },
+    "aggregation": {
+      "n": 549,
+      "accuracy_pct": 59.6
+    },
+    "ORDER BY / LIMIT": {
+      "n": 237,
+      "accuracy_pct": 54.4
+    },
+    "set operation": {
+      "n": 80,
+      "accuracy_pct": 28.8
+    }
+  },
+  "examples": {
+    "error: wrong column name": [
+      {
+        "question": "What are the song titles and singer names?",
+        "gold": "SELECT T2.Title ,  T1.Name FROM singer AS T1 JOIN song AS T2 ON T1.Singer_ID  =  T2.Singer_ID",
+        "pred": "SELECT Title, Name FROM song;"
+      },
+      {
+        "question": "What is the money rank of the tallest poker player?",
+        "gold": "SELECT T2.Money_Rank FROM people AS T1 JOIN poker_player AS T2 ON T1.People_ID  =  T2.People_ID ORDER BY T1.Height DESC LIMIT 1",
+        "pred": "SELECT Money_Rank FROM poker_player WHERE Height = (SELECT MAX(Height) FROM people);"
+      },
+      {
+        "question": "Give average earnings of poker players who are taller than 200.",
+        "gold": "SELECT avg(T2.Earnings) FROM people AS T1 JOIN poker_player AS T2 ON T1.People_ID  =  T2.People_ID WHERE T1.Height  >  200",
+        "pred": "SELECT AVG(Earnings) FROM poker_player WHERE Height > 200;"
+      }
+    ],
+    "error: ambiguous column": [
+      {
+        "question": "Show the names of singers and the total sales of their songs.",
+        "gold": "SELECT T1.Name ,  sum(T2.Sales) FROM singer AS T1 JOIN song AS T2 ON T1.Singer_ID  =  T2.Singer_ID GROUP BY T1.Name",
+        "pred": "SELECT Name, SUM(Sales) AS Total_Sales FROM singer JOIN song ON singer.Singer_ID = song.Singer_ID GROUP BY Singer_ID;"
+      },
+      {
+        "question": "What are the names of the teachers and how many courses do they teach?",
+        "gold": "SELECT T2.Name ,  COUNT(*) FROM course_arrange AS T1 JOIN teacher AS T2 ON T1.Teacher_ID  =  T2.Teacher_ID GROUP BY T2.Name",
+        "pred": "SELECT Name, COUNT(*) FROM teacher JOIN course_arrange ON teacher.Teacher_ID = course_arrange.Teacher_ID GROUP BY Teacher_ID;"
+      },
+      {
+        "question": "Show the stadium name and the number of concerts in each stadium.",
+        "gold": "SELECT T2.name ,  count(*) FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id GROUP BY T1.stadium_id",
+        "pred": "SELECT Name AS Stadium_Name, COUNT(concert_ID) FROM stadium JOIN concert ON stadium.Stadium_ID = concert.Stadium_ID GROUP BY Stadium_ID;"
+      }
+    ],
+    "wrong: same structure, wrong details": [
+      {
+        "question": "What are the names of the singers who are not French citizens?",
+        "gold": "SELECT Name FROM singer WHERE Citizenship != \"France\"",
+        "pred": "SELECT Name FROM singer WHERE Citizenship != 'French';"
+      },
+      {
+        "question": "How many poker players are there?",
+        "gold": "SELECT count(*) FROM poker_player",
+        "pred": "SELECT COUNT(*) FROM people;"
+      },
+      {
+        "question": "Return the name of the high school student with the most friends.",
+        "gold": "SELECT T2.name FROM Friend AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id GROUP BY T1.student_id ORDER BY count(*) DESC LIMIT 1",
+        "pred": "SELECT T1.name FROM Highschooler AS T1 JOIN Friend AS T2 ON T1.ID = T2.student_id JOIN Friend AS T3 ON T1.ID = T3.friend_id GROUP BY T1.ID ORDER BY COUNT(*) DESC LIMIT 1;"
+      }
+    ],
+    "wrong: missing JOIN": [
+      {
+        "question": "What are the names of poker players?",
+        "gold": "SELECT T1.Name FROM people AS T1 JOIN poker_player AS T2 ON T1.People_ID  =  T2.People_ID",
+        "pred": "SELECT Name FROM people;"
+      },
+      {
+        "question": "Return the names of all the poker players.",
+        "gold": "SELECT T1.Name FROM people AS T1 JOIN poker_player AS T2 ON T1.People_ID  =  T2.People_ID",
+        "pred": "SELECT Name FROM people;"
+      },
+      {
+        "question": "What are the names of poker players in descending order of earnings?",
+        "gold": "SELECT T1.Name FROM people AS T1 JOIN poker_player AS T2 ON T1.People_ID  =  T2.People_ID ORDER BY T2.Earnings DESC",
+        "pred": "SELECT Name FROM people WHERE People_ID IN (SELECT People_ID FROM poker_player ORDER BY Earnings DESC)"
+      }
+    ],
+    "wrong: missing nested query": [
+      {
+        "question": "Show the citizenship shared by singers with birth year before 1945 and after 1955.",
+        "gold": "SELECT Citizenship FROM singer WHERE Birth_Year  <  1945 INTERSECT SELECT Citizenship FROM singer WHERE Birth_Year  >  1955",
+        "pred": "SELECT Citizenship FROM singer WHERE Birth_Year BETWEEN 1944 AND 1955;"
+      },
+      {
+        "question": "What are the citizenships that are shared by singers with a birth year before 1945 and after 1955?",
+        "gold": "SELECT Citizenship FROM singer WHERE Birth_Year  <  1945 INTERSECT SELECT Citizenship FROM singer WHERE Birth_Year  >  1955",
+        "pred": "SELECT DISTINCT Citizenship FROM singer WHERE Birth_Year BETWEEN 1945 AND 1955;"
+      },
+      {
+        "question": "What is the name of the visitor who visited both a museum opened before 2009 and a museum opened after 2011?",
+        "gold": "SELECT t1.name FROM visitor AS t1 JOIN visit AS t2 ON t1.id  =  t2.visitor_id JOIN museum AS t3 ON t3.Museum_ID  =  t2.Museum_ID WHERE t3.open_year  <  2009 INTERSECT SELECT t1.name FROM visitor AS t1 JOIN visit AS t2 ON t1.id  =  t2.visitor_id JOIN museum AS t3 ON t3.Museum_ID  =  t2.Museum_ID WHERE t3.open_year  >  2011",
+        "pred": "SELECT v.Name FROM visitor AS v\nJOIN visit AS vi ON v.ID = vi.visitor_ID\nJOIN museum AS m ON vi.Museum_ID = m.Museum_ID\nWHERE (m.Open_Year < '2009' OR m.Open_Year > '2011')\nGROUP BY v.Name;"
+      }
+    ],
+    "wrong: selected different columns": [
+      {
+        "question": "What is the grade of each high schooler?",
+        "gold": "SELECT grade FROM Highschooler",
+        "pred": "SELECT ID, name, grade FROM Highschooler;"
+      },
+      {
+        "question": "Show names of teachers and the courses they are arranged to teach.",
+        "gold": "SELECT T3.Name ,  T2.Course FROM course_arrange AS T1 JOIN course AS T2 ON T1.Course_ID  =  T2.Course_ID JOIN teacher AS T3 ON T1.Teacher_ID  =  T3.Teacher_ID",
+        "pred": "SELECT teacher.Name FROM teacher JOIN course_arrange ON teacher.Teacher_ID = course_arrange.Teacher_ID;"
+      },
+      {
+        "question": "List the name, date and result of each battle.",
+        "gold": "SELECT name ,  date FROM battle",
+        "pred": "SELECT name, date, result FROM battle;"
+      }
+    ],
+    "wrong: unnecessary JOIN": [
+      {
+        "question": "How many friends does each student have?",
+        "gold": "SELECT student_id ,  count(*) FROM Friend GROUP BY student_id",
+        "pred": "SELECT name, COUNT(*) as friend_count FROM Highschooler JOIN Friend ON Highschooler.ID = Friend.student_id GROUP BY name;"
+      },
+      {
+        "question": "What are the ids of students who both have friends and are liked?",
+        "gold": "SELECT student_id FROM Friend INTERSECT SELECT liked_id FROM Likes",
+        "pred": "SELECT DISTINCT T1.ID FROM Highschooler AS T1 JOIN Friend AS T2 ON T1.ID = T2.student_id JOIN Friend AS T3 ON T1.ID = T3.friend_id WHERE T2.friend_id = T1.ID AND T3.student_id = T1.ID;"
+      },
+      {
+        "question": "Find the type and weight of the youngest pet.",
+        "gold": "SELECT pettype ,  weight FROM pets ORDER BY pet_age LIMIT 1",
+        "pred": "SELECT PetType, weight FROM Pets WHERE PetID = (SELECT PetID FROM Has_Pet INNER JOIN Student ON Has_Pet.StuID = Student.StuID ORDER BY Age ASC LIMIT 1);"
+      }
+    ],
+    "wrong: unnecessary nested query": [
+      {
+        "question": "Show me all grades that have at least 4 students.",
+        "gold": "SELECT grade FROM Highschooler GROUP BY grade HAVING count(*)  >=  4",
+        "pred": "SELECT grade FROM Highschooler WHERE ID IN (\n    SELECT student_id FROM Friend GROUP BY student_id HAVING COUNT(*) >= 4\n);"
+      },
+      {
+        "question": "Show the names of all of the high schooler Kyle's friends.",
+        "gold": "SELECT T3.name FROM Friend AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id JOIN Highschooler AS T3 ON T1.friend_id  =  T3.id WHERE T2.name  =  \"Kyle\"",
+        "pred": "SELECT T1.name FROM Highschooler AS T1 JOIN Friend AS T2 ON T1.ID = T2.student_id WHERE T2.friend_id = (SELECT ID FROM Highschooler WHERE name = 'Kyle')"
+      },
+      {
+        "question": "Find the first name of students who have cat or dog pet.",
+        "gold": "SELECT DISTINCT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat' OR T3.pettype  =  'dog'",
+        "pred": "SELECT T1.Fname FROM Student AS T1 JOIN Has_Pet AS T2 ON T1.StuID = T2.StuID WHERE T2.PetID IN (SELECT PetID FROM Pets WHERE PetType IN ('cat', 'dog'))"
+      }
+    ],
+    "wrong: unnecessary aggregation": [
+      {
+        "question": "Find the weight of the youngest dog.",
+        "gold": "SELECT weight FROM pets ORDER BY pet_age LIMIT 1",
+        "pred": "SELECT MIN(weight) FROM Pets WHERE PetType = 'Dog';"
+      },
+      {
+        "question": "How much does the most recent treatment cost?",
+        "gold": "SELECT cost_of_treatment FROM Treatments ORDER BY date_of_treatment DESC LIMIT 1",
+        "pred": "SELECT MAX(cost_of_treatment) FROM Treatments;"
+      }
+    ],
+    "error: wrong table name": [
+      {
+        "question": "Find the average and maximum age for each type of pet.",
+        "gold": "SELECT avg(pet_age) ,  max(pet_age) ,  pettype FROM pets GROUP BY pettype",
+        "pred": "SELECT P.PetType, AVG(S.Age), MAX(S.Age)\nFROM Students S\nJOIN Has_Pet HP ON S.StuID = HP.StuID\nJOIN Pets P ON HP.PetID = P.PetID\nGROUP BY P.PetType;"
+      },
+      {
+        "question": "How many pets are owned by students that have an age greater than 20?",
+        "gold": "SELECT count(*) FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid WHERE T1.age  >  20",
+        "pred": "SELECT COUNT(*) FROM Students AS T1 JOIN Has_Pet AS T2 ON T1.StuID = T2.StuID WHERE T1.Age > 20;"
+      },
+      {
+        "question": "What is the title of all the cartools that are on the TV Channel with the series name \"Sky Radio\"?",
+        "gold": "SELECT T2.Title FROM TV_Channel AS T1 JOIN Cartoon AS T2 ON T1.id = T2.Channel WHERE T1.series_name = \"Sky Radio\";",
+        "pred": "SELECT Title FROM Cartoon WHERE Channel = (SELECT id FROM TV_Channel WHERE series_name = 'Sky Radio') AND Channel IN (SELECT id FROM Cartoons);"
+      }
+    ],
+    "wrong: unnecessary GROUP BY": [
+      {
+        "question": "List the number of different series names and contents in the TV Channel table.",
+        "gold": "SELECT count(DISTINCT series_name) ,  count(DISTINCT content) FROM TV_Channel;",
+        "pred": "SELECT COUNT(DISTINCT series_name), Content FROM TV_Channel GROUP BY Content;"
+      }
+    ],
+    "wrong: missing aggregation": [
+      {
+        "question": "What are all the song names by singers who are older than average?",
+        "gold": "SELECT song_name FROM singer WHERE age  >  (SELECT avg(age) FROM singer)",
+        "pred": "SELECT Song_Name FROM singer WHERE Age > (SELECT Average FROM stadium)"
+      },
+      {
+        "question": "How many people live in Gelderland district?",
+        "gold": "SELECT sum(Population) FROM city WHERE District  =  \"Gelderland\"",
+        "pred": "SELECT Population FROM city WHERE District = 'Gelderland' ;"
+      }
+    ],
+    "error: other": [
+      {
+        "question": "What is the name and capacity of the stadium with the most concerts after 2013 ?",
+        "gold": "select t2.name ,  t2.capacity from concert as t1 join stadium as t2 on t1.stadium_id  =  t2.stadium_id where t1.year  >  2013 group by t2.stadium_id order by count(*) desc limit 1",
+        "pred": "SELECT T1.Name, T1.Capacity FROM stadium AS T1 JOIN concert AS T2 ON T1.Stadium_ID = T2.Stadium_ID WHERE T2.Year > '2013' ORDER BY COUNT(*) DESC LIMIT 1;"
+      },
+      {
+        "question": "What are the major record formats of orchestras, sorted by their frequency?",
+        "gold": "SELECT Major_Record_Format FROM orchestra GROUP BY Major_Record_Format ORDER BY COUNT(*) ASC",
+        "pred": "SELECT DISTINCT Major_Record_Format FROM orchestra ORDER BY COUNT(Major_Record_Format) DESC;"
+      },
+      {
+        "question": "What is the name of the country with the most car makers?",
+        "gold": "SELECT T2.CountryName FROM CAR_MAKERS AS T1 JOIN COUNTRIES AS T2 ON T1.Country  =  T2.CountryId GROUP BY T1.Country ORDER BY Count(*) DESC LIMIT 1;",
+        "pred": "SELECT CountryName FROM countries WHERE Continent = (SELECT Continent FROM continents ORDER BY COUNT(*) DESC LIMIT 1);"
+      }
+    ],
+    "wrong: missing GROUP BY": [
+      {
+        "question": "How many countries has more than 2 car makers ?",
+        "gold": "select count(*) from countries as t1 join car_makers as t2 on t1.countryid  =  t2.country group by t1.countryid having count(*)  >  2",
+        "pred": "SELECT COUNT(DISTINCT c.CountryName) FROM countries AS c JOIN car_makers AS cm ON c.Continent = cm.Country WHERE cm.Id > 2;"
+      },
+      {
+        "question": "What is the number of countries with more than 2 car makers ?",
+        "gold": "select count(*) from countries as t1 join car_makers as t2 on t1.countryid  =  t2.country group by t1.countryid having count(*)  >  2",
+        "pred": "SELECT COUNT(DISTINCT c.CountryName) FROM countries AS c JOIN car_makers AS cm ON c.Continent = cm.Country WHERE cm.Id > 2;"
+      },
+      {
+        "question": "What are the names and ids of all countries with at least one car maker?",
+        "gold": "SELECT T1.CountryName ,  T1.CountryId FROM COUNTRIES AS T1 JOIN CAR_MAKERS AS T2 ON T1.CountryId  =  T2.Country GROUP BY T1.CountryId HAVING count(*)  >=  1;",
+        "pred": "SELECT T1.CountryName, T2.Id FROM countries AS T1 JOIN car_makers AS T2 ON T1.Continent = T2.Country WHERE T2.Country IS NOT NULL;"
+      }
+    ],
+    "wrong: missing ORDER BY / LIMIT": [
+      {
+        "question": "How many cars have a larger accelerate than the car with the largest horsepower?",
+        "gold": "SELECT COUNT(*) FROM CARS_DATA WHERE Accelerate  >  ( SELECT Accelerate FROM CARS_DATA ORDER BY Horsepower DESC LIMIT 1 );",
+        "pred": "SELECT COUNT(*) FROM cars_data WHERE Accelerate > (SELECT MAX(Horsepower) FROM cars_data);"
+      },
+      {
+        "question": "What is the number of cars with a greater accelerate than the one with the most horsepower?",
+        "gold": "SELECT COUNT(*) FROM CARS_DATA WHERE Accelerate  >  ( SELECT Accelerate FROM CARS_DATA ORDER BY Horsepower DESC LIMIT 1 );",
+        "pred": "SELECT COUNT(*) FROM cars_data WHERE Accelerate > (SELECT MAX(Horsepower) FROM cars_data);"
+      }
+    ],
+    "error: SQL syntax": [
+      {
+        "question": "Which Asian countries have a population that is larger than any country in Africa?",
+        "gold": "SELECT Name FROM country WHERE Continent  =  \"Asia\"  AND population  >  (SELECT max(population) FROM country WHERE Continent  =  \"Africa\")",
+        "pred": "SELECT c.Name \nFROM city AS c \nJOIN country AS k ON c.CountryCode = k.Code \nWHERE k.Continent = 'Asia' AND (k.SurfaceArea > ALL (SELECT SurfaceArea FROM country WHERE Continent = 'Africa') OR Population > ALL (SELECT Population FROM country WHERE Continent = 'Africa'))"
+      }
+    ],
+    "wrong: missing set operation": [
+      {
+        "question": "Find the states where both owners and professionals live.",
+        "gold": "SELECT state FROM Owners INTERSECT SELECT state FROM Professionals",
+        "pred": "SELECT state FROM Owners WHERE owner_id IN (SELECT owner_id FROM Dogs);"
+      },
+      {
+        "question": "Which states have both owners and professionals living there?",
+        "gold": "SELECT state FROM Owners INTERSECT SELECT state FROM Professionals",
+        "pred": "SELECT state FROM Owners WHERE owner_id IN (SELECT owner_id FROM Dogs);"
+      }
+    ]
+  }
+}
