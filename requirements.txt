@@ -2,3 +2,4 @@ datasets
 pyyaml
 pytest
 python-dotenv
+huggingface-hub
