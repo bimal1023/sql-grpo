@@ -1,7 +1,7 @@
 model: Qwen/Qwen2.5-0.5B-Instruct
 max_seq_length: 1536
 load_in_4bit: false        # 0.5B is small enough for 16-bit LoRA
-fast_inference: true       # vLLM generation: much faster GRPO steps
+fast_inference: false       # vLLM generation: much faster GRPO steps
 gpu_memory_utilization: 0.5
 lora_rank: 32
 
