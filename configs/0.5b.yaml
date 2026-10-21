@@ -1,0 +1,16 @@
+model: Qwen/Qwen2.5-0.5B-Instruct
+max_seq_length: 1536
+load_in_4bit: false        # 0.5B is small enough for 16-bit LoRA
+fast_inference: true       # vLLM generation: much faster GRPO steps
+gpu_memory_utilization: 0.5
+lora_rank: 32
+
+learning_rate: 5.0e-6
+batch_size: 8              # completions per device step (must be divisible by num_generations)
+grad_accum: 2
+num_generations: 8         # answers sampled per question (the "group" in GRPO)
+max_prompt_tokens: 1024    # skip questions whose schema is longer than this
+max_completion_tokens: 256 # SQL is short
+max_steps: 400
+save_steps: 50
+output_dir: outputs/grpo-0.5b

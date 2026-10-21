@@ -2,13 +2,13 @@
 
 > Training a small open LLM with reinforcement learning (GRPO) to write correct SQL — and measuring how close it gets to a frontier API model at a fraction of the cost.
 
-**Status:** 🚧 Work in progress — Week 3 of 6 (started Oct 2026)
+**Status:** 🚧 Work in progress — Week 4 of 6 (started Oct 2026)
 
 ## Goal
 
 Fine-tune **Qwen2.5-0.5B → 1.5B** with **GRPO** (Group Relative Policy Optimization) on the **Spider** text-to-SQL benchmark, using a reward computed by actually executing the generated SQL against SQLite. No human labels — the database is the judge.
 
-**Target result:** *GRPO takes a 1.5B model from X% to Y% execution accuracy, closing most of the gap to gpt-4.1-mini (74.37%) at a fraction of the cost — and it runs locally.*
+**Target result:** *GRPO takes Qwen2.5-1.5B from 40.72% to Y% execution accuracy, closing most of the gap to gpt-4.1-mini (74.37%) at a fraction of the cost — and it runs locally.*
 
 ## How it works
 
@@ -29,10 +29,10 @@ Fine-tune **Qwen2.5-0.5B → 1.5B** with **GRPO** (Group Relative Policy Optimiz
 
 ## Stack
 
-- **Training:** Unsloth + Hugging Face TRL (`GRPOTrainer`), 4-bit LoRA, Kaggle T4 GPU
+- **Training:** Unsloth + Hugging Face TRL (`GRPOTrainer`), LoRA, Kaggle T4 GPU
 - **Data:** Spider (7,000 train / 1,034 dev questions across 200 SQLite databases)
 - **Reward / eval:** Python + SQLite (runs locally, no GPU)
-- **Baseline:** OpenAI `gpt-4.1-mini`, prompted with the same schema + question
+- **Baselines:** untrained Qwen2.5-0.5B/1.5B-Instruct and OpenAI `gpt-4.1-mini`, all with the same prompt
 - **Artifacts:** checkpoints and adapters on the Hugging Face Hub
 - **Demo:** Gradio on Hugging Face Spaces
 
@@ -48,7 +48,8 @@ sql-grpo/
 │   ├── sql_exec.py        # safe, read-only SQL execution with timeout
 │   ├── reward.py          # reward functions for GRPO
 │   ├── eval.py            # score any model's predictions on the dev set
-│   ├── baselines.py       # prompted API baseline
+│   ├── baselines.py       # prompted OpenAI baseline
+│   ├── generate_hf.py     # generate predictions with any HF model (+ LoRA adapter)
 │   └── train.py           # GRPO training loop
 ├── tests/                 # reward + result-comparison tests
 ├── notebooks/             # Kaggle launcher notebook
@@ -65,7 +66,7 @@ sql-grpo/
 - [x] `sql_exec.py` + `reward.py` with tests (17 passing)
 - [x] Evaluation script with oracle sanity check
 - [x] API baseline: gpt-4.1-mini
-- [ ] Baseline: untrained Qwen
+- [x] Baselines: untrained Qwen2.5-0.5B and 1.5B
 - [ ] First GRPO run on 0.5B
 - [ ] Scale to 1.5B
 - [ ] Evaluation + failure analysis
@@ -73,16 +74,23 @@ sql-grpo/
 
 ## Results
 
-| System | Accuracy (%) | Invalid SQL (%) | Cost / 1k queries ($) | Latency (s) |
-| --- | --- | --- | --- | --- |
-| Base Qwen2.5-1.5B | – | – | – | – |
-| GRPO-trained 1.5B | – | – | – | – |
-| gpt-4.1-mini (prompted) | 74.37 | 1.26 | 0.21 | 0.67 |
+| System | Accuracy (%) | Invalid SQL (%) | Format (%) | Cost / 1k queries ($) | Latency (s) |
+| --- | --- | --- | --- | --- | --- |
+| Qwen2.5-0.5B-Instruct (untrained) | 18.18 | 64.60 | 66.73 | 0.00* | 0.22† |
+| Qwen2.5-1.5B-Instruct (untrained) | 40.72 | 41.59 | 76.89 | 0.00* | 0.29† |
+| GRPO-trained 0.5B | – | – | – | – | – |
+| GRPO-trained 1.5B | – | – | – | – | – |
+| gpt-4.1-mini (prompted) | 74.37 | 1.26 | 100.00 | 0.21 | 0.67 |
 
-*Spider dev set, 1,034 questions. Execution accuracy = the predicted SQL returns the same rows as the gold SQL (order enforced only when the gold query uses `ORDER BY`).*
+*Spider dev set, 1,034 questions. Execution accuracy = the predicted SQL returns the same rows as the gold SQL (order enforced only when the gold query uses `ORDER BY`). Invalid SQL includes answers missing the `<sql>` tags.*
+\* *Run on a free Kaggle T4; no per-query API cost.*
+† *Per-question average from batched generation on a T4 — not directly comparable to the API's per-request latency.*
+
+**Key observation:** the untrained 1.5B model forgets the `<sql>` tags 23% of the time, and those answers count as invalid. GRPO's format reward should fix this early; the real test is whether it also improves SQL correctness.
 
 ## Dev log
 
+- **2026-10-21** — Untrained Qwen baselines on Kaggle: 0.5B scores 18.18%, 1.5B scores 40.72% (34 points below gpt-4.1-mini). Added `generate_hf.py` for batched GPU inference with optional LoRA adapters.
 - **2026-10-21** — Ran Unsloth GRPO demo on Kaggle (T4). Added Spider download, safe read-only SQL executor with timeout, execution-based reward functions (17 tests passing), and evaluation script. API baseline: gpt-4.1-mini scores 74.37% for $0.21 per 1k queries.
 - **2026-10-20** — Planned the project, set up the repo structure, initialized git.
 
@@ -102,6 +110,13 @@ Run the API baseline (needs `OPENAI_API_KEY` in `.env`):
 ```bash
 python -m src.baselines
 python -m src.eval results/preds_gpt-4.1-mini.jsonl
+```
+
+Run a local-model baseline (GPU, e.g. Kaggle):
+
+```bash
+python -m src.generate_hf --model Qwen/Qwen2.5-1.5B-Instruct
+python -m src.eval results/preds_qwen2.5-1.5b-instruct.jsonl
 ```
 
 Training runs on Kaggle using `requirements-train.txt` (GPU only).

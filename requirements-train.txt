@@ -1,2 +1,3 @@
 unsloth
 trl
+vllm
