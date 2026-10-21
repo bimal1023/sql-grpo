@@ -1,0 +1,10 @@
+{
+  "predictions": "results/preds_grpo-0.5b.jsonl",
+  "n": 1034,
+  "accuracy_pct": 41.68,
+  "valid_sql_pct": 73.21,
+  "invalid_sql_pct": 26.79,
+  "format_pct": 99.81,
+  "avg_latency_s": 0.136,
+  "cost_per_1k_usd": 0.0
+}
