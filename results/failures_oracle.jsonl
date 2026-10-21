@@ -1,0 +1,2 @@
+{"idx": 455, "db_id": "wta_1", "question": "List the first and last name of all players in the order of birth date.", "gold_sql": "SELECT first_name ,  last_name FROM players ORDER BY birth_date", "pred_sql": "SELECT first_name ,  last_name FROM players ORDER BY birth_date", "valid": false}
+{"idx": 456, "db_id": "wta_1", "question": "What are the full names of all players, sorted by birth date?", "gold_sql": "SELECT first_name ,  last_name FROM players ORDER BY birth_date", "pred_sql": "SELECT first_name ,  last_name FROM players ORDER BY birth_date", "valid": false}

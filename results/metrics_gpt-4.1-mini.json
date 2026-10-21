@@ -1,0 +1,10 @@
+{
+  "predictions": "results/preds_gpt-4.1-mini.jsonl",
+  "n": 1034,
+  "accuracy_pct": 74.37,
+  "valid_sql_pct": 98.74,
+  "invalid_sql_pct": 1.26,
+  "format_pct": 100.0,
+  "avg_latency_s": 0.665,
+  "cost_per_1k_usd": 0.2071
+}

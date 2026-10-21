@@ -1,0 +1,10 @@
+{
+  "predictions": "results/preds_oracle.jsonl",
+  "n": 1034,
+  "accuracy_pct": 99.81,
+  "valid_sql_pct": 99.81,
+  "invalid_sql_pct": 0.19,
+  "format_pct": 100.0,
+  "avg_latency_s": 0.0,
+  "cost_per_1k_usd": 0.0
+}
