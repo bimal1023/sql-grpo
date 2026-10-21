@@ -1,0 +1,1034 @@
+{"idx": 0, "completion": "<sql>SELECT count(*) FROM singer</sql>"}
+{"idx": 1, "completion": "<sql>SELECT count(*) FROM singer</sql>"}
+{"idx": 2, "completion": "<sql>SELECT name ,  country ,  age FROM singer ORDER BY age DESC</sql>"}
+{"idx": 3, "completion": "<sql>SELECT name ,  country ,  age FROM singer ORDER BY age DESC</sql>"}
+{"idx": 4, "completion": "<sql>SELECT avg(age) ,  min(age) ,  max(age) FROM singer WHERE country  =  'France'</sql>"}
+{"idx": 5, "completion": "<sql>SELECT avg(age) ,  min(age) ,  max(age) FROM singer WHERE country  =  'France'</sql>"}
+{"idx": 6, "completion": "<sql>SELECT song_name ,  song_release_year FROM singer ORDER BY age LIMIT 1</sql>"}
+{"idx": 7, "completion": "<sql>SELECT song_name ,  song_release_year FROM singer ORDER BY age LIMIT 1</sql>"}
+{"idx": 8, "completion": "<sql>SELECT DISTINCT country FROM singer WHERE age  >  20</sql>"}
+{"idx": 9, "completion": "<sql>SELECT DISTINCT country FROM singer WHERE age  >  20</sql>"}
+{"idx": 10, "completion": "<sql>SELECT country ,  count(*) FROM singer GROUP BY country</sql>"}
+{"idx": 11, "completion": "<sql>SELECT country ,  count(*) FROM singer GROUP BY country</sql>"}
+{"idx": 12, "completion": "<sql>SELECT song_name FROM singer WHERE age  >  (SELECT avg(age) FROM singer)</sql>"}
+{"idx": 13, "completion": "<sql>SELECT song_name FROM singer WHERE age  >  (SELECT avg(age) FROM singer)</sql>"}
+{"idx": 14, "completion": "<sql>SELECT LOCATION ,  name FROM stadium WHERE capacity BETWEEN 5000 AND 10000</sql>"}
+{"idx": 15, "completion": "<sql>SELECT LOCATION ,  name FROM stadium WHERE capacity BETWEEN 5000 AND 10000</sql>"}
+{"idx": 16, "completion": "<sql>select max(capacity), average from stadium</sql>"}
+{"idx": 17, "completion": "<sql>select avg(capacity) ,  max(capacity) from stadium</sql>"}
+{"idx": 18, "completion": "<sql>SELECT name ,  capacity FROM stadium ORDER BY average DESC LIMIT 1</sql>"}
+{"idx": 19, "completion": "<sql>SELECT name ,  capacity FROM stadium ORDER BY average DESC LIMIT 1</sql>"}
+{"idx": 20, "completion": "<sql>SELECT count(*) FROM concert WHERE YEAR  =  2014 OR YEAR  =  2015</sql>"}
+{"idx": 21, "completion": "<sql>SELECT count(*) FROM concert WHERE YEAR  =  2014 OR YEAR  =  2015</sql>"}
+{"idx": 22, "completion": "<sql>SELECT T2.name ,  count(*) FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id GROUP BY T1.stadium_id</sql>"}
+{"idx": 23, "completion": "<sql>SELECT T2.name ,  count(*) FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id GROUP BY T1.stadium_id</sql>"}
+{"idx": 24, "completion": "<sql>SELECT T2.name ,  T2.capacity FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id WHERE T1.year  >=  2014 GROUP BY T2.stadium_id ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 25, "completion": "<sql>select t2.name ,  t2.capacity from concert as t1 join stadium as t2 on t1.stadium_id  =  t2.stadium_id where t1.year  >  2013 group by t2.stadium_id order by count(*) desc limit 1</sql>"}
+{"idx": 26, "completion": "<sql>SELECT YEAR FROM concert GROUP BY YEAR ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 27, "completion": "<sql>SELECT YEAR FROM concert GROUP BY YEAR ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 28, "completion": "<sql>SELECT name FROM stadium WHERE stadium_id NOT IN (SELECT stadium_id FROM concert)</sql>"}
+{"idx": 29, "completion": "<sql>SELECT name FROM stadium WHERE stadium_id NOT IN (SELECT stadium_id FROM concert)</sql>"}
+{"idx": 30, "completion": "<sql>SELECT country FROM singer WHERE age  >  40 INTERSECT SELECT country FROM singer WHERE age  <  30</sql>"}
+{"idx": 31, "completion": "<sql>SELECT name FROM stadium EXCEPT SELECT T2.name FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id WHERE T1.year  =  2014</sql>"}
+{"idx": 32, "completion": "<sql>SELECT name FROM stadium EXCEPT SELECT T2.name FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id WHERE T1.year  =  2014</sql>"}
+{"idx": 33, "completion": "<sql>SELECT T2.concert_name ,  T2.theme ,  count(*) FROM singer_in_concert AS T1 JOIN concert AS T2 ON T1.concert_id  =  T2.concert_id GROUP BY T2.concert_id</sql>"}
+{"idx": 34, "completion": "<sql>select t2.concert_name ,  t2.theme ,  count(*) from singer_in_concert as t1 join concert as t2 on t1.concert_id  =  t2.concert_id group by t2.concert_id</sql>"}
+{"idx": 35, "completion": "<sql>SELECT T2.name ,  count(*) FROM singer_in_concert AS T1 JOIN singer AS T2 ON T1.singer_id  =  T2.singer_id GROUP BY T2.singer_id</sql>"}
+{"idx": 36, "completion": "<sql>SELECT T2.name ,  count(*) FROM singer_in_concert AS T1 JOIN singer AS T2 ON T1.singer_id  =  T2.singer_id GROUP BY T2.singer_id</sql>"}
+{"idx": 37, "completion": "<sql>SELECT T2.name FROM singer_in_concert AS T1 JOIN singer AS T2 ON T1.singer_id  =  T2.singer_id JOIN concert AS T3 ON T1.concert_id  =  T3.concert_id WHERE T3.year  =  2014</sql>"}
+{"idx": 38, "completion": "<sql>SELECT T2.name FROM singer_in_concert AS T1 JOIN singer AS T2 ON T1.singer_id  =  T2.singer_id JOIN concert AS T3 ON T1.concert_id  =  T3.concert_id WHERE T3.year  =  2014</sql>"}
+{"idx": 39, "completion": "<sql>SELECT name ,  country FROM singer WHERE song_name LIKE '%Hey%'</sql>"}
+{"idx": 40, "completion": "<sql>SELECT name ,  country FROM singer WHERE song_name LIKE '%Hey%'</sql>"}
+{"idx": 41, "completion": "<sql>SELECT T2.name ,  T2.location FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id WHERE T1.Year  =  2014 INTERSECT SELECT T2.name ,  T2.location FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id WHERE T1.Year  =  2015</sql>"}
+{"idx": 42, "completion": "<sql>SELECT T2.name ,  T2.location FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id WHERE T1.Year  =  2014 INTERSECT SELECT T2.name ,  T2.location FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id WHERE T1.Year  =  2015</sql>"}
+{"idx": 43, "completion": "<sql>select count(*) from concert where stadium_id = (select stadium_id from stadium order by capacity desc limit 1)</sql>"}
+{"idx": 44, "completion": "<sql>select count(*) from concert where stadium_id = (select stadium_id from stadium order by capacity desc limit 1)</sql>"}
+{"idx": 45, "completion": "<sql>SELECT count(*) FROM pets WHERE weight  >  10</sql>"}
+{"idx": 46, "completion": "<sql>SELECT count(*) FROM pets WHERE weight  >  10</sql>"}
+{"idx": 47, "completion": "<sql>SELECT weight FROM pets ORDER BY pet_age LIMIT 1</sql>"}
+{"idx": 48, "completion": "<sql>SELECT weight FROM pets ORDER BY pet_age LIMIT 1</sql>"}
+{"idx": 49, "completion": "<sql>SELECT max(weight) ,  petType FROM pets GROUP BY petType</sql>"}
+{"idx": 50, "completion": "<sql>SELECT max(weight) ,  petType FROM pets GROUP BY petType</sql>"}
+{"idx": 51, "completion": "<sql>SELECT count(*) FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid WHERE T1.age  >  20</sql>"}
+{"idx": 52, "completion": "<sql>SELECT count(*) FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid WHERE T1.age  >  20</sql>"}
+{"idx": 53, "completion": "<sql>SELECT count(*) FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T2.petid  =  T3.petid WHERE T1.sex  =  'F' AND T3.pettype  =  'dog'</sql>"}
+{"idx": 54, "completion": "<sql>SELECT count(*) FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T2.petid  =  T3.petid WHERE T1.sex  =  'F' AND T3.pettype  =  'dog'</sql>"}
+{"idx": 55, "completion": "<sql>SELECT count(DISTINCT pettype) FROM pets</sql>"}
+{"idx": 56, "completion": "<sql>SELECT count(DISTINCT pettype) FROM pets</sql>"}
+{"idx": 57, "completion": "<sql>SELECT DISTINCT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat' OR T3.pettype  =  'dog'</sql>"}
+{"idx": 58, "completion": "<sql>SELECT DISTINCT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat' OR T3.pettype  =  'dog'</sql>"}
+{"idx": 59, "completion": "<sql>select t1.fname from student as t1 join has_pet as t2 on t1.stuid  =  t2.stuid join pets as t3 on t3.petid  =  t2.petid where t3.pettype  =  'cat' intersect select t1.fname from student as t1 join has_pet as t2 on t1.stuid  =  t2.stuid join pets as t3 on t3.petid  =  t2.petid where t3.pettype  =  'dog'</sql>"}
+{"idx": 60, "completion": "<sql>SELECT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat' INTERSECT SELECT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'dog'</sql>"}
+{"idx": 61, "completion": "<sql>SELECT major ,  age FROM student WHERE stuid NOT IN (SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat')</sql>"}
+{"idx": 62, "completion": "<sql>SELECT major ,  age FROM student WHERE stuid NOT IN (SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat')</sql>"}
+{"idx": 63, "completion": "<sql>SELECT stuid FROM student EXCEPT SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat'</sql>"}
+{"idx": 64, "completion": "<sql>SELECT stuid FROM student EXCEPT SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat'</sql>"}
+{"idx": 65, "completion": "<sql>SELECT T1.fname ,  T1.age FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'dog' AND T1.stuid NOT IN (SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat')</sql>"}
+{"idx": 66, "completion": "<sql>SELECT T1.fname ,  T1.age FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'dog' AND T1.stuid NOT IN (SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat')</sql>"}
+{"idx": 67, "completion": "<sql>SELECT pettype ,  weight FROM pets ORDER BY pet_age LIMIT 1</sql>"}
+{"idx": 68, "completion": "<sql>SELECT pettype ,  weight FROM pets ORDER BY pet_age LIMIT 1</sql>"}
+{"idx": 69, "completion": "<sql>SELECT petid ,  weight FROM pets WHERE pet_age  >  1</sql>"}
+{"idx": 70, "completion": "<sql>SELECT petid ,  weight FROM pets WHERE pet_age  >  1</sql>"}
+{"idx": 71, "completion": "<sql>SELECT avg(pet_age) ,  max(pet_age) ,  pettype FROM pets GROUP BY pettype</sql>"}
+{"idx": 72, "completion": "<sql>SELECT avg(pet_age) ,  max(pet_age) ,  pettype FROM pets GROUP BY pettype</sql>"}
+{"idx": 73, "completion": "<sql>SELECT avg(weight) ,  pettype FROM pets GROUP BY pettype</sql>"}
+{"idx": 74, "completion": "<sql>SELECT avg(weight) ,  pettype FROM pets GROUP BY pettype</sql>"}
+{"idx": 75, "completion": "<sql>SELECT DISTINCT T1.fname ,  T1.age FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid</sql>"}
+{"idx": 76, "completion": "<sql>SELECT DISTINCT T1.fname ,  T1.age FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid</sql>"}
+{"idx": 77, "completion": "<sql>SELECT T2.petid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid WHERE T1.Lname  =  'Smith'</sql>"}
+{"idx": 78, "completion": "<sql>SELECT T2.petid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid WHERE T1.Lname  =  'Smith'</sql>"}
+{"idx": 79, "completion": "<sql>SELECT count(*) ,  T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid GROUP BY T1.stuid</sql>"}
+{"idx": 80, "completion": "<sql>select count(*) ,  t1.stuid from student as t1 join has_pet as t2 on t1.stuid  =  t2.stuid group by t1.stuid</sql>"}
+{"idx": 81, "completion": "<sql>SELECT T1.fname ,  T1.sex FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid GROUP BY T1.stuid HAVING count(*)  >  1</sql>"}
+{"idx": 82, "completion": "<sql>SELECT T1.fname ,  T1.sex FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid GROUP BY T1.stuid HAVING count(*)  >  1</sql>"}
+{"idx": 83, "completion": "<sql>SELECT T1.lname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pet_age  =  3 AND T3.pettype  =  'cat'</sql>"}
+{"idx": 84, "completion": "<sql>SELECT T1.lname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pet_age  =  3 AND T3.pettype  =  'cat'</sql>"}
+{"idx": 85, "completion": "<sql>select avg(age) from student where stuid not in (select stuid from has_pet)</sql>"}
+{"idx": 86, "completion": "<sql>select avg(age) from student where stuid not in (select stuid from has_pet)</sql>"}
+{"idx": 87, "completion": "<sql>SELECT count(*) FROM CONTINENTS;</sql>"}
+{"idx": 88, "completion": "<sql>SELECT count(*) FROM CONTINENTS;</sql>"}
+{"idx": 89, "completion": "<sql>SELECT T1.ContId ,  T1.Continent ,  count(*) FROM CONTINENTS AS T1 JOIN COUNTRIES AS T2 ON T1.ContId  =  T2.Continent GROUP BY T1.ContId;</sql>"}
+{"idx": 90, "completion": "<sql>SELECT T1.ContId ,  T1.Continent ,  count(*) FROM CONTINENTS AS T1 JOIN COUNTRIES AS T2 ON T1.ContId  =  T2.Continent GROUP BY T1.ContId;</sql>"}
+{"idx": 91, "completion": "<sql>SELECT count(*) FROM COUNTRIES;</sql>"}
+{"idx": 92, "completion": "<sql>SELECT count(*) FROM COUNTRIES;</sql>"}
+{"idx": 93, "completion": "<sql>SELECT T1.FullName ,  T1.Id ,  count(*) FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker GROUP BY T1.Id;</sql>"}
+{"idx": 94, "completion": "<sql>SELECT T1.FullName ,  T1.Id ,  count(*) FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker GROUP BY T1.Id;</sql>"}
+{"idx": 95, "completion": "<sql>SELECT T1.Model FROM CAR_NAMES AS T1 JOIN CARS_DATA AS T2 ON T1.MakeId  =  T2.Id ORDER BY T2.horsepower ASC LIMIT 1;</sql>"}
+{"idx": 96, "completion": "<sql>SELECT T1.Model FROM CAR_NAMES AS T1 JOIN CARS_DATA AS T2 ON T1.MakeId  =  T2.Id ORDER BY T2.horsepower ASC LIMIT 1;</sql>"}
+{"idx": 97, "completion": "<sql>SELECT T1.model FROM CAR_NAMES AS T1 JOIN CARS_DATA AS T2 ON T1.MakeId  =  T2.Id WHERE T2.Weight  <  (SELECT avg(Weight) FROM CARS_DATA)</sql>"}
+{"idx": 98, "completion": "<sql>SELECT T1.model FROM CAR_NAMES AS T1 JOIN CARS_DATA AS T2 ON T1.MakeId  =  T2.Id WHERE T2.Weight  <  (SELECT avg(Weight) FROM CARS_DATA)</sql>"}
+{"idx": 99, "completion": "<sql>SELECT DISTINCT T1.Maker FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker JOIN CAR_NAMES AS T3 ON T2.model  =  T3.model JOIN CARS_DATA AS T4 ON T3.MakeId  =  T4.id WHERE T4.year  =  '1970';</sql>"}
+{"idx": 100, "completion": "<sql>SELECT DISTINCT T1.Maker FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker JOIN CAR_NAMES AS T3 ON T2.model  =  T3.model JOIN CARS_DATA AS T4 ON T3.MakeId  =  T4.id WHERE T4.year  =  '1970';</sql>"}
+{"idx": 101, "completion": "<sql>SELECT T2.Make ,  T1.Year FROM CARS_DATA AS T1 JOIN CAR_NAMES AS T2 ON T1.Id  =  T2.MakeId WHERE T1.Year  =  (SELECT min(YEAR) FROM CARS_DATA);</sql>"}
+{"idx": 102, "completion": "<sql>SELECT T2.Make ,  T1.Year FROM CARS_DATA AS T1 JOIN CAR_NAMES AS T2 ON T1.Id  =  T2.MakeId WHERE T1.Year  =  (SELECT min(YEAR) FROM CARS_DATA);</sql>"}
+{"idx": 103, "completion": "<sql>SELECT DISTINCT T1.model FROM MODEL_LIST AS T1 JOIN CAR_NAMES AS T2 ON T1.model  =  T2.model JOIN CARS_DATA AS T3 ON T2.MakeId  =  T3.id WHERE T3.year  >  1980;</sql>"}
+{"idx": 104, "completion": "<sql>SELECT DISTINCT T1.model FROM MODEL_LIST AS T1 JOIN CAR_NAMES AS T2 ON T1.model  =  T2.model JOIN CARS_DATA AS T3 ON T2.MakeId  =  T3.id WHERE T3.year  >  1980;</sql>"}
+{"idx": 105, "completion": "<sql>SELECT T1.Continent ,  count(*) FROM CONTINENTS AS T1 JOIN COUNTRIES AS T2 ON T1.ContId  =  T2.continent JOIN car_makers AS T3 ON T2.CountryId  =  T3.Country GROUP BY T1.Continent;</sql>"}
+{"idx": 106, "completion": "<sql>SELECT T1.Continent ,  count(*) FROM CONTINENTS AS T1 JOIN COUNTRIES AS T2 ON T1.ContId  =  T2.continent JOIN car_makers AS T3 ON T2.CountryId  =  T3.Country GROUP BY T1.Continent;</sql>"}
+{"idx": 107, "completion": "<sql>SELECT T2.CountryName FROM CAR_MAKERS AS T1 JOIN COUNTRIES AS T2 ON T1.Country  =  T2.CountryId GROUP BY T1.Country ORDER BY Count(*) DESC LIMIT 1;</sql>"}
+{"idx": 108, "completion": "<sql>SELECT T2.CountryName FROM CAR_MAKERS AS T1 JOIN COUNTRIES AS T2 ON T1.Country  =  T2.CountryId GROUP BY T1.Country ORDER BY Count(*) DESC LIMIT 1;</sql>"}
+{"idx": 109, "completion": "<sql>select count(*) ,  t2.fullname from model_list as t1 join car_makers as t2 on t1.maker  =  t2.id group by t2.id;</sql>"}
+{"idx": 110, "completion": "<sql>SELECT Count(*) ,  T2.FullName ,  T2.id FROM MODEL_LIST AS T1 JOIN CAR_MAKERS AS T2 ON T1.Maker  =  T2.Id GROUP BY T2.id;</sql>"}
+{"idx": 111, "completion": "<sql>SELECT T1.Accelerate FROM CARS_DATA AS T1 JOIN CAR_NAMES AS T2 ON T1.Id  =  T2.MakeId WHERE T2.Make  =  'amc hornet sportabout (sw)';</sql>"}
+{"idx": 112, "completion": "<sql>SELECT T1.Accelerate FROM CARS_DATA AS T1 JOIN CAR_NAMES AS T2 ON T1.Id  =  T2.MakeId WHERE T2.Make  =  'amc hornet sportabout (sw)';</sql>"}
+{"idx": 113, "completion": "<sql>SELECT count(*) FROM CAR_MAKERS AS T1 JOIN COUNTRIES AS T2 ON T1.Country  =  T2.CountryId WHERE T2.CountryName  =  'france';</sql>"}
+{"idx": 114, "completion": "<sql>SELECT count(*) FROM CAR_MAKERS AS T1 JOIN COUNTRIES AS T2 ON T1.Country  =  T2.CountryId WHERE T2.CountryName  =  'france';</sql>"}
+{"idx": 115, "completion": "<sql>SELECT count(*) FROM MODEL_LIST AS T1 JOIN CAR_MAKERS AS T2 ON T1.Maker  =  T2.Id JOIN COUNTRIES AS T3 ON T2.Country  =  T3.CountryId WHERE T3.CountryName  =  'usa';</sql>"}
+{"idx": 116, "completion": "<sql>SELECT count(*) FROM MODEL_LIST AS T1 JOIN CAR_MAKERS AS T2 ON T1.Maker  =  T2.Id JOIN COUNTRIES AS T3 ON T2.Country  =  T3.CountryId WHERE T3.CountryName  =  'usa';</sql>"}
+{"idx": 117, "completion": "<sql>SELECT avg(mpg) FROM CARS_DATA WHERE Cylinders  =  4;</sql>"}
+{"idx": 118, "completion": "<sql>SELECT avg(mpg) FROM CARS_DATA WHERE Cylinders  =  4;</sql>"}
+{"idx": 119, "completion": "<sql>select min(weight) from cars_data where cylinders  =  8 and year  =  1974</sql>"}
+{"idx": 120, "completion": "<sql>select min(weight) from cars_data where cylinders  =  8 and year  =  1974</sql>"}
+{"idx": 121, "completion": "<sql>SELECT Maker ,  Model FROM MODEL_LIST;</sql>"}
+{"idx": 122, "completion": "<sql>SELECT Maker ,  Model FROM MODEL_LIST;</sql>"}
+{"idx": 123, "completion": "<sql>SELECT T1.CountryName ,  T1.CountryId FROM COUNTRIES AS T1 JOIN CAR_MAKERS AS T2 ON T1.CountryId  =  T2.Country GROUP BY T1.CountryId HAVING count(*)  >=  1;</sql>"}
+{"idx": 124, "completion": "<sql>SELECT T1.CountryName ,  T1.CountryId FROM COUNTRIES AS T1 JOIN CAR_MAKERS AS T2 ON T1.CountryId  =  T2.Country GROUP BY T1.CountryId HAVING count(*)  >=  1;</sql>"}
+{"idx": 125, "completion": "<sql>SELECT count(*) FROM CARS_DATA WHERE horsepower  >  150;</sql>"}
+{"idx": 126, "completion": "<sql>SELECT count(*) FROM CARS_DATA WHERE horsepower  >  150;</sql>"}
+{"idx": 127, "completion": "<sql>SELECT avg(Weight) ,  YEAR FROM CARS_DATA GROUP BY YEAR;</sql>"}
+{"idx": 128, "completion": "<sql>SELECT avg(Weight) ,  YEAR FROM CARS_DATA GROUP BY YEAR;</sql>"}
+{"idx": 129, "completion": "<sql>SELECT T1.CountryName FROM COUNTRIES AS T1 JOIN CONTINENTS AS T2 ON T1.Continent  =  T2.ContId JOIN CAR_MAKERS AS T3 ON T1.CountryId  =  T3.Country WHERE T2.Continent  =  'europe' GROUP BY T1.CountryName HAVING count(*)  >=  3;</sql>"}
+{"idx": 130, "completion": "<sql>SELECT T1.CountryName FROM COUNTRIES AS T1 JOIN CONTINENTS AS T2 ON T1.Continent  =  T2.ContId JOIN CAR_MAKERS AS T3 ON T1.CountryId  =  T3.Country WHERE T2.Continent  =  'europe' GROUP BY T1.CountryName HAVING count(*)  >=  3;</sql>"}
+{"idx": 131, "completion": "<sql>SELECT T2.horsepower ,  T1.Make FROM CAR_NAMES AS T1 JOIN CARS_DATA AS T2 ON T1.MakeId  =  T2.Id WHERE T2.cylinders  =  3 ORDER BY T2.horsepower DESC LIMIT 1;</sql>"}
+{"idx": 132, "completion": "<sql>SELECT T2.horsepower ,  T1.Make FROM CAR_NAMES AS T1 JOIN CARS_DATA AS T2 ON T1.MakeId  =  T2.Id WHERE T2.cylinders  =  3 ORDER BY T2.horsepower DESC LIMIT 1;</sql>"}
+{"idx": 133, "completion": "<sql>SELECT T1.Model FROM CAR_NAMES AS T1 JOIN CARS_DATA AS T2 ON T1.MakeId  =  T2.Id ORDER BY T2.mpg DESC LIMIT 1;</sql>"}
+{"idx": 134, "completion": "<sql>select t1.model from car_names as t1 join cars_data as t2 on t1.makeid  =  t2.id order by t2.mpg desc limit 1;</sql>"}
+{"idx": 135, "completion": "<sql>SELECT avg(horsepower) FROM CARS_DATA WHERE YEAR  <  1980;</sql>"}
+{"idx": 136, "completion": "<sql>select avg(horsepower) from cars_data where year  <  1980;</sql>"}
+{"idx": 137, "completion": "<sql>SELECT avg(T2.edispl) FROM CAR_NAMES AS T1 JOIN CARS_DATA AS T2 ON T1.MakeId  =  T2.Id WHERE T1.Model  =  'volvo';</sql>"}
+{"idx": 138, "completion": "<sql>SELECT avg(T2.edispl) FROM CAR_NAMES AS T1 JOIN CARS_DATA AS T2 ON T1.MakeId  =  T2.Id WHERE T1.Model  =  'volvo';</sql>"}
+{"idx": 139, "completion": "<sql>SELECT max(Accelerate) ,  Cylinders FROM CARS_DATA GROUP BY Cylinders;</sql>"}
+{"idx": 140, "completion": "<sql>SELECT max(Accelerate) ,  Cylinders FROM CARS_DATA GROUP BY Cylinders;</sql>"}
+{"idx": 141, "completion": "<sql>SELECT Model FROM CAR_NAMES GROUP BY Model ORDER BY count(*) DESC LIMIT 1;</sql>"}
+{"idx": 142, "completion": "<sql>SELECT Model FROM CAR_NAMES GROUP BY Model ORDER BY count(*) DESC LIMIT 1;</sql>"}
+{"idx": 143, "completion": "<sql>SELECT count(*) FROM CARS_DATA WHERE Cylinders  >  4;</sql>"}
+{"idx": 144, "completion": "<sql>SELECT count(*) FROM CARS_DATA WHERE Cylinders  >  4;</sql>"}
+{"idx": 145, "completion": "<sql>SELECT count(*) FROM CARS_DATA WHERE YEAR  =  1980;</sql>"}
+{"idx": 146, "completion": "<sql>SELECT count(*) FROM CARS_DATA WHERE YEAR  =  1980;</sql>"}
+{"idx": 147, "completion": "<sql>SELECT count(*) FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker WHERE T1.FullName  =  'American Motor Company';</sql>"}
+{"idx": 148, "completion": "<sql>SELECT count(*) FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker WHERE T1.FullName  =  'American Motor Company';</sql>"}
+{"idx": 149, "completion": "<sql>SELECT T1.FullName ,  T1.Id FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker GROUP BY T1.Id HAVING count(*)  >  3;</sql>"}
+{"idx": 150, "completion": "<sql>SELECT T1.FullName ,  T1.Id FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker GROUP BY T1.Id HAVING count(*)  >  3;</sql>"}
+{"idx": 151, "completion": "<sql>SELECT DISTINCT T2.Model FROM CAR_NAMES AS T1 JOIN MODEL_LIST AS T2 ON T1.Model  =  T2.Model JOIN CAR_MAKERS AS T3 ON T2.Maker  =  T3.Id JOIN CARS_DATA AS T4 ON T1.MakeId  =  T4.Id WHERE T3.FullName  =  'General Motors' OR T4.weight  >  3500;</sql>"}
+{"idx": 152, "completion": "<sql>SELECT DISTINCT T2.Model FROM CAR_NAMES AS T1 JOIN MODEL_LIST AS T2 ON T1.Model  =  T2.Model JOIN CAR_MAKERS AS T3 ON T2.Maker  =  T3.Id JOIN CARS_DATA AS T4 ON T1.MakeId  =  T4.Id WHERE T3.FullName  =  'General Motors' OR T4.weight  >  3500;</sql>"}
+{"idx": 153, "completion": "<sql>select distinct year from cars_data where weight between 3000 and 4000;</sql>"}
+{"idx": 154, "completion": "<sql>select distinct year from cars_data where weight between 3000 and 4000;</sql>"}
+{"idx": 155, "completion": "<sql>SELECT T1.horsepower FROM CARS_DATA AS T1 ORDER BY T1.accelerate DESC LIMIT 1;</sql>"}
+{"idx": 156, "completion": "<sql>SELECT T1.horsepower FROM CARS_DATA AS T1 ORDER BY T1.accelerate DESC LIMIT 1;</sql>"}
+{"idx": 157, "completion": "<sql>SELECT T1.cylinders FROM CARS_DATA AS T1 JOIN CAR_NAMES AS T2 ON T1.Id  =  T2.MakeId WHERE T2.Model  =  'volvo' ORDER BY T1.accelerate ASC LIMIT 1;</sql>"}
+{"idx": 158, "completion": "<sql>SELECT T1.cylinders FROM CARS_DATA AS T1 JOIN CAR_NAMES AS T2 ON T1.Id  =  T2.MakeId WHERE T2.Model  =  'volvo' ORDER BY T1.accelerate ASC LIMIT 1;</sql>"}
+{"idx": 159, "completion": "<sql>SELECT COUNT(*) FROM CARS_DATA WHERE Accelerate  >  ( SELECT Accelerate FROM CARS_DATA ORDER BY Horsepower DESC LIMIT 1 );</sql>"}
+{"idx": 160, "completion": "<sql>SELECT COUNT(*) FROM CARS_DATA WHERE Accelerate  >  ( SELECT Accelerate FROM CARS_DATA ORDER BY Horsepower DESC LIMIT 1 );</sql>"}
+{"idx": 161, "completion": "<sql>select count(*) from countries as t1 join car_makers as t2 on t1.countryid  =  t2.country group by t1.countryid having count(*)  >  2</sql>"}
+{"idx": 162, "completion": "<sql>select count(*) from countries as t1 join car_makers as t2 on t1.countryid  =  t2.country group by t1.countryid having count(*)  >  2</sql>"}
+{"idx": 163, "completion": "<sql>SELECT COUNT(*) FROM CARS_DATA WHERE Cylinders  >  6;</sql>"}
+{"idx": 164, "completion": "<sql>SELECT COUNT(*) FROM CARS_DATA WHERE Cylinders  >  6;</sql>"}
+{"idx": 165, "completion": "<sql>SELECT T1.Model FROM CAR_NAMES AS T1 JOIN CARS_DATA AS T2 ON T1.MakeId  =  T2.Id WHERE T2.Cylinders  =  4 ORDER BY T2.horsepower DESC LIMIT 1;</sql>"}
+{"idx": 166, "completion": "<sql>SELECT T1.Model FROM CAR_NAMES AS T1 JOIN CARS_DATA AS T2 ON T1.MakeId  =  T2.Id WHERE T2.Cylinders  =  4 ORDER BY T2.horsepower DESC LIMIT 1;</sql>"}
+{"idx": 167, "completion": "<sql>SELECT T2.MakeId ,  T2.Make FROM CARS_DATA AS T1 JOIN CAR_NAMES AS T2 ON T1.Id  =  T2.MakeId WHERE T1.Horsepower  >  (SELECT min(Horsepower) FROM CARS_DATA) AND T1.Cylinders  <=  3;</sql>"}
+{"idx": 168, "completion": "<sql>select t2.makeid ,  t2.make from cars_data as t1 join car_names as t2 on t1.id  =  t2.makeid where t1.horsepower  >  (select min(horsepower) from cars_data) and t1.cylinders  <  4;</sql>"}
+{"idx": 169, "completion": "<sql>select max(mpg) from cars_data where cylinders  =  8 or year  <  1980</sql>"}
+{"idx": 170, "completion": "<sql>select max(mpg) from cars_data where cylinders  =  8 or year  <  1980</sql>"}
+{"idx": 171, "completion": "<sql>SELECT DISTINCT T1.model FROM MODEL_LIST AS T1 JOIN CAR_NAMES AS T2 ON T1.Model  =  T2.Model JOIN CARS_DATA AS T3 ON T2.MakeId  =  T3.Id JOIN CAR_MAKERS AS T4 ON T1.Maker  =  T4.Id WHERE T3.weight  <  3500 AND T4.FullName != 'Ford Motor Company';</sql>"}
+{"idx": 172, "completion": "<sql>SELECT DISTINCT T1.model FROM MODEL_LIST AS T1 JOIN CAR_NAMES AS T2 ON T1.Model  =  T2.Model JOIN CARS_DATA AS T3 ON T2.MakeId  =  T3.Id JOIN CAR_MAKERS AS T4 ON T1.Maker  =  T4.Id WHERE T3.weight  <  3500 AND T4.FullName != 'Ford Motor Company';</sql>"}
+{"idx": 173, "completion": "<sql>SELECT CountryName FROM countries EXCEPT SELECT T1.CountryName FROM countries AS T1 JOIN CAR_MAKERS AS T2 ON T1.countryId  =  T2.Country;</sql>"}
+{"idx": 174, "completion": "<sql>SELECT CountryName FROM countries EXCEPT SELECT T1.CountryName FROM countries AS T1 JOIN CAR_MAKERS AS T2 ON T1.countryId  =  T2.Country;</sql>"}
+{"idx": 175, "completion": "<sql>select t1.id ,  t1.maker from car_makers as t1 join model_list as t2 on t1.id  =  t2.maker group by t1.id having count(*)  >=  2 intersect select t1.id ,  t1.maker from car_makers as t1 join model_list as t2 on t1.id  =  t2.maker join car_names as t3 on t2.model  =  t3.model group by t1.id having count(*)  >  3;</sql>"}
+{"idx": 176, "completion": "<sql>SELECT T1.Id ,  T1.Maker FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker GROUP BY T1.Id HAVING count(*)  >=  2 INTERSECT SELECT T1.Id ,  T1.Maker FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker JOIN CAR_NAMES AS T3 ON T2.model  =  T3.model GROUP BY T1.Id HAVING count(*)  >  3;</sql>"}
+{"idx": 177, "completion": "<sql>SELECT T1.countryId ,  T1.CountryName FROM Countries AS T1 JOIN CAR_MAKERS AS T2 ON T1.CountryId  =  T2.Country GROUP BY T1.countryId HAVING count(*)  >  3 UNION SELECT T1.countryId ,  T1.CountryName FROM Countries AS T1 JOIN CAR_MAKERS AS T2 ON T1.CountryId  =  T2.Country JOIN MODEL_LIST AS T3 ON T2.Id  =  T3.Maker WHERE T3.Model  =  'fiat';</sql>"}
+{"idx": 178, "completion": "<sql>select t1.countryid ,  t1.countryname from countries as t1 join car_makers as t2 on t1.countryid  =  t2.country group by t1.countryid having count(*)  >  3 union select t1.countryid ,  t1.countryname from countries as t1 join car_makers as t2 on t1.countryid  =  t2.country join model_list as t3 on t2.id  =  t3.maker where t3.model  =  'fiat';</sql>"}
+{"idx": 179, "completion": "<sql>SELECT Country FROM AIRLINES WHERE Airline  =  \"JetBlue Airways\"</sql>"}
+{"idx": 180, "completion": "<sql>SELECT Country FROM AIRLINES WHERE Airline  =  \"JetBlue Airways\"</sql>"}
+{"idx": 181, "completion": "<sql>SELECT Abbreviation FROM AIRLINES WHERE Airline  =  \"JetBlue Airways\"</sql>"}
+{"idx": 182, "completion": "<sql>SELECT Abbreviation FROM AIRLINES WHERE Airline  =  \"JetBlue Airways\"</sql>"}
+{"idx": 183, "completion": "<sql>SELECT Airline ,  Abbreviation FROM AIRLINES WHERE Country  =  \"USA\"</sql>"}
+{"idx": 184, "completion": "<sql>SELECT Airline ,  Abbreviation FROM AIRLINES WHERE Country  =  \"USA\"</sql>"}
+{"idx": 185, "completion": "<sql>SELECT AirportCode ,  AirportName FROM AIRPORTS WHERE city  =  \"Anthony\"</sql>"}
+{"idx": 186, "completion": "<sql>SELECT AirportCode ,  AirportName FROM AIRPORTS WHERE city  =  \"Anthony\"</sql>"}
+{"idx": 187, "completion": "<sql>SELECT count(*) FROM AIRLINES</sql>"}
+{"idx": 188, "completion": "<sql>SELECT count(*) FROM AIRLINES</sql>"}
+{"idx": 189, "completion": "<sql>SELECT count(*) FROM AIRPORTS</sql>"}
+{"idx": 190, "completion": "<sql>SELECT count(*) FROM AIRPORTS</sql>"}
+{"idx": 191, "completion": "<sql>SELECT count(*) FROM FLIGHTS</sql>"}
+{"idx": 192, "completion": "<sql>SELECT count(*) FROM FLIGHTS</sql>"}
+{"idx": 193, "completion": "<sql>SELECT Airline FROM AIRLINES WHERE Abbreviation  =  \"UAL\"</sql>"}
+{"idx": 194, "completion": "<sql>SELECT Airline FROM AIRLINES WHERE Abbreviation  =  \"UAL\"</sql>"}
+{"idx": 195, "completion": "<sql>SELECT count(*) FROM AIRLINES WHERE Country  =  \"USA\"</sql>"}
+{"idx": 196, "completion": "<sql>SELECT count(*) FROM AIRLINES WHERE Country  =  \"USA\"</sql>"}
+{"idx": 197, "completion": "<sql>SELECT City ,  Country FROM AIRPORTS WHERE AirportName  =  \"Alton\"</sql>"}
+{"idx": 198, "completion": "<sql>SELECT City ,  Country FROM AIRPORTS WHERE AirportName  =  \"Alton\"</sql>"}
+{"idx": 199, "completion": "<sql>SELECT AirportName FROM AIRPORTS WHERE AirportCode  =  \"AKO\"</sql>"}
+{"idx": 200, "completion": "<sql>SELECT AirportName FROM AIRPORTS WHERE AirportCode  =  \"AKO\"</sql>"}
+{"idx": 201, "completion": "<sql>SELECT AirportName FROM AIRPORTS WHERE City = \"Aberdeen\"</sql>"}
+{"idx": 202, "completion": "<sql>SELECT AirportName FROM AIRPORTS WHERE City = \"Aberdeen\"</sql>"}
+{"idx": 203, "completion": "<sql>SELECT count(*) FROM FLIGHTS WHERE SourceAirport  =  \"APG\"</sql>"}
+{"idx": 204, "completion": "<sql>SELECT count(*) FROM FLIGHTS WHERE SourceAirport  =  \"APG\"</sql>"}
+{"idx": 205, "completion": "<sql>SELECT count(*) FROM FLIGHTS WHERE DestAirport  =  \"ATO\"</sql>"}
+{"idx": 206, "completion": "<sql>SELECT count(*) FROM FLIGHTS WHERE DestAirport  =  \"ATO\"</sql>"}
+{"idx": 207, "completion": "<sql>SELECT count(*) FROM FLIGHTS AS T1 JOIN AIRPORTS AS T2 ON T1.SourceAirport  =  T2.AirportCode WHERE T2.City  =  \"Aberdeen\"</sql>"}
+{"idx": 208, "completion": "<sql>SELECT count(*) FROM FLIGHTS AS T1 JOIN AIRPORTS AS T2 ON T1.SourceAirport  =  T2.AirportCode WHERE T2.City  =  \"Aberdeen\"</sql>"}
+{"idx": 209, "completion": "<sql>SELECT count(*) FROM FLIGHTS AS T1 JOIN AIRPORTS AS T2 ON T1.DestAirport  =  T2.AirportCode WHERE T2.City  =  \"Aberdeen\"</sql>"}
+{"idx": 210, "completion": "<sql>SELECT count(*) FROM FLIGHTS AS T1 JOIN AIRPORTS AS T2 ON T1.DestAirport  =  T2.AirportCode WHERE T2.City  =  \"Aberdeen\"</sql>"}
+{"idx": 211, "completion": "<sql>SELECT count(*) FROM FLIGHTS AS T1 JOIN AIRPORTS AS T2 ON T1.DestAirport  =  T2.AirportCode JOIN AIRPORTS AS T3 ON T1.SourceAirport  =  T3.AirportCode WHERE T2.City  =  \"Ashley\" AND T3.City  =  \"Aberdeen\"</sql>"}
+{"idx": 212, "completion": "<sql>SELECT count(*) FROM FLIGHTS AS T1 JOIN AIRPORTS AS T2 ON T1.DestAirport  =  T2.AirportCode JOIN AIRPORTS AS T3 ON T1.SourceAirport  =  T3.AirportCode WHERE T2.City  =  \"Ashley\" AND T3.City  =  \"Aberdeen\"</sql>"}
+{"idx": 213, "completion": "<sql>SELECT count(*) FROM FLIGHTS AS T1 JOIN AIRLINES AS T2 ON T1.Airline  =  T2.uid WHERE T2.Airline = \"JetBlue Airways\"</sql>"}
+{"idx": 214, "completion": "<sql>SELECT count(*) FROM FLIGHTS AS T1 JOIN AIRLINES AS T2 ON T1.Airline  =  T2.uid WHERE T2.Airline = \"JetBlue Airways\"</sql>"}
+{"idx": 215, "completion": "<sql>SELECT count(*) FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T2.Airline  =  T1.uid WHERE T1.Airline  =  \"United Airlines\" AND T2.DestAirport  =  \"ASY\"</sql>"}
+{"idx": 216, "completion": "<sql>SELECT count(*) FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T2.Airline  =  T1.uid WHERE T1.Airline  =  \"United Airlines\" AND T2.DestAirport  =  \"ASY\"</sql>"}
+{"idx": 217, "completion": "<sql>SELECT count(*) FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T2.Airline  =  T1.uid WHERE T1.Airline  =  \"United Airlines\" AND T2.SourceAirport  =  \"AHD\"</sql>"}
+{"idx": 218, "completion": "<sql>SELECT count(*) FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T2.Airline  =  T1.uid WHERE T1.Airline  =  \"United Airlines\" AND T2.SourceAirport  =  \"AHD\"</sql>"}
+{"idx": 219, "completion": "<sql>SELECT count(*) FROM FLIGHTS AS T1 JOIN AIRPORTS AS T2 ON T1.DestAirport  =  T2.AirportCode JOIN AIRLINES AS T3 ON T3.uid  =  T1.Airline WHERE T2.City  =  \"Aberdeen\" AND T3.Airline  =  \"United Airlines\"</sql>"}
+{"idx": 220, "completion": "<sql>SELECT count(*) FROM FLIGHTS AS T1 JOIN AIRPORTS AS T2 ON T1.DestAirport  =  T2.AirportCode JOIN AIRLINES AS T3 ON T3.uid  =  T1.Airline WHERE T2.City  =  \"Aberdeen\" AND T3.Airline  =  \"United Airlines\"</sql>"}
+{"idx": 221, "completion": "<sql>SELECT T1.City FROM AIRPORTS AS T1 JOIN FLIGHTS AS T2 ON T1.AirportCode  =  T2.DestAirport GROUP BY T1.City ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 222, "completion": "<sql>SELECT T1.City FROM AIRPORTS AS T1 JOIN FLIGHTS AS T2 ON T1.AirportCode  =  T2.DestAirport GROUP BY T1.City ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 223, "completion": "<sql>SELECT T1.City FROM AIRPORTS AS T1 JOIN FLIGHTS AS T2 ON T1.AirportCode  =  T2.SourceAirport GROUP BY T1.City ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 224, "completion": "<sql>SELECT T1.City FROM AIRPORTS AS T1 JOIN FLIGHTS AS T2 ON T1.AirportCode  =  T2.SourceAirport GROUP BY T1.City ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 225, "completion": "<sql>SELECT T1.AirportCode FROM AIRPORTS AS T1 JOIN FLIGHTS AS T2 ON T1.AirportCode  =  T2.DestAirport OR T1.AirportCode  =  T2.SourceAirport GROUP BY T1.AirportCode ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 226, "completion": "<sql>SELECT T1.AirportCode FROM AIRPORTS AS T1 JOIN FLIGHTS AS T2 ON T1.AirportCode  =  T2.DestAirport OR T1.AirportCode  =  T2.SourceAirport GROUP BY T1.AirportCode ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 227, "completion": "<sql>SELECT T1.AirportCode FROM AIRPORTS AS T1 JOIN FLIGHTS AS T2 ON T1.AirportCode  =  T2.DestAirport OR T1.AirportCode  =  T2.SourceAirport GROUP BY T1.AirportCode ORDER BY count(*) LIMIT 1</sql>"}
+{"idx": 228, "completion": "<sql>SELECT T1.AirportCode FROM AIRPORTS AS T1 JOIN FLIGHTS AS T2 ON T1.AirportCode  =  T2.DestAirport OR T1.AirportCode  =  T2.SourceAirport GROUP BY T1.AirportCode ORDER BY count(*) LIMIT 1</sql>"}
+{"idx": 229, "completion": "<sql>SELECT T1.Airline FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T1.uid  =  T2.Airline GROUP BY T1.Airline ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 230, "completion": "<sql>SELECT T1.Airline FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T1.uid  =  T2.Airline GROUP BY T1.Airline ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 231, "completion": "<sql>SELECT T1.Abbreviation ,  T1.Country FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T1.uid  =  T2.Airline GROUP BY T1.Airline ORDER BY count(*) LIMIT 1</sql>"}
+{"idx": 232, "completion": "<sql>SELECT T1.Abbreviation ,  T1.Country FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T1.uid  =  T2.Airline GROUP BY T1.Airline ORDER BY count(*) LIMIT 1</sql>"}
+{"idx": 233, "completion": "<sql>SELECT T1.Airline FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T1.uid  =  T2.Airline WHERE T2.SourceAirport  =  \"AHD\"</sql>"}
+{"idx": 234, "completion": "<sql>SELECT T1.Airline FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T1.uid  =  T2.Airline WHERE T2.SourceAirport  =  \"AHD\"</sql>"}
+{"idx": 235, "completion": "<sql>SELECT T1.Airline FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T1.uid  =  T2.Airline WHERE T2.DestAirport  =  \"AHD\"</sql>"}
+{"idx": 236, "completion": "<sql>SELECT T1.Airline FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T1.uid  =  T2.Airline WHERE T2.DestAirport  =  \"AHD\"</sql>"}
+{"idx": 237, "completion": "<sql>SELECT T1.Airline FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T1.uid  =  T2.Airline WHERE T2.SourceAirport  =  \"APG\" INTERSECT SELECT T1.Airline FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T1.uid  =  T2.Airline WHERE T2.SourceAirport  =  \"CVO\"</sql>"}
+{"idx": 238, "completion": "<sql>SELECT T1.Airline FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T1.uid  =  T2.Airline WHERE T2.SourceAirport  =  \"APG\" INTERSECT SELECT T1.Airline FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T1.uid  =  T2.Airline WHERE T2.SourceAirport  =  \"CVO\"</sql>"}
+{"idx": 239, "completion": "<sql>SELECT T1.Airline FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T1.uid  =  T2.Airline WHERE T2.SourceAirport  =  \"CVO\" EXCEPT SELECT T1.Airline FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T1.uid  =  T2.Airline WHERE T2.SourceAirport  =  \"APG\"</sql>"}
+{"idx": 240, "completion": "<sql>SELECT T1.Airline FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T1.uid  =  T2.Airline WHERE T2.SourceAirport  =  \"CVO\" EXCEPT SELECT T1.Airline FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T1.uid  =  T2.Airline WHERE T2.SourceAirport  =  \"APG\"</sql>"}
+{"idx": 241, "completion": "<sql>SELECT T1.Airline FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T1.uid  =  T2.Airline GROUP BY T1.Airline HAVING count(*)  >  10</sql>"}
+{"idx": 242, "completion": "<sql>SELECT T1.Airline FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T1.uid  =  T2.Airline GROUP BY T1.Airline HAVING count(*)  >  10</sql>"}
+{"idx": 243, "completion": "<sql>SELECT T1.Airline FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T1.uid  =  T2.Airline GROUP BY T1.Airline HAVING count(*)  <  200</sql>"}
+{"idx": 244, "completion": "<sql>SELECT T1.Airline FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T1.uid  =  T2.Airline GROUP BY T1.Airline HAVING count(*)  <  200</sql>"}
+{"idx": 245, "completion": "<sql>SELECT T1.FlightNo FROM FLIGHTS AS T1 JOIN AIRLINES AS T2 ON T2.uid  =  T1.Airline WHERE T2.Airline  =  \"United Airlines\"</sql>"}
+{"idx": 246, "completion": "<sql>SELECT T1.FlightNo FROM FLIGHTS AS T1 JOIN AIRLINES AS T2 ON T2.uid  =  T1.Airline WHERE T2.Airline  =  \"United Airlines\"</sql>"}
+{"idx": 247, "completion": "<sql>SELECT FlightNo FROM FLIGHTS WHERE SourceAirport  =  \"APG\"</sql>"}
+{"idx": 248, "completion": "<sql>SELECT FlightNo FROM FLIGHTS WHERE SourceAirport  =  \"APG\"</sql>"}
+{"idx": 249, "completion": "<sql>SELECT FlightNo FROM FLIGHTS WHERE DestAirport  =  \"APG\"</sql>"}
+{"idx": 250, "completion": "<sql>SELECT FlightNo FROM FLIGHTS WHERE DestAirport  =  \"APG\"</sql>"}
+{"idx": 251, "completion": "<sql>SELECT T1.FlightNo FROM FLIGHTS AS T1 JOIN AIRPORTS AS T2 ON T1.SourceAirport   =  T2.AirportCode WHERE T2.City  =  \"Aberdeen\"</sql>"}
+{"idx": 252, "completion": "<sql>SELECT T1.FlightNo FROM FLIGHTS AS T1 JOIN AIRPORTS AS T2 ON T1.SourceAirport   =  T2.AirportCode WHERE T2.City  =  \"Aberdeen\"</sql>"}
+{"idx": 253, "completion": "<sql>SELECT T1.FlightNo FROM FLIGHTS AS T1 JOIN AIRPORTS AS T2 ON T1.DestAirport   =  T2.AirportCode WHERE T2.City  =  \"Aberdeen\"</sql>"}
+{"idx": 254, "completion": "<sql>SELECT T1.FlightNo FROM FLIGHTS AS T1 JOIN AIRPORTS AS T2 ON T1.DestAirport   =  T2.AirportCode WHERE T2.City  =  \"Aberdeen\"</sql>"}
+{"idx": 255, "completion": "<sql>SELECT count(*) FROM Flights AS T1 JOIN Airports AS T2 ON T1.DestAirport  =  T2.AirportCode WHERE T2.city  =  \"Aberdeen\" OR T2.city  =  \"Abilene\"</sql>"}
+{"idx": 256, "completion": "<sql>SELECT count(*) FROM Flights AS T1 JOIN Airports AS T2 ON T1.DestAirport  =  T2.AirportCode WHERE T2.city  =  \"Aberdeen\" OR T2.city  =  \"Abilene\"</sql>"}
+{"idx": 257, "completion": "<sql>SELECT AirportName FROM Airports WHERE AirportCode NOT IN (SELECT SourceAirport FROM Flights UNION SELECT DestAirport FROM Flights)</sql>"}
+{"idx": 258, "completion": "<sql>SELECT AirportName FROM Airports WHERE AirportCode NOT IN (SELECT SourceAirport FROM Flights UNION SELECT DestAirport FROM Flights)</sql>"}
+{"idx": 259, "completion": "<sql>SELECT count(*) FROM employee</sql>"}
+{"idx": 260, "completion": "<sql>SELECT count(*) FROM employee</sql>"}
+{"idx": 261, "completion": "<sql>SELECT name FROM employee ORDER BY age</sql>"}
+{"idx": 262, "completion": "<sql>SELECT name FROM employee ORDER BY age</sql>"}
+{"idx": 263, "completion": "<sql>SELECT count(*) ,  city FROM employee GROUP BY city</sql>"}
+{"idx": 264, "completion": "<sql>SELECT count(*) ,  city FROM employee GROUP BY city</sql>"}
+{"idx": 265, "completion": "<sql>SELECT city FROM employee WHERE age  <  30 GROUP BY city HAVING count(*)  >  1</sql>"}
+{"idx": 266, "completion": "<sql>SELECT city FROM employee WHERE age  <  30 GROUP BY city HAVING count(*)  >  1</sql>"}
+{"idx": 267, "completion": "<sql>SELECT count(*) ,  LOCATION FROM shop GROUP BY LOCATION</sql>"}
+{"idx": 268, "completion": "<sql>SELECT count(*) ,  LOCATION FROM shop GROUP BY LOCATION</sql>"}
+{"idx": 269, "completion": "<sql>SELECT manager_name ,  district FROM shop ORDER BY number_products DESC LIMIT 1</sql>"}
+{"idx": 270, "completion": "<sql>SELECT manager_name ,  district FROM shop ORDER BY number_products DESC LIMIT 1</sql>"}
+{"idx": 271, "completion": "<sql>SELECT min(Number_products) ,  max(Number_products) FROM shop</sql>"}
+{"idx": 272, "completion": "<sql>SELECT min(Number_products) ,  max(Number_products) FROM shop</sql>"}
+{"idx": 273, "completion": "<sql>SELECT name ,  LOCATION ,  district FROM shop ORDER BY number_products DESC</sql>"}
+{"idx": 274, "completion": "<sql>SELECT name ,  LOCATION ,  district FROM shop ORDER BY number_products DESC</sql>"}
+{"idx": 275, "completion": "<sql>SELECT name FROM shop WHERE number_products  >  (SELECT avg(number_products) FROM shop)</sql>"}
+{"idx": 276, "completion": "<sql>SELECT name FROM shop WHERE number_products  >  (SELECT avg(number_products) FROM shop)</sql>"}
+{"idx": 277, "completion": "<sql>SELECT t1.name FROM employee AS t1 JOIN evaluation AS t2 ON t1.Employee_ID  =  t2.Employee_ID GROUP BY t2.Employee_ID ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 278, "completion": "<sql>SELECT t1.name FROM employee AS t1 JOIN evaluation AS t2 ON t1.Employee_ID  =  t2.Employee_ID GROUP BY t2.Employee_ID ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 279, "completion": "<sql>SELECT t1.name FROM employee AS t1 JOIN evaluation AS t2 ON t1.Employee_ID  =  t2.Employee_ID ORDER BY t2.bonus DESC LIMIT 1</sql>"}
+{"idx": 280, "completion": "<sql>SELECT t1.name FROM employee AS t1 JOIN evaluation AS t2 ON t1.Employee_ID  =  t2.Employee_ID ORDER BY t2.bonus DESC LIMIT 1</sql>"}
+{"idx": 281, "completion": "<sql>SELECT name FROM employee WHERE Employee_ID NOT IN (SELECT Employee_ID FROM evaluation)</sql>"}
+{"idx": 282, "completion": "<sql>SELECT name FROM employee WHERE Employee_ID NOT IN (SELECT Employee_ID FROM evaluation)</sql>"}
+{"idx": 283, "completion": "<sql>SELECT t2.name FROM hiring AS t1 JOIN shop AS t2 ON t1.shop_id  =  t2.shop_id GROUP BY t1.shop_id ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 284, "completion": "<sql>SELECT t2.name FROM hiring AS t1 JOIN shop AS t2 ON t1.shop_id  =  t2.shop_id GROUP BY t1.shop_id ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 285, "completion": "<sql>SELECT name FROM shop WHERE shop_id NOT IN (SELECT shop_id FROM hiring)</sql>"}
+{"idx": 286, "completion": "<sql>SELECT name FROM shop WHERE shop_id NOT IN (SELECT shop_id FROM hiring)</sql>"}
+{"idx": 287, "completion": "<sql>SELECT count(*) ,  t2.name FROM hiring AS t1 JOIN shop AS t2 ON t1.shop_id  =  t2.shop_id GROUP BY t2.name</sql>"}
+{"idx": 288, "completion": "<sql>SELECT count(*) ,  t2.name FROM hiring AS t1 JOIN shop AS t2 ON t1.shop_id  =  t2.shop_id GROUP BY t2.name</sql>"}
+{"idx": 289, "completion": "<sql>SELECT sum(bonus) FROM evaluation</sql>"}
+{"idx": 290, "completion": "<sql>SELECT sum(bonus) FROM evaluation</sql>"}
+{"idx": 291, "completion": "<sql>SELECT * FROM hiring</sql>"}
+{"idx": 292, "completion": "<sql>SELECT * FROM hiring</sql>"}
+{"idx": 293, "completion": "<sql>SELECT district FROM shop WHERE Number_products  <  3000 INTERSECT SELECT district FROM shop WHERE Number_products  >  10000</sql>"}
+{"idx": 294, "completion": "<sql>SELECT district FROM shop WHERE Number_products  <  3000 INTERSECT SELECT district FROM shop WHERE Number_products  >  10000</sql>"}
+{"idx": 295, "completion": "<sql>SELECT count(DISTINCT LOCATION) FROM shop</sql>"}
+{"idx": 296, "completion": "<sql>SELECT count(DISTINCT LOCATION) FROM shop</sql>"}
+{"idx": 297, "completion": "<sql>SELECT count(*) FROM Documents</sql>"}
+{"idx": 298, "completion": "<sql>SELECT count(*) FROM Documents</sql>"}
+{"idx": 299, "completion": "<sql>SELECT document_id ,  document_name ,  document_description FROM Documents</sql>"}
+{"idx": 300, "completion": "<sql>SELECT document_id ,  document_name ,  document_description FROM Documents</sql>"}
+{"idx": 301, "completion": "<sql>SELECT document_name ,  template_id FROM Documents WHERE Document_Description LIKE \"%w%\"</sql>"}
+{"idx": 302, "completion": "<sql>SELECT document_name ,  template_id FROM Documents WHERE Document_Description LIKE \"%w%\"</sql>"}
+{"idx": 303, "completion": "<sql>SELECT document_id ,  template_id ,  Document_Description FROM Documents WHERE document_name  =  \"Robbin CV\"</sql>"}
+{"idx": 304, "completion": "<sql>SELECT document_id ,  template_id ,  Document_Description FROM Documents WHERE document_name  =  \"Robbin CV\"</sql>"}
+{"idx": 305, "completion": "<sql>SELECT count(DISTINCT template_id) FROM Documents</sql>"}
+{"idx": 306, "completion": "<sql>SELECT count(DISTINCT template_id) FROM Documents</sql>"}
+{"idx": 307, "completion": "<sql>SELECT count(*) FROM Documents AS T1 JOIN Templates AS T2 ON T1.Template_ID  =  T2.Template_ID WHERE T2.Template_Type_Code  =  'PPT'</sql>"}
+{"idx": 308, "completion": "<sql>SELECT count(*) FROM Documents AS T1 JOIN Templates AS T2 ON T1.Template_ID  =  T2.Template_ID WHERE T2.Template_Type_Code  =  'PPT'</sql>"}
+{"idx": 309, "completion": "<sql>SELECT template_id ,  count(*) FROM Documents GROUP BY template_id</sql>"}
+{"idx": 310, "completion": "<sql>SELECT template_id ,  count(*) FROM Documents GROUP BY template_id</sql>"}
+{"idx": 311, "completion": "<sql>SELECT T1.template_id ,  T2.Template_Type_Code FROM Documents AS T1 JOIN Templates AS T2 ON T1.template_id  =  T2.template_id GROUP BY T1.template_id ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 312, "completion": "<sql>SELECT T1.template_id ,  T2.Template_Type_Code FROM Documents AS T1 JOIN Templates AS T2 ON T1.template_id  =  T2.template_id GROUP BY T1.template_id ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 313, "completion": "<sql>SELECT template_id FROM Documents GROUP BY template_id HAVING count(*)  >  1</sql>"}
+{"idx": 314, "completion": "<sql>SELECT template_id FROM Documents GROUP BY template_id HAVING count(*)  >  1</sql>"}
+{"idx": 315, "completion": "<sql>SELECT template_id FROM Templates EXCEPT SELECT template_id FROM Documents</sql>"}
+{"idx": 316, "completion": "<sql>SELECT template_id FROM Templates EXCEPT SELECT template_id FROM Documents</sql>"}
+{"idx": 317, "completion": "<sql>SELECT count(*) FROM Templates</sql>"}
+{"idx": 318, "completion": "<sql>SELECT count(*) FROM Templates</sql>"}
+{"idx": 319, "completion": "<sql>SELECT template_id ,  version_number ,  template_type_code FROM Templates</sql>"}
+{"idx": 320, "completion": "<sql>SELECT template_id ,  version_number ,  template_type_code FROM Templates</sql>"}
+{"idx": 321, "completion": "<sql>SELECT DISTINCT template_type_code FROM Templates</sql>"}
+{"idx": 322, "completion": "<sql>SELECT DISTINCT template_type_code FROM Templates</sql>"}
+{"idx": 323, "completion": "<sql>SELECT template_id FROM Templates WHERE template_type_code  =  \"PP\" OR template_type_code  =  \"PPT\"</sql>"}
+{"idx": 324, "completion": "<sql>SELECT template_id FROM Templates WHERE template_type_code  =  \"PP\" OR template_type_code  =  \"PPT\"</sql>"}
+{"idx": 325, "completion": "<sql>SELECT count(*) FROM Templates WHERE template_type_code  =  \"CV\"</sql>"}
+{"idx": 326, "completion": "<sql>SELECT count(*) FROM Templates WHERE template_type_code  =  \"CV\"</sql>"}
+{"idx": 327, "completion": "<sql>SELECT version_number ,  template_type_code FROM Templates WHERE version_number  >  5</sql>"}
+{"idx": 328, "completion": "<sql>SELECT version_number ,  template_type_code FROM Templates WHERE version_number  >  5</sql>"}
+{"idx": 329, "completion": "<sql>SELECT template_type_code ,  count(*) FROM Templates GROUP BY template_type_code</sql>"}
+{"idx": 330, "completion": "<sql>SELECT template_type_code ,  count(*) FROM Templates GROUP BY template_type_code</sql>"}
+{"idx": 331, "completion": "<sql>SELECT template_type_code FROM Templates GROUP BY template_type_code ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 332, "completion": "<sql>SELECT template_type_code FROM Templates GROUP BY template_type_code ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 333, "completion": "<sql>SELECT template_type_code FROM Templates GROUP BY template_type_code HAVING count(*)  <  3</sql>"}
+{"idx": 334, "completion": "<sql>SELECT template_type_code FROM Templates GROUP BY template_type_code HAVING count(*)  <  3</sql>"}
+{"idx": 335, "completion": "<sql>SELECT min(Version_Number) ,  template_type_code FROM Templates</sql>"}
+{"idx": 336, "completion": "<sql>SELECT min(Version_Number) ,  template_type_code FROM Templates</sql>"}
+{"idx": 337, "completion": "<sql>SELECT T1.template_type_code FROM Templates AS T1 JOIN Documents AS T2 ON T1.template_id  =  T2.template_id WHERE T2.document_name  =  \"Data base\"</sql>"}
+{"idx": 338, "completion": "<sql>SELECT T1.template_type_code FROM Templates AS T1 JOIN Documents AS T2 ON T1.template_id  =  T2.template_id WHERE T2.document_name  =  \"Data base\"</sql>"}
+{"idx": 339, "completion": "<sql>SELECT T2.document_name FROM Templates AS T1 JOIN Documents AS T2 ON T1.template_id  =  T2.template_id WHERE T1.template_type_code  =  \"BK\"</sql>"}
+{"idx": 340, "completion": "<sql>SELECT T2.document_name FROM Templates AS T1 JOIN Documents AS T2 ON T1.template_id  =  T2.template_id WHERE T1.template_type_code  =  \"BK\"</sql>"}
+{"idx": 341, "completion": "<sql>SELECT T1.template_type_code ,  count(*) FROM Templates AS T1 JOIN Documents AS T2 ON T1.template_id  =  T2.template_id GROUP BY T1.template_type_code</sql>"}
+{"idx": 342, "completion": "<sql>SELECT T1.template_type_code ,  count(*) FROM Templates AS T1 JOIN Documents AS T2 ON T1.template_id  =  T2.template_id GROUP BY T1.template_type_code</sql>"}
+{"idx": 343, "completion": "<sql>SELECT T1.template_type_code FROM Templates AS T1 JOIN Documents AS T2 ON T1.template_id  =  T2.template_id GROUP BY T1.template_type_code ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 344, "completion": "<sql>SELECT T1.template_type_code FROM Templates AS T1 JOIN Documents AS T2 ON T1.template_id  =  T2.template_id GROUP BY T1.template_type_code ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 345, "completion": "<sql>SELECT template_type_code FROM Templates EXCEPT SELECT template_type_code FROM Templates AS T1 JOIN Documents AS T2 ON T1.template_id  =  T2.template_id</sql>"}
+{"idx": 346, "completion": "<sql>SELECT template_type_code FROM Templates EXCEPT SELECT template_type_code FROM Templates AS T1 JOIN Documents AS T2 ON T1.template_id  =  T2.template_id</sql>"}
+{"idx": 347, "completion": "<sql>SELECT template_type_code ,  template_type_description FROM Ref_template_types</sql>"}
+{"idx": 348, "completion": "<sql>SELECT template_type_code ,  template_type_description FROM Ref_template_types</sql>"}
+{"idx": 349, "completion": "<sql>SELECT template_type_description FROM Ref_template_types WHERE template_type_code  =  \"AD\"</sql>"}
+{"idx": 350, "completion": "<sql>SELECT template_type_description FROM Ref_template_types WHERE template_type_code  =  \"AD\"</sql>"}
+{"idx": 351, "completion": "<sql>SELECT template_type_code FROM Ref_template_types WHERE template_type_description  =  \"Book\"</sql>"}
+{"idx": 352, "completion": "<sql>SELECT template_type_code FROM Ref_template_types WHERE template_type_description  =  \"Book\"</sql>"}
+{"idx": 353, "completion": "<sql>SELECT DISTINCT T1.template_type_description FROM Ref_template_types AS T1 JOIN Templates AS T2 ON T1.template_type_code  = T2.template_type_code JOIN Documents AS T3 ON T2.Template_ID  =  T3.template_ID</sql>"}
+{"idx": 354, "completion": "<sql>SELECT DISTINCT T1.template_type_description FROM Ref_template_types AS T1 JOIN Templates AS T2 ON T1.template_type_code  = T2.template_type_code JOIN Documents AS T3 ON T2.Template_ID  =  T3.template_ID</sql>"}
+{"idx": 355, "completion": "<sql>SELECT T2.template_id FROM Ref_template_types AS T1 JOIN Templates AS T2 ON T1.template_type_code  = T2.template_type_code WHERE T1.template_type_description  =  \"Presentation\"</sql>"}
+{"idx": 356, "completion": "<sql>SELECT T2.template_id FROM Ref_template_types AS T1 JOIN Templates AS T2 ON T1.template_type_code  = T2.template_type_code WHERE T1.template_type_description  =  \"Presentation\"</sql>"}
+{"idx": 357, "completion": "<sql>SELECT count(*) FROM Paragraphs</sql>"}
+{"idx": 358, "completion": "<sql>SELECT count(*) FROM Paragraphs</sql>"}
+{"idx": 359, "completion": "<sql>SELECT count(*) FROM Paragraphs AS T1 JOIN Documents AS T2 ON T1.document_ID  =  T2.document_ID WHERE T2.document_name  =  'Summer Show'</sql>"}
+{"idx": 360, "completion": "<sql>SELECT count(*) FROM Paragraphs AS T1 JOIN Documents AS T2 ON T1.document_ID  =  T2.document_ID WHERE T2.document_name  =  'Summer Show'</sql>"}
+{"idx": 361, "completion": "<sql>select other_details from paragraphs where paragraph_text like 'korea'</sql>"}
+{"idx": 362, "completion": "<sql>select other_details from paragraphs where paragraph_text like 'korea'</sql>"}
+{"idx": 363, "completion": "<sql>SELECT T1.paragraph_id ,   T1.paragraph_text FROM Paragraphs AS T1 JOIN Documents AS T2 ON T1.document_id  =  T2.document_id WHERE T2.Document_Name  =  'Welcome to NY'</sql>"}
+{"idx": 364, "completion": "<sql>SELECT T1.paragraph_id ,   T1.paragraph_text FROM Paragraphs AS T1 JOIN Documents AS T2 ON T1.document_id  =  T2.document_id WHERE T2.Document_Name  =  'Welcome to NY'</sql>"}
+{"idx": 365, "completion": "<sql>SELECT T1.paragraph_text FROM Paragraphs AS T1 JOIN Documents AS T2 ON T1.document_id  =  T2.document_id WHERE T2.document_name  =  \"Customer reviews\"</sql>"}
+{"idx": 366, "completion": "<sql>SELECT T1.paragraph_text FROM Paragraphs AS T1 JOIN Documents AS T2 ON T1.document_id  =  T2.document_id WHERE T2.document_name  =  \"Customer reviews\"</sql>"}
+{"idx": 367, "completion": "<sql>SELECT document_id ,  count(*) FROM Paragraphs GROUP BY document_id ORDER BY document_id</sql>"}
+{"idx": 368, "completion": "<sql>SELECT document_id ,  count(*) FROM Paragraphs GROUP BY document_id ORDER BY document_id</sql>"}
+{"idx": 369, "completion": "<sql>SELECT T1.document_id ,  T2.document_name ,  count(*) FROM Paragraphs AS T1 JOIN Documents AS T2 ON T1.document_id  =  T2.document_id GROUP BY T1.document_id</sql>"}
+{"idx": 370, "completion": "<sql>SELECT T1.document_id ,  T2.document_name ,  count(*) FROM Paragraphs AS T1 JOIN Documents AS T2 ON T1.document_id  =  T2.document_id GROUP BY T1.document_id</sql>"}
+{"idx": 371, "completion": "<sql>SELECT document_id FROM Paragraphs GROUP BY document_id HAVING count(*)  >=  2</sql>"}
+{"idx": 372, "completion": "<sql>SELECT document_id FROM Paragraphs GROUP BY document_id HAVING count(*)  >=  2</sql>"}
+{"idx": 373, "completion": "<sql>SELECT T1.document_id ,  T2.document_name FROM Paragraphs AS T1 JOIN Documents AS T2 ON T1.document_id  =  T2.document_id GROUP BY T1.document_id ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 374, "completion": "<sql>SELECT T1.document_id ,  T2.document_name FROM Paragraphs AS T1 JOIN Documents AS T2 ON T1.document_id  =  T2.document_id GROUP BY T1.document_id ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 375, "completion": "<sql>SELECT document_id FROM Paragraphs GROUP BY document_id ORDER BY count(*) ASC LIMIT 1</sql>"}
+{"idx": 376, "completion": "<sql>SELECT document_id FROM Paragraphs GROUP BY document_id ORDER BY count(*) ASC LIMIT 1</sql>"}
+{"idx": 377, "completion": "<sql>SELECT document_id FROM Paragraphs GROUP BY document_id HAVING count(*) BETWEEN 1 AND 2</sql>"}
+{"idx": 378, "completion": "<sql>SELECT document_id FROM Paragraphs GROUP BY document_id HAVING count(*) BETWEEN 1 AND 2</sql>"}
+{"idx": 379, "completion": "<sql>SELECT document_id FROM Paragraphs WHERE paragraph_text  =  'Brazil' INTERSECT SELECT document_id FROM Paragraphs WHERE paragraph_text  =  'Ireland'</sql>"}
+{"idx": 380, "completion": "<sql>SELECT document_id FROM Paragraphs WHERE paragraph_text  =  'Brazil' INTERSECT SELECT document_id FROM Paragraphs WHERE paragraph_text  =  'Ireland'</sql>"}
+{"idx": 381, "completion": "<sql>SELECT count(*) FROM teacher</sql>"}
+{"idx": 382, "completion": "<sql>SELECT count(*) FROM teacher</sql>"}
+{"idx": 383, "completion": "<sql>SELECT Name FROM teacher ORDER BY Age ASC</sql>"}
+{"idx": 384, "completion": "<sql>SELECT Name FROM teacher ORDER BY Age ASC</sql>"}
+{"idx": 385, "completion": "<sql>SELECT Age ,  Hometown FROM teacher</sql>"}
+{"idx": 386, "completion": "<sql>SELECT Age ,  Hometown FROM teacher</sql>"}
+{"idx": 387, "completion": "<sql>select name from teacher where hometown != \"little lever urban district\"</sql>"}
+{"idx": 388, "completion": "<sql>select name from teacher where hometown != \"little lever urban district\"</sql>"}
+{"idx": 389, "completion": "<sql>SELECT Name FROM teacher WHERE Age  =  32 OR Age  =  33</sql>"}
+{"idx": 390, "completion": "<sql>SELECT Name FROM teacher WHERE Age  =  32 OR Age  =  33</sql>"}
+{"idx": 391, "completion": "<sql>SELECT Hometown FROM teacher ORDER BY Age ASC LIMIT 1</sql>"}
+{"idx": 392, "completion": "<sql>SELECT Hometown FROM teacher ORDER BY Age ASC LIMIT 1</sql>"}
+{"idx": 393, "completion": "<sql>SELECT Hometown ,  COUNT(*) FROM teacher GROUP BY Hometown</sql>"}
+{"idx": 394, "completion": "<sql>SELECT Hometown ,  COUNT(*) FROM teacher GROUP BY Hometown</sql>"}
+{"idx": 395, "completion": "<sql>SELECT Hometown FROM teacher GROUP BY Hometown ORDER BY COUNT(*) DESC LIMIT 1</sql>"}
+{"idx": 396, "completion": "<sql>SELECT Hometown FROM teacher GROUP BY Hometown ORDER BY COUNT(*) DESC LIMIT 1</sql>"}
+{"idx": 397, "completion": "<sql>SELECT Hometown FROM teacher GROUP BY Hometown HAVING COUNT(*)  >=  2</sql>"}
+{"idx": 398, "completion": "<sql>SELECT Hometown FROM teacher GROUP BY Hometown HAVING COUNT(*)  >=  2</sql>"}
+{"idx": 399, "completion": "<sql>SELECT T3.Name ,  T2.Course FROM course_arrange AS T1 JOIN course AS T2 ON T1.Course_ID  =  T2.Course_ID JOIN teacher AS T3 ON T1.Teacher_ID  =  T3.Teacher_ID</sql>"}
+{"idx": 400, "completion": "<sql>SELECT T3.Name ,  T2.Course FROM course_arrange AS T1 JOIN course AS T2 ON T1.Course_ID  =  T2.Course_ID JOIN teacher AS T3 ON T1.Teacher_ID  =  T3.Teacher_ID</sql>"}
+{"idx": 401, "completion": "<sql>SELECT T3.Name ,  T2.Course FROM course_arrange AS T1 JOIN course AS T2 ON T1.Course_ID  =  T2.Course_ID JOIN teacher AS T3 ON T1.Teacher_ID  =  T3.Teacher_ID ORDER BY T3.Name</sql>"}
+{"idx": 402, "completion": "<sql>SELECT T3.Name ,  T2.Course FROM course_arrange AS T1 JOIN course AS T2 ON T1.Course_ID  =  T2.Course_ID JOIN teacher AS T3 ON T1.Teacher_ID  =  T3.Teacher_ID ORDER BY T3.Name</sql>"}
+{"idx": 403, "completion": "<sql>SELECT T3.Name FROM course_arrange AS T1 JOIN course AS T2 ON T1.Course_ID  =  T2.Course_ID JOIN teacher AS T3 ON T1.Teacher_ID  =  T3.Teacher_ID WHERE T2.Course  =  \"Math\"</sql>"}
+{"idx": 404, "completion": "<sql>SELECT T3.Name FROM course_arrange AS T1 JOIN course AS T2 ON T1.Course_ID  =  T2.Course_ID JOIN teacher AS T3 ON T1.Teacher_ID  =  T3.Teacher_ID WHERE T2.Course  =  \"Math\"</sql>"}
+{"idx": 405, "completion": "<sql>SELECT T2.Name ,  COUNT(*) FROM course_arrange AS T1 JOIN teacher AS T2 ON T1.Teacher_ID  =  T2.Teacher_ID GROUP BY T2.Name</sql>"}
+{"idx": 406, "completion": "<sql>SELECT T2.Name ,  COUNT(*) FROM course_arrange AS T1 JOIN teacher AS T2 ON T1.Teacher_ID  =  T2.Teacher_ID GROUP BY T2.Name</sql>"}
+{"idx": 407, "completion": "<sql>SELECT T2.Name FROM course_arrange AS T1 JOIN teacher AS T2 ON T1.Teacher_ID  =  T2.Teacher_ID GROUP BY T2.Name HAVING COUNT(*)  >=  2</sql>"}
+{"idx": 408, "completion": "<sql>SELECT T2.Name FROM course_arrange AS T1 JOIN teacher AS T2 ON T1.Teacher_ID  =  T2.Teacher_ID GROUP BY T2.Name HAVING COUNT(*)  >=  2</sql>"}
+{"idx": 409, "completion": "<sql>SELECT Name FROM teacher WHERE Teacher_id NOT IN (SELECT Teacher_id FROM course_arrange)</sql>"}
+{"idx": 410, "completion": "<sql>SELECT Name FROM teacher WHERE Teacher_id NOT IN (SELECT Teacher_id FROM course_arrange)</sql>"}
+{"idx": 411, "completion": "<sql>SELECT count(*) FROM visitor WHERE age  <  30</sql>"}
+{"idx": 412, "completion": "<sql>SELECT name FROM visitor WHERE Level_of_membership  >  4 ORDER BY Level_of_membership DESC</sql>"}
+{"idx": 413, "completion": "<sql>SELECT avg(age) FROM visitor WHERE Level_of_membership  <=  4</sql>"}
+{"idx": 414, "completion": "<sql>SELECT name ,  Level_of_membership FROM visitor WHERE Level_of_membership  >  4 ORDER BY age DESC</sql>"}
+{"idx": 415, "completion": "<sql>SELECT museum_id ,  name FROM museum ORDER BY num_of_staff DESC LIMIT 1</sql>"}
+{"idx": 416, "completion": "<sql>SELECT avg(num_of_staff) FROM museum WHERE open_year  <  2009</sql>"}
+{"idx": 417, "completion": "<sql>SELECT Num_of_Staff ,  Open_Year FROM museum WHERE name  =  'Plaza Museum'</sql>"}
+{"idx": 418, "completion": "<sql>SELECT name FROM museum WHERE num_of_staff  >  (SELECT min(num_of_staff) FROM museum WHERE open_year  >  2010)</sql>"}
+{"idx": 419, "completion": "<sql>SELECT t1.id ,  t1.name ,  t1.age FROM visitor AS t1 JOIN visit AS t2 ON t1.id  =  t2.visitor_id GROUP BY t1.id HAVING count(*)  >  1</sql>"}
+{"idx": 420, "completion": "<sql>SELECT t2.visitor_id ,  t1.name ,  t1.Level_of_membership FROM visitor AS t1 JOIN visit AS t2 ON t1.id  =  t2.visitor_id GROUP BY t2.visitor_id ORDER BY sum(t2.Total_spent) DESC LIMIT 1</sql>"}
+{"idx": 421, "completion": "<sql>SELECT t2.Museum_ID ,  t1.name FROM museum AS t1 JOIN visit AS t2 ON t1.Museum_ID  =  t2.Museum_ID GROUP BY t2.Museum_ID ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 422, "completion": "<sql>SELECT name FROM museum WHERE Museum_ID NOT IN (SELECT museum_id FROM visit)</sql>"}
+{"idx": 423, "completion": "<sql>SELECT t1.name ,  t1.age FROM visitor AS t1 JOIN visit AS t2 ON t1.id  =  t2.visitor_id ORDER BY t2.num_of_ticket DESC LIMIT 1</sql>"}
+{"idx": 424, "completion": "<sql>SELECT avg(num_of_ticket) ,  max(num_of_ticket) FROM visit</sql>"}
+{"idx": 425, "completion": "<sql>SELECT sum(t2.Total_spent) FROM visitor AS t1 JOIN visit AS t2 ON t1.id  =  t2.visitor_id WHERE t1.Level_of_membership  =  1</sql>"}
+{"idx": 426, "completion": "<sql>SELECT t1.name FROM visitor AS t1 JOIN visit AS t2 ON t1.id  =  t2.visitor_id JOIN museum AS t3 ON t3.Museum_ID  =  t2.Museum_ID WHERE t3.open_year  <  2009 INTERSECT SELECT t1.name FROM visitor AS t1 JOIN visit AS t2 ON t1.id  =  t2.visitor_id JOIN museum AS t3 ON t3.Museum_ID  =  t2.Museum_ID WHERE t3.open_year  >  2011</sql>"}
+{"idx": 427, "completion": "<sql>SELECT count(*) FROM visitor WHERE id NOT IN (SELECT t2.visitor_id FROM museum AS t1 JOIN visit AS t2 ON t1.Museum_ID  =  t2.Museum_ID WHERE t1.open_year  >  2010)</sql>"}
+{"idx": 428, "completion": "<sql>SELECT count(*) FROM museum WHERE open_year  >  2013 OR open_year  <  2008</sql>"}
+{"idx": 429, "completion": "<sql>SELECT count(*) FROM players</sql>"}
+{"idx": 430, "completion": "<sql>SELECT count(*) FROM players</sql>"}
+{"idx": 431, "completion": "<sql>SELECT count(*) FROM matches</sql>"}
+{"idx": 432, "completion": "<sql>SELECT count(*) FROM matches</sql>"}
+{"idx": 433, "completion": "<sql>SELECT first_name ,  birth_date FROM players WHERE country_code  =  'USA'</sql>"}
+{"idx": 434, "completion": "<sql>SELECT first_name ,  birth_date FROM players WHERE country_code  =  'USA'</sql>"}
+{"idx": 435, "completion": "<sql>SELECT avg(loser_age) ,  avg(winner_age) FROM matches</sql>"}
+{"idx": 436, "completion": "<sql>SELECT avg(loser_age) ,  avg(winner_age) FROM matches</sql>"}
+{"idx": 437, "completion": "<sql>SELECT avg(winner_rank) FROM matches</sql>"}
+{"idx": 438, "completion": "<sql>SELECT avg(winner_rank) FROM matches</sql>"}
+{"idx": 439, "completion": "<sql>SELECT min(loser_rank) FROM matches</sql>"}
+{"idx": 440, "completion": "<sql>SELECT min(loser_rank) FROM matches</sql>"}
+{"idx": 441, "completion": "<sql>SELECT count(DISTINCT country_code) FROM players</sql>"}
+{"idx": 442, "completion": "<sql>SELECT count(DISTINCT country_code) FROM players</sql>"}
+{"idx": 443, "completion": "<sql>SELECT count(DISTINCT loser_name) FROM matches</sql>"}
+{"idx": 444, "completion": "<sql>SELECT count(DISTINCT loser_name) FROM matches</sql>"}
+{"idx": 445, "completion": "<sql>SELECT tourney_name FROM matches GROUP BY tourney_name HAVING count(*)  >  10</sql>"}
+{"idx": 446, "completion": "<sql>SELECT tourney_name FROM matches GROUP BY tourney_name HAVING count(*)  >  10</sql>"}
+{"idx": 447, "completion": "<sql>SELECT winner_name FROM matches WHERE YEAR  =  2013 INTERSECT SELECT winner_name FROM matches WHERE YEAR  =  2016</sql>"}
+{"idx": 448, "completion": "<sql>SELECT winner_name FROM matches WHERE YEAR  =  2013 INTERSECT SELECT winner_name FROM matches WHERE YEAR  =  2016</sql>"}
+{"idx": 449, "completion": "<sql>SELECT count(*) FROM matches WHERE YEAR  =  2013 OR YEAR  =  2016</sql>"}
+{"idx": 450, "completion": "<sql>SELECT count(*) FROM matches WHERE YEAR  =  2013 OR YEAR  =  2016</sql>"}
+{"idx": 451, "completion": "<sql>SELECT T1.country_code ,  T1.first_name FROM players AS T1 JOIN matches AS T2 ON T1.player_id  =  T2.winner_id WHERE T2.tourney_name  =  'WTA Championships' INTERSECT SELECT T1.country_code ,  T1.first_name FROM players AS T1 JOIN matches AS T2 ON T1.player_id  =  T2.winner_id WHERE T2.tourney_name  =  'Australian Open'</sql>"}
+{"idx": 452, "completion": "<sql>SELECT T1.country_code ,  T1.first_name FROM players AS T1 JOIN matches AS T2 ON T1.player_id  =  T2.winner_id WHERE T2.tourney_name  =  'WTA Championships' INTERSECT SELECT T1.country_code ,  T1.first_name FROM players AS T1 JOIN matches AS T2 ON T1.player_id  =  T2.winner_id WHERE T2.tourney_name  =  'Australian Open'</sql>"}
+{"idx": 453, "completion": "<sql>SELECT first_name ,  country_code FROM players ORDER BY birth_date LIMIT 1</sql>"}
+{"idx": 454, "completion": "<sql>SELECT first_name ,  country_code FROM players ORDER BY birth_date LIMIT 1</sql>"}
+{"idx": 455, "completion": "<sql>SELECT first_name ,  last_name FROM players ORDER BY birth_date</sql>"}
+{"idx": 456, "completion": "<sql>SELECT first_name ,  last_name FROM players ORDER BY birth_date</sql>"}
+{"idx": 457, "completion": "<sql>SELECT first_name ,  last_name FROM players WHERE hand  =  'L' ORDER BY birth_date</sql>"}
+{"idx": 458, "completion": "<sql>SELECT first_name ,  last_name FROM players WHERE hand  =  'L' ORDER BY birth_date</sql>"}
+{"idx": 459, "completion": "<sql>SELECT T1.country_code ,  T1.first_name FROM players AS T1 JOIN rankings AS T2 ON T1.player_id  =  T2.player_id ORDER BY T2.tours DESC LIMIT 1</sql>"}
+{"idx": 460, "completion": "<sql>SELECT T1.country_code ,  T1.first_name FROM players AS T1 JOIN rankings AS T2 ON T1.player_id  =  T2.player_id ORDER BY T2.tours DESC LIMIT 1</sql>"}
+{"idx": 461, "completion": "<sql>SELECT YEAR FROM matches GROUP BY YEAR ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 462, "completion": "<sql>SELECT YEAR FROM matches GROUP BY YEAR ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 463, "completion": "<sql>SELECT winner_name ,  winner_rank_points FROM matches GROUP BY winner_name ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 464, "completion": "<sql>SELECT winner_name ,  winner_rank_points FROM matches GROUP BY winner_name ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 465, "completion": "<sql>SELECT winner_name FROM matches WHERE tourney_name  =  'Australian Open' ORDER BY winner_rank_points DESC LIMIT 1</sql>"}
+{"idx": 466, "completion": "<sql>SELECT winner_name FROM matches WHERE tourney_name  =  'Australian Open' ORDER BY winner_rank_points DESC LIMIT 1</sql>"}
+{"idx": 467, "completion": "<sql>SELECT winner_name ,  loser_name FROM matches ORDER BY minutes DESC LIMIT 1</sql>"}
+{"idx": 468, "completion": "<sql>SELECT winner_name ,  loser_name FROM matches ORDER BY minutes DESC LIMIT 1</sql>"}
+{"idx": 469, "completion": "<sql>SELECT avg(ranking) ,  T1.first_name FROM players AS T1 JOIN rankings AS T2 ON T1.player_id  =  T2.player_id GROUP BY T1.first_name</sql>"}
+{"idx": 470, "completion": "<sql>SELECT avg(ranking) ,  T1.first_name FROM players AS T1 JOIN rankings AS T2 ON T1.player_id  =  T2.player_id GROUP BY T1.first_name</sql>"}
+{"idx": 471, "completion": "<sql>SELECT sum(ranking_points) ,  T1.first_name FROM players AS T1 JOIN rankings AS T2 ON T1.player_id  =  T2.player_id GROUP BY T1.first_name</sql>"}
+{"idx": 472, "completion": "<sql>SELECT sum(ranking_points) ,  T1.first_name FROM players AS T1 JOIN rankings AS T2 ON T1.player_id  =  T2.player_id GROUP BY T1.first_name</sql>"}
+{"idx": 473, "completion": "<sql>SELECT count(*) ,  country_code FROM players GROUP BY country_code</sql>"}
+{"idx": 474, "completion": "<sql>SELECT count(*) ,  country_code FROM players GROUP BY country_code</sql>"}
+{"idx": 475, "completion": "<sql>SELECT country_code FROM players GROUP BY country_code ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 476, "completion": "<sql>SELECT country_code FROM players GROUP BY country_code ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 477, "completion": "<sql>SELECT country_code FROM players GROUP BY country_code HAVING count(*)  >  50</sql>"}
+{"idx": 478, "completion": "<sql>SELECT country_code FROM players GROUP BY country_code HAVING count(*)  >  50</sql>"}
+{"idx": 479, "completion": "<sql>SELECT sum(tours) ,  ranking_date FROM rankings GROUP BY ranking_date</sql>"}
+{"idx": 480, "completion": "<sql>SELECT sum(tours) ,  ranking_date FROM rankings GROUP BY ranking_date</sql>"}
+{"idx": 481, "completion": "<sql>SELECT count(*) ,  YEAR FROM matches GROUP BY YEAR</sql>"}
+{"idx": 482, "completion": "<sql>SELECT count(*) ,  YEAR FROM matches GROUP BY YEAR</sql>"}
+{"idx": 483, "completion": "<sql>SELECT DISTINCT winner_name ,  winner_rank FROM matches ORDER BY winner_age LIMIT 3</sql>"}
+{"idx": 484, "completion": "<sql>SELECT DISTINCT winner_name ,  winner_rank FROM matches ORDER BY winner_age LIMIT 3</sql>"}
+{"idx": 485, "completion": "<sql>SELECT count(DISTINCT winner_name) FROM matches WHERE tourney_name  =  'WTA Championships' AND winner_hand  =  'L'</sql>"}
+{"idx": 486, "completion": "<sql>SELECT count(DISTINCT winner_name) FROM matches WHERE tourney_name  =  'WTA Championships' AND winner_hand  =  'L'</sql>"}
+{"idx": 487, "completion": "<sql>SELECT T1.first_name ,  T1.country_code ,  T1.birth_date FROM players AS T1 JOIN matches AS T2 ON T1.player_id  =  T2.winner_id ORDER BY T2.winner_rank_points DESC LIMIT 1</sql>"}
+{"idx": 488, "completion": "<sql>SELECT T1.first_name ,  T1.country_code ,  T1.birth_date FROM players AS T1 JOIN matches AS T2 ON T1.player_id  =  T2.winner_id ORDER BY T2.winner_rank_points DESC LIMIT 1</sql>"}
+{"idx": 489, "completion": "<sql>SELECT count(*) ,  hand FROM players GROUP BY hand</sql>"}
+{"idx": 490, "completion": "<sql>SELECT count(*) ,  hand FROM players GROUP BY hand</sql>"}
+{"idx": 491, "completion": "<sql>SELECT count(*) FROM ship WHERE disposition_of_ship  =  'Captured'</sql>"}
+{"idx": 492, "completion": "<sql>SELECT name ,  tonnage FROM ship ORDER BY name DESC</sql>"}
+{"idx": 493, "completion": "<sql>SELECT name ,  date FROM battle</sql>"}
+{"idx": 494, "completion": "<sql>SELECT max(killed) ,  min(killed) FROM death</sql>"}
+{"idx": 495, "completion": "<sql>SELECT avg(injured) FROM death</sql>"}
+{"idx": 496, "completion": "<sql>SELECT T1.killed ,  T1.injured FROM death AS T1 JOIN ship AS t2 ON T1.caused_by_ship_id  =  T2.id WHERE T2.tonnage  =  't'</sql>"}
+{"idx": 497, "completion": "<sql>SELECT name ,  RESULT FROM battle WHERE bulgarian_commander != 'Boril'</sql>"}
+{"idx": 498, "completion": "<sql>SELECT DISTINCT T1.id ,  T1.name FROM battle AS T1 JOIN ship AS T2 ON T1.id  =  T2.lost_in_battle WHERE T2.ship_type  =  'Brig'</sql>"}
+{"idx": 499, "completion": "<sql>SELECT T1.id ,  T1.name FROM battle AS T1 JOIN ship AS T2 ON T1.id  =  T2.lost_in_battle JOIN death AS T3 ON T2.id  =  T3.caused_by_ship_id GROUP BY T1.id HAVING sum(T3.killed)  >  10</sql>"}
+{"idx": 500, "completion": "<sql>SELECT T2.id ,  T2.name FROM death AS T1 JOIN ship AS t2 ON T1.caused_by_ship_id  =  T2.id GROUP BY T2.id ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 501, "completion": "<sql>SELECT name FROM battle WHERE bulgarian_commander  =  'Kaloyan' AND latin_commander  =  'Baldwin I'</sql>"}
+{"idx": 502, "completion": "<sql>SELECT count(DISTINCT RESULT) FROM battle</sql>"}
+{"idx": 503, "completion": "<sql>SELECT count(*) FROM battle WHERE id NOT IN ( SELECT lost_in_battle FROM ship WHERE tonnage  =  '225' );</sql>"}
+{"idx": 504, "completion": "<sql>SELECT T1.name ,  T1.date FROM battle AS T1 JOIN ship AS T2 ON T1.id  =  T2.lost_in_battle WHERE T2.name  =  'Lettice' INTERSECT SELECT T1.name ,  T1.date FROM battle AS T1 JOIN ship AS T2 ON T1.id  =  T2.lost_in_battle WHERE T2.name  =  'HMS Atalanta'</sql>"}
+{"idx": 505, "completion": "<sql>SELECT name ,  RESULT ,  bulgarian_commander FROM battle EXCEPT SELECT T1.name ,  T1.result ,  T1.bulgarian_commander FROM battle AS T1 JOIN ship AS T2 ON T1.id  =  T2.lost_in_battle WHERE T2.location  =  'English Channel'</sql>"}
+{"idx": 506, "completion": "<sql>SELECT note FROM death WHERE note LIKE '%East%'</sql>"}
+{"idx": 507, "completion": "<sql>SELECT line_1 ,  line_2 FROM addresses</sql>"}
+{"idx": 508, "completion": "<sql>SELECT line_1 ,  line_2 FROM addresses</sql>"}
+{"idx": 509, "completion": "<sql>SELECT count(*) FROM Courses</sql>"}
+{"idx": 510, "completion": "<sql>SELECT count(*) FROM Courses</sql>"}
+{"idx": 511, "completion": "<sql>SELECT course_description FROM Courses WHERE course_name  =  'math'</sql>"}
+{"idx": 512, "completion": "<sql>SELECT course_description FROM Courses WHERE course_name  =  'math'</sql>"}
+{"idx": 513, "completion": "<sql>SELECT zip_postcode FROM Addresses WHERE city  =  'Port Chelsea'</sql>"}
+{"idx": 514, "completion": "<sql>SELECT zip_postcode FROM Addresses WHERE city  =  'Port Chelsea'</sql>"}
+{"idx": 515, "completion": "<sql>SELECT T2.department_name ,  T1.department_id FROM Degree_Programs AS T1 JOIN Departments AS T2 ON T1.department_id  =  T2.department_id GROUP BY T1.department_id ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 516, "completion": "<sql>select t2.department_name ,  t1.department_id from degree_programs as t1 join departments as t2 on t1.department_id  =  t2.department_id group by t1.department_id order by count(*) desc limit 1</sql>"}
+{"idx": 517, "completion": "<sql>SELECT count(DISTINCT department_id) FROM Degree_Programs</sql>"}
+{"idx": 518, "completion": "<sql>SELECT count(DISTINCT department_id) FROM Degree_Programs</sql>"}
+{"idx": 519, "completion": "<sql>SELECT count(DISTINCT degree_summary_name) FROM Degree_Programs</sql>"}
+{"idx": 520, "completion": "<sql>SELECT count(DISTINCT degree_summary_name) FROM Degree_Programs</sql>"}
+{"idx": 521, "completion": "<sql>SELECT count(*) FROM Departments AS T1 JOIN Degree_Programs AS T2 ON T1.department_id  =  T2.department_id WHERE T1.department_name  =  'engineer'</sql>"}
+{"idx": 522, "completion": "<sql>SELECT count(*) FROM Departments AS T1 JOIN Degree_Programs AS T2 ON T1.department_id  =  T2.department_id WHERE T1.department_name  =  'engineer'</sql>"}
+{"idx": 523, "completion": "<sql>SELECT section_name ,  section_description FROM Sections</sql>"}
+{"idx": 524, "completion": "<sql>SELECT section_name ,  section_description FROM Sections</sql>"}
+{"idx": 525, "completion": "<sql>SELECT T1.course_name ,  T1.course_id FROM Courses AS T1 JOIN Sections AS T2 ON T1.course_id  =  T2.course_id GROUP BY T1.course_id HAVING count(*)  <=  2</sql>"}
+{"idx": 526, "completion": "<sql>SELECT T1.course_name ,  T1.course_id FROM Courses AS T1 JOIN Sections AS T2 ON T1.course_id  =  T2.course_id GROUP BY T1.course_id HAVING count(*)  <=  2</sql>"}
+{"idx": 527, "completion": "<sql>SELECT section_name FROM Sections ORDER BY section_name DESC</sql>"}
+{"idx": 528, "completion": "<sql>SELECT section_name FROM Sections ORDER BY section_name DESC</sql>"}
+{"idx": 529, "completion": "<sql>SELECT T1.semester_name ,  T1.semester_id FROM Semesters AS T1 JOIN Student_Enrolment AS T2 ON T1.semester_id  =  T2.semester_id GROUP BY T1.semester_id ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 530, "completion": "<sql>SELECT T1.semester_name ,  T1.semester_id FROM Semesters AS T1 JOIN Student_Enrolment AS T2 ON T1.semester_id  =  T2.semester_id GROUP BY T1.semester_id ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 531, "completion": "<sql>SELECT department_description FROM Departments WHERE department_name LIKE '%computer%'</sql>"}
+{"idx": 532, "completion": "<sql>SELECT department_description FROM Departments WHERE department_name LIKE '%computer%'</sql>"}
+{"idx": 533, "completion": "<sql>SELECT T1.first_name ,  T1.middle_name ,  T1.last_name ,  T1.student_id FROM Students AS T1 JOIN Student_Enrolment AS T2 ON T1.student_id  =  T2.student_id GROUP BY T1.student_id HAVING count(*)  =  2</sql>"}
+{"idx": 534, "completion": "<sql>SELECT T1.first_name ,  T1.middle_name ,  T1.last_name ,  T1.student_id FROM Students AS T1 JOIN Student_Enrolment AS T2 ON T1.student_id  =  T2.student_id GROUP BY T1.student_id HAVING count(*)  =  2</sql>"}
+{"idx": 535, "completion": "<sql>SELECT DISTINCT T1.first_name ,  T1.middle_name ,  T1.last_name FROM Students AS T1 JOIN Student_Enrolment AS T2 ON T1.student_id  =  T2.student_id JOIN Degree_Programs AS T3 ON T2.degree_program_id  =  T3.degree_program_id WHERE T3.degree_summary_name  =  'Bachelor'</sql>"}
+{"idx": 536, "completion": "<sql>SELECT DISTINCT T1.first_name ,  T1.middle_name ,  T1.last_name FROM Students AS T1 JOIN Student_Enrolment AS T2 ON T1.student_id  =  T2.student_id JOIN Degree_Programs AS T3 ON T2.degree_program_id  =  T3.degree_program_id WHERE T3.degree_summary_name  =  'Bachelor'</sql>"}
+{"idx": 537, "completion": "<sql>SELECT T1.degree_summary_name FROM Degree_Programs AS T1 JOIN Student_Enrolment AS T2 ON T1.degree_program_id  =  T2.degree_program_id GROUP BY T1.degree_summary_name ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 538, "completion": "<sql>SELECT T1.degree_summary_name FROM Degree_Programs AS T1 JOIN Student_Enrolment AS T2 ON T1.degree_program_id  =  T2.degree_program_id GROUP BY T1.degree_summary_name ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 539, "completion": "<sql>SELECT T1.degree_program_id ,  T1.degree_summary_name FROM Degree_Programs AS T1 JOIN Student_Enrolment AS T2 ON T1.degree_program_id  =  T2.degree_program_id GROUP BY T1.degree_program_id ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 540, "completion": "<sql>SELECT T1.degree_program_id ,  T1.degree_summary_name FROM Degree_Programs AS T1 JOIN Student_Enrolment AS T2 ON T1.degree_program_id  =  T2.degree_program_id GROUP BY T1.degree_program_id ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 541, "completion": "<sql>SELECT T1.student_id ,  T1.first_name ,  T1.middle_name ,  T1.last_name ,  count(*) ,  T1.student_id FROM Students AS T1 JOIN Student_Enrolment AS T2 ON T1.student_id  =  T2.student_id GROUP BY T1.student_id ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 542, "completion": "<sql>SELECT T1.student_id ,  T1.first_name ,  T1.middle_name ,  T1.last_name ,  count(*) ,  T1.student_id FROM Students AS T1 JOIN Student_Enrolment AS T2 ON T1.student_id  =  T2.student_id GROUP BY T1.student_id ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 543, "completion": "<sql>SELECT semester_name FROM Semesters WHERE semester_id NOT IN( SELECT semester_id FROM Student_Enrolment )</sql>"}
+{"idx": 544, "completion": "<sql>SELECT semester_name FROM Semesters WHERE semester_id NOT IN( SELECT semester_id FROM Student_Enrolment )</sql>"}
+{"idx": 545, "completion": "<sql>SELECT DISTINCT T1.course_name FROM Courses AS T1 JOIN Student_Enrolment_Courses AS T2 ON T1.course_id  =  T2.course_id</sql>"}
+{"idx": 546, "completion": "<sql>SELECT DISTINCT T1.course_name FROM Courses AS T1 JOIN Student_Enrolment_Courses AS T2 ON T1.course_id  =  T2.course_id</sql>"}
+{"idx": 547, "completion": "<sql>SELECT  T1.course_name FROM Courses AS T1 JOIN Student_Enrolment_Courses AS T2 ON T1.course_id  =  T2.course_id GROUP BY T1.course_name ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 548, "completion": "<sql>SELECT  T1.course_name FROM Courses AS T1 JOIN Student_Enrolment_Courses AS T2 ON T1.course_id  =  T2.course_id GROUP BY T1.course_name ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 549, "completion": "<sql>SELECT T1.last_name FROM Students AS T1 JOIN Addresses AS T2 ON T1.current_address_id  =  T2.address_id WHERE T2.state_province_county  =  'NorthCarolina' EXCEPT SELECT DISTINCT T3.last_name FROM Students AS T3 JOIN Student_Enrolment AS T4 ON T3.student_id  =  T4.student_id</sql>"}
+{"idx": 550, "completion": "<sql>SELECT T1.last_name FROM Students AS T1 JOIN Addresses AS T2 ON T1.current_address_id  =  T2.address_id WHERE T2.state_province_county  =  'NorthCarolina' EXCEPT SELECT DISTINCT T3.last_name FROM Students AS T3 JOIN Student_Enrolment AS T4 ON T3.student_id  =  T4.student_id</sql>"}
+{"idx": 551, "completion": "<sql>SELECT T2.transcript_date ,  T1.transcript_id FROM Transcript_Contents AS T1 JOIN Transcripts AS T2 ON T1.transcript_id  =  T2.transcript_id GROUP BY T1.transcript_id HAVING count(*)  >=  2</sql>"}
+{"idx": 552, "completion": "<sql>SELECT T2.transcript_date ,  T1.transcript_id FROM Transcript_Contents AS T1 JOIN Transcripts AS T2 ON T1.transcript_id  =  T2.transcript_id GROUP BY T1.transcript_id HAVING count(*)  >=  2</sql>"}
+{"idx": 553, "completion": "<sql>SELECT cell_mobile_number FROM Students WHERE first_name  =  'Timmothy' AND last_name  =  'Ward'</sql>"}
+{"idx": 554, "completion": "<sql>select cell_mobile_number from students where first_name  =  'timmothy' and last_name  =  'ward'</sql>"}
+{"idx": 555, "completion": "<sql>SELECT first_name ,  middle_name ,  last_name FROM Students ORDER BY date_first_registered ASC LIMIT 1</sql>"}
+{"idx": 556, "completion": "<sql>SELECT first_name ,  middle_name ,  last_name FROM Students ORDER BY date_first_registered ASC LIMIT 1</sql>"}
+{"idx": 557, "completion": "<sql>SELECT first_name ,  middle_name ,  last_name FROM Students ORDER BY date_left ASC LIMIT 1</sql>"}
+{"idx": 558, "completion": "<sql>SELECT first_name ,  middle_name ,  last_name FROM Students ORDER BY date_left ASC LIMIT 1</sql>"}
+{"idx": 559, "completion": "<sql>SELECT first_name FROM Students WHERE current_address_id != permanent_address_id</sql>"}
+{"idx": 560, "completion": "<sql>SELECT first_name FROM Students WHERE current_address_id != permanent_address_id</sql>"}
+{"idx": 561, "completion": "<sql>SELECT T1.address_id ,  T1.line_1 ,  T1.line_2 FROM Addresses AS T1 JOIN Students AS T2 ON T1.address_id  =  T2.current_address_id GROUP BY T1.address_id ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 562, "completion": "<sql>SELECT T1.address_id ,  T1.line_1 ,  T1.line_2 FROM Addresses AS T1 JOIN Students AS T2 ON T1.address_id  =  T2.current_address_id GROUP BY T1.address_id ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 563, "completion": "<sql>SELECT avg(transcript_date) FROM Transcripts</sql>"}
+{"idx": 564, "completion": "<sql>SELECT avg(transcript_date) FROM Transcripts</sql>"}
+{"idx": 565, "completion": "<sql>SELECT transcript_date ,  other_details FROM Transcripts ORDER BY transcript_date ASC LIMIT 1</sql>"}
+{"idx": 566, "completion": "<sql>SELECT transcript_date ,  other_details FROM Transcripts ORDER BY transcript_date ASC LIMIT 1</sql>"}
+{"idx": 567, "completion": "<sql>SELECT count(*) FROM Transcripts</sql>"}
+{"idx": 568, "completion": "<sql>SELECT count(*) FROM Transcripts</sql>"}
+{"idx": 569, "completion": "<sql>SELECT transcript_date FROM Transcripts ORDER BY transcript_date DESC LIMIT 1</sql>"}
+{"idx": 570, "completion": "<sql>SELECT transcript_date FROM Transcripts ORDER BY transcript_date DESC LIMIT 1</sql>"}
+{"idx": 571, "completion": "<sql>SELECT count(*) ,  student_course_id FROM Transcript_Contents GROUP BY student_course_id ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 572, "completion": "<sql>SELECT count(*) ,  student_course_id FROM Transcript_Contents GROUP BY student_course_id ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 573, "completion": "<sql>SELECT T2.transcript_date ,  T1.transcript_id FROM Transcript_Contents AS T1 JOIN Transcripts AS T2 ON T1.transcript_id  =  T2.transcript_id GROUP BY T1.transcript_id ORDER BY count(*) ASC LIMIT 1</sql>"}
+{"idx": 574, "completion": "<sql>SELECT T2.transcript_date ,  T1.transcript_id FROM Transcript_Contents AS T1 JOIN Transcripts AS T2 ON T1.transcript_id  =  T2.transcript_id GROUP BY T1.transcript_id ORDER BY count(*) ASC LIMIT 1</sql>"}
+{"idx": 575, "completion": "<sql>SELECT DISTINCT T2.semester_id FROM Degree_Programs AS T1 JOIN Student_Enrolment AS T2 ON T1.degree_program_id  =  T2.degree_program_id WHERE degree_summary_name  =  'Master' INTERSECT SELECT DISTINCT T2.semester_id FROM Degree_Programs AS T1 JOIN Student_Enrolment AS T2 ON T1.degree_program_id  =  T2.degree_program_id WHERE degree_summary_name  =  'Bachelor'</sql>"}
+{"idx": 576, "completion": "<sql>SELECT DISTINCT T2.semester_id FROM Degree_Programs AS T1 JOIN Student_Enrolment AS T2 ON T1.degree_program_id  =  T2.degree_program_id WHERE degree_summary_name  =  'Master' INTERSECT SELECT DISTINCT T2.semester_id FROM Degree_Programs AS T1 JOIN Student_Enrolment AS T2 ON T1.degree_program_id  =  T2.degree_program_id WHERE degree_summary_name  =  'Bachelor'</sql>"}
+{"idx": 577, "completion": "<sql>SELECT count(DISTINCT current_address_id) FROM Students</sql>"}
+{"idx": 578, "completion": "<sql>SELECT count(DISTINCT current_address_id) FROM Students</sql>"}
+{"idx": 579, "completion": "<sql>SELECT other_student_details FROM Students ORDER BY other_student_details DESC</sql>"}
+{"idx": 580, "completion": "<sql>SELECT other_student_details FROM Students ORDER BY other_student_details DESC</sql>"}
+{"idx": 581, "completion": "<sql>SELECT section_description FROM Sections WHERE section_name  =  'h'</sql>"}
+{"idx": 582, "completion": "<sql>SELECT section_description FROM Sections WHERE section_name  =  'h'</sql>"}
+{"idx": 583, "completion": "<sql>select t1.first_name from students as t1 join addresses as t2 on t1.permanent_address_id  =  t2.address_id where t2.country  =  'haiti' or t1.cell_mobile_number  =  '09700166582'</sql>"}
+{"idx": 584, "completion": "<sql>select t1.first_name from students as t1 join addresses as t2 on t1.permanent_address_id  =  t2.address_id where t2.country  =  'haiti' or t1.cell_mobile_number  =  '09700166582'</sql>"}
+{"idx": 585, "completion": "<sql>SELECT Title FROM Cartoon ORDER BY title</sql>"}
+{"idx": 586, "completion": "<sql>SELECT Title FROM Cartoon ORDER BY title</sql>"}
+{"idx": 587, "completion": "<sql>SELECT Title FROM Cartoon WHERE Directed_by = \"Ben Jones\";</sql>"}
+{"idx": 588, "completion": "<sql>SELECT Title FROM Cartoon WHERE Directed_by = \"Ben Jones\";</sql>"}
+{"idx": 589, "completion": "<sql>SELECT count(*) FROM Cartoon WHERE Written_by = \"Joseph Kuhr\";</sql>"}
+{"idx": 590, "completion": "<sql>SELECT count(*) FROM Cartoon WHERE Written_by = \"Joseph Kuhr\";</sql>"}
+{"idx": 591, "completion": "<sql>SELECT title ,  Directed_by FROM Cartoon ORDER BY Original_air_date</sql>"}
+{"idx": 592, "completion": "<sql>SELECT title ,  Directed_by FROM Cartoon ORDER BY Original_air_date</sql>"}
+{"idx": 593, "completion": "<sql>SELECT Title FROM Cartoon WHERE Directed_by = \"Ben Jones\" OR Directed_by = \"Brandon Vietti\";</sql>"}
+{"idx": 594, "completion": "<sql>SELECT Title FROM Cartoon WHERE Directed_by = \"Ben Jones\" OR Directed_by = \"Brandon Vietti\";</sql>"}
+{"idx": 595, "completion": "<sql>SELECT Country ,  count(*) FROM TV_Channel GROUP BY Country ORDER BY count(*) DESC LIMIT 1;</sql>"}
+{"idx": 596, "completion": "<sql>SELECT Country ,  count(*) FROM TV_Channel GROUP BY Country ORDER BY count(*) DESC LIMIT 1;</sql>"}
+{"idx": 597, "completion": "<sql>SELECT count(DISTINCT series_name) ,  count(DISTINCT content) FROM TV_Channel;</sql>"}
+{"idx": 598, "completion": "<sql>SELECT count(DISTINCT series_name) ,  count(DISTINCT content) FROM TV_Channel;</sql>"}
+{"idx": 599, "completion": "<sql>SELECT Content FROM TV_Channel WHERE series_name = \"Sky Radio\";</sql>"}
+{"idx": 600, "completion": "<sql>SELECT Content FROM TV_Channel WHERE series_name = \"Sky Radio\";</sql>"}
+{"idx": 601, "completion": "<sql>SELECT Package_Option FROM TV_Channel WHERE series_name = \"Sky Radio\";</sql>"}
+{"idx": 602, "completion": "<sql>SELECT Package_Option FROM TV_Channel WHERE series_name = \"Sky Radio\";</sql>"}
+{"idx": 603, "completion": "<sql>SELECT count(*) FROM TV_Channel WHERE LANGUAGE = \"English\";</sql>"}
+{"idx": 604, "completion": "<sql>SELECT count(*) FROM TV_Channel WHERE LANGUAGE = \"English\";</sql>"}
+{"idx": 605, "completion": "<sql>SELECT LANGUAGE ,  count(*) FROM TV_Channel GROUP BY LANGUAGE ORDER BY count(*) ASC LIMIT 1;</sql>"}
+{"idx": 606, "completion": "<sql>SELECT LANGUAGE ,  count(*) FROM TV_Channel GROUP BY LANGUAGE ORDER BY count(*) ASC LIMIT 1;</sql>"}
+{"idx": 607, "completion": "<sql>SELECT LANGUAGE ,  count(*) FROM TV_Channel GROUP BY LANGUAGE</sql>"}
+{"idx": 608, "completion": "<sql>SELECT LANGUAGE ,  count(*) FROM TV_Channel GROUP BY LANGUAGE</sql>"}
+{"idx": 609, "completion": "<sql>SELECT T1.series_name FROM TV_Channel AS T1 JOIN Cartoon AS T2 ON T1.id = T2.Channel WHERE T2.Title = \"The Rise of the Blue Beetle!\";</sql>"}
+{"idx": 610, "completion": "<sql>SELECT T1.series_name FROM TV_Channel AS T1 JOIN Cartoon AS T2 ON T1.id = T2.Channel WHERE T2.Title = \"The Rise of the Blue Beetle!\";</sql>"}
+{"idx": 611, "completion": "<sql>SELECT T2.Title FROM TV_Channel AS T1 JOIN Cartoon AS T2 ON T1.id = T2.Channel WHERE T1.series_name = \"Sky Radio\";</sql>"}
+{"idx": 612, "completion": "<sql>SELECT T2.Title FROM TV_Channel AS T1 JOIN Cartoon AS T2 ON T1.id = T2.Channel WHERE T1.series_name = \"Sky Radio\";</sql>"}
+{"idx": 613, "completion": "<sql>SELECT Episode FROM TV_series ORDER BY rating</sql>"}
+{"idx": 614, "completion": "<sql>SELECT Episode FROM TV_series ORDER BY rating</sql>"}
+{"idx": 615, "completion": "<sql>SELECT Episode ,  Rating FROM TV_series ORDER BY Rating DESC LIMIT 3;</sql>"}
+{"idx": 616, "completion": "<sql>SELECT Episode ,  Rating FROM TV_series ORDER BY Rating DESC LIMIT 3;</sql>"}
+{"idx": 617, "completion": "<sql>SELECT max(SHARE) , min(SHARE) FROM TV_series;</sql>"}
+{"idx": 618, "completion": "<sql>SELECT max(SHARE) , min(SHARE) FROM TV_series;</sql>"}
+{"idx": 619, "completion": "<sql>SELECT Air_Date FROM TV_series WHERE Episode = \"A Love of a Lifetime\";</sql>"}
+{"idx": 620, "completion": "<sql>SELECT Air_Date FROM TV_series WHERE Episode = \"A Love of a Lifetime\";</sql>"}
+{"idx": 621, "completion": "<sql>SELECT Weekly_Rank FROM TV_series WHERE Episode = \"A Love of a Lifetime\";</sql>"}
+{"idx": 622, "completion": "<sql>SELECT Weekly_Rank FROM TV_series WHERE Episode = \"A Love of a Lifetime\";</sql>"}
+{"idx": 623, "completion": "<sql>SELECT T1.series_name FROM TV_Channel AS T1 JOIN TV_series AS T2 ON T1.id = T2.Channel WHERE T2.Episode = \"A Love of a Lifetime\";</sql>"}
+{"idx": 624, "completion": "<sql>SELECT T1.series_name FROM TV_Channel AS T1 JOIN TV_series AS T2 ON T1.id = T2.Channel WHERE T2.Episode = \"A Love of a Lifetime\";</sql>"}
+{"idx": 625, "completion": "<sql>SELECT T2.Episode FROM TV_Channel AS T1 JOIN TV_series AS T2 ON T1.id = T2.Channel WHERE T1.series_name = \"Sky Radio\";</sql>"}
+{"idx": 626, "completion": "<sql>SELECT T2.Episode FROM TV_Channel AS T1 JOIN TV_series AS T2 ON T1.id = T2.Channel WHERE T1.series_name = \"Sky Radio\";</sql>"}
+{"idx": 627, "completion": "<sql>SELECT count(*) ,  Directed_by FROM cartoon GROUP BY Directed_by</sql>"}
+{"idx": 628, "completion": "<sql>SELECT count(*) ,  Directed_by FROM cartoon GROUP BY Directed_by</sql>"}
+{"idx": 629, "completion": "<sql>select production_code ,  channel from cartoon order by original_air_date desc limit 1</sql>"}
+{"idx": 630, "completion": "<sql>select production_code ,  channel from cartoon order by original_air_date desc limit 1</sql>"}
+{"idx": 631, "completion": "<sql>SELECT package_option ,  series_name FROM TV_Channel WHERE hight_definition_TV  =  \"yes\"</sql>"}
+{"idx": 632, "completion": "<sql>SELECT package_option ,  series_name FROM TV_Channel WHERE hight_definition_TV  =  \"yes\"</sql>"}
+{"idx": 633, "completion": "<sql>SELECT T1.country FROM TV_Channel AS T1 JOIN cartoon AS T2 ON T1.id = T2.Channel WHERE T2.written_by  =  'Todd Casey'</sql>"}
+{"idx": 634, "completion": "<sql>SELECT T1.country FROM TV_Channel AS T1 JOIN cartoon AS T2 ON T1.id = T2.Channel WHERE T2.written_by  =  'Todd Casey'</sql>"}
+{"idx": 635, "completion": "<sql>SELECT country FROM TV_Channel EXCEPT SELECT T1.country FROM TV_Channel AS T1 JOIN cartoon AS T2 ON T1.id = T2.Channel WHERE T2.written_by  =  'Todd Casey'</sql>"}
+{"idx": 636, "completion": "<sql>SELECT country FROM TV_Channel EXCEPT SELECT T1.country FROM TV_Channel AS T1 JOIN cartoon AS T2 ON T1.id = T2.Channel WHERE T2.written_by  =  'Todd Casey'</sql>"}
+{"idx": 637, "completion": "<sql>SELECT T1.series_name ,  T1.country FROM TV_Channel AS T1 JOIN cartoon AS T2 ON T1.id = T2.Channel WHERE T2.directed_by  =  'Michael Chang' INTERSECT SELECT T1.series_name ,  T1.country FROM TV_Channel AS T1 JOIN cartoon AS T2 ON T1.id = T2.Channel WHERE T2.directed_by  =  'Ben Jones'</sql>"}
+{"idx": 638, "completion": "<sql>SELECT T1.series_name ,  T1.country FROM TV_Channel AS T1 JOIN cartoon AS T2 ON T1.id = T2.Channel WHERE T2.directed_by  =  'Michael Chang' INTERSECT SELECT T1.series_name ,  T1.country FROM TV_Channel AS T1 JOIN cartoon AS T2 ON T1.id = T2.Channel WHERE T2.directed_by  =  'Ben Jones'</sql>"}
+{"idx": 639, "completion": "<sql>SELECT Pixel_aspect_ratio_PAR ,  country FROM tv_channel WHERE LANGUAGE != 'English'</sql>"}
+{"idx": 640, "completion": "<sql>SELECT Pixel_aspect_ratio_PAR ,  country FROM tv_channel WHERE LANGUAGE != 'English'</sql>"}
+{"idx": 641, "completion": "<sql>SELECT id FROM tv_channel GROUP BY country HAVING count(*)  >  2</sql>"}
+{"idx": 642, "completion": "<sql>SELECT id FROM tv_channel GROUP BY country HAVING count(*)  >  2</sql>"}
+{"idx": 643, "completion": "<sql>SELECT id FROM TV_Channel EXCEPT SELECT channel FROM cartoon WHERE directed_by  =  'Ben Jones'</sql>"}
+{"idx": 644, "completion": "<sql>SELECT id FROM TV_Channel EXCEPT SELECT channel FROM cartoon WHERE directed_by  =  'Ben Jones'</sql>"}
+{"idx": 645, "completion": "<sql>SELECT package_option FROM TV_Channel WHERE id NOT IN (SELECT channel FROM cartoon WHERE directed_by  =  'Ben Jones')</sql>"}
+{"idx": 646, "completion": "<sql>SELECT package_option FROM TV_Channel WHERE id NOT IN (SELECT channel FROM cartoon WHERE directed_by  =  'Ben Jones')</sql>"}
+{"idx": 647, "completion": "<sql>SELECT count(*) FROM poker_player</sql>"}
+{"idx": 648, "completion": "<sql>SELECT count(*) FROM poker_player</sql>"}
+{"idx": 649, "completion": "<sql>SELECT Earnings FROM poker_player ORDER BY Earnings DESC</sql>"}
+{"idx": 650, "completion": "<sql>SELECT Earnings FROM poker_player ORDER BY Earnings DESC</sql>"}
+{"idx": 651, "completion": "<sql>SELECT Final_Table_Made ,  Best_Finish FROM poker_player</sql>"}
+{"idx": 652, "completion": "<sql>SELECT Final_Table_Made ,  Best_Finish FROM poker_player</sql>"}
+{"idx": 653, "completion": "<sql>SELECT avg(Earnings) FROM poker_player</sql>"}
+{"idx": 654, "completion": "<sql>SELECT avg(Earnings) FROM poker_player</sql>"}
+{"idx": 655, "completion": "<sql>SELECT Money_Rank FROM poker_player ORDER BY Earnings DESC LIMIT 1</sql>"}
+{"idx": 656, "completion": "<sql>SELECT Money_Rank FROM poker_player ORDER BY Earnings DESC LIMIT 1</sql>"}
+{"idx": 657, "completion": "<sql>SELECT max(Final_Table_Made) FROM poker_player WHERE Earnings  <  200000</sql>"}
+{"idx": 658, "completion": "<sql>SELECT max(Final_Table_Made) FROM poker_player WHERE Earnings  <  200000</sql>"}
+{"idx": 659, "completion": "<sql>SELECT T1.Name FROM people AS T1 JOIN poker_player AS T2 ON T1.People_ID  =  T2.People_ID</sql>"}
+{"idx": 660, "completion": "<sql>SELECT T1.Name FROM people AS T1 JOIN poker_player AS T2 ON T1.People_ID  =  T2.People_ID</sql>"}
+{"idx": 661, "completion": "<sql>SELECT T1.Name FROM people AS T1 JOIN poker_player AS T2 ON T1.People_ID  =  T2.People_ID WHERE T2.Earnings  >  300000</sql>"}
+{"idx": 662, "completion": "<sql>SELECT T1.Name FROM people AS T1 JOIN poker_player AS T2 ON T1.People_ID  =  T2.People_ID WHERE T2.Earnings  >  300000</sql>"}
+{"idx": 663, "completion": "<sql>SELECT T1.Name FROM people AS T1 JOIN poker_player AS T2 ON T1.People_ID  =  T2.People_ID ORDER BY T2.Final_Table_Made</sql>"}
+{"idx": 664, "completion": "<sql>SELECT T1.Name FROM people AS T1 JOIN poker_player AS T2 ON T1.People_ID  =  T2.People_ID ORDER BY T2.Final_Table_Made</sql>"}
+{"idx": 665, "completion": "<sql>SELECT T1.Birth_Date FROM people AS T1 JOIN poker_player AS T2 ON T1.People_ID  =  T2.People_ID ORDER BY T2.Earnings ASC LIMIT 1</sql>"}
+{"idx": 666, "completion": "<sql>SELECT T1.Birth_Date FROM people AS T1 JOIN poker_player AS T2 ON T1.People_ID  =  T2.People_ID ORDER BY T2.Earnings ASC LIMIT 1</sql>"}
+{"idx": 667, "completion": "<sql>SELECT T2.Money_Rank FROM people AS T1 JOIN poker_player AS T2 ON T1.People_ID  =  T2.People_ID ORDER BY T1.Height DESC LIMIT 1</sql>"}
+{"idx": 668, "completion": "<sql>SELECT T2.Money_Rank FROM people AS T1 JOIN poker_player AS T2 ON T1.People_ID  =  T2.People_ID ORDER BY T1.Height DESC LIMIT 1</sql>"}
+{"idx": 669, "completion": "<sql>SELECT avg(T2.Earnings) FROM people AS T1 JOIN poker_player AS T2 ON T1.People_ID  =  T2.People_ID WHERE T1.Height  >  200</sql>"}
+{"idx": 670, "completion": "<sql>SELECT avg(T2.Earnings) FROM people AS T1 JOIN poker_player AS T2 ON T1.People_ID  =  T2.People_ID WHERE T1.Height  >  200</sql>"}
+{"idx": 671, "completion": "<sql>SELECT T1.Name FROM people AS T1 JOIN poker_player AS T2 ON T1.People_ID  =  T2.People_ID ORDER BY T2.Earnings DESC</sql>"}
+{"idx": 672, "completion": "<sql>SELECT T1.Name FROM people AS T1 JOIN poker_player AS T2 ON T1.People_ID  =  T2.People_ID ORDER BY T2.Earnings DESC</sql>"}
+{"idx": 673, "completion": "<sql>SELECT Nationality ,  COUNT(*) FROM people GROUP BY Nationality</sql>"}
+{"idx": 674, "completion": "<sql>SELECT Nationality ,  COUNT(*) FROM people GROUP BY Nationality</sql>"}
+{"idx": 675, "completion": "<sql>SELECT Nationality FROM people GROUP BY Nationality ORDER BY COUNT(*) DESC LIMIT 1</sql>"}
+{"idx": 676, "completion": "<sql>SELECT Nationality FROM people GROUP BY Nationality ORDER BY COUNT(*) DESC LIMIT 1</sql>"}
+{"idx": 677, "completion": "<sql>SELECT Nationality FROM people GROUP BY Nationality HAVING COUNT(*)  >=  2</sql>"}
+{"idx": 678, "completion": "<sql>SELECT Nationality FROM people GROUP BY Nationality HAVING COUNT(*)  >=  2</sql>"}
+{"idx": 679, "completion": "<sql>SELECT Name ,  Birth_Date FROM people ORDER BY Name ASC</sql>"}
+{"idx": 680, "completion": "<sql>SELECT Name ,  Birth_Date FROM people ORDER BY Name ASC</sql>"}
+{"idx": 681, "completion": "<sql>SELECT Name FROM people WHERE Nationality != \"Russia\"</sql>"}
+{"idx": 682, "completion": "<sql>SELECT Name FROM people WHERE Nationality != \"Russia\"</sql>"}
+{"idx": 683, "completion": "<sql>SELECT Name FROM people WHERE People_ID NOT IN (SELECT People_ID FROM poker_player)</sql>"}
+{"idx": 684, "completion": "<sql>SELECT Name FROM people WHERE People_ID NOT IN (SELECT People_ID FROM poker_player)</sql>"}
+{"idx": 685, "completion": "<sql>SELECT count(DISTINCT Nationality) FROM people</sql>"}
+{"idx": 686, "completion": "<sql>SELECT count(DISTINCT Nationality) FROM people</sql>"}
+{"idx": 687, "completion": "<sql>SELECT count(*) FROM area_code_state</sql>"}
+{"idx": 688, "completion": "<sql>SELECT contestant_number ,  contestant_name FROM contestants ORDER BY contestant_name DESC</sql>"}
+{"idx": 689, "completion": "<sql>SELECT vote_id ,  phone_number ,  state FROM votes</sql>"}
+{"idx": 690, "completion": "<sql>SELECT max(area_code) ,  min(area_code) FROM area_code_state</sql>"}
+{"idx": 691, "completion": "<sql>SELECT max(created) FROM votes WHERE state  =  'CA'</sql>"}
+{"idx": 692, "completion": "<sql>SELECT contestant_name FROM contestants WHERE contestant_name != 'Jessie Alloway'</sql>"}
+{"idx": 693, "completion": "<sql>SELECT DISTINCT state ,  created FROM votes</sql>"}
+{"idx": 694, "completion": "<sql>SELECT T1.contestant_number , T1.contestant_name FROM contestants AS T1 JOIN votes AS T2 ON T1.contestant_number  =  T2.contestant_number GROUP BY T1.contestant_number HAVING count(*)  >=  2</sql>"}
+{"idx": 695, "completion": "<sql>SELECT T1.contestant_number , T1.contestant_name FROM contestants AS T1 JOIN votes AS T2 ON T1.contestant_number  =  T2.contestant_number GROUP BY T1.contestant_number ORDER BY count(*) ASC LIMIT 1</sql>"}
+{"idx": 696, "completion": "<sql>SELECT count(*) FROM votes WHERE state  =  'NY' OR state  =  'CA'</sql>"}
+{"idx": 697, "completion": "<sql>SELECT count(*) FROM contestants WHERE contestant_number NOT IN ( SELECT contestant_number FROM votes )</sql>"}
+{"idx": 698, "completion": "<sql>SELECT T1.area_code FROM area_code_state AS T1 JOIN votes AS T2 ON T1.state  =  T2.state GROUP BY T1.area_code ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 699, "completion": "<sql>SELECT T2.created ,  T2.state ,  T2.phone_number FROM contestants AS T1 JOIN votes AS T2 ON T1.contestant_number  =  T2.contestant_number WHERE T1.contestant_name  =  'Tabatha Gehling'</sql>"}
+{"idx": 700, "completion": "<sql>SELECT T3.area_code FROM contestants AS T1 JOIN votes AS T2 ON T1.contestant_number  =  T2.contestant_number JOIN area_code_state AS T3 ON T2.state  =  T3.state WHERE T1.contestant_name  =  'Tabatha Gehling' INTERSECT SELECT T3.area_code FROM contestants AS T1 JOIN votes AS T2 ON T1.contestant_number  =  T2.contestant_number JOIN area_code_state AS T3 ON T2.state  =  T3.state WHERE T1.contestant_name  =  'Kelly Clauss'</sql>"}
+{"idx": 701, "completion": "<sql>select contestant_name from contestants where contestant_name like \"%al%\"</sql>"}
+{"idx": 702, "completion": "<sql>SELECT Name FROM country WHERE IndepYear  >  1950</sql>"}
+{"idx": 703, "completion": "<sql>SELECT Name FROM country WHERE IndepYear  >  1950</sql>"}
+{"idx": 704, "completion": "<sql>SELECT count(*) FROM country WHERE GovernmentForm  =  \"Republic\"</sql>"}
+{"idx": 705, "completion": "<sql>SELECT count(*) FROM country WHERE GovernmentForm  =  \"Republic\"</sql>"}
+{"idx": 706, "completion": "<sql>SELECT sum(SurfaceArea) FROM country WHERE Region  =  \"Caribbean\"</sql>"}
+{"idx": 707, "completion": "<sql>SELECT sum(SurfaceArea) FROM country WHERE Region  =  \"Caribbean\"</sql>"}
+{"idx": 708, "completion": "<sql>SELECT Continent FROM country WHERE Name  =  \"Anguilla\"</sql>"}
+{"idx": 709, "completion": "<sql>SELECT Continent FROM country WHERE Name  =  \"Anguilla\"</sql>"}
+{"idx": 710, "completion": "<sql>SELECT Region FROM country AS T1 JOIN city AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Name  =  \"Kabul\"</sql>"}
+{"idx": 711, "completion": "<sql>SELECT Region FROM country AS T1 JOIN city AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Name  =  \"Kabul\"</sql>"}
+{"idx": 712, "completion": "<sql>SELECT T2.Language FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T1.Name  =  \"Aruba\" ORDER BY Percentage DESC LIMIT 1</sql>"}
+{"idx": 713, "completion": "<sql>SELECT T2.Language FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T1.Name  =  \"Aruba\" ORDER BY Percentage DESC LIMIT 1</sql>"}
+{"idx": 714, "completion": "<sql>SELECT Population ,  LifeExpectancy FROM country WHERE Name  =  \"Brazil\"</sql>"}
+{"idx": 715, "completion": "<sql>SELECT Population ,  LifeExpectancy FROM country WHERE Name  =  \"Brazil\"</sql>"}
+{"idx": 716, "completion": "<sql>SELECT Population ,  Region FROM country WHERE Name  =  \"Angola\"</sql>"}
+{"idx": 717, "completion": "<sql>SELECT Population ,  Region FROM country WHERE Name  =  \"Angola\"</sql>"}
+{"idx": 718, "completion": "<sql>SELECT avg(LifeExpectancy) FROM country WHERE Region  =  \"Central Africa\"</sql>"}
+{"idx": 719, "completion": "<sql>SELECT avg(LifeExpectancy) FROM country WHERE Region  =  \"Central Africa\"</sql>"}
+{"idx": 720, "completion": "<sql>SELECT Name FROM country WHERE Continent  =  \"Asia\" ORDER BY LifeExpectancy LIMIT 1</sql>"}
+{"idx": 721, "completion": "<sql>SELECT Name FROM country WHERE Continent  =  \"Asia\" ORDER BY LifeExpectancy LIMIT 1</sql>"}
+{"idx": 722, "completion": "<sql>SELECT sum(Population) ,  max(GNP) FROM country WHERE Continent  =  \"Asia\"</sql>"}
+{"idx": 723, "completion": "<sql>SELECT sum(Population) ,  max(GNP) FROM country WHERE Continent  =  \"Asia\"</sql>"}
+{"idx": 724, "completion": "<sql>SELECT avg(LifeExpectancy) FROM country WHERE Continent  =  \"Africa\" AND GovernmentForm  =  \"Republic\"</sql>"}
+{"idx": 725, "completion": "<sql>SELECT avg(LifeExpectancy) FROM country WHERE Continent  =  \"Africa\" AND GovernmentForm  =  \"Republic\"</sql>"}
+{"idx": 726, "completion": "<sql>SELECT sum(SurfaceArea) FROM country WHERE Continent  =  \"Asia\" OR Continent  =  \"Europe\"</sql>"}
+{"idx": 727, "completion": "<sql>SELECT sum(SurfaceArea) FROM country WHERE Continent  =  \"Asia\" OR Continent  =  \"Europe\"</sql>"}
+{"idx": 728, "completion": "<sql>SELECT sum(Population) FROM city WHERE District  =  \"Gelderland\"</sql>"}
+{"idx": 729, "completion": "<sql>SELECT sum(Population) FROM city WHERE District  =  \"Gelderland\"</sql>"}
+{"idx": 730, "completion": "<sql>SELECT avg(GNP) ,  sum(population) FROM country WHERE GovernmentForm  =  \"US Territory\"</sql>"}
+{"idx": 731, "completion": "<sql>SELECT avg(GNP) ,  sum(population) FROM country WHERE GovernmentForm  =  \"US Territory\"</sql>"}
+{"idx": 732, "completion": "<sql>SELECT count(DISTINCT LANGUAGE) FROM countrylanguage</sql>"}
+{"idx": 733, "completion": "<sql>SELECT count(DISTINCT LANGUAGE) FROM countrylanguage</sql>"}
+{"idx": 734, "completion": "<sql>SELECT count(DISTINCT GovernmentForm) FROM country WHERE Continent  =  \"Africa\"</sql>"}
+{"idx": 735, "completion": "<sql>SELECT count(DISTINCT GovernmentForm) FROM country WHERE Continent  =  \"Africa\"</sql>"}
+{"idx": 736, "completion": "<sql>SELECT COUNT(T2.Language) FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T1.Name  =  \"Aruba\"</sql>"}
+{"idx": 737, "completion": "<sql>SELECT COUNT(T2.Language) FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T1.Name  =  \"Aruba\"</sql>"}
+{"idx": 738, "completion": "<sql>SELECT COUNT(*) FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T1.Name  =  \"Afghanistan\" AND IsOfficial  =  \"T\"</sql>"}
+{"idx": 739, "completion": "<sql>SELECT COUNT(*) FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T1.Name  =  \"Afghanistan\" AND IsOfficial  =  \"T\"</sql>"}
+{"idx": 740, "completion": "<sql>SELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode GROUP BY T1.Name ORDER BY COUNT(*) DESC LIMIT 1</sql>"}
+{"idx": 741, "completion": "<sql>SELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode GROUP BY T1.Name ORDER BY COUNT(*) DESC LIMIT 1</sql>"}
+{"idx": 742, "completion": "<sql>SELECT T1.Continent FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode GROUP BY T1.Continent ORDER BY COUNT(*) DESC LIMIT 1</sql>"}
+{"idx": 743, "completion": "<sql>SELECT T1.Continent FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode GROUP BY T1.Continent ORDER BY COUNT(*) DESC LIMIT 1</sql>"}
+{"idx": 744, "completion": "<sql>SELECT COUNT(*) FROM (SELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"English\" INTERSECT SELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"Dutch\")</sql>"}
+{"idx": 745, "completion": "<sql>SELECT COUNT(*) FROM (SELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"English\" INTERSECT SELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"Dutch\")</sql>"}
+{"idx": 746, "completion": "<sql>SELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"English\" INTERSECT SELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"French\"</sql>"}
+{"idx": 747, "completion": "<sql>SELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"English\" INTERSECT SELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"French\"</sql>"}
+{"idx": 748, "completion": "<sql>SELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"English\" AND T2.IsOfficial  =  \"T\" INTERSECT SELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"French\" AND T2.IsOfficial  =  \"T\"</sql>"}
+{"idx": 749, "completion": "<sql>SELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"English\" AND T2.IsOfficial  =  \"T\" INTERSECT SELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"French\" AND T2.IsOfficial  =  \"T\"</sql>"}
+{"idx": 750, "completion": "<sql>SELECT COUNT( DISTINCT Continent) FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"Chinese\"</sql>"}
+{"idx": 751, "completion": "<sql>SELECT COUNT( DISTINCT Continent) FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"Chinese\"</sql>"}
+{"idx": 752, "completion": "<sql>SELECT DISTINCT T1.Region FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"English\" OR T2.Language  =  \"Dutch\"</sql>"}
+{"idx": 753, "completion": "<sql>SELECT DISTINCT T1.Region FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"English\" OR T2.Language  =  \"Dutch\"</sql>"}
+{"idx": 754, "completion": "<sql>select t1.name from country as t1 join countrylanguage as t2 on t1.code  =  t2.countrycode where t2.language  =  \"english\" and isofficial  =  \"t\" union select t1.name from country as t1 join countrylanguage as t2 on t1.code  =  t2.countrycode where t2.language  =  \"dutch\" and isofficial  =  \"t\"</sql>"}
+{"idx": 755, "completion": "<sql>SELECT * FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"English\" AND IsOfficial  =  \"T\" UNION SELECT * FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"Dutch\" AND IsOfficial  =  \"T\"</sql>"}
+{"idx": 756, "completion": "<sql>SELECT T2.Language FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T1.Continent  =  \"Asia\" GROUP BY T2.Language ORDER BY COUNT (*) DESC LIMIT 1</sql>"}
+{"idx": 757, "completion": "<sql>SELECT T2.Language FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T1.Continent  =  \"Asia\" GROUP BY T2.Language ORDER BY COUNT (*) DESC LIMIT 1</sql>"}
+{"idx": 758, "completion": "<sql>SELECT T2.Language FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T1.GovernmentForm  =  \"Republic\" GROUP BY T2.Language HAVING COUNT(*)  =  1</sql>"}
+{"idx": 759, "completion": "<sql>SELECT T2.Language FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T1.GovernmentForm  =  \"Republic\" GROUP BY T2.Language HAVING COUNT(*)  =  1</sql>"}
+{"idx": 760, "completion": "<sql>SELECT T1.Name ,  T1.Population FROM city AS T1 JOIN countrylanguage AS T2 ON T1.CountryCode  =  T2.CountryCode WHERE T2.Language  =  \"English\" ORDER BY T1.Population DESC LIMIT 1</sql>"}
+{"idx": 761, "completion": "<sql>SELECT T1.Name ,  T1.Population FROM city AS T1 JOIN countrylanguage AS T2 ON T1.CountryCode  =  T2.CountryCode WHERE T2.Language  =  \"English\" ORDER BY T1.Population DESC LIMIT 1</sql>"}
+{"idx": 762, "completion": "<sql>SELECT Name ,  Population ,  LifeExpectancy FROM country WHERE Continent  =  \"Asia\" ORDER BY SurfaceArea DESC LIMIT 1</sql>"}
+{"idx": 763, "completion": "<sql>SELECT Name ,  Population ,  LifeExpectancy FROM country WHERE Continent  =  \"Asia\" ORDER BY SurfaceArea DESC LIMIT 1</sql>"}
+{"idx": 764, "completion": "<sql>SELECT avg(LifeExpectancy) FROM country WHERE Name NOT IN (SELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"English\" AND T2.IsOfficial  =  \"T\")</sql>"}
+{"idx": 765, "completion": "<sql>SELECT avg(LifeExpectancy) FROM country WHERE Name NOT IN (SELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"English\" AND T2.IsOfficial  =  \"T\")</sql>"}
+{"idx": 766, "completion": "<sql>SELECT sum(Population) FROM country WHERE Name NOT IN (SELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"English\")</sql>"}
+{"idx": 767, "completion": "<sql>SELECT sum(Population) FROM country WHERE Name NOT IN (SELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"English\")</sql>"}
+{"idx": 768, "completion": "<sql>SELECT T2.Language FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T1.HeadOfState  =  \"Beatrix\" AND T2.IsOfficial  =  \"T\"</sql>"}
+{"idx": 769, "completion": "<sql>SELECT T2.Language FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T1.HeadOfState  =  \"Beatrix\" AND T2.IsOfficial  =  \"T\"</sql>"}
+{"idx": 770, "completion": "<sql>SELECT count(DISTINCT T2.Language) FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE  IndepYear  <  1930 AND T2.IsOfficial  =  \"T\"</sql>"}
+{"idx": 771, "completion": "<sql>SELECT count(DISTINCT T2.Language) FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE  IndepYear  <  1930 AND T2.IsOfficial  =  \"T\"</sql>"}
+{"idx": 772, "completion": "<sql>SELECT Name FROM country WHERE SurfaceArea  >  (SELECT min(SurfaceArea) FROM country WHERE Continent  =  \"Europe\")</sql>"}
+{"idx": 773, "completion": "<sql>SELECT Name FROM country WHERE SurfaceArea  >  (SELECT min(SurfaceArea) FROM country WHERE Continent  =  \"Europe\")</sql>"}
+{"idx": 774, "completion": "<sql>SELECT Name FROM country WHERE Continent  =  \"Africa\"  AND population  <  (SELECT max(population) FROM country WHERE Continent  =  \"Asia\")</sql>"}
+{"idx": 775, "completion": "<sql>SELECT Name FROM country WHERE Continent  =  \"Africa\"  AND population  <  (SELECT min(population) FROM country WHERE Continent  =  \"Asia\")</sql>"}
+{"idx": 776, "completion": "<sql>SELECT Name FROM country WHERE Continent  =  \"Asia\"  AND population  >  (SELECT max(population) FROM country WHERE Continent  =  \"Africa\")</sql>"}
+{"idx": 777, "completion": "<sql>SELECT Name FROM country WHERE Continent  =  \"Asia\"  AND population  >  (SELECT min(population) FROM country WHERE Continent  =  \"Africa\")</sql>"}
+{"idx": 778, "completion": "<sql>SELECT CountryCode FROM countrylanguage EXCEPT SELECT CountryCode FROM countrylanguage WHERE LANGUAGE  =  \"English\"</sql>"}
+{"idx": 779, "completion": "<sql>SELECT CountryCode FROM countrylanguage EXCEPT SELECT CountryCode FROM countrylanguage WHERE LANGUAGE  =  \"English\"</sql>"}
+{"idx": 780, "completion": "<sql>SELECT DISTINCT CountryCode FROM countrylanguage WHERE LANGUAGE != \"English\"</sql>"}
+{"idx": 781, "completion": "<sql>SELECT DISTINCT CountryCode FROM countrylanguage WHERE LANGUAGE != \"English\"</sql>"}
+{"idx": 782, "completion": "<sql>SELECT Code FROM country WHERE GovernmentForm != \"Republic\" EXCEPT SELECT CountryCode FROM countrylanguage WHERE LANGUAGE  =  \"English\"</sql>"}
+{"idx": 783, "completion": "<sql>SELECT Code FROM country WHERE GovernmentForm != \"Republic\" EXCEPT SELECT CountryCode FROM countrylanguage WHERE LANGUAGE  =  \"English\"</sql>"}
+{"idx": 784, "completion": "<sql>SELECT DISTINCT T2.Name FROM country AS T1 JOIN city AS T2 ON T2.CountryCode  =  T1.Code WHERE T1.Continent  =  'Europe' AND T1.Name NOT IN (SELECT T3.Name FROM country AS T3 JOIN countrylanguage AS T4 ON T3.Code  =  T4.CountryCode WHERE T4.IsOfficial  =  'T' AND T4.Language  =  'English')</sql>"}
+{"idx": 785, "completion": "<sql>SELECT DISTINCT T2.Name FROM country AS T1 JOIN city AS T2 ON T2.CountryCode  =  T1.Code WHERE T1.Continent  =  'Europe' AND T1.Name NOT IN (SELECT T3.Name FROM country AS T3 JOIN countrylanguage AS T4 ON T3.Code  =  T4.CountryCode WHERE T4.IsOfficial  =  'T' AND T4.Language  =  'English')</sql>"}
+{"idx": 786, "completion": "<sql>select distinct t3.name from country as t1 join countrylanguage as t2 on t1.code  =  t2.countrycode join city as t3 on t1.code  =  t3.countrycode where t2.isofficial  =  't' and t2.language  =  'chinese' and t1.continent  =  \"asia\"</sql>"}
+{"idx": 787, "completion": "<sql>SELECT DISTINCT T3.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode JOIN city AS T3 ON T1.Code  =  T3.CountryCode WHERE T2.IsOfficial  =  'T' AND T2.Language  =  'Chinese' AND T1.Continent  =  \"Asia\"</sql>"}
+{"idx": 788, "completion": "<sql>SELECT Name ,  SurfaceArea ,  IndepYear FROM country ORDER BY Population LIMIT 1</sql>"}
+{"idx": 789, "completion": "<sql>SELECT Name ,  SurfaceArea ,  IndepYear FROM country ORDER BY Population LIMIT 1</sql>"}
+{"idx": 790, "completion": "<sql>SELECT Name ,  population ,  HeadOfState FROM country ORDER BY SurfaceArea DESC LIMIT 1</sql>"}
+{"idx": 791, "completion": "<sql>SELECT Name ,  population ,  HeadOfState FROM country ORDER BY SurfaceArea DESC LIMIT 1</sql>"}
+{"idx": 792, "completion": "<sql>SELECT COUNT(T2.Language) ,  T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode GROUP BY T1.Name HAVING COUNT(*)  >  2</sql>"}
+{"idx": 793, "completion": "<sql>SELECT COUNT(T2.Language) ,  T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode GROUP BY T1.Name HAVING COUNT(*)  >  2</sql>"}
+{"idx": 794, "completion": "<sql>SELECT count(*) ,  District FROM city WHERE Population  >  (SELECT avg(Population) FROM city) GROUP BY District</sql>"}
+{"idx": 795, "completion": "<sql>SELECT count(*) ,  District FROM city WHERE Population  >  (SELECT avg(Population) FROM city) GROUP BY District</sql>"}
+{"idx": 796, "completion": "<sql>SELECT sum(Population) ,  GovernmentForm FROM country GROUP BY GovernmentForm HAVING avg(LifeExpectancy)  >  72</sql>"}
+{"idx": 797, "completion": "<sql>SELECT sum(Population) ,  GovernmentForm FROM country GROUP BY GovernmentForm HAVING avg(LifeExpectancy)  >  72</sql>"}
+{"idx": 798, "completion": "<sql>SELECT sum(Population) ,  avg(LifeExpectancy) ,  Continent FROM country GROUP BY Continent HAVING avg(LifeExpectancy)  <  72</sql>"}
+{"idx": 799, "completion": "<sql>SELECT sum(Population) ,  avg(LifeExpectancy) ,  Continent FROM country GROUP BY Continent HAVING avg(LifeExpectancy)  <  72</sql>"}
+{"idx": 800, "completion": "<sql>SELECT Name ,  SurfaceArea FROM country ORDER BY SurfaceArea DESC LIMIT 5</sql>"}
+{"idx": 801, "completion": "<sql>SELECT Name ,  SurfaceArea FROM country ORDER BY SurfaceArea DESC LIMIT 5</sql>"}
+{"idx": 802, "completion": "<sql>SELECT Name FROM country ORDER BY Population DESC LIMIT 3</sql>"}
+{"idx": 803, "completion": "<sql>SELECT Name FROM country ORDER BY Population DESC LIMIT 3</sql>"}
+{"idx": 804, "completion": "<sql>SELECT Name FROM country ORDER BY Population ASC LIMIT 3</sql>"}
+{"idx": 805, "completion": "<sql>SELECT Name FROM country ORDER BY Population ASC LIMIT 3</sql>"}
+{"idx": 806, "completion": "<sql>SELECT count(*) FROM country WHERE continent  =  \"Asia\"</sql>"}
+{"idx": 807, "completion": "<sql>SELECT count(*) FROM country WHERE continent  =  \"Asia\"</sql>"}
+{"idx": 808, "completion": "<sql>SELECT Name FROM country WHERE continent  =  \"Europe\" AND Population  =  \"80000\"</sql>"}
+{"idx": 809, "completion": "<sql>SELECT Name FROM country WHERE continent  =  \"Europe\" AND Population  =  \"80000\"</sql>"}
+{"idx": 810, "completion": "<sql>select sum(population) ,  avg(surfacearea) from country where continent  =  \"north america\" and surfacearea  >  3000</sql>"}
+{"idx": 811, "completion": "<sql>select sum(population) ,  avg(surfacearea) from country where continent  =  \"north america\" and surfacearea  >  3000</sql>"}
+{"idx": 812, "completion": "<sql>SELECT name FROM city WHERE Population BETWEEN 160000 AND 900000</sql>"}
+{"idx": 813, "completion": "<sql>select name from city where population between 160000 and 900000</sql>"}
+{"idx": 814, "completion": "<sql>SELECT LANGUAGE FROM countrylanguage GROUP BY LANGUAGE ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 815, "completion": "<sql>SELECT LANGUAGE FROM countrylanguage GROUP BY LANGUAGE ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 816, "completion": "<sql>SELECT LANGUAGE ,  CountryCode ,  max(Percentage) FROM countrylanguage GROUP BY CountryCode</sql>"}
+{"idx": 817, "completion": "<sql>SELECT LANGUAGE ,  CountryCode ,  max(Percentage) FROM countrylanguage GROUP BY CountryCode</sql>"}
+{"idx": 818, "completion": "<sql>SELECT count(*) ,   max(Percentage) FROM countrylanguage WHERE LANGUAGE  =  \"Spanish\" GROUP BY CountryCode</sql>"}
+{"idx": 819, "completion": "<sql>SELECT count(*) ,   max(Percentage) FROM countrylanguage WHERE LANGUAGE  =  \"Spanish\" GROUP BY CountryCode</sql>"}
+{"idx": 820, "completion": "<sql>SELECT CountryCode ,  max(Percentage) FROM countrylanguage WHERE LANGUAGE  =  \"Spanish\" GROUP BY CountryCode</sql>"}
+{"idx": 821, "completion": "<sql>SELECT CountryCode ,  max(Percentage) FROM countrylanguage WHERE LANGUAGE  =  \"Spanish\" GROUP BY CountryCode</sql>"}
+{"idx": 822, "completion": "<sql>SELECT count(*) FROM conductor</sql>"}
+{"idx": 823, "completion": "<sql>SELECT count(*) FROM conductor</sql>"}
+{"idx": 824, "completion": "<sql>SELECT Name FROM conductor ORDER BY Age ASC</sql>"}
+{"idx": 825, "completion": "<sql>SELECT Name FROM conductor ORDER BY Age ASC</sql>"}
+{"idx": 826, "completion": "<sql>SELECT Name FROM conductor WHERE Nationality != 'USA'</sql>"}
+{"idx": 827, "completion": "<sql>SELECT Name FROM conductor WHERE Nationality != 'USA'</sql>"}
+{"idx": 828, "completion": "<sql>SELECT Record_Company FROM orchestra ORDER BY Year_of_Founded DESC</sql>"}
+{"idx": 829, "completion": "<sql>SELECT Record_Company FROM orchestra ORDER BY Year_of_Founded DESC</sql>"}
+{"idx": 830, "completion": "<sql>SELECT avg(Attendance) FROM SHOW</sql>"}
+{"idx": 831, "completion": "<sql>SELECT avg(Attendance) FROM SHOW</sql>"}
+{"idx": 832, "completion": "<sql>SELECT max(SHARE) ,  min(SHARE) FROM performance WHERE TYPE != \"Live final\"</sql>"}
+{"idx": 833, "completion": "<sql>SELECT max(SHARE) ,  min(SHARE) FROM performance WHERE TYPE != \"Live final\"</sql>"}
+{"idx": 834, "completion": "<sql>SELECT count(DISTINCT Nationality) FROM conductor</sql>"}
+{"idx": 835, "completion": "<sql>SELECT count(DISTINCT Nationality) FROM conductor</sql>"}
+{"idx": 836, "completion": "<sql>SELECT Name FROM conductor ORDER BY Year_of_Work DESC</sql>"}
+{"idx": 837, "completion": "<sql>SELECT Name FROM conductor ORDER BY Year_of_Work DESC</sql>"}
+{"idx": 838, "completion": "<sql>SELECT Name FROM conductor ORDER BY Year_of_Work DESC LIMIT 1</sql>"}
+{"idx": 839, "completion": "<sql>SELECT Name FROM conductor ORDER BY Year_of_Work DESC LIMIT 1</sql>"}
+{"idx": 840, "completion": "<sql>SELECT T1.Name ,  T2.Orchestra FROM conductor AS T1 JOIN orchestra AS T2 ON T1.Conductor_ID  =  T2.Conductor_ID</sql>"}
+{"idx": 841, "completion": "<sql>SELECT T1.Name ,  T2.Orchestra FROM conductor AS T1 JOIN orchestra AS T2 ON T1.Conductor_ID  =  T2.Conductor_ID</sql>"}
+{"idx": 842, "completion": "<sql>SELECT T1.Name FROM conductor AS T1 JOIN orchestra AS T2 ON T1.Conductor_ID  =  T2.Conductor_ID GROUP BY T2.Conductor_ID HAVING COUNT(*)  >  1</sql>"}
+{"idx": 843, "completion": "<sql>SELECT T1.Name FROM conductor AS T1 JOIN orchestra AS T2 ON T1.Conductor_ID  =  T2.Conductor_ID GROUP BY T2.Conductor_ID HAVING COUNT(*)  >  1</sql>"}
+{"idx": 844, "completion": "<sql>SELECT T1.Name FROM conductor AS T1 JOIN orchestra AS T2 ON T1.Conductor_ID  =  T2.Conductor_ID GROUP BY T2.Conductor_ID ORDER BY COUNT(*) DESC LIMIT 1</sql>"}
+{"idx": 845, "completion": "<sql>SELECT T1.Name FROM conductor AS T1 JOIN orchestra AS T2 ON T1.Conductor_ID  =  T2.Conductor_ID GROUP BY T2.Conductor_ID ORDER BY COUNT(*) DESC LIMIT 1</sql>"}
+{"idx": 846, "completion": "<sql>SELECT T1.Name FROM conductor AS T1 JOIN orchestra AS T2 ON T1.Conductor_ID  =  T2.Conductor_ID WHERE Year_of_Founded  >  2008</sql>"}
+{"idx": 847, "completion": "<sql>SELECT T1.Name FROM conductor AS T1 JOIN orchestra AS T2 ON T1.Conductor_ID  =  T2.Conductor_ID WHERE Year_of_Founded  >  2008</sql>"}
+{"idx": 848, "completion": "<sql>SELECT Record_Company ,  COUNT(*) FROM orchestra GROUP BY Record_Company</sql>"}
+{"idx": 849, "completion": "<sql>SELECT Record_Company ,  COUNT(*) FROM orchestra GROUP BY Record_Company</sql>"}
+{"idx": 850, "completion": "<sql>SELECT Major_Record_Format FROM orchestra GROUP BY Major_Record_Format ORDER BY COUNT(*) ASC</sql>"}
+{"idx": 851, "completion": "<sql>SELECT Major_Record_Format FROM orchestra GROUP BY Major_Record_Format ORDER BY COUNT(*) ASC</sql>"}
+{"idx": 852, "completion": "<sql>SELECT Record_Company FROM orchestra GROUP BY Record_Company ORDER BY COUNT(*) DESC LIMIT 1</sql>"}
+{"idx": 853, "completion": "<sql>SELECT Record_Company FROM orchestra GROUP BY Record_Company ORDER BY COUNT(*) DESC LIMIT 1</sql>"}
+{"idx": 854, "completion": "<sql>SELECT Orchestra FROM orchestra WHERE Orchestra_ID NOT IN (SELECT Orchestra_ID FROM performance)</sql>"}
+{"idx": 855, "completion": "<sql>SELECT Orchestra FROM orchestra WHERE Orchestra_ID NOT IN (SELECT Orchestra_ID FROM performance)</sql>"}
+{"idx": 856, "completion": "<sql>SELECT Record_Company FROM orchestra WHERE Year_of_Founded  <  2003 INTERSECT SELECT Record_Company FROM orchestra WHERE Year_of_Founded  >  2003</sql>"}
+{"idx": 857, "completion": "<sql>SELECT Record_Company FROM orchestra WHERE Year_of_Founded  <  2003 INTERSECT SELECT Record_Company FROM orchestra WHERE Year_of_Founded  >  2003</sql>"}
+{"idx": 858, "completion": "<sql>SELECT COUNT(*) FROM orchestra WHERE Major_Record_Format  =  \"CD\" OR Major_Record_Format  =  \"DVD\"</sql>"}
+{"idx": 859, "completion": "<sql>SELECT COUNT(*) FROM orchestra WHERE Major_Record_Format  =  \"CD\" OR Major_Record_Format  =  \"DVD\"</sql>"}
+{"idx": 860, "completion": "<sql>SELECT Year_of_Founded FROM orchestra AS T1 JOIN performance AS T2 ON T1.Orchestra_ID  =  T2.Orchestra_ID GROUP BY T2.Orchestra_ID HAVING COUNT(*)  >  1</sql>"}
+{"idx": 861, "completion": "<sql>SELECT Year_of_Founded FROM orchestra AS T1 JOIN performance AS T2 ON T1.Orchestra_ID  =  T2.Orchestra_ID GROUP BY T2.Orchestra_ID HAVING COUNT(*)  >  1</sql>"}
+{"idx": 862, "completion": "<sql>SELECT count(*) FROM Highschooler</sql>"}
+{"idx": 863, "completion": "<sql>SELECT count(*) FROM Highschooler</sql>"}
+{"idx": 864, "completion": "<sql>SELECT name ,  grade FROM Highschooler</sql>"}
+{"idx": 865, "completion": "<sql>SELECT name ,  grade FROM Highschooler</sql>"}
+{"idx": 866, "completion": "<sql>SELECT grade FROM Highschooler</sql>"}
+{"idx": 867, "completion": "<sql>SELECT grade FROM Highschooler</sql>"}
+{"idx": 868, "completion": "<sql>SELECT grade FROM Highschooler WHERE name  =  \"Kyle\"</sql>"}
+{"idx": 869, "completion": "<sql>SELECT grade FROM Highschooler WHERE name  =  \"Kyle\"</sql>"}
+{"idx": 870, "completion": "<sql>SELECT name FROM Highschooler WHERE grade  =  10</sql>"}
+{"idx": 871, "completion": "<sql>SELECT name FROM Highschooler WHERE grade  =  10</sql>"}
+{"idx": 872, "completion": "<sql>SELECT ID FROM Highschooler WHERE name  =  \"Kyle\"</sql>"}
+{"idx": 873, "completion": "<sql>SELECT ID FROM Highschooler WHERE name  =  \"Kyle\"</sql>"}
+{"idx": 874, "completion": "<sql>SELECT count(*) FROM Highschooler WHERE grade  =  9 OR grade  =  10</sql>"}
+{"idx": 875, "completion": "<sql>SELECT count(*) FROM Highschooler WHERE grade  =  9 OR grade  =  10</sql>"}
+{"idx": 876, "completion": "<sql>SELECT grade ,  count(*) FROM Highschooler GROUP BY grade</sql>"}
+{"idx": 877, "completion": "<sql>SELECT grade ,  count(*) FROM Highschooler GROUP BY grade</sql>"}
+{"idx": 878, "completion": "<sql>SELECT grade FROM Highschooler GROUP BY grade ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 879, "completion": "<sql>SELECT grade FROM Highschooler GROUP BY grade ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 880, "completion": "<sql>SELECT grade FROM Highschooler GROUP BY grade HAVING count(*)  >=  4</sql>"}
+{"idx": 881, "completion": "<sql>SELECT grade FROM Highschooler GROUP BY grade HAVING count(*)  >=  4</sql>"}
+{"idx": 882, "completion": "<sql>SELECT student_id ,  count(*) FROM Friend GROUP BY student_id</sql>"}
+{"idx": 883, "completion": "<sql>SELECT student_id ,  count(*) FROM Friend GROUP BY student_id</sql>"}
+{"idx": 884, "completion": "<sql>SELECT T2.name ,  count(*) FROM Friend AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id GROUP BY T1.student_id</sql>"}
+{"idx": 885, "completion": "<sql>SELECT T2.name ,  count(*) FROM Friend AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id GROUP BY T1.student_id</sql>"}
+{"idx": 886, "completion": "<sql>SELECT T2.name FROM Friend AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id GROUP BY T1.student_id ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 887, "completion": "<sql>SELECT T2.name FROM Friend AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id GROUP BY T1.student_id ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 888, "completion": "<sql>SELECT T2.name FROM Friend AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id GROUP BY T1.student_id HAVING count(*)  >=  3</sql>"}
+{"idx": 889, "completion": "<sql>SELECT T2.name FROM Friend AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id GROUP BY T1.student_id HAVING count(*)  >=  3</sql>"}
+{"idx": 890, "completion": "<sql>SELECT T3.name FROM Friend AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id JOIN Highschooler AS T3 ON T1.friend_id  =  T3.id WHERE T2.name  =  \"Kyle\"</sql>"}
+{"idx": 891, "completion": "<sql>SELECT T3.name FROM Friend AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id JOIN Highschooler AS T3 ON T1.friend_id  =  T3.id WHERE T2.name  =  \"Kyle\"</sql>"}
+{"idx": 892, "completion": "<sql>SELECT count(*) FROM Friend AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id WHERE T2.name  =  \"Kyle\"</sql>"}
+{"idx": 893, "completion": "<sql>SELECT count(*) FROM Friend AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id WHERE T2.name  =  \"Kyle\"</sql>"}
+{"idx": 894, "completion": "<sql>SELECT id FROM Highschooler EXCEPT SELECT student_id FROM Friend</sql>"}
+{"idx": 895, "completion": "<sql>SELECT id FROM Highschooler EXCEPT SELECT student_id FROM Friend</sql>"}
+{"idx": 896, "completion": "<sql>SELECT name FROM Highschooler EXCEPT SELECT T2.name FROM Friend AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id</sql>"}
+{"idx": 897, "completion": "<sql>SELECT name FROM Highschooler EXCEPT SELECT T2.name FROM Friend AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id</sql>"}
+{"idx": 898, "completion": "<sql>SELECT student_id FROM Friend INTERSECT SELECT liked_id FROM Likes</sql>"}
+{"idx": 899, "completion": "<sql>SELECT student_id FROM Friend INTERSECT SELECT liked_id FROM Likes</sql>"}
+{"idx": 900, "completion": "<sql>SELECT T2.name FROM Friend AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id INTERSECT SELECT T2.name FROM Likes AS T1 JOIN Highschooler AS T2 ON T1.liked_id  =  T2.id</sql>"}
+{"idx": 901, "completion": "<sql>SELECT T2.name FROM Friend AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id INTERSECT SELECT T2.name FROM Likes AS T1 JOIN Highschooler AS T2 ON T1.liked_id  =  T2.id</sql>"}
+{"idx": 902, "completion": "<sql>SELECT student_id ,  count(*) FROM Likes GROUP BY student_id</sql>"}
+{"idx": 903, "completion": "<sql>SELECT student_id ,  count(*) FROM Likes GROUP BY student_id</sql>"}
+{"idx": 904, "completion": "<sql>SELECT T2.name ,  count(*) FROM Likes AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id GROUP BY T1.student_id</sql>"}
+{"idx": 905, "completion": "<sql>SELECT T2.name ,  count(*) FROM Likes AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id GROUP BY T1.student_id</sql>"}
+{"idx": 906, "completion": "<sql>SELECT T2.name FROM Likes AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id GROUP BY T1.student_id ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 907, "completion": "<sql>SELECT T2.name FROM Likes AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id GROUP BY T1.student_id ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 908, "completion": "<sql>SELECT T2.name FROM Likes AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id GROUP BY T1.student_id HAVING count(*)  >=  2</sql>"}
+{"idx": 909, "completion": "<sql>SELECT T2.name FROM Likes AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id GROUP BY T1.student_id HAVING count(*)  >=  2</sql>"}
+{"idx": 910, "completion": "<sql>SELECT T2.name FROM Friend AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id WHERE T2.grade  >  5 GROUP BY T1.student_id HAVING count(*)  >=  2</sql>"}
+{"idx": 911, "completion": "<sql>SELECT T2.name FROM Friend AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id WHERE T2.grade  >  5 GROUP BY T1.student_id HAVING count(*)  >=  2</sql>"}
+{"idx": 912, "completion": "<sql>SELECT count(*) FROM Likes AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id WHERE T2.name  =  \"Kyle\"</sql>"}
+{"idx": 913, "completion": "<sql>SELECT count(*) FROM Likes AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id WHERE T2.name  =  \"Kyle\"</sql>"}
+{"idx": 914, "completion": "<sql>SELECT avg(grade) FROM Highschooler WHERE id IN (SELECT T1.student_id FROM Friend AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id)</sql>"}
+{"idx": 915, "completion": "<sql>SELECT avg(grade) FROM Highschooler WHERE id IN (SELECT T1.student_id FROM Friend AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id)</sql>"}
+{"idx": 916, "completion": "<sql>SELECT min(grade) FROM Highschooler WHERE id NOT IN (SELECT T1.student_id FROM Friend AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id)</sql>"}
+{"idx": 917, "completion": "<sql>SELECT min(grade) FROM Highschooler WHERE id NOT IN (SELECT T1.student_id FROM Friend AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id)</sql>"}
+{"idx": 918, "completion": "<sql>SELECT state FROM Owners INTERSECT SELECT state FROM Professionals</sql>"}
+{"idx": 919, "completion": "<sql>SELECT state FROM Owners INTERSECT SELECT state FROM Professionals</sql>"}
+{"idx": 920, "completion": "<sql>SELECT avg(age) FROM Dogs WHERE dog_id IN ( SELECT dog_id FROM Treatments )</sql>"}
+{"idx": 921, "completion": "<sql>SELECT avg(age) FROM Dogs WHERE dog_id IN ( SELECT dog_id FROM Treatments )</sql>"}
+{"idx": 922, "completion": "<sql>SELECT professional_id ,  last_name ,  cell_number FROM Professionals WHERE state  =  'Indiana' UNION SELECT T1.professional_id ,  T1.last_name ,  T1.cell_number FROM Professionals AS T1 JOIN Treatments AS T2 ON T1.professional_id  =  T2.professional_id GROUP BY T1.professional_id HAVING count(*)  >  2</sql>"}
+{"idx": 923, "completion": "<sql>SELECT professional_id ,  last_name ,  cell_number FROM Professionals WHERE state  =  'Indiana' UNION SELECT T1.professional_id ,  T1.last_name ,  T1.cell_number FROM Professionals AS T1 JOIN Treatments AS T2 ON T1.professional_id  =  T2.professional_id GROUP BY T1.professional_id HAVING count(*)  >  2</sql>"}
+{"idx": 924, "completion": "<sql>select name from dogs where dog_id not in ( select dog_id from treatments group by dog_id having sum(cost_of_treatment)  >  1000 )</sql>"}
+{"idx": 925, "completion": "<sql>select name from dogs where dog_id not in ( select dog_id from treatments group by dog_id having sum(cost_of_treatment)  >  1000 )</sql>"}
+{"idx": 926, "completion": "<sql>SELECT first_name FROM Professionals UNION SELECT first_name FROM Owners EXCEPT SELECT name FROM Dogs</sql>"}
+{"idx": 927, "completion": "<sql>SELECT first_name FROM Professionals UNION SELECT first_name FROM Owners EXCEPT SELECT name FROM Dogs</sql>"}
+{"idx": 928, "completion": "<sql>SELECT professional_id ,  role_code ,  email_address FROM Professionals EXCEPT SELECT T1.professional_id ,  T1.role_code ,  T1.email_address FROM Professionals AS T1 JOIN Treatments AS T2 ON T1.professional_id  =  T2.professional_id</sql>"}
+{"idx": 929, "completion": "<sql>SELECT professional_id ,  role_code ,  email_address FROM Professionals EXCEPT SELECT T1.professional_id ,  T1.role_code ,  T1.email_address FROM Professionals AS T1 JOIN Treatments AS T2 ON T1.professional_id  =  T2.professional_id</sql>"}
+{"idx": 930, "completion": "<sql>SELECT T1.owner_id ,  T2.first_name ,  T2.last_name FROM Dogs AS T1 JOIN Owners AS T2 ON T1.owner_id  =  T2.owner_id GROUP BY T1.owner_id ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 931, "completion": "<sql>SELECT T1.owner_id ,  T2.first_name ,  T2.last_name FROM Dogs AS T1 JOIN Owners AS T2 ON T1.owner_id  =  T2.owner_id GROUP BY T1.owner_id ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 932, "completion": "<sql>SELECT T1.professional_id ,  T1.role_code ,  T1.first_name FROM Professionals AS T1 JOIN Treatments AS T2 ON T1.professional_id  =  T2.professional_id GROUP BY T1.professional_id HAVING count(*)  >=  2</sql>"}
+{"idx": 933, "completion": "<sql>SELECT T1.professional_id ,  T1.role_code ,  T1.first_name FROM Professionals AS T1 JOIN Treatments AS T2 ON T1.professional_id  =  T2.professional_id GROUP BY T1.professional_id HAVING count(*)  >=  2</sql>"}
+{"idx": 934, "completion": "<sql>SELECT T1.breed_name FROM Breeds AS T1 JOIN Dogs AS T2 ON T1.breed_code  =  T2.breed_code GROUP BY T1.breed_name ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 935, "completion": "<sql>SELECT T1.breed_name FROM Breeds AS T1 JOIN Dogs AS T2 ON T1.breed_code  =  T2.breed_code GROUP BY T1.breed_name ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 936, "completion": "<sql>SELECT T1.owner_id ,  T1.last_name FROM Owners AS T1 JOIN Dogs AS T2 ON T1.owner_id  =  T2.owner_id JOIN Treatments AS T3 ON T2.dog_id  =  T3.dog_id GROUP BY T1.owner_id ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 937, "completion": "<sql>SELECT T1.owner_id ,  T1.last_name FROM Owners AS T1 JOIN Dogs AS T2 ON T1.owner_id  =  T2.owner_id JOIN Treatments AS T3 ON T2.dog_id  =  T3.dog_id GROUP BY T1.owner_id ORDER BY count(*) DESC LIMIT 1</sql>"}
+{"idx": 938, "completion": "<sql>SELECT T1.treatment_type_description FROM Treatment_types AS T1 JOIN Treatments AS T2 ON T1.treatment_type_code  =  T2.treatment_type_code GROUP BY T1.treatment_type_code ORDER BY sum(cost_of_treatment) ASC LIMIT 1</sql>"}
+{"idx": 939, "completion": "<sql>SELECT T1.treatment_type_description FROM Treatment_types AS T1 JOIN Treatments AS T2 ON T1.treatment_type_code  =  T2.treatment_type_code GROUP BY T1.treatment_type_code ORDER BY sum(cost_of_treatment) ASC LIMIT 1</sql>"}
+{"idx": 940, "completion": "<sql>SELECT T1.owner_id ,  T1.zip_code FROM Owners AS T1 JOIN Dogs AS T2 ON T1.owner_id  =  T2.owner_id JOIN Treatments AS T3 ON T2.dog_id  =  T3.dog_id GROUP BY T1.owner_id ORDER BY sum(T3.cost_of_treatment) DESC LIMIT 1</sql>"}
+{"idx": 941, "completion": "<sql>SELECT T1.owner_id ,  T1.zip_code FROM Owners AS T1 JOIN Dogs AS T2 ON T1.owner_id  =  T2.owner_id JOIN Treatments AS T3 ON T2.dog_id  =  T3.dog_id GROUP BY T1.owner_id ORDER BY sum(T3.cost_of_treatment) DESC LIMIT 1</sql>"}
+{"idx": 942, "completion": "<sql>SELECT T1.professional_id ,  T1.cell_number FROM Professionals AS T1 JOIN Treatments AS T2 ON T1.professional_id  =  T2.professional_id GROUP BY T1.professional_id HAVING count(*)  >=  2</sql>"}
+{"idx": 943, "completion": "<sql>SELECT T1.professional_id ,  T1.cell_number FROM Professionals AS T1 JOIN Treatments AS T2 ON T1.professional_id  =  T2.professional_id GROUP BY T1.professional_id HAVING count(*)  >=  2</sql>"}
+{"idx": 944, "completion": "<sql>SELECT DISTINCT T1.first_name ,  T1.last_name FROM Professionals AS T1 JOIN Treatments AS T2 WHERE cost_of_treatment  <  ( SELECT avg(cost_of_treatment) FROM Treatments )</sql>"}
+{"idx": 945, "completion": "<sql>SELECT DISTINCT T1.first_name ,  T1.last_name FROM Professionals AS T1 JOIN Treatments AS T2 WHERE cost_of_treatment  <  ( SELECT avg(cost_of_treatment) FROM Treatments )</sql>"}
+{"idx": 946, "completion": "<sql>SELECT T1.date_of_treatment ,  T2.first_name FROM Treatments AS T1 JOIN Professionals AS T2 ON T1.professional_id  =  T2.professional_id</sql>"}
+{"idx": 947, "completion": "<sql>SELECT T1.date_of_treatment ,  T2.first_name FROM Treatments AS T1 JOIN Professionals AS T2 ON T1.professional_id  =  T2.professional_id</sql>"}
+{"idx": 948, "completion": "<sql>SELECT T1.cost_of_treatment ,  T2.treatment_type_description FROM Treatments AS T1 JOIN treatment_types AS T2 ON T1.treatment_type_code  =  T2.treatment_type_code</sql>"}
+{"idx": 949, "completion": "<sql>SELECT T1.cost_of_treatment ,  T2.treatment_type_description FROM Treatments AS T1 JOIN treatment_types AS T2 ON T1.treatment_type_code  =  T2.treatment_type_code</sql>"}
+{"idx": 950, "completion": "<sql>SELECT T1.first_name ,  T1.last_name ,  T2.size_code FROM Owners AS T1 JOIN Dogs AS T2 ON T1.owner_id  =  T2.owner_id</sql>"}
+{"idx": 951, "completion": "<sql>SELECT T1.first_name ,  T1.last_name ,  T2.size_code FROM Owners AS T1 JOIN Dogs AS T2 ON T1.owner_id  =  T2.owner_id</sql>"}
+{"idx": 952, "completion": "<sql>SELECT T1.first_name ,  T2.name FROM Owners AS T1 JOIN Dogs AS T2 ON T1.owner_id  =  T2.owner_id</sql>"}
+{"idx": 953, "completion": "<sql>SELECT T1.first_name ,  T2.name FROM Owners AS T1 JOIN Dogs AS T2 ON T1.owner_id  =  T2.owner_id</sql>"}
+{"idx": 954, "completion": "<sql>SELECT T1.name ,  T2.date_of_treatment FROM Dogs AS T1 JOIN Treatments AS T2 ON T1.dog_id  =  T2.dog_id WHERE T1.breed_code  =  ( SELECT breed_code FROM Dogs GROUP BY breed_code ORDER BY count(*) ASC LIMIT 1 )</sql>"}
+{"idx": 955, "completion": "<sql>SELECT T1.name ,  T2.date_of_treatment FROM Dogs AS T1 JOIN Treatments AS T2 ON T1.dog_id  =  T2.dog_id WHERE T1.breed_code  =  ( SELECT breed_code FROM Dogs GROUP BY breed_code ORDER BY count(*) ASC LIMIT 1 )</sql>"}
+{"idx": 956, "completion": "<sql>SELECT T1.first_name ,  T2.name FROM Owners AS T1 JOIN Dogs AS T2 ON T1.owner_id  =  T2.owner_id WHERE T1.state  =  'Virginia'</sql>"}
+{"idx": 957, "completion": "<sql>SELECT T1.first_name ,  T2.name FROM Owners AS T1 JOIN Dogs AS T2 ON T1.owner_id  =  T2.owner_id WHERE T1.state  =  'Virginia'</sql>"}
+{"idx": 958, "completion": "<sql>SELECT DISTINCT T1.date_arrived ,  T1.date_departed FROM Dogs AS T1 JOIN Treatments AS T2 ON T1.dog_id  =  T2.dog_id</sql>"}
+{"idx": 959, "completion": "<sql>SELECT DISTINCT T1.date_arrived ,  T1.date_departed FROM Dogs AS T1 JOIN Treatments AS T2 ON T1.dog_id  =  T2.dog_id</sql>"}
+{"idx": 960, "completion": "<sql>SELECT T1.last_name FROM Owners AS T1 JOIN Dogs AS T2 ON T1.owner_id  =  T2.owner_id WHERE T2.age  =  ( SELECT max(age) FROM Dogs )</sql>"}
+{"idx": 961, "completion": "<sql>SELECT T1.last_name FROM Owners AS T1 JOIN Dogs AS T2 ON T1.owner_id  =  T2.owner_id WHERE T2.age  =  ( SELECT max(age) FROM Dogs )</sql>"}
+{"idx": 962, "completion": "<sql>SELECT email_address FROM Professionals WHERE state  =  'Hawaii' OR state  =  'Wisconsin'</sql>"}
+{"idx": 963, "completion": "<sql>SELECT email_address FROM Professionals WHERE state  =  'Hawaii' OR state  =  'Wisconsin'</sql>"}
+{"idx": 964, "completion": "<sql>SELECT date_arrived ,  date_departed FROM Dogs</sql>"}
+{"idx": 965, "completion": "<sql>SELECT date_arrived ,  date_departed FROM Dogs</sql>"}
+{"idx": 966, "completion": "<sql>SELECT count(DISTINCT dog_id) FROM Treatments</sql>"}
+{"idx": 967, "completion": "<sql>SELECT count(DISTINCT dog_id) FROM Treatments</sql>"}
+{"idx": 968, "completion": "<sql>SELECT count(DISTINCT professional_id) FROM Treatments</sql>"}
+{"idx": 969, "completion": "<sql>SELECT count(DISTINCT professional_id) FROM Treatments</sql>"}
+{"idx": 970, "completion": "<sql>SELECT role_code ,  street ,  city ,  state FROM professionals WHERE city LIKE '%West%'</sql>"}
+{"idx": 971, "completion": "<sql>SELECT role_code ,  street ,  city ,  state FROM professionals WHERE city LIKE '%West%'</sql>"}
+{"idx": 972, "completion": "<sql>SELECT first_name ,  last_name ,  email_address FROM Owners WHERE state LIKE '%North%'</sql>"}
+{"idx": 973, "completion": "<sql>SELECT first_name ,  last_name ,  email_address FROM Owners WHERE state LIKE '%North%'</sql>"}
+{"idx": 974, "completion": "<sql>SELECT count(*) FROM Dogs WHERE age  <  ( SELECT avg(age) FROM Dogs )</sql>"}
+{"idx": 975, "completion": "<sql>SELECT count(*) FROM Dogs WHERE age  <  ( SELECT avg(age) FROM Dogs )</sql>"}
+{"idx": 976, "completion": "<sql>SELECT cost_of_treatment FROM Treatments ORDER BY date_of_treatment DESC LIMIT 1</sql>"}
+{"idx": 977, "completion": "<sql>SELECT cost_of_treatment FROM Treatments ORDER BY date_of_treatment DESC LIMIT 1</sql>"}
+{"idx": 978, "completion": "<sql>SELECT count(*) FROM Dogs WHERE dog_id NOT IN ( SELECT dog_id FROM Treatments )</sql>"}
+{"idx": 979, "completion": "<sql>select count(*) from dogs where dog_id not in ( select dog_id from treatments )</sql>"}
+{"idx": 980, "completion": "<sql>SELECT count(*) FROM Owners WHERE owner_id NOT IN ( SELECT owner_id FROM Dogs )</sql>"}
+{"idx": 981, "completion": "<sql>SELECT count(*) FROM Owners WHERE owner_id NOT IN ( SELECT owner_id FROM Dogs )</sql>"}
+{"idx": 982, "completion": "<sql>SELECT count(*) FROM Professionals WHERE professional_id NOT IN ( SELECT professional_id FROM Treatments )</sql>"}
+{"idx": 983, "completion": "<sql>SELECT count(*) FROM Professionals WHERE professional_id NOT IN ( SELECT professional_id FROM Treatments )</sql>"}
+{"idx": 984, "completion": "<sql>SELECT name ,  age ,  weight FROM Dogs WHERE abandoned_yn  =  1</sql>"}
+{"idx": 985, "completion": "<sql>SELECT name ,  age ,  weight FROM Dogs WHERE abandoned_yn  =  1</sql>"}
+{"idx": 986, "completion": "<sql>SELECT avg(age) FROM Dogs</sql>"}
+{"idx": 987, "completion": "<sql>SELECT avg(age) FROM Dogs</sql>"}
+{"idx": 988, "completion": "<sql>SELECT max(age) FROM Dogs</sql>"}
+{"idx": 989, "completion": "<sql>SELECT max(age) FROM Dogs</sql>"}
+{"idx": 990, "completion": "<sql>SELECT charge_type ,  charge_amount FROM Charges</sql>"}
+{"idx": 991, "completion": "<sql>SELECT charge_type ,  charge_amount FROM Charges</sql>"}
+{"idx": 992, "completion": "<sql>SELECT max(charge_amount) FROM Charges</sql>"}
+{"idx": 993, "completion": "<sql>SELECT max(charge_amount) FROM Charges</sql>"}
+{"idx": 994, "completion": "<sql>SELECT email_address ,  cell_number ,  home_phone FROM professionals</sql>"}
+{"idx": 995, "completion": "<sql>SELECT email_address ,  cell_number ,  home_phone FROM professionals</sql>"}
+{"idx": 996, "completion": "<sql>SELECT DISTINCT breed_code ,  size_code FROM dogs</sql>"}
+{"idx": 997, "completion": "<sql>SELECT DISTINCT breed_code ,  size_code FROM dogs</sql>"}
+{"idx": 998, "completion": "<sql>SELECT DISTINCT T1.first_name ,  T3.treatment_type_description FROM professionals AS T1 JOIN Treatments AS T2 ON T1.professional_id  =  T2.professional_id JOIN Treatment_types AS T3 ON T2.treatment_type_code  =  T3.treatment_type_code</sql>"}
+{"idx": 999, "completion": "<sql>SELECT DISTINCT T1.first_name ,  T3.treatment_type_description FROM professionals AS T1 JOIN Treatments AS T2 ON T1.professional_id  =  T2.professional_id JOIN Treatment_types AS T3 ON T2.treatment_type_code  =  T3.treatment_type_code</sql>"}
+{"idx": 1000, "completion": "<sql>SELECT count(*) FROM singer</sql>"}
+{"idx": 1001, "completion": "<sql>SELECT count(*) FROM singer</sql>"}
+{"idx": 1002, "completion": "<sql>SELECT Name FROM singer ORDER BY Net_Worth_Millions ASC</sql>"}
+{"idx": 1003, "completion": "<sql>SELECT Name FROM singer ORDER BY Net_Worth_Millions ASC</sql>"}
+{"idx": 1004, "completion": "<sql>SELECT Birth_Year ,  Citizenship FROM singer</sql>"}
+{"idx": 1005, "completion": "<sql>SELECT Birth_Year ,  Citizenship FROM singer</sql>"}
+{"idx": 1006, "completion": "<sql>SELECT Name FROM singer WHERE Citizenship != \"France\"</sql>"}
+{"idx": 1007, "completion": "<sql>SELECT Name FROM singer WHERE Citizenship != \"France\"</sql>"}
+{"idx": 1008, "completion": "<sql>SELECT Name FROM singer WHERE Birth_Year  =  1948 OR Birth_Year  =  1949</sql>"}
+{"idx": 1009, "completion": "<sql>SELECT Name FROM singer WHERE Birth_Year  =  1948 OR Birth_Year  =  1949</sql>"}
+{"idx": 1010, "completion": "<sql>SELECT Name FROM singer ORDER BY Net_Worth_Millions DESC LIMIT 1</sql>"}
+{"idx": 1011, "completion": "<sql>SELECT Name FROM singer ORDER BY Net_Worth_Millions DESC LIMIT 1</sql>"}
+{"idx": 1012, "completion": "<sql>SELECT Citizenship ,  COUNT(*) FROM singer GROUP BY Citizenship</sql>"}
+{"idx": 1013, "completion": "<sql>SELECT Citizenship ,  COUNT(*) FROM singer GROUP BY Citizenship</sql>"}
+{"idx": 1014, "completion": "<sql>SELECT Citizenship FROM singer GROUP BY Citizenship ORDER BY COUNT(*) DESC LIMIT 1</sql>"}
+{"idx": 1015, "completion": "<sql>select citizenship from singer group by citizenship order by count(*) desc limit 1</sql>"}
+{"idx": 1016, "completion": "<sql>SELECT Citizenship ,  max(Net_Worth_Millions) FROM singer GROUP BY Citizenship</sql>"}
+{"idx": 1017, "completion": "<sql>SELECT Citizenship ,  max(Net_Worth_Millions) FROM singer GROUP BY Citizenship</sql>"}
+{"idx": 1018, "completion": "<sql>SELECT T2.Title ,  T1.Name FROM singer AS T1 JOIN song AS T2 ON T1.Singer_ID  =  T2.Singer_ID</sql>"}
+{"idx": 1019, "completion": "<sql>SELECT T2.Title ,  T1.Name FROM singer AS T1 JOIN song AS T2 ON T1.Singer_ID  =  T2.Singer_ID</sql>"}
+{"idx": 1020, "completion": "<sql>SELECT DISTINCT T1.Name FROM singer AS T1 JOIN song AS T2 ON T1.Singer_ID  =  T2.Singer_ID WHERE T2.Sales  >  300000</sql>"}
+{"idx": 1021, "completion": "<sql>SELECT DISTINCT T1.Name FROM singer AS T1 JOIN song AS T2 ON T1.Singer_ID  =  T2.Singer_ID WHERE T2.Sales  >  300000</sql>"}
+{"idx": 1022, "completion": "<sql>SELECT T1.Name FROM singer AS T1 JOIN song AS T2 ON T1.Singer_ID  =  T2.Singer_ID GROUP BY T1.Name HAVING COUNT(*)  >  1</sql>"}
+{"idx": 1023, "completion": "<sql>SELECT T1.Name FROM singer AS T1 JOIN song AS T2 ON T1.Singer_ID  =  T2.Singer_ID GROUP BY T1.Name HAVING COUNT(*)  >  1</sql>"}
+{"idx": 1024, "completion": "<sql>SELECT T1.Name ,  sum(T2.Sales) FROM singer AS T1 JOIN song AS T2 ON T1.Singer_ID  =  T2.Singer_ID GROUP BY T1.Name</sql>"}
+{"idx": 1025, "completion": "<sql>SELECT T1.Name ,  sum(T2.Sales) FROM singer AS T1 JOIN song AS T2 ON T1.Singer_ID  =  T2.Singer_ID GROUP BY T1.Name</sql>"}
+{"idx": 1026, "completion": "<sql>SELECT Name FROM singer WHERE Singer_ID NOT IN (SELECT Singer_ID FROM song)</sql>"}
+{"idx": 1027, "completion": "<sql>SELECT Name FROM singer WHERE Singer_ID NOT IN (SELECT Singer_ID FROM song)</sql>"}
+{"idx": 1028, "completion": "<sql>SELECT Citizenship FROM singer WHERE Birth_Year  <  1945 INTERSECT SELECT Citizenship FROM singer WHERE Birth_Year  >  1955</sql>"}
+{"idx": 1029, "completion": "<sql>SELECT Citizenship FROM singer WHERE Birth_Year  <  1945 INTERSECT SELECT Citizenship FROM singer WHERE Birth_Year  >  1955</sql>"}
+{"idx": 1030, "completion": "<sql>SELECT count(*) FROM Other_Available_Features</sql>"}
+{"idx": 1031, "completion": "<sql>SELECT T2.feature_type_name FROM Other_Available_Features AS T1 JOIN Ref_Feature_Types AS T2 ON T1.feature_type_code  =  T2.feature_type_code WHERE T1.feature_name  =  \"AirCon\"</sql>"}
+{"idx": 1032, "completion": "<sql>SELECT T2.property_type_description FROM Properties AS T1 JOIN Ref_Property_Types AS T2 ON T1.property_type_code  =  T2.property_type_code GROUP BY T1.property_type_code</sql>"}
+{"idx": 1033, "completion": "<sql>SELECT property_name FROM Properties WHERE property_type_code  =  \"House\" UNION SELECT property_name FROM Properties WHERE property_type_code  =  \"Apartment\" AND room_count  >  1</sql>"}

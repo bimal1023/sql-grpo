@@ -1,0 +1,10 @@
+{
+  "predictions": "results/preds_qwen2.5-0.5b-instruct.jsonl",
+  "n": 1034,
+  "accuracy_pct": 18.18,
+  "valid_sql_pct": 35.4,
+  "invalid_sql_pct": 64.6,
+  "format_pct": 66.73,
+  "avg_latency_s": 0.219,
+  "cost_per_1k_usd": 0.0
+}
