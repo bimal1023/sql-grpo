@@ -2,7 +2,7 @@
 
 > Training small open LLMs with reinforcement learning (GRPO) to write correct SQL — and measuring how close they get to a frontier API model at a fraction of the cost.
 
-**Status:** 🚧 Week 5 of 6 — training and evaluation complete; Gradio demo in progress.
+**🚀 [Try the live demo](https://huggingface.co/spaces/bimal2004/sql-grpo-demo)** — ask a database a question and compare the untrained and GRPO-trained models side by side.
 
 ## Headline results
 
@@ -63,6 +63,7 @@ GRPO improved every question type — not just formatting. JOINs and nested quer
 2. **Both model sizes plateau around step 150.** Since the plateau appears at the same point for both sizes, the limit is likely the training setup (2 questions per step, a fixed reward, the same data) rather than training length.
 3. **Bigger models gain differently.** For 0.5B, correctness *among well-formatted answers* rose from ~27% to ~42% — real new SQL skill. For 1.5B it rose from ~53% to ~58%, with more of the gain coming from reliably following the output format. The larger model already knew more SQL; GRPO mostly taught it to apply that knowledge consistently.
 4. **Shorter, cleaner answers.** Answer length fell (0.5B: ~65 → ~30 tokens; 1.5B: ~48 → ~37) as models stopped adding explanations. This was not forced by the length penalty, which only applies above 1,500 characters.
+5. **Borderline answers are sensitive to numerics.** A few questions the trained model answered correctly in evaluation flip when run under slightly different conditions (precision, batching, merged vs. unmerged LoRA). Confident answers stay stable; the 1,034-question evaluation, not any single example, is the reliable measure.
 
 ## Failure analysis (1.5B + GRPO)
 
@@ -77,6 +78,10 @@ Of 437 remaining failures (categories are keyword-based heuristics, so approxima
 | Other | 58 | 13.3% |
 
 **The #1 remaining problem is schema linking:** the model references columns that don't exist. Because SQLite reports these errors explicitly (`no such column: ...`), a **self-correcting agent** — one that runs its query, reads the error, and retries — could plausibly fix many of them. That's the planned next step.
+
+## Demo
+
+The [Gradio demo](https://huggingface.co/spaces/bimal2004/sql-grpo-demo) runs on Hugging Face ZeroGPU. It loads the 1.5B model once and toggles the LoRA adapter off and on, so a single model shows both the untrained and trained answers. Each answer is executed against the real Spider database and the returned rows (or the error) are shown.
 
 ## Use the trained models
 
@@ -99,16 +104,20 @@ Prompt format: a system message asking for one SQLite query inside `<sql></sql>`
 - **Data:** Spider (7,000 train / 1,034 dev questions across 200 SQLite databases; 6,289 train examples after filtering very long schemas)
 - **Reward / eval:** Python + SQLite (runs locally, no GPU)
 - **Baselines:** untrained Qwen2.5-0.5B/1.5B-Instruct and OpenAI `gpt-4.1-mini`, all with the same prompt
+- **Demo:** Gradio on Hugging Face Spaces (ZeroGPU)
 
 ## Repo structure
 
 ```
 sql-grpo/
+├── app.py                   # Gradio demo (Hugging Face Space)
+├── requirements-space.txt   # dependencies for the Space
 ├── configs/                 # training configs (0.5b.yaml, 1.5b.yaml)
 ├── scripts/
 │   ├── download_spider.py   # download + checksum-verify Spider databases
 │   ├── plot_training.py     # training curves from trainer_state.json
-│   └── analyze_failures.py  # failure categories + accuracy by question type
+│   ├── analyze_failures.py  # failure categories + accuracy by question type
+│   └── deploy_space.py      # upload the demo to a Hugging Face Space
 ├── src/
 │   ├── data.py              # load Spider, build prompts from real schemas
 │   ├── sql_exec.py          # safe, read-only SQL execution with timeout
@@ -117,24 +126,25 @@ sql-grpo/
 │   ├── generate_hf.py       # predictions with any HF model (+ LoRA adapter)
 │   ├── eval.py              # score predictions on the dev set
 │   └── baselines.py         # prompted OpenAI baseline
-├── tests/                   # reward + result-comparison tests
-├── results/                 # predictions, metrics, failures, curves, analysis
-└── app.py                   # Gradio demo (in progress)
+├── tests/                   # reward + result-comparison tests (16)
+└── results/                 # predictions, metrics, failures, curves, analysis
 ```
 
 ## Progress
 
-- [x] Data loading, safe SQL executor, reward functions (17 tests passing)
+- [x] Data loading, safe SQL executor, reward functions (16 tests passing)
 - [x] Evaluation pipeline with oracle sanity check
 - [x] Baselines: gpt-4.1-mini, untrained Qwen 0.5B and 1.5B
 - [x] GRPO on 0.5B: 18.18% → 41.68%
 - [x] GRPO on 1.5B: 40.72% → 57.74%
 - [x] Training curves and failure analysis
-- [ ] Gradio demo
-- [ ] Write-up
+- [x] Live Gradio demo on Hugging Face Spaces
+- [ ] Model cards and write-up
+- [ ] Next: self-correcting multi-turn SQL agent
 
 ## Dev log
 
+- **2026-10-22** — Launched the Gradio demo on Hugging Face ZeroGPU, comparing untrained vs. trained answers side by side with live query execution. Example questions are drawn from Spider dev questions GRPO fixed.
 - **2026-10-21** — GRPO on 1.5B (400 steps, free T4): 40.72% → 57.74%. Added failure analysis: schema linking (wrong column names) is the top remaining error; gains appear across all question types.
 - **2026-10-21** — GRPO on 0.5B: 18.18% → 41.68%. Added training-curve plotting.
 - **2026-10-21** — Debug run of `train.py`; disabled vLLM fast inference after it failed to install on Kaggle.
@@ -161,6 +171,12 @@ python -m src.generate_hf --model Qwen/Qwen2.5-1.5B-Instruct --adapter outputs/g
 python -m src.eval results/preds_grpo-1.5b.jsonl
 python scripts/plot_training.py --run outputs/grpo-1.5b --name grpo-1.5b
 python scripts/analyze_failures.py grpo-1.5b
+```
+
+Deploy the demo (after `huggingface_hub` login):
+
+```bash
+python scripts/deploy_space.py <your-username>/sql-grpo-demo
 ```
 
 ---
