@@ -16,6 +16,7 @@ ALLOWED_START = ("select", "with")
 class ExecResult:
     ok: bool
     rows: list = field(default_factory=list)
+    columns: list = field(default_factory=list)
     error: str | None = None
 
 
@@ -34,13 +35,15 @@ def execute_sql(db_id: str, sql: str, timeout_s: float = 2.0,
             # Abort the query once the deadline passes
             deadline = time.monotonic() + timeout_s
             conn.set_progress_handler(lambda: int(time.monotonic() > deadline), 10_000)
-            rows = conn.execute(sql).fetchmany(max_rows + 1)
+            cur = conn.execute(sql)
+            rows = cur.fetchmany(max_rows + 1)
+            columns = [d[0] for d in cur.description or []]
     except (sqlite3.Error, sqlite3.Warning) as e:
         return ExecResult(ok=False, error=f"{type(e).__name__}: {e}")
 
     if len(rows) > max_rows:
         return ExecResult(ok=False, error=f"Result exceeded {max_rows} rows")
-    return ExecResult(ok=True, rows=rows)
+    return ExecResult(ok=True, rows=rows, columns=columns)
 
 
 def _normalize(value):

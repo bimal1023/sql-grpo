@@ -1,0 +1,5 @@
+torch==2.9.1
+transformers
+peft
+huggingface_hub
+pandas
