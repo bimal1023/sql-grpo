@@ -115,10 +115,6 @@ with gr.Blocks(title="SQL-GRPO") as demo:
     gr.Examples(
         EXAMPLES,
         inputs=[db, q],
-        outputs=outputs,
-        fn=answer,
-        run_on_click=True,     # one click: fill in the example AND run it
-        cache_examples=False,  # don't pre-run examples at startup (saves GPU quota)
         label="Questions GRPO fixed (Spider dev set)",
     )
 
