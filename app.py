@@ -30,12 +30,18 @@ model.eval()
 
 DEV = load_split("dev")
 DB_IDS = sorted({ex["db_id"] for ex in DEV})
-EXAMPLES, seen = [], set()
-for ex in DEV:  # one example question per database
-    if ex["db_id"] not in seen:
-        seen.add(ex["db_id"])
-        EXAMPLES.append([ex["db_id"], ex["question"]])
-EXAMPLES = EXAMPLES[:8]
+
+# Spider dev questions the untrained model got wrong and the GRPO-trained model got right
+EXAMPLES = [
+    ["concert_singer", "How many singers do we have?"],
+    ["pets_1", "Find the number of distinct type of pets."],
+    ["car_1", "What is the average miles per gallon(mpg) of the cars with 4 cylinders?"],
+    ["flight_2", "Which abbreviation corresponds to Jetblue Airways?"],
+    ["employee_hire_evaluation", "Find the manager name and district of the shop whose number of products is the largest."],
+    ["cre_Doc_Template_Mgt", "What is the document name and template id for document with description with the letter 'w' in it?"],
+    ["course_teach", "What are the names of the teachers ordered by ascending age?"],
+    ["museum_visit", "How many visitors below age 30 are there?"],
+]
 
 
 def generate(db_id: str, question: str, trained: bool) -> str:
@@ -80,6 +86,7 @@ with gr.Blocks(title="SQL-GRPO") as demo:
         "# SQL-GRPO: ask a database in plain English\n"
         "Qwen2.5-1.5B trained with reinforcement learning (GRPO) on SQL execution feedback, "
         "using a free GPU. Spider dev accuracy: **40.7% → 57.7%** (gpt-4.1-mini: 74.4%).  \n"
+        "The examples below are questions the untrained model got wrong and the trained model got right.  \n"
         "[Code](https://github.com/bimal1023/sql-grpo) · "
         "[Model](https://huggingface.co/bimal2004/sql-grpo-1.5b)"
     )
@@ -102,7 +109,7 @@ with gr.Blocks(title="SQL-GRPO") as demo:
             g_status = gr.Textbox(label="Result", interactive=False)
             g_df = gr.Dataframe(label="Rows")
 
-    gr.Examples(EXAMPLES, inputs=[db, q], label="Try a question from the Spider dev set")
+    gr.Examples(EXAMPLES, inputs=[db, q], label="Questions GRPO fixed (Spider dev set)")
 
     outputs = [b_sql, b_status, b_df, g_sql, g_status, g_df]
     db.change(get_schema, db, schema)
