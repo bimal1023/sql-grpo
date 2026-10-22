@@ -31,16 +31,16 @@ model.eval()
 DEV = load_split("dev")
 DB_IDS = sorted({ex["db_id"] for ex in DEV})
 
-# Spider dev questions the untrained model got wrong and the GRPO-trained model got right
+# Spider dev questions where the untrained model wrote wrong SQL and the GRPO-trained model got it right
 EXAMPLES = [
-    ["concert_singer", "How many singers do we have?"],
+    ["concert_singer", "What are  the different countries with singers above age 20?"],
     ["pets_1", "Find the number of distinct type of pets."],
     ["car_1", "What is the average miles per gallon(mpg) of the cars with 4 cylinders?"],
     ["flight_2", "Which abbreviation corresponds to Jetblue Airways?"],
     ["employee_hire_evaluation", "Find the manager name and district of the shop whose number of products is the largest."],
-    ["cre_Doc_Template_Mgt", "What is the document name and template id for document with description with the letter 'w' in it?"],
-    ["course_teach", "What are the names of the teachers ordered by ascending age?"],
-    ["museum_visit", "How many visitors below age 30 are there?"],
+    ["cre_Doc_Template_Mgt", "How many documents are using the template with type code 'PPT'?"],
+    ["wta_1", "List the first name and birth date of all players from the country with code USA."],
+    ["battle_death", "What are the distinct battle names which are between bulgarian commander 'Kaloyan' and latin commander 'Baldwin I'?"],
 ]
 
 
@@ -64,14 +64,15 @@ def generate_both(db_id: str, question: str):
 
 
 def run_answer(db_id: str, completion: str):
+    hidden = gr.Dataframe(value=None, visible=False)
     sql = extract_sql(completion)
     if sql is None:
-        return completion.strip() or "(empty answer)", "No <sql> block in the answer", None
+        return completion.strip() or "(empty answer)", "No <sql> block in the answer", hidden
     res = execute_sql(db_id, sql)
     if not res.ok:
-        return sql, res.error, None
+        return sql, res.error, hidden
     df = pd.DataFrame(res.rows[:50], columns=res.columns or None)
-    return sql, f"{len(res.rows)} row(s) returned", df
+    return sql, f"{len(res.rows)} row(s) returned", gr.Dataframe(value=df, visible=True)
 
 
 def answer(db_id: str, question: str):
@@ -86,7 +87,7 @@ with gr.Blocks(title="SQL-GRPO") as demo:
         "# SQL-GRPO: ask a database in plain English\n"
         "Qwen2.5-1.5B trained with reinforcement learning (GRPO) on SQL execution feedback, "
         "using a free GPU. Spider dev accuracy: **40.7% → 57.7%** (gpt-4.1-mini: 74.4%).  \n"
-        "The examples below are questions the untrained model got wrong and the trained model got right.  \n"
+        "Click an example below: these are questions the untrained model got wrong and the trained model got right.  \n"
         "[Code](https://github.com/bimal1023/sql-grpo) · "
         "[Model](https://huggingface.co/bimal2004/sql-grpo-1.5b)"
     )
@@ -102,16 +103,25 @@ with gr.Blocks(title="SQL-GRPO") as demo:
             gr.Markdown("### Untrained model")
             b_sql = gr.Code(language="sql", label="SQL")
             b_status = gr.Textbox(label="Result", interactive=False)
-            b_df = gr.Dataframe(label="Rows")
+            b_df = gr.Dataframe(label="Rows", visible=False)
         with gr.Column():
             gr.Markdown("### GRPO-trained model")
             g_sql = gr.Code(language="sql", label="SQL")
             g_status = gr.Textbox(label="Result", interactive=False)
-            g_df = gr.Dataframe(label="Rows")
-
-    gr.Examples(EXAMPLES, inputs=[db, q], label="Questions GRPO fixed (Spider dev set)")
+            g_df = gr.Dataframe(label="Rows", visible=False)
 
     outputs = [b_sql, b_status, b_df, g_sql, g_status, g_df]
+
+    gr.Examples(
+        EXAMPLES,
+        inputs=[db, q],
+        outputs=outputs,
+        fn=answer,
+        run_on_click=True,     # one click: fill in the example AND run it
+        cache_examples=False,  # don't pre-run examples at startup (saves GPU quota)
+        label="Questions GRPO fixed (Spider dev set)",
+    )
+
     db.change(get_schema, db, schema)
     btn.click(answer, [db, q], outputs)
     q.submit(answer, [db, q], outputs)
