@@ -23,7 +23,7 @@ BASE_MODEL = os.environ.get("BASE_MODEL", "Qwen/Qwen2.5-1.5B-Instruct")
 ADAPTER = os.environ.get("ADAPTER", "bimal2004/sql-grpo-1.5b")
 
 tokenizer = AutoTokenizer.from_pretrained(BASE_MODEL)
-base = AutoModelForCausalLM.from_pretrained(BASE_MODEL, torch_dtype=torch.bfloat16)
+base = AutoModelForCausalLM.from_pretrained(BASE_MODEL, torch_dtype=torch.float16)
 model = PeftModel.from_pretrained(base, ADAPTER, torch_device="cpu")  # load on CPU first
 model.to("cuda")  # ZeroGPU: place on cuda at startup
 model.eval()
