@@ -1,0 +1,19 @@
+model: /kaggle/working/merged-1.5b   # your GRPO-trained 1.5B, merged
+max_seq_length: 2048
+load_in_4bit: false
+fast_inference: false
+gpu_memory_utilization: 0.5
+lora_rank: 32
+
+learning_rate: 5.0e-6
+batch_size: 8
+grad_accum: 2
+num_generations: 8
+max_prompt_tokens: 1536            # correction prompts are longer
+max_completion_tokens: 256
+max_steps: 300
+save_steps: 50
+output_dir: outputs/grpo-1.5b-mt
+
+correction_file: data/correction_train.jsonl
+first_turn_fraction: 0.3           # 30% normal questions, so turn-1 skill isn't forgotten
