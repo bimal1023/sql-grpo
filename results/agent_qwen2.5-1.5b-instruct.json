@@ -1,0 +1,26 @@
+{
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "adapter": null,
+  "max_turns": 3,
+  "n": 1034,
+  "per_turn": [
+    {
+      "turn": 1,
+      "accuracy_pct": 40.72,
+      "attempted": 1034,
+      "still_erroring": 430
+    },
+    {
+      "turn": 2,
+      "accuracy_pct": 46.32,
+      "attempted": 430,
+      "still_erroring": 340
+    },
+    {
+      "turn": 3,
+      "accuracy_pct": 46.91,
+      "attempted": 340,
+      "still_erroring": 0
+    }
+  ]
+}

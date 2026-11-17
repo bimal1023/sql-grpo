@@ -1,0 +1,26 @@
+{
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "adapter": "bimal2004/sql-grpo-1.5b",
+  "max_turns": 3,
+  "n": 1034,
+  "per_turn": [
+    {
+      "turn": 1,
+      "accuracy_pct": 57.74,
+      "attempted": 1034,
+      "still_erroring": 182
+    },
+    {
+      "turn": 2,
+      "accuracy_pct": 59.19,
+      "attempted": 182,
+      "still_erroring": 146
+    },
+    {
+      "turn": 3,
+      "accuracy_pct": 59.67,
+      "attempted": 146,
+      "still_erroring": 0
+    }
+  ]
+}
